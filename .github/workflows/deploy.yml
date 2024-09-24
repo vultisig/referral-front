@@ -41,6 +41,10 @@ jobs:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/master'
 
+    permissions:
+      contents: read
+      packages: write
+
     steps:
       - name: Download artifact
         uses: actions/download-artifact@v3
