@@ -28605,8 +28605,8 @@ const resource = {
 };
 
 const i18n = createI18n({
-    locale: ({}).VITE_DEFAULT_LOCALE,
-    fallbackLocale: ({}).VITE_FALLBACK_LOCALE,
+    locale: "en_EN",
+    fallbackLocale: "en_EN",
     legacy: false,
     warnHtmlMessage: false,
     messages: resource
@@ -28690,13 +28690,13 @@ const routes = [
     {
         path: '/home',
         name: 'home',
-        component: () => __vitePreload(() => import('./Home.5bf8fd02.js'),true?["assets/Home.5bf8fd02.js","assets/Avatar.c64d0faf.js","assets/Avatar.429656ec.css","assets/EmptyLabel.c231206d.js","assets/EmptyLabel.b61dc386.css","assets/Home.98bd6e5c.css"]:void 0),
+        component: () => __vitePreload(() => import('./Home.b98e655b.js'),true?["assets/Home.b98e655b.js","assets/Avatar.212ae402.js","assets/Avatar.429656ec.css","assets/EmptyLabel.3648c0a4.js","assets/EmptyLabel.b61dc386.css","assets/Home.98bd6e5c.css"]:void 0),
         abort: []
     },
     {
         path: '/referrals',
         name: 'referrals',
-        component: () => __vitePreload(() => import('./Referrals.8ba4aad1.js'),true?["assets/Referrals.8ba4aad1.js","assets/Avatar.c64d0faf.js","assets/Avatar.429656ec.css","assets/EmptyLabel.c231206d.js","assets/EmptyLabel.b61dc386.css","assets/Referrals.acf79971.css"]:void 0),
+        component: () => __vitePreload(() => import('./Referrals.8266dd88.js'),true?["assets/Referrals.8266dd88.js","assets/Avatar.212ae402.js","assets/Avatar.429656ec.css","assets/EmptyLabel.3648c0a4.js","assets/EmptyLabel.b61dc386.css","assets/Referrals.acf79971.css"]:void 0),
         abort: [
             'referrals'
         ]
@@ -28704,19 +28704,19 @@ const routes = [
     {
         path: '/airdrop',
         name: 'airdrop',
-        component: () => __vitePreload(() => import('./Airdrop.da07d951.js'),true?["assets/Airdrop.da07d951.js","assets/Airdrop.4adb4f4d.css"]:void 0),
+        component: () => __vitePreload(() => import('./Airdrop.c647dcfa.js'),true?["assets/Airdrop.c647dcfa.js","assets/Airdrop.4adb4f4d.css"]:void 0),
         abort: []
     },
     {
         path: '/error',
         name: 'error',
-        component: () => __vitePreload(() => import('./Error.057b972c.js'),true?["assets/Error.057b972c.js","assets/EmptyLabel.c231206d.js","assets/EmptyLabel.b61dc386.css","assets/Error.1e1044f0.css"]:void 0),
+        component: () => __vitePreload(() => import('./Error.e2f42926.js'),true?["assets/Error.e2f42926.js","assets/EmptyLabel.3648c0a4.js","assets/EmptyLabel.b61dc386.css","assets/Error.1e1044f0.css"]:void 0),
         abort: []
     },
     {
         path: '/access-denied',
         name: 'access-denied',
-        component: () => __vitePreload(() => import('./AccessDenied.d20b0836.js'),true?["assets/AccessDenied.d20b0836.js","assets/EmptyLabel.c231206d.js","assets/EmptyLabel.b61dc386.css","assets/AccessDenied.ed7dcc68.css"]:void 0),
+        component: () => __vitePreload(() => import('./AccessDenied.7f03897a.js'),true?["assets/AccessDenied.7f03897a.js","assets/EmptyLabel.3648c0a4.js","assets/EmptyLabel.b61dc386.css","assets/AccessDenied.ed7dcc68.css"]:void 0),
         abort: []
     },
     {
@@ -29099,7 +29099,7 @@ async function fetchData({ url, method, data, params, auth = true, contentType, 
     }
 
     return await axios$1({
-        baseURL: ({}).VITE_APP_API_URL,
+        baseURL: "https://vultisig.com",
         method,
         url,
         data,
@@ -39973,7 +39973,7 @@ const browserExt = {
   },
   test: () => true,
   load: async () => {
-    await __vitePreload(() => import('./browserAll.6b0ea3b5.js'),true?["assets/browserAll.6b0ea3b5.js","assets/init.cf3bccbb.js","assets/colorToUniform.78ecc98f.js"]:void 0);
+    await __vitePreload(() => import('./browserAll.ae74516a.js'),true?["assets/browserAll.ae74516a.js","assets/init.a50edb52.js","assets/colorToUniform.f3fa4209.js"]:void 0);
   }
 };
 
@@ -39985,7 +39985,7 @@ const webworkerExt = {
   },
   test: () => typeof self !== "undefined" && self.WorkerGlobalScope !== void 0,
   load: async () => {
-    await __vitePreload(() => import('./webworkerAll.6bbacddc.js'),true?["assets/webworkerAll.6bbacddc.js","assets/init.cf3bccbb.js","assets/colorToUniform.78ecc98f.js"]:void 0);
+    await __vitePreload(() => import('./webworkerAll.05391740.js'),true?["assets/webworkerAll.05391740.js","assets/init.a50edb52.js","assets/colorToUniform.f3fa4209.js"]:void 0);
   }
 };
 
@@ -49826,14 +49826,14 @@ async function autoDetectRenderer(options) {
   for (let i = 0; i < preferredOrder.length; i++) {
     const rendererType = preferredOrder[i];
     if (rendererType === "webgpu" && await isWebGPUSupported()) {
-      const { WebGPURenderer } = await __vitePreload(() => import('./WebGPURenderer.020f12fd.js'),true?["assets/WebGPURenderer.020f12fd.js","assets/colorToUniform.78ecc98f.js","assets/SharedSystems.2fe28140.js"]:void 0);
+      const { WebGPURenderer } = await __vitePreload(() => import('./WebGPURenderer.22ab42b9.js'),true?["assets/WebGPURenderer.22ab42b9.js","assets/colorToUniform.f3fa4209.js","assets/SharedSystems.6fa1b982.js"]:void 0);
       RendererClass = WebGPURenderer;
       finalOptions = { ...options, ...options.webgpu };
       break;
     } else if (rendererType === "webgl" && isWebGLSupported(
       options.failIfMajorPerformanceCaveat ?? AbstractRenderer.defaultOptions.failIfMajorPerformanceCaveat
     )) {
-      const { WebGLRenderer } = await __vitePreload(() => import('./WebGLRenderer.ea771b50.js'),true?["assets/WebGLRenderer.ea771b50.js","assets/colorToUniform.78ecc98f.js","assets/SharedSystems.2fe28140.js"]:void 0);
+      const { WebGLRenderer } = await __vitePreload(() => import('./WebGLRenderer.5084f3b5.js'),true?["assets/WebGLRenderer.5084f3b5.js","assets/colorToUniform.f3fa4209.js","assets/SharedSystems.6fa1b982.js"]:void 0);
       RendererClass = WebGLRenderer;
       finalOptions = { ...options, ...options.webgl };
       break;
@@ -59880,8 +59880,8 @@ const Icon = /*#__PURE__*/_export_sfc(_sfc_main, [['__file',"/home/runner/work/r
 
 const base = '';
 
-if (({}).VITE_APP_TITLE) {
-    document.title = ({}).VITE_APP_TITLE;
+{
+    document.title = "VULTIREF";
 }
 
 const app = createApp(App);

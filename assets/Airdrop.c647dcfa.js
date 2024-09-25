@@ -1,4 +1,4 @@
-import { _ as _export_sfc, u as useI18n, m as mapState, r as reactive, k as resolveComponent, b as unref, o as openBlock, d as createElementBlock, e as createVNode, f as createBaseVNode, F as Fragment, l as renderList, h as createCommentVNode, B as Button, p as normalizeClass, g as createBlock, q as withCtx } from './index.f49e8235.js';
+import { _ as _export_sfc, u as useI18n, m as mapState, r as reactive, k as resolveComponent, b as unref, o as openBlock, d as createElementBlock, e as createVNode, f as createBaseVNode, F as Fragment, l as renderList, h as createCommentVNode, B as Button, p as normalizeClass, g as createBlock, q as withCtx } from './index.3e0adf8f.js';
 
 const Airdrop_vue_vue_type_style_index_0_scoped_94566200_lang = '';
 
@@ -64,9 +64,9 @@ const _sfc_main = {
 
     const openDoc = () => {
         if (window.Telegram?.WebApp) {
-            window.Telegram?.WebApp.openLink(({}).VITE_APP_DOC_URL);
+            window.Telegram?.WebApp.openLink("https://docs.vultisig.com/vultisig-token/airdrop?source=vultiref");
         } else {
-            window.open(({}).VITE_APP_DOC_URL, '_blank');
+            window.open("https://docs.vultisig.com/vultisig-token/airdrop?source=vultiref", '_blank');
         }
     };
 
