@@ -28612,7 +28612,7 @@ const i18n = createI18n({
     messages: resource
 });
 
-const scriptRel = 'modulepreload';const assetsURL = function(dep) { return "/undefined/"+dep };const seen = {};const __vitePreload = function preload(baseModule, deps, importerUrl) {
+const scriptRel = 'modulepreload';const assetsURL = function(dep) { return "/"+dep };const seen = {};const __vitePreload = function preload(baseModule, deps, importerUrl) {
     // @ts-ignore
     if (!true || !deps || deps.length === 0) {
         return baseModule();
@@ -28690,13 +28690,13 @@ const routes = [
     {
         path: '/home',
         name: 'home',
-        component: () => __vitePreload(() => import('./Home.2b6682fc.js'),true?["assets/Home.2b6682fc.js","assets/Avatar.25d7becd.js","assets/Avatar.429656ec.css","assets/EmptyLabel.13d32967.js","assets/EmptyLabel.b61dc386.css","assets/Home.98bd6e5c.css"]:void 0),
+        component: () => __vitePreload(() => import('./Home.5bf8fd02.js'),true?["assets/Home.5bf8fd02.js","assets/Avatar.c64d0faf.js","assets/Avatar.429656ec.css","assets/EmptyLabel.c231206d.js","assets/EmptyLabel.b61dc386.css","assets/Home.98bd6e5c.css"]:void 0),
         abort: []
     },
     {
         path: '/referrals',
         name: 'referrals',
-        component: () => __vitePreload(() => import('./Referrals.cc280fd2.js'),true?["assets/Referrals.cc280fd2.js","assets/Avatar.25d7becd.js","assets/Avatar.429656ec.css","assets/EmptyLabel.13d32967.js","assets/EmptyLabel.b61dc386.css","assets/Referrals.acf79971.css"]:void 0),
+        component: () => __vitePreload(() => import('./Referrals.8ba4aad1.js'),true?["assets/Referrals.8ba4aad1.js","assets/Avatar.c64d0faf.js","assets/Avatar.429656ec.css","assets/EmptyLabel.c231206d.js","assets/EmptyLabel.b61dc386.css","assets/Referrals.acf79971.css"]:void 0),
         abort: [
             'referrals'
         ]
@@ -28704,19 +28704,19 @@ const routes = [
     {
         path: '/airdrop',
         name: 'airdrop',
-        component: () => __vitePreload(() => import('./Airdrop.41fb2e6b.js'),true?["assets/Airdrop.41fb2e6b.js","assets/Airdrop.4adb4f4d.css"]:void 0),
+        component: () => __vitePreload(() => import('./Airdrop.da07d951.js'),true?["assets/Airdrop.da07d951.js","assets/Airdrop.4adb4f4d.css"]:void 0),
         abort: []
     },
     {
         path: '/error',
         name: 'error',
-        component: () => __vitePreload(() => import('./Error.fc8bd1ed.js'),true?["assets/Error.fc8bd1ed.js","assets/EmptyLabel.13d32967.js","assets/EmptyLabel.b61dc386.css","assets/Error.1e1044f0.css"]:void 0),
+        component: () => __vitePreload(() => import('./Error.057b972c.js'),true?["assets/Error.057b972c.js","assets/EmptyLabel.c231206d.js","assets/EmptyLabel.b61dc386.css","assets/Error.1e1044f0.css"]:void 0),
         abort: []
     },
     {
         path: '/access-denied',
         name: 'access-denied',
-        component: () => __vitePreload(() => import('./AccessDenied.b927dfb0.js'),true?["assets/AccessDenied.b927dfb0.js","assets/EmptyLabel.13d32967.js","assets/EmptyLabel.b61dc386.css","assets/AccessDenied.ed7dcc68.css"]:void 0),
+        component: () => __vitePreload(() => import('./AccessDenied.d20b0836.js'),true?["assets/AccessDenied.d20b0836.js","assets/EmptyLabel.c231206d.js","assets/EmptyLabel.b61dc386.css","assets/AccessDenied.ed7dcc68.css"]:void 0),
         abort: []
     },
     {
@@ -28727,7 +28727,7 @@ const routes = [
 ];
 
 const router = createRouter({
-    history: createWebHistory(({}).VITE_APP_BASE_URL),
+    history: createWebHistory(),
     routes
 });
 
@@ -39681,7 +39681,6 @@ const _sfc_main$5 = {
   __name: 'empty',
   setup(__props) {
 
-const baseUrl = ({}).VITE_APP_BASE_URL;
 const { theme, user } = mapState();
 const { openModal, closeModal } = mapMutations();
 const { login } = mapActions();
@@ -39708,7 +39707,7 @@ return (_ctx, _cache) => {
   return (openBlock(), createElementBlock(Fragment, null, [
     createBaseVNode("link", {
       rel: "stylesheet",
-      href: `${unref(baseUrl)}/themes/${unref(theme)}.css`
+      href: `/themes/${unref(theme)}.css`
     }, null, 8 /* PROPS */, _hoisted_1$3),
     createBaseVNode("div", _hoisted_2$2, [
       createVNode(Circle$1, {
@@ -39974,7 +39973,7 @@ const browserExt = {
   },
   test: () => true,
   load: async () => {
-    await __vitePreload(() => import('./browserAll.e9cc24d8.js'),true?["assets/browserAll.e9cc24d8.js","assets/init.a1606938.js","assets/colorToUniform.a297e230.js"]:void 0);
+    await __vitePreload(() => import('./browserAll.6b0ea3b5.js'),true?["assets/browserAll.6b0ea3b5.js","assets/init.cf3bccbb.js","assets/colorToUniform.78ecc98f.js"]:void 0);
   }
 };
 
@@ -39986,7 +39985,7 @@ const webworkerExt = {
   },
   test: () => typeof self !== "undefined" && self.WorkerGlobalScope !== void 0,
   load: async () => {
-    await __vitePreload(() => import('./webworkerAll.f9cae60a.js'),true?["assets/webworkerAll.f9cae60a.js","assets/init.a1606938.js","assets/colorToUniform.a297e230.js"]:void 0);
+    await __vitePreload(() => import('./webworkerAll.6bbacddc.js'),true?["assets/webworkerAll.6bbacddc.js","assets/init.cf3bccbb.js","assets/colorToUniform.78ecc98f.js"]:void 0);
   }
 };
 
@@ -49827,14 +49826,14 @@ async function autoDetectRenderer(options) {
   for (let i = 0; i < preferredOrder.length; i++) {
     const rendererType = preferredOrder[i];
     if (rendererType === "webgpu" && await isWebGPUSupported()) {
-      const { WebGPURenderer } = await __vitePreload(() => import('./WebGPURenderer.86683387.js'),true?["assets/WebGPURenderer.86683387.js","assets/colorToUniform.a297e230.js","assets/SharedSystems.b825a818.js"]:void 0);
+      const { WebGPURenderer } = await __vitePreload(() => import('./WebGPURenderer.020f12fd.js'),true?["assets/WebGPURenderer.020f12fd.js","assets/colorToUniform.78ecc98f.js","assets/SharedSystems.2fe28140.js"]:void 0);
       RendererClass = WebGPURenderer;
       finalOptions = { ...options, ...options.webgpu };
       break;
     } else if (rendererType === "webgl" && isWebGLSupported(
       options.failIfMajorPerformanceCaveat ?? AbstractRenderer.defaultOptions.failIfMajorPerformanceCaveat
     )) {
-      const { WebGLRenderer } = await __vitePreload(() => import('./WebGLRenderer.3f82ab63.js'),true?["assets/WebGLRenderer.3f82ab63.js","assets/colorToUniform.a297e230.js","assets/SharedSystems.b825a818.js"]:void 0);
+      const { WebGLRenderer } = await __vitePreload(() => import('./WebGLRenderer.ea771b50.js'),true?["assets/WebGLRenderer.ea771b50.js","assets/colorToUniform.78ecc98f.js","assets/SharedSystems.2fe28140.js"]:void 0);
       RendererClass = WebGLRenderer;
       finalOptions = { ...options, ...options.webgl };
       break;
@@ -59592,12 +59591,12 @@ const data = reactive({
     bgTextures: [
         {
             code: 'logo',
-            url: `${({}).VITE_APP_BASE_URL}/img/bg/logo.svg`,
+            url: `/img/bg/logo.svg`,
             width: 43,
             height: 41
         }, {
             code: 'back-logo',
-            url: `${({}).VITE_APP_BASE_URL}/img/bg/back-logo.svg`,
+            url: `/img/bg/back-logo.svg`,
             width: 57,
             height: 56
         }
@@ -59750,7 +59749,6 @@ const _sfc_main$2 = {
   __name: 'index',
   setup(__props) {
 
-const baseUrl = ({}).VITE_APP_BASE_URL;
 const { theme, user } = mapState();
 const { openModal, closeModal, setReady } = mapMutations();
 const { login, getSettings } = mapActions();
@@ -59788,7 +59786,7 @@ return (_ctx, _cache) => {
   return (openBlock(), createElementBlock(Fragment, null, [
     createBaseVNode("link", {
       rel: "stylesheet",
-      href: `${unref(baseUrl)}/themes/${unref(theme)}.css`
+      href: `/themes/${unref(theme)}.css`
     }, null, 8 /* PROPS */, _hoisted_1$1),
     createVNode(Pixi, { onReady: ready }),
     createBaseVNode("div", _hoisted_2$1, [
@@ -59861,7 +59859,7 @@ const _sfc_main = {
 
 const props = __props;
 
-const url = computed(() => `${({}).VITE_APP_BASE_URL}/img/svg-sprite.svg#${props.icon}`);
+const url = computed(() => `/img/svg-sprite.svg#${props.icon}`);
 
 return (_ctx, _cache) => {
   return (openBlock(), createElementBlock("svg", {

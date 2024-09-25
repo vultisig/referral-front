@@ -1,6 +1,6 @@
-import { _ as _export_sfc, u as useI18n, m as mapState, a as mapMutations, c as computed, b as unref, o as openBlock, d as createElementBlock, e as createVNode, f as createBaseVNode, t as toDisplayString, g as createBlock, h as createCommentVNode, B as Button } from './index.d992a1bf.js';
-import { A as Avatar } from './Avatar.25d7becd.js';
-import { E as EmptyLabel } from './EmptyLabel.13d32967.js';
+import { _ as _export_sfc, u as useI18n, m as mapState, a as mapMutations, c as computed, b as unref, o as openBlock, d as createElementBlock, e as createVNode, f as createBaseVNode, t as toDisplayString, g as createBlock, h as createCommentVNode, B as Button } from './index.f49e8235.js';
+import { A as Avatar } from './Avatar.c64d0faf.js';
+import { E as EmptyLabel } from './EmptyLabel.c231206d.js';
 
 const Home_vue_vue_type_style_index_0_scoped_933e9cdf_lang = '';
 
@@ -25,7 +25,7 @@ const _sfc_main = {
     const { openModal } = mapMutations();
 
     const emptyImg = computed(() => {
-        const path = `${({}).VITE_APP_BASE_URL}/img/problems.svg`;
+        const path = `/img/problems.svg`;
         return new URL(path, import.meta.url).href;
     });
 
