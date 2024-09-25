@@ -29,9 +29,6 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Build CNAME
-        run: npm run add-domain
-
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v3
         with:
