@@ -15,7 +15,6 @@ export default ({ mode }) => {
         api: process.env.VITE_APP_API_URL
     };
     return defineConfig({
-        base: process.env.VITE_APP_BASE_URL + '/',
         build: {
             minify: false,
             target: 'esnext'

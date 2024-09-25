@@ -1,5 +1,5 @@
 <template>
-    <link rel="stylesheet" :href="`${baseUrl}/themes/${theme}.css`" />
+    <link rel="stylesheet" :href="`/themes/${theme}.css`" />
     <Pixi @ready="ready" />
     <div class="layout">
         <Circle top="0" left="0" class="move-1" />
@@ -25,7 +25,6 @@ import { mapActions, mapMutations, mapState } from '@/map-state';
 import router from '@/router';
 import { initTg } from '@/utils/tg';
 
-const baseUrl = import.meta.env.VITE_APP_BASE_URL;
 const { theme, user } = mapState();
 const { openModal, closeModal, setReady } = mapMutations();
 const { login, getSettings } = mapActions();

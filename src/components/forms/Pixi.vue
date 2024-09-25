@@ -15,12 +15,12 @@ const data = reactive({
     bgTextures: [
         {
             code: 'logo',
-            url: `${import.meta.env.VITE_APP_BASE_URL}/img/bg/logo.svg`,
+            url: `/img/bg/logo.svg`,
             width: 43,
             height: 41
         }, {
             code: 'back-logo',
-            url: `${import.meta.env.VITE_APP_BASE_URL}/img/bg/back-logo.svg`,
+            url: `/img/bg/back-logo.svg`,
             width: 57,
             height: 56
         }

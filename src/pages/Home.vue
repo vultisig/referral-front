@@ -43,7 +43,7 @@
     const { openModal } = mapMutations();
 
     const emptyImg = computed(() => {
-        const path = `${import.meta.env.VITE_APP_BASE_URL}/img/problems.svg`;
+        const path = `/img/problems.svg`;
         return new URL(path, import.meta.url).href;
     });
 

@@ -19,5 +19,5 @@ const props = defineProps({
     title: { type: String, default: '' }
 });
 
-const url = computed(() => `${import.meta.env.VITE_APP_BASE_URL}/img/svg-sprite.svg#${props.icon}`);
+const url = computed(() => `/img/svg-sprite.svg#${props.icon}`);
 </script>
