@@ -77,7 +77,7 @@
 
         const payload = await getReferrals({
             skip: data.referrals.length,
-            take: settings.value.REFERRALS_DEFAULT_TAKE || 30
+            take: +settings.value.REFERRALS_DEFAULT_TAKE || 30
         });
 
         if (payload?.total) {
