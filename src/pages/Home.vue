@@ -71,8 +71,8 @@
         }
 
         .home-img {
-            width: 220px;
-            height: 220px;
+            width: 200px;
+            height: 200px;
             margin: auto;
         }
 
