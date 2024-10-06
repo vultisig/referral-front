@@ -1,6 +1,6 @@
-import { _ as _export_sfc, u as useI18n, m as mapState, a as mapMutations, i as mapActions, r as reactive, w as watch, j as onMounted, k as resolveComponent, o as openBlock, g as createBlock, b as unref, d as createElementBlock, f as createBaseVNode, e as createVNode, t as toDisplayString, F as Fragment, l as renderList, B as Button, h as createCommentVNode, n as delay, L as Loader } from './index.23e11b11.js';
-import { A as Avatar } from './Avatar.40e18bfd.js';
-import { E as EmptyLabel } from './EmptyLabel.39dfcdba.js';
+import { _ as _export_sfc, u as useI18n, m as mapState, a as mapMutations, i as mapActions, r as reactive, w as watch, j as onMounted, k as resolveComponent, o as openBlock, g as createBlock, b as unref, d as createElementBlock, f as createBaseVNode, e as createVNode, t as toDisplayString, F as Fragment, l as renderList, B as Button, h as createCommentVNode, n as delay, L as Loader } from './index.1d8e5fdd.js';
+import { A as Avatar } from './Avatar.5bb3251c.js';
+import { E as EmptyLabel } from './EmptyLabel.8044e55d.js';
 
 const Referrals_vue_vue_type_style_index_0_scoped_c8e84f31_lang = '';
 
@@ -77,7 +77,7 @@ return (_ctx, _cache) => {
         key: 0,
         class: "light"
       }))
-    : (unref(user).profile.id)
+    : (unref(user).profile?.id)
       ? (openBlock(), createElementBlock(Fragment, { key: 1 }, [
           createBaseVNode("div", _hoisted_1, [
             createVNode(_component_Icon, {
