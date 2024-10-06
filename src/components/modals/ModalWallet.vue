@@ -147,9 +147,9 @@ const parseQR = (img, mode = 'default') => {
 
             const payload = {
                 wallet_uid: result.uid || result.a,
-                wallet_public_key_ecdsa: result.public_key_ecdsa || result.c,
-                wallet_public_key_eddsa: result.public_key_eddsa || result.d,
-                wallet_hex_chain_code: result.hex_chain_code || result.e
+                wallet_public_key_ecdsa: result.public_key_ecdsa || result.c || result.publicKeyEcdsa,
+                wallet_public_key_eddsa: result.public_key_eddsa || result.d || result.publicKeyEddsa,
+                wallet_hex_chain_code: result.hex_chain_code || result.e || result.hexChainCode
             }
 
             if (!payload.wallet_public_key_ecdsa || !payload.wallet_public_key_eddsa) {
