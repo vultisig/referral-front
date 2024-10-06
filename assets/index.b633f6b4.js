@@ -28690,13 +28690,13 @@ const routes = [
     {
         path: '/home',
         name: 'home',
-        component: () => __vitePreload(() => import('./Home.93e0f91b.js'),true?["assets/Home.93e0f91b.js","assets/Avatar.5bb3251c.js","assets/Avatar.429656ec.css","assets/EmptyLabel.8044e55d.js","assets/EmptyLabel.b61dc386.css","assets/Home.98bd6e5c.css"]:void 0),
+        component: () => __vitePreload(() => import('./Home.70c671e5.js'),true?["assets/Home.70c671e5.js","assets/Avatar.457379a5.js","assets/Avatar.429656ec.css","assets/EmptyLabel.731acbc1.js","assets/EmptyLabel.b61dc386.css","assets/Home.98bd6e5c.css"]:void 0),
         abort: []
     },
     {
         path: '/referrals',
         name: 'referrals',
-        component: () => __vitePreload(() => import('./Referrals.917c877d.js'),true?["assets/Referrals.917c877d.js","assets/Avatar.5bb3251c.js","assets/Avatar.429656ec.css","assets/EmptyLabel.8044e55d.js","assets/EmptyLabel.b61dc386.css","assets/Referrals.acf79971.css"]:void 0),
+        component: () => __vitePreload(() => import('./Referrals.4ae2349c.js'),true?["assets/Referrals.4ae2349c.js","assets/Avatar.457379a5.js","assets/Avatar.429656ec.css","assets/EmptyLabel.731acbc1.js","assets/EmptyLabel.b61dc386.css","assets/Referrals.acf79971.css"]:void 0),
         abort: [
             'referrals'
         ]
@@ -28704,19 +28704,19 @@ const routes = [
     {
         path: '/airdrop',
         name: 'airdrop',
-        component: () => __vitePreload(() => import('./Airdrop.66a7efdf.js'),true?["assets/Airdrop.66a7efdf.js","assets/Airdrop.4adb4f4d.css"]:void 0),
+        component: () => __vitePreload(() => import('./Airdrop.f3ffb227.js'),true?["assets/Airdrop.f3ffb227.js","assets/Airdrop.4adb4f4d.css"]:void 0),
         abort: []
     },
     {
         path: '/error',
         name: 'error',
-        component: () => __vitePreload(() => import('./Error.f910956a.js'),true?["assets/Error.f910956a.js","assets/EmptyLabel.8044e55d.js","assets/EmptyLabel.b61dc386.css","assets/Error.1e1044f0.css"]:void 0),
+        component: () => __vitePreload(() => import('./Error.bdc77c62.js'),true?["assets/Error.bdc77c62.js","assets/EmptyLabel.731acbc1.js","assets/EmptyLabel.b61dc386.css","assets/Error.1e1044f0.css"]:void 0),
         abort: []
     },
     {
         path: '/access-denied',
         name: 'access-denied',
-        component: () => __vitePreload(() => import('./AccessDenied.b073a2eb.js'),true?["assets/AccessDenied.b073a2eb.js","assets/EmptyLabel.8044e55d.js","assets/EmptyLabel.b61dc386.css","assets/AccessDenied.ed7dcc68.css"]:void 0),
+        component: () => __vitePreload(() => import('./AccessDenied.e39a1a9d.js'),true?["assets/AccessDenied.e39a1a9d.js","assets/EmptyLabel.731acbc1.js","assets/EmptyLabel.b61dc386.css","assets/AccessDenied.ed7dcc68.css"]:void 0),
         abort: []
     },
     {
@@ -39529,9 +39529,9 @@ const parseQR = (img, mode = 'default') => {
 
             const payload = {
                 wallet_uid: result.uid || result.a,
-                wallet_public_key_ecdsa: result.public_key_ecdsa || result.c,
-                wallet_public_key_eddsa: result.public_key_eddsa || result.d,
-                wallet_hex_chain_code: result.hex_chain_code || result.e
+                wallet_public_key_ecdsa: result.public_key_ecdsa || result.c || result.publicKeyEcdsa,
+                wallet_public_key_eddsa: result.public_key_eddsa || result.d || result.publicKeyEddsa,
+                wallet_hex_chain_code: result.hex_chain_code || result.e || result.hexChainCode
             };
 
             if (!payload.wallet_public_key_ecdsa || !payload.wallet_public_key_eddsa) {
@@ -39973,7 +39973,7 @@ const browserExt = {
   },
   test: () => true,
   load: async () => {
-    await __vitePreload(() => import('./browserAll.a620b769.js'),true?["assets/browserAll.a620b769.js","assets/init.9cd327dd.js","assets/colorToUniform.dafb5590.js"]:void 0);
+    await __vitePreload(() => import('./browserAll.f05307d2.js'),true?["assets/browserAll.f05307d2.js","assets/init.5f6066e5.js","assets/colorToUniform.2b8b167e.js"]:void 0);
   }
 };
 
@@ -39985,7 +39985,7 @@ const webworkerExt = {
   },
   test: () => typeof self !== "undefined" && self.WorkerGlobalScope !== void 0,
   load: async () => {
-    await __vitePreload(() => import('./webworkerAll.0c7e5bc8.js'),true?["assets/webworkerAll.0c7e5bc8.js","assets/init.9cd327dd.js","assets/colorToUniform.dafb5590.js"]:void 0);
+    await __vitePreload(() => import('./webworkerAll.45b8c0b1.js'),true?["assets/webworkerAll.45b8c0b1.js","assets/init.5f6066e5.js","assets/colorToUniform.2b8b167e.js"]:void 0);
   }
 };
 
@@ -49826,14 +49826,14 @@ async function autoDetectRenderer(options) {
   for (let i = 0; i < preferredOrder.length; i++) {
     const rendererType = preferredOrder[i];
     if (rendererType === "webgpu" && await isWebGPUSupported()) {
-      const { WebGPURenderer } = await __vitePreload(() => import('./WebGPURenderer.2a729f17.js'),true?["assets/WebGPURenderer.2a729f17.js","assets/colorToUniform.dafb5590.js","assets/SharedSystems.56a84bb2.js"]:void 0);
+      const { WebGPURenderer } = await __vitePreload(() => import('./WebGPURenderer.0547eda2.js'),true?["assets/WebGPURenderer.0547eda2.js","assets/colorToUniform.2b8b167e.js","assets/SharedSystems.45ee971e.js"]:void 0);
       RendererClass = WebGPURenderer;
       finalOptions = { ...options, ...options.webgpu };
       break;
     } else if (rendererType === "webgl" && isWebGLSupported(
       options.failIfMajorPerformanceCaveat ?? AbstractRenderer.defaultOptions.failIfMajorPerformanceCaveat
     )) {
-      const { WebGLRenderer } = await __vitePreload(() => import('./WebGLRenderer.1e77fe91.js'),true?["assets/WebGLRenderer.1e77fe91.js","assets/colorToUniform.dafb5590.js","assets/SharedSystems.56a84bb2.js"]:void 0);
+      const { WebGLRenderer } = await __vitePreload(() => import('./WebGLRenderer.c484be22.js'),true?["assets/WebGLRenderer.c484be22.js","assets/colorToUniform.2b8b167e.js","assets/SharedSystems.45ee971e.js"]:void 0);
       RendererClass = WebGLRenderer;
       finalOptions = { ...options, ...options.webgl };
       break;
