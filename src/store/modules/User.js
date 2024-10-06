@@ -24,7 +24,7 @@ const actions = {
         try {
             const auth = await this.$http({
                 method: 'POST',
-                url: '/user/login',
+                url: '/auth',
                 data: { tg_init_data, ref },
                 signal: requests.login.signal()
             });
@@ -46,7 +46,7 @@ const actions = {
         try {
             const result = await this.$http({
                 method: 'POST',
-                url: '/user/wallet',
+                url: '/user/changeWallet',
                 signal: requests.wallet.signal(),
                 data
             });
@@ -62,7 +62,7 @@ const actions = {
     async me({ commit }) {
         try {
             const result = await this.$http({
-                method: 'POST',
+                method: 'GET',
                 url: '/user/me',
                 signal: requests.me.signal()
             });
