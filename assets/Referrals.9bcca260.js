@@ -1,6 +1,6 @@
-import { _ as _export_sfc, u as useI18n, m as mapState, a as mapMutations, i as mapActions, r as reactive, w as watch, j as onMounted, k as resolveComponent, o as openBlock, g as createBlock, b as unref, d as createElementBlock, f as createBaseVNode, e as createVNode, t as toDisplayString, F as Fragment, l as renderList, B as Button, h as createCommentVNode, n as delay, L as Loader } from './index.3e0adf8f.js';
-import { A as Avatar } from './Avatar.212ae402.js';
-import { E as EmptyLabel } from './EmptyLabel.3648c0a4.js';
+import { _ as _export_sfc, u as useI18n, m as mapState, a as mapMutations, i as mapActions, r as reactive, w as watch, j as onMounted, k as resolveComponent, o as openBlock, g as createBlock, b as unref, d as createElementBlock, f as createBaseVNode, e as createVNode, t as toDisplayString, F as Fragment, l as renderList, B as Button, h as createCommentVNode, n as delay, L as Loader } from './index.23e11b11.js';
+import { A as Avatar } from './Avatar.40e18bfd.js';
+import { E as EmptyLabel } from './EmptyLabel.39dfcdba.js';
 
 const Referrals_vue_vue_type_style_index_0_scoped_c8e84f31_lang = '';
 
@@ -38,7 +38,7 @@ const _sfc_main = {
 
         const payload = await getReferrals({
             skip: data.referrals.length,
-            take: settings.value.REFERRALS_DEFAULT_TAKE || 30
+            take: +settings.value.REFERRALS_DEFAULT_TAKE || 30
         });
 
         if (payload?.total) {
