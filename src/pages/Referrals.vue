@@ -1,7 +1,7 @@
 <template>
     <Loader v-if="data.loading && !data.referrals.length" class="light" />
 
-    <template v-else-if="user.profile.id">
+    <template v-else-if="user.profile?.id">
         <div class="page-container">
             <Icon icon="frens" :alt="t('pages.referrals.title')"/>
             <h1 v-html="t('pages.referrals.title')" ></h1>

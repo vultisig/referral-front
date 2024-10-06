@@ -69,7 +69,7 @@ const actions = {
 
             if (result.status === 200) {
                 const { data } = result;
-                commit('setUser', data.user);
+                commit('setUser', data);
             }
         } catch (e) {
             onRequestDefaultError(e);
