@@ -28690,13 +28690,13 @@ const routes = [
     {
         path: '/home',
         name: 'home',
-        component: () => __vitePreload(() => import('./Home.f31a2584.js'),true?["assets/Home.f31a2584.js","assets/Avatar.34c84699.js","assets/Avatar.429656ec.css","assets/EmptyLabel.79af6353.js","assets/EmptyLabel.b61dc386.css","assets/Home.694f90eb.css"]:void 0),
+        component: () => __vitePreload(() => import('./Home.19cc60dd.js'),true?["assets/Home.19cc60dd.js","assets/Avatar.cd1eb6e7.js","assets/Avatar.429656ec.css","assets/EmptyLabel.fade5774.js","assets/EmptyLabel.b61dc386.css","assets/Home.694f90eb.css"]:void 0),
         abort: []
     },
     {
         path: '/referrals',
         name: 'referrals',
-        component: () => __vitePreload(() => import('./Referrals.96cb35ad.js'),true?["assets/Referrals.96cb35ad.js","assets/Avatar.34c84699.js","assets/Avatar.429656ec.css","assets/EmptyLabel.79af6353.js","assets/EmptyLabel.b61dc386.css","assets/Referrals.acf79971.css"]:void 0),
+        component: () => __vitePreload(() => import('./Referrals.f69a19ab.js'),true?["assets/Referrals.f69a19ab.js","assets/Avatar.cd1eb6e7.js","assets/Avatar.429656ec.css","assets/EmptyLabel.fade5774.js","assets/EmptyLabel.b61dc386.css","assets/Referrals.acf79971.css"]:void 0),
         abort: [
             'referrals'
         ]
@@ -28704,19 +28704,19 @@ const routes = [
     {
         path: '/airdrop',
         name: 'airdrop',
-        component: () => __vitePreload(() => import('./Airdrop.d2b88b44.js'),true?["assets/Airdrop.d2b88b44.js","assets/Airdrop.4adb4f4d.css"]:void 0),
+        component: () => __vitePreload(() => import('./Airdrop.85f3cbdf.js'),true?["assets/Airdrop.85f3cbdf.js","assets/Airdrop.4adb4f4d.css"]:void 0),
         abort: []
     },
     {
         path: '/error',
         name: 'error',
-        component: () => __vitePreload(() => import('./Error.72d950e3.js'),true?["assets/Error.72d950e3.js","assets/EmptyLabel.79af6353.js","assets/EmptyLabel.b61dc386.css","assets/Error.1e1044f0.css"]:void 0),
+        component: () => __vitePreload(() => import('./Error.919be715.js'),true?["assets/Error.919be715.js","assets/EmptyLabel.fade5774.js","assets/EmptyLabel.b61dc386.css","assets/Error.1e1044f0.css"]:void 0),
         abort: []
     },
     {
         path: '/access-denied',
         name: 'access-denied',
-        component: () => __vitePreload(() => import('./AccessDenied.6a9343ea.js'),true?["assets/AccessDenied.6a9343ea.js","assets/EmptyLabel.79af6353.js","assets/EmptyLabel.b61dc386.css","assets/AccessDenied.ed7dcc68.css"]:void 0),
+        component: () => __vitePreload(() => import('./AccessDenied.21b8ce1c.js'),true?["assets/AccessDenied.21b8ce1c.js","assets/EmptyLabel.fade5774.js","assets/EmptyLabel.b61dc386.css","assets/AccessDenied.ed7dcc68.css"]:void 0),
         abort: []
     },
     {
@@ -39551,11 +39551,13 @@ const upload = async () => {
     const input = document.createElement('input');
     input.type = 'file';
     input.accept='image/png, image/gif, image/jpeg';
+    input.style.display = 'none';
+
+    document.body.appendChild(input);
 
     const img = document.createElement('img');
-    // const canvas = document.createElement('canvas');
 
-    input.onchange = async (e) => { 
+    input.addEventListener('change', async (e) => { 
         if (e.target.files.length == 0) {
             return;
         }
@@ -39569,8 +39571,10 @@ const upload = async () => {
             await delay(1500);
 
             parseQR(img);
+
+            document.body.removeChild(input);
         };
-    };
+    });
 
     input.click();
 };
@@ -39973,7 +39977,7 @@ const browserExt = {
   },
   test: () => true,
   load: async () => {
-    await __vitePreload(() => import('./browserAll.eb75edbb.js'),true?["assets/browserAll.eb75edbb.js","assets/init.0a646541.js","assets/colorToUniform.6c23e82c.js"]:void 0);
+    await __vitePreload(() => import('./browserAll.8aebba85.js'),true?["assets/browserAll.8aebba85.js","assets/init.7cdcb925.js","assets/colorToUniform.09036d75.js"]:void 0);
   }
 };
 
@@ -39985,7 +39989,7 @@ const webworkerExt = {
   },
   test: () => typeof self !== "undefined" && self.WorkerGlobalScope !== void 0,
   load: async () => {
-    await __vitePreload(() => import('./webworkerAll.20abd473.js'),true?["assets/webworkerAll.20abd473.js","assets/init.0a646541.js","assets/colorToUniform.6c23e82c.js"]:void 0);
+    await __vitePreload(() => import('./webworkerAll.07be5868.js'),true?["assets/webworkerAll.07be5868.js","assets/init.7cdcb925.js","assets/colorToUniform.09036d75.js"]:void 0);
   }
 };
 
@@ -49826,14 +49830,14 @@ async function autoDetectRenderer(options) {
   for (let i = 0; i < preferredOrder.length; i++) {
     const rendererType = preferredOrder[i];
     if (rendererType === "webgpu" && await isWebGPUSupported()) {
-      const { WebGPURenderer } = await __vitePreload(() => import('./WebGPURenderer.f8a0cc2e.js'),true?["assets/WebGPURenderer.f8a0cc2e.js","assets/colorToUniform.6c23e82c.js","assets/SharedSystems.6e669be7.js"]:void 0);
+      const { WebGPURenderer } = await __vitePreload(() => import('./WebGPURenderer.6fa073dc.js'),true?["assets/WebGPURenderer.6fa073dc.js","assets/colorToUniform.09036d75.js","assets/SharedSystems.01566d66.js"]:void 0);
       RendererClass = WebGPURenderer;
       finalOptions = { ...options, ...options.webgpu };
       break;
     } else if (rendererType === "webgl" && isWebGLSupported(
       options.failIfMajorPerformanceCaveat ?? AbstractRenderer.defaultOptions.failIfMajorPerformanceCaveat
     )) {
-      const { WebGLRenderer } = await __vitePreload(() => import('./WebGLRenderer.69be3cd7.js'),true?["assets/WebGLRenderer.69be3cd7.js","assets/colorToUniform.6c23e82c.js","assets/SharedSystems.6e669be7.js"]:void 0);
+      const { WebGLRenderer } = await __vitePreload(() => import('./WebGLRenderer.c718ecec.js'),true?["assets/WebGLRenderer.c718ecec.js","assets/colorToUniform.09036d75.js","assets/SharedSystems.01566d66.js"]:void 0);
       RendererClass = WebGLRenderer;
       finalOptions = { ...options, ...options.webgl };
       break;
