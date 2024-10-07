@@ -169,11 +169,13 @@ const upload = async () => {
     const input = document.createElement('input');
     input.type = 'file';
     input.accept='image/png, image/gif, image/jpeg';
+    input.style.display = 'none';
+
+    document.body.appendChild(input);
 
     const img = document.createElement('img');
-    // const canvas = document.createElement('canvas');
 
-    input.onchange = async (e) => { 
+    input.addEventListener('change', async (e) => { 
         if (e.target.files.length == 0) {
             return;
         }
@@ -187,8 +189,10 @@ const upload = async () => {
             await delay(1500);
 
             parseQR(img);
+
+            document.body.removeChild(input);
         };
-    };
+    });
 
     input.click();
 };
