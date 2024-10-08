@@ -28717,7 +28717,7 @@ const routes = [
     {
         path: '/home',
         name: 'home',
-        component: () => __vitePreload(() => import('./Home.1c9da118.js'),true?["assets/Home.1c9da118.js","assets/Avatar.49bbc08a.js","assets/Avatar.429656ec.css","assets/EmptyLabel.0966b3e9.js","assets/EmptyLabel.b61dc386.css","assets/Home.e20363e1.css"]:void 0),
+        component: () => __vitePreload(() => import('./Home.1c9da118.js'),true?["assets/Home.1c9da118.js","assets/Avatar.49bbc08a.js","assets/Avatar.429656ec.css","assets/EmptyLabel.0966b3e9.js","assets/EmptyLabel.b61dc386.css","assets/Home.b0cc9f1d.css"]:void 0),
         abort: []
     },
     {
