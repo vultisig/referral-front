@@ -28717,13 +28717,13 @@ const routes = [
     {
         path: '/home',
         name: 'home',
-        component: () => __vitePreload(() => import('./Home.1c9da118.js'),true?["assets/Home.1c9da118.js","assets/Avatar.49bbc08a.js","assets/Avatar.429656ec.css","assets/EmptyLabel.0966b3e9.js","assets/EmptyLabel.b61dc386.css","assets/Home.b0cc9f1d.css"]:void 0),
+        component: () => __vitePreload(() => import('./Home.1c9da118.js'),true?["assets/Home.1c9da118.js","assets/Avatar.49bbc08a.js","assets/Avatar.429656ec.css","assets/EmptyLabel.0966b3e9.js","assets/EmptyLabel.b61dc386.css","assets/Home.f2d334a5.css"]:void 0),
         abort: []
     },
     {
         path: '/referrals',
         name: 'referrals',
-        component: () => __vitePreload(() => import('./Referrals.3b262bbc.js'),true?["assets/Referrals.3b262bbc.js","assets/Avatar.49bbc08a.js","assets/Avatar.429656ec.css","assets/EmptyLabel.0966b3e9.js","assets/EmptyLabel.b61dc386.css","assets/Referrals.acf79971.css"]:void 0),
+        component: () => __vitePreload(() => import('./Referrals.3b262bbc.js'),true?["assets/Referrals.3b262bbc.js","assets/Avatar.49bbc08a.js","assets/Avatar.429656ec.css","assets/EmptyLabel.0966b3e9.js","assets/EmptyLabel.b61dc386.css","assets/Referrals.ea90de4c.css"]:void 0),
         abort: [
             'referrals'
         ]
@@ -28731,13 +28731,13 @@ const routes = [
     {
         path: '/airdrop',
         name: 'airdrop',
-        component: () => __vitePreload(() => import('./Airdrop.756bb32d.js'),true?["assets/Airdrop.756bb32d.js","assets/Airdrop.c2ff36ac.css"]:void 0),
+        component: () => __vitePreload(() => import('./Airdrop.756bb32d.js'),true?["assets/Airdrop.756bb32d.js","assets/Airdrop.2afd2fe3.css"]:void 0),
         abort: []
     },
     {
         path: '/settings',
         name: 'settings',
-        component: () => __vitePreload(() => import('./Settings.ad0dad07.js'),true?["assets/Settings.ad0dad07.js","assets/Settings.c16e6ea5.css"]:void 0),
+        component: () => __vitePreload(() => import('./Settings.ad0dad07.js'),true?["assets/Settings.ad0dad07.js","assets/Settings.f814c84b.css"]:void 0),
         abort: []
     },
     {
