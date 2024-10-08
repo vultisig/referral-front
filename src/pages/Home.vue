@@ -164,7 +164,7 @@
                 width: 100%;
                 background: $black-1;
                 border-radius: 12px;
-                padding: 16px 16px;
+                padding: 12px 16px;
                 align-items: center;
                 
                 border-top-right-radius: 24px;
