@@ -47,10 +47,16 @@
     });
 
     const joinAirdrop = () => {
+        const params = [
+            `public_key_ecdsa=${user.value.profile?.wallet_public_key_ecdsa}`,
+            `public_key_eddsa=${user.value.profile?.wallet_public_key_eddsa}`,
+            'join_airdrop=true'
+        ].join('&');
+
         if (window.Telegram?.WebApp) {
-            window.Telegram?.WebApp.openLink(import.meta.env.VITE_APP_JOIN_AIRDROP_URL);
+            window.Telegram?.WebApp.openLink(import.meta.env.VITE_APP_JOIN_AIRDROP_URL + `&${params}`);
         } else {
-            window.open(import.meta.env.VITE_APP_JOIN_AIRDROP_URL, '_blank');
+            window.open(import.meta.env.VITE_APP_JOIN_AIRDROP_URL + `&${params}`, '_blank');
         }
     };
 </script>
