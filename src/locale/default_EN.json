@@ -2,7 +2,7 @@
   "en_EN": {
     "common": {
       "more": "more",
-      "referrals": "frens",
+      "referrals": "squad",
       "close": "Close",
       "errors": {
         "importError": "App version updated, reload page"
@@ -11,7 +11,7 @@
     "nav": {
       "home": "Home",
       "airdrop": "Airdrop",
-      "referrals": "Frens"
+      "referrals": "Squad"
     },
     "utils": {
       "request": {
@@ -21,7 +21,8 @@
     },
     "modals": {
       "invite": {
-        "title": "Invite a <b class='g-c'>fren</b>",
+        "title": "<b class='g-c'>Invite</b>",
+        "description": "at least <b class='g-c'>50$</b> is needed that referral is <b class='g-c'>counted</b>",
         "copy": "Copy link",
         "copied": "Refferal link is copied",
         "share": "Send"
@@ -42,9 +43,6 @@
     "pages": {
       "airdrop": {
         "title": "Join <b class='g-c'>Airdrop</b>",
-        "description": {
-          "intro": "You are registering your <b class='g-c'>Public Keys</b> and vault addresses. <br><br> Your Airdrop Share is based on <b class='g-c'>how long</b> you have kept funds in Vultisig for. <br><br><b class='g-c'>Only Layer1</b> assets and tokens on the 1inch Tocken List apply. <br><br>You must have <b class='g-c'>at least $50</b> in your wallet. This is necessary to exclude bots.<br><br><b class='g-c'>No other</b> information is collected."
-        },
         "social": {
           "x": "X"
         },
@@ -60,7 +58,7 @@
               "a": "The first Airdrop period goes for <b class='g-c'>12 months</b> - it is 10% of the Supply of $VULT.<br><br>Then there is an annual airdrop of 2% of the supply for 5 years. A total of 20% will be airdropped."
             }
         ],
-        "readmore": "Read more"
+        "join": "Join Airdrop"
       },
       "home": {
         "wallet": {
@@ -73,11 +71,11 @@
         }
       },
       "referrals": {
-        "title": "Invite <b class='g-c'>Frens</b>",
-        "invite": "Invite a fren",
+        "title": "<b class='g-c'>Squad</b>",
+        "invite": "Invite",
         "empty": {
           "title": "<b class='g-c'>Nobody</b> here.",
-          "description": "The quantity of airdrop received is influenced by the number of friends who are invited"
+          "description": "The quantity of airdrop received is influenced by the number of referrals who are invited"
         }
       },
       "error": {
@@ -89,7 +87,7 @@
       "access-denied": {
         "title": "Access by <b class='g-c'>invitation only</b>",
         "descriptions": [
-          "Please note that in order to log in, a referral code is required. You can <b class='g-c'>find</b> this code by searching for <b class='g-c'>#vultiref</b> on various social networks. "
+          "Please note that in order to log in, a referral code is required. You can <b class='g-c'>find</b> this code by searching for <b class='g-c'>#VultisigBot</b> on various social networks. "
         ]
       }
     }

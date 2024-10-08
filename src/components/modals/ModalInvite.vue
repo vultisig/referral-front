@@ -7,6 +7,8 @@
             <span v-html="t('modals.invite.title')"></span>
         </template>
         <template v-slot:content>
+            <div v-html="t('modals.invite.description')" class="description"></div>
+
             <div class="canvas-box">
                 <canvas id="qr-canvas"></canvas>
             </div>
@@ -46,7 +48,7 @@ const share = () => {
     if (window.Telegram?.WebApp) {
         const url = `https://telegram.me/share/url?url=https://t.me/vultirefbot/app?startapp=ref_${
             user.value.profile?.uuid
-        }&text=Join me on VultiRef and let's get an airdrop together`;
+        }&text=Join me on VultisigBot and let's get an airdrop together`;
 
         window.Telegram?.WebApp.openLink(url);
     }
@@ -78,6 +80,16 @@ onMounted(() => {
 </script>
 
 <style lang="scss" scoped>
+
+    .description {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        @include font-b;
+        gap: 4px;
+    }
+
     .canvas-box {
         width: 284px;
         height: 284px;

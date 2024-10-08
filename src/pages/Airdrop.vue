@@ -3,10 +3,6 @@
         <Icon icon="airdrop-secondary"/>
         <h1 v-html="t('pages.airdrop.title')"></h1>
 
-        <label class="description">
-            <span v-html="t('pages.airdrop.description.intro')"></span>
-        </label>
-
         <ul class="spoilers" v-if="data.qa?.length">
             <li v-for="(item, id) in data.qa"
                 :key="id"
@@ -32,9 +28,9 @@
 
         <div class="button-box">
             <Button
-                :name="t('pages.airdrop.readmore')"
+                :name="t('pages.airdrop.join')"
                 class="secondary"
-                @click="openDoc"
+                @click="joinAirdrop"
             />
         </div>
     </div>
@@ -84,11 +80,11 @@
         }
     };
 
-    const openDoc = () => {
+    const joinAirdrop = () => {
         if (window.Telegram?.WebApp) {
-            window.Telegram?.WebApp.openLink(import.meta.env.VITE_APP_DOC_URL);
+            window.Telegram?.WebApp.openLink(import.meta.env.VITE_APP_JOIN_AIRDROP_URL);
         } else {
-            window.open(import.meta.env.VITE_APP_DOC_URL, '_blank');
+            window.open(import.meta.env.VITE_APP_JOIN_AIRDROP_URL, '_blank');
         }
     };
 </script>

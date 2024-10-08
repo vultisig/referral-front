@@ -199,7 +199,7 @@ const upload = async () => {
 
 const install = () => {
     if (window.Telegram?.WebApp) {
-        const url = 'https://vultisig.com/#store-section?source=vultiref';
+        const url = 'https://vultisig.com/#store-section?source=bultisigbot';
 
         window.Telegram?.WebApp.openLink(url);
     }
