@@ -1,6 +1,6 @@
 <template>
     <div class="page-container">
-        <label class="g-c hashtag">#vultiref&nbsp;</label>
+        <label class="g-c hashtag">#VultisigBot&nbsp;</label>
         <EmptyLabel :title="t('pages.access-denied.title')" :description="data.description" />
     </div>
 </template>

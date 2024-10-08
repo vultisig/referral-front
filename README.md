@@ -1,4 +1,4 @@
-# VULTIREF
+# VultisigBot
 
 ## Customize configuration
 
