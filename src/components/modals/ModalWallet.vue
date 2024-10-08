@@ -7,7 +7,6 @@
             <span v-html="t('modals.wallet.title')"></span>
         </template>
         <template v-slot:content>
-            <canvas id="qwe"/>
             <Progress
                 :value="data.value"
                 :title="data.title"
@@ -34,7 +33,7 @@ import { mapActions, mapMutations } from '@/map-state';
 import { delay, message } from '@/utils/utils';
 
 const { t } = useI18n();
-const { updateWallet } = mapActions();
+const { updateWallet, putUserToVAS, getVASUser } = mapActions();
 const { closeModal } = mapMutations();
 
 const data = reactive({
@@ -51,8 +50,16 @@ const data = reactive({
             title: t('modals.wallet.steps.unpacking')
         },
         update: {
-            value: 55,
+            value: 65,
             title: t('modals.wallet.steps.update')
+        },
+        put: {
+            value: 80,
+            title: t('modals.wallet.steps.put')
+        },
+        get: {
+            value: 90,
+            title: t('modals.wallet.steps.get')
         },
         done: {
             value: 100,
@@ -79,14 +86,22 @@ const close = () => {
 
 const update = async(payload) => {
     setStep('update');
-
     await updateWallet(payload);
 
-    await delay(800);
+    await delay(100);
+    setStep('put');
+    await putUserToVAS();
+
+    await delay(100);
+    setStep('get');
+    await getVASUser();
+
+    await delay(200);
     setStep('done');
 
     data.inProcess = false;
     await delay(100);
+
     close();
 };
 

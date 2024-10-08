@@ -13,7 +13,7 @@
             />
 
             <div v-else class="users-list">
-                <span>{{ data.total }} {{ t('common.referrals') }}</span>
+                <span>{{ data.total }} <span v-html="t('pages.referrals.total')"></span></span>
 
                 <ul>
                     <li v-for="item in data.referrals"

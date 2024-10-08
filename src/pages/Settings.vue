@@ -1,29 +1,25 @@
 <template>
     <div class="page-container" v-if="user.profile.id">
-        <Icon icon="airdrop-secondary"/>
-        <h1 v-html="t('pages.airdrop.title')"></h1>
+        <Icon icon="settings-secondary"/>
+        <h1 v-html="t('pages.settings.title')"></h1>
 
-        <ul class="spoilers" v-if="data.qa?.length">
-            <li v-for="(item, id) in data.qa"
-                :key="id"
-                :class="{ opened: item.opened }"
-            >
+        <ul class="params">
+            <li>
                 <button type="button"
-                    @click="item.opened = !item.opened"
+                    @click="openWallet"
                 >
-                    <span v-html="item.q"></span>
+                    <span v-html="user.profile.wallet_public_key_ecdsa ? t('pages.settings.wallet.edit') : t('pages.settings.wallet.add')"></span>
                     <Icon icon="arrow"/>
                 </button>
-                <div v-html="item.a"></div>
             </li>
         </ul>
 
-        <div class="button-box">
+        <div class="social-box">
             <Button
-                :name="t('pages.airdrop.join')"
-                class="secondary"
-                @click="joinAirdrop"
-            />
+                v-for="(item, id) in data.socials" :key="id"
+                class="icon"
+                @click="openSocial(item)"
+            ><Icon :icon="item.icon"/></Button>
         </div>
     </div>
 </template>
@@ -32,25 +28,39 @@
     import { reactive } from 'vue';
     import { useI18n } from 'vue-i18n';
     import Button from '@/components/forms/Button.vue';
-    import { mapState } from '@/map-state';
+    import { mapState, mapMutations } from '@/map-state';
 
-    const { t, tm, rt } = useI18n();
+    const { t } = useI18n();
     const { user } = mapState();
-
-    const qa = tm('pages.airdrop.qa').map(item => ({
-        q: rt(item.q),
-        a: rt(item.a)
-    }));
+    const { openModal } = mapMutations();
 
     const data = reactive({
-        qa: qa || []
+        socials: [
+            {
+                icon: 'x',
+                url: 'https://twitter.com/vultisig'
+            }, {
+                icon: 'discord',
+                url: 'https://discord.gg/54wEtGYxuv'
+            }, {
+                icon: 'telegram',
+                url: 'https://t.me/vultisig'
+            }, {
+                icon: 'github',
+                url: 'https://github.com/Vultisig'
+            }
+        ]
     });
 
-    const joinAirdrop = () => {
+    const openWallet = () => {
+        openModal('wallet');
+    };
+
+    const openSocial = (item) => {
         if (window.Telegram?.WebApp) {
-            window.Telegram?.WebApp.openLink(import.meta.env.VITE_APP_JOIN_AIRDROP_URL);
+            window.Telegram?.WebApp.openLink(item.url);
         } else {
-            window.open(import.meta.env.VITE_APP_JOIN_AIRDROP_URL, '_blank');
+            window.open(item.url, '_blank');
         }
     };
 </script>
@@ -76,17 +86,7 @@
             flex-shrink: 0;
         }
 
-        & > .description {
-            @include font-b;
-            color: $black-2;
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-            flex-shrink: 0;
-            padding: 0 12px;
-        }
-
-        .spoilers {
+        .params {
             list-style: none;
             padding: 0;
             margin: 0;
@@ -125,31 +125,8 @@
                         fill: $white;
                         width: 16px;
                         height: 16px;
-                        transform: rotate(0);
+                        transform: rotate(-90deg);
                         transition: all .4s;
-                    }
-                }
-
-                & > div {
-                    display: none;
-                }
-
-                &.opened {
-                    box-shadow: 0px 0px 1px white;
-                    border-radius: 12px;
-                    & > button {
-                        svg {
-                            transform: rotate(180deg);
-                        }
-                    }
-                    & > div {
-                        display: block;
-                        @include font-b;
-                        color: $white;
-                        padding: 24px 12px;
-                        background: $black;
-                        border-bottom-right-radius: 12px;
-                        border-bottom-left-radius: 12px;
                     }
                 }
             }
@@ -161,22 +138,7 @@
             align-items: center;
             justify-content: center;
             margin-top: auto;
-        }
-
-        .button-box {
-            padding: 12px 0;
-            flex-shrink: 0;
-            position: sticky;
-            bottom: 0;
-            margin-top: auto;
-
-            button {
-                width: 100%;
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                gap: 8px;
-            }
+            margin-bottom: 24px;
         }
     }
 </style>

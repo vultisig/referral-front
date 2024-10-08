@@ -1,8 +1,13 @@
 import { onRequestDefaultError, requests } from '@/utils/requests';
 import { delay } from '@/utils/utils';
+import i18n from '@/i18n';
+import axios from 'axios';
+
+const { t } = i18n.global;
 
 const state = () => ({
     profile: {},
+    vasProfile: {},
     token: null
 });
 
@@ -59,6 +64,38 @@ const actions = {
             onRequestDefaultError(e);
         }
     },
+    async putUserToVAS({ commit }) {
+        try {
+            await this.$http({
+                method: 'POST',
+                url: '/external-api/putUserToVAS',
+                signal: requests.putUserToVAS.signal()
+            });
+
+            return true;
+        } catch (e) {
+            if (e.status === 400) {
+                return true;
+            } else {
+                onRequestDefaultError(e);
+            }
+        }
+    },
+    async getVASUser({ commit }) {
+        try {
+            const result = await this.$http({
+                method: 'GET',
+                url: '/external-api/getVASUser',
+                signal: requests.getVASUser.signal()
+            });
+
+            if (result.status === 200) {
+                commit('setVASProfile', result.data);
+            }
+        } catch (e) {
+            onRequestDefaultError(e);
+        }
+    },
     async me({ commit }) {
         try {
             const result = await this.$http({
@@ -98,6 +135,9 @@ const actions = {
 const getters = {};
 
 const mutations = {
+    setVASProfile(state, payload) {
+        state.vasProfile = payload;
+    },
     setToken(state, payload) {
         state.token = payload;
     },
