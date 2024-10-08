@@ -112,7 +112,7 @@
 <style lang="scss" scoped>
     .page-container {
         gap: 24px;
-        padding: 60px 10px 0;
+        padding: 40px 10px 0;
         overflow: auto;
         @include scrollbar();
         display: flex;

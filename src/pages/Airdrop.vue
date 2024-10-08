@@ -58,7 +58,7 @@
 <style lang="scss" scoped>
     .page-container {
         gap: 14px;
-        padding: 60px 10px 0;
+        padding: 40px 10px 0;
 
         & > svg {
             width: 90px;
