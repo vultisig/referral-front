@@ -85,6 +85,7 @@ div {
         top: 50%;
         left: 50%;
         transform: translateX(-50%) translateY(-50%);
+        text-align: center;
     }
 }
 </style>

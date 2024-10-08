@@ -3,30 +3,75 @@
         <Avatar :name="user.profile.first_name" class="big"/>
         <h1>{{ user.profile.username }}</h1>
 
+
         <template v-if="!user.profile.wallet_public_key_ecdsa">
             <EmptyLabel
                 :title="t('pages.home.wallet.empty.title')"
                 :description="t('pages.home.wallet.empty.description')" />
-        </template>
 
-        <img class="home-img" :src="emptyImg" />
+            <img class="home-img" :src="emptyImg" />
 
-        <template v-if="user.profile.wallet_public_key_ecdsa">
-            <div class="description">
-                <b class="g-c">ECDSA Key:</b>
-                <span>{{ user.profile.wallet_public_key_ecdsa }}</span><br>
-                <b class="g-c">EdDSA Key:</b>
-                <span>{{ user.profile.wallet_public_key_eddsa }}</span>
+            <div class="button-box">
+                <Button
+                    :name="t('pages.home.wallet.add')"
+                    class="secondary"
+                    @click="openWallet"
+                />
             </div>
         </template>
+        <template v-else>
+            <ul class="stats">
 
-        <div class="button-box">
-            <Button
-                :name="user.profile.wallet_public_key_ecdsa ? t('pages.home.wallet.edit') : t('pages.home.wallet.add')"
-                class="secondary"
-                @click="openWallet"
-            />
-        </div>
+                <li>
+                    <Icon icon="referrals-secondary"/>
+                    <div>
+                        <span v-html="t('pages.home.stats.refferals')"></span>
+                        <span>{{ user.profile.referrals_count }}</span>
+                    </div>
+                </li>
+                <template v-if="user.vasProfile?.uid">
+                    <li>
+                        <Icon icon="wallet"/>
+                        <div>
+                            <span v-html="t('pages.home.stats.name')"></span>
+                            <span>{{ user.vasProfile.name }}</span>
+                        </div>
+                    </li>
+                    <li>
+                        <Icon icon="flag"/>
+                        <div>
+                            <span v-html="t('pages.home.stats.joined.title')"></span>
+                            <span>{{ user.vasProfile.join_airdrop ? t('pages.home.stats.joined.yes') : t('pages.home.stats.joined.no') }}</span>
+                        </div>
+                    </li>
+
+                    <template v-if="user.vasProfile?.join_airdrop">
+                        <li>
+                            <Icon icon="rank"/>
+                            <div>
+                                <span v-html="t('pages.home.stats.rank')"></span>
+                                <span>#{{ user.vasProfile.rank }}</span>
+                            </div>
+                        </li>
+                        <li>
+                            <Icon icon="coin"/>
+                            <div>
+                                <span v-html="t('pages.home.stats.farmed.title')"></span>
+                                <span>{{ user.vasProfile.total_points }} {{ t('pages.home.stats.farmed.points') }}</span>
+                            </div>
+                        </li>
+                    </template>
+                </template>
+            </ul>
+
+            <div class="button-box">
+                <Button
+                    :name="t('pages.home.wallet.view')"
+                    class="secondary"
+                    @click="viewWallet"
+                />
+            </div>
+        </template>
     </div>
 </template>
 
@@ -46,6 +91,14 @@
         const path = `/img/problems.svg`;
         return new URL(path, import.meta.url).href;
     });
+    
+    const viewWallet = () => {
+        if (window.Telegram?.WebApp) {
+            window.Telegram?.WebApp.openLink(import.meta.env.VITE_APP_JOIN_AIRDROP_URL);
+        } else {
+            window.open(import.meta.env.VITE_APP_JOIN_AIRDROP_URL, '_blank');
+        }
+    };
 
     const openWallet = () => {
         openModal('wallet');
@@ -90,6 +143,83 @@
                 white-space: normal;
                 max-width: 100%;
                 word-wrap: break-word;
+            }
+        }
+
+        .stats {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+            margin: auto;
+            gap: 8px;
+            width: 100%;
+
+            li {
+                display: flex;
+                flex: 1 1 100%;
+                flex-direction: row;
+                gap: 16px;
+                @include font-b;
+                width: 100%;
+                background: $black-1;
+                border-radius: 12px;
+                padding: 16px 16px;
+                align-items: center;
+                
+                border-top-right-radius: 24px;
+                border-top-left-radius: 0;
+                border-bottom-right-radius: 0;
+                border-bottom-left-radius: 24px;
+
+                &:nth-child(2n) {
+                    flex-direction: row-reverse;
+                    border-top-left-radius: 24px;
+                    border-top-right-radius: 0;
+                    border-bottom-left-radius: 0;
+                    border-bottom-right-radius: 24px;
+                    svg {
+                        margin-left: auto;
+                        margin-right: 0;
+                    }
+                    div {
+                        align-items: start;
+                    }
+                }
+
+                svg {
+                    width: 32px;
+                    height: 32px;
+                    margin-right: auto;
+                    animation: stat-svg infinite 6s;
+                }
+
+                @keyframes stat-svg {
+                    0% {
+                        transform: scale(1);
+                    }
+                    50% {
+                        transform: scale(.9);
+                    }
+                    100% {
+                        transform: scale(1);
+                    }
+                }
+
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 4px;
+                    align-items: end;
+                    span {
+                        &:nth-child(1) {
+                        }
+                        &:nth-child(2) {
+                            @include font-h3;
+                            line-height: 16px;
+                        }
+                    }
+                }
             }
         }
 

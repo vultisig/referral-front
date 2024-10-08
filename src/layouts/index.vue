@@ -27,7 +27,7 @@ import { initTg } from '@/utils/tg';
 
 const { theme, user } = mapState();
 const { openModal, closeModal, setReady } = mapMutations();
-const { login, getSettings } = mapActions();
+const { login, getSettings, getVASUser, putUserToVAS } = mapActions();
 
 const ready = async () => {
     // Login
@@ -41,6 +41,20 @@ const ready = async () => {
             router.push({ name: 'error' });
         }
         return;
+    }
+
+    // Get Wallet info
+    if (user.value?.profile?.wallet_public_key_ecdsa && user.value?.profile?.wallet_public_key_eddsa) {
+        await getVASUser();
+
+        if (!user.value?.vasProfile?.uid) {
+            const payload = await putUserToVAS();
+
+            if (payload) {
+                // Reload VAS USER
+                await getVASUser();
+            }
+        }
     }
 
     // End we are ready

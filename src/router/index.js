@@ -37,6 +37,12 @@ const routes = [
         abort: []
     },
     {
+        path: '/settings',
+        name: 'settings',
+        component: () => import('../pages/Settings.vue'),
+        abort: []
+    },
+    {
         path: '/error',
         name: 'error',
         component: () => import('../pages/Error.vue'),

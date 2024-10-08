@@ -1,6 +1,9 @@
 {
   "en_EN": {
     "common": {
+      "wallet": {
+        "defaultName": "'s wallet",
+      },
       "more": "more",
       "referrals": "squad",
       "close": "Close",
@@ -11,7 +14,8 @@
     "nav": {
       "home": "Home",
       "airdrop": "Airdrop",
-      "referrals": "Squad"
+      "referrals": "Squad",
+      "settings": "Settings"
     },
     "utils": {
       "request": {
@@ -36,11 +40,20 @@
           "intro": "Upload QR",
           "unpacking": "Unpacking...",
           "update": "Update",
+          "put": "Registration on <b class='g-c'>web.vultisig.com</b>",
+          "get": "Login on <b class='g-c'>web.vultisig.com</b>",
           "done": "Done!"
         }
       }
     },
     "pages": {
+      "settings": {
+        "title": "<b class='g-c'>Settings</b>",
+        "wallet": {
+          "add": "Add <b class='g-c'>Wallet</b>",
+          "edit": "Change <b class='g-c'>Wallet</b>"
+        }
+      },
       "airdrop": {
         "title": "Join <b class='g-c'>Airdrop</b>",
         "social": {
@@ -61,7 +74,22 @@
         "join": "Join Airdrop"
       },
       "home": {
+        "stats": {
+          "name": "<b class='g-c'>Wallet</b> name",
+          "refferals": "<b class='g-c'>Referrals</b> in your squad",
+          "joined": {
+            "title": "<b class='g-c'>Joined</b> the airdrop",
+            "yes": "Yes",
+            "no": "No"
+          },
+          "rank": "Your <b class='g-c'>position</b>",
+          "farmed": {
+            "title": "<b class='g-c'>Farmed</b>",
+            "points": "points"
+          }
+        },
         "wallet": {
+          "view": "View Wallet",
           "add": "Add Wallet",
           "edit": "Change Wallet",
           "empty": {
@@ -71,6 +99,7 @@
         }
       },
       "referrals": {
+        "total": "refferals in <b class='g-c'>your squad</b>",
         "title": "<b class='g-c'>Squad</b>",
         "invite": "Invite",
         "empty": {

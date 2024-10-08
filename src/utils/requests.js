@@ -57,6 +57,14 @@ export const requests = {
     referrals: {
         signal: () => signal('referrals'),
         abort: () => abort('referrals')
+    },
+    getVASUser: {
+        signal: () => signal('getVASUser'),
+        abort: () => abort('getVASUser')
+    },
+    putUserToVAS: {
+        signal: () => signal('putUserToVAS'),
+        abort: () => abort('putUserToVAS')
     }
 };
 

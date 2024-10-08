@@ -34,6 +34,10 @@ const data = reactive({
         icon: 'airdrop',
         link: '/airdrop',
         name: t('nav.airdrop')
+    }, {
+        icon: 'settings',
+        link: '/settings',
+        name: t('nav.settings')
     }]
 });
 </script>
