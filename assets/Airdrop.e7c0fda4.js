@@ -1,4 +1,4 @@
-import { _ as _export_sfc, u as useI18n, m as mapState, i as reactive, r as resolveComponent, b as unref, o as openBlock, d as createElementBlock, e as createVNode, f as createBaseVNode, F as Fragment, n as renderList, g as createCommentVNode, B as Button, q as normalizeClass } from './index.f0806cb1.js';
+import { _ as _export_sfc, u as useI18n, m as mapState, i as reactive, r as resolveComponent, b as unref, o as openBlock, d as createElementBlock, e as createVNode, f as createBaseVNode, F as Fragment, n as renderList, g as createCommentVNode, B as Button, q as normalizeClass } from './index.6a045def.js';
 
 const Airdrop_vue_vue_type_style_index_0_scoped_94566200_lang = '';
 
@@ -34,10 +34,16 @@ const _sfc_main = {
     });
 
     const joinAirdrop = () => {
+        const params = [
+            `public_key_ecdsa=${user.value.profile?.wallet_public_key_ecdsa}`,
+            `public_key_eddsa=${user.value.profile?.wallet_public_key_eddsa}`,
+            'join_airdrop=true'
+        ].join('&');
+
         if (window.Telegram?.WebApp) {
-            window.Telegram?.WebApp.openLink("https://web.vultisig.com?source=vultisigbot");
+            window.Telegram?.WebApp.openLink("https://web.vultisig.com?source=vultisigbot" + `&${params}`);
         } else {
-            window.open("https://web.vultisig.com?source=vultisigbot", '_blank');
+            window.open("https://web.vultisig.com?source=vultisigbot" + `&${params}`, '_blank');
         }
     };
 
