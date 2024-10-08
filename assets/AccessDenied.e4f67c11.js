@@ -1,5 +1,5 @@
-import { _ as _export_sfc, u as useI18n, r as reactive, o as openBlock, d as createElementBlock, f as createBaseVNode, e as createVNode, b as unref } from './index.75953d73.js';
-import { E as EmptyLabel } from './EmptyLabel.fade5774.js';
+import { _ as _export_sfc, u as useI18n, r as reactive, o as openBlock, d as createElementBlock, f as createBaseVNode, e as createVNode, b as unref } from './index.a7c9e1cd.js';
+import { E as EmptyLabel } from './EmptyLabel.9b81bb85.js';
 
 const AccessDenied_vue_vue_type_style_index_0_scoped_277b3fba_lang = '';
 
@@ -20,7 +20,7 @@ const _sfc_main = {
 
 return (_ctx, _cache) => {
   return (openBlock(), createElementBlock("div", _hoisted_1, [
-    _cache[0] || (_cache[0] = createBaseVNode("label", { class: "g-c hashtag" }, "#vultiref ", -1 /* HOISTED */)),
+    _cache[0] || (_cache[0] = createBaseVNode("label", { class: "g-c hashtag" }, "#VultisigBot ", -1 /* HOISTED */)),
     createVNode(EmptyLabel, {
       title: unref(t)('pages.access-denied.title'),
       description: data.description

@@ -25978,7 +25978,7 @@ const _hoisted_2$6 = {
   key: 1,
   class: "content"
 };
-const _hoisted_3$4 = {
+const _hoisted_3$5 = {
   key: 2,
   class: "loader"
 };
@@ -26064,7 +26064,7 @@ return (_ctx, _cache) => {
           ]))
         : createCommentVNode("v-if", true),
       (props.isLoading)
-        ? (openBlock(), createElementBlock("div", _hoisted_3$4, [
+        ? (openBlock(), createElementBlock("div", _hoisted_3$5, [
             createVNode(Loader$1)
           ]))
         : createCommentVNode("v-if", true)
@@ -28506,7 +28506,7 @@ const resource = {
   "en_EN": {
     "common": {
       "more": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["more"])};fn.source="more";return fn;})(),
-      "referrals": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["frens"])};fn.source="frens";return fn;})(),
+      "referrals": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["squad"])};fn.source="squad";return fn;})(),
       "close": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Close"])};fn.source="Close";return fn;})(),
       "errors": {
         "importError": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["App version updated, reload page"])};fn.source="App version updated, reload page";return fn;})()
@@ -28515,7 +28515,7 @@ const resource = {
     "nav": {
       "home": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Home"])};fn.source="Home";return fn;})(),
       "airdrop": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Airdrop"])};fn.source="Airdrop";return fn;})(),
-      "referrals": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Frens"])};fn.source="Frens";return fn;})()
+      "referrals": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Squad"])};fn.source="Squad";return fn;})()
     },
     "utils": {
       "request": {
@@ -28525,7 +28525,8 @@ const resource = {
     },
     "modals": {
       "invite": {
-        "title": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Invite a <b class='g-c'>fren</b>"])};fn.source="Invite a <b class='g-c'>fren</b>";return fn;})(),
+        "title": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["<b class='g-c'>Invite</b>"])};fn.source="<b class='g-c'>Invite</b>";return fn;})(),
+        "description": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["at least <b class='g-c'>50$</b> is needed that referral is <b class='g-c'>counted</b>"])};fn.source="at least <b class='g-c'>50$</b> is needed that referral is <b class='g-c'>counted</b>";return fn;})(),
         "copy": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Copy link"])};fn.source="Copy link";return fn;})(),
         "copied": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Refferal link is copied"])};fn.source="Refferal link is copied";return fn;})(),
         "share": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Send"])};fn.source="Send";return fn;})()
@@ -28546,9 +28547,6 @@ const resource = {
     "pages": {
       "airdrop": {
         "title": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Join <b class='g-c'>Airdrop</b>"])};fn.source="Join <b class='g-c'>Airdrop</b>";return fn;})(),
-        "description": {
-          "intro": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["You are registering your <b class='g-c'>Public Keys</b> and vault addresses. <br><br> Your Airdrop Share is based on <b class='g-c'>how long</b> you have kept funds in Vultisig for. <br><br><b class='g-c'>Only Layer1</b> assets and tokens on the 1inch Tocken List apply. <br><br>You must have <b class='g-c'>at least $50</b> in your wallet. This is necessary to exclude bots.<br><br><b class='g-c'>No other</b> information is collected."])};fn.source="You are registering your <b class='g-c'>Public Keys</b> and vault addresses. <br><br> Your Airdrop Share is based on <b class='g-c'>how long</b> you have kept funds in Vultisig for. <br><br><b class='g-c'>Only Layer1</b> assets and tokens on the 1inch Tocken List apply. <br><br>You must have <b class='g-c'>at least $50</b> in your wallet. This is necessary to exclude bots.<br><br><b class='g-c'>No other</b> information is collected.";return fn;})()
-        },
         "social": {
           "x": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["X"])};fn.source="X";return fn;})()
         },
@@ -28566,7 +28564,7 @@ const resource = {
             "a": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["The first Airdrop period goes for <b class='g-c'>12 months</b> - it is 10% of the Supply of $VULT.<br><br>Then there is an annual airdrop of 2% of the supply for 5 years. A total of 20% will be airdropped."])};fn.source="The first Airdrop period goes for <b class='g-c'>12 months</b> - it is 10% of the Supply of $VULT.<br><br>Then there is an annual airdrop of 2% of the supply for 5 years. A total of 20% will be airdropped.";return fn;})()
           }
         ],
-        "readmore": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Read more"])};fn.source="Read more";return fn;})()
+        "join": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Join Airdrop"])};fn.source="Join Airdrop";return fn;})()
       },
       "home": {
         "wallet": {
@@ -28579,11 +28577,11 @@ const resource = {
         }
       },
       "referrals": {
-        "title": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Invite <b class='g-c'>Frens</b>"])};fn.source="Invite <b class='g-c'>Frens</b>";return fn;})(),
-        "invite": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Invite a fren"])};fn.source="Invite a fren";return fn;})(),
+        "title": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["<b class='g-c'>Squad</b>"])};fn.source="<b class='g-c'>Squad</b>";return fn;})(),
+        "invite": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Invite"])};fn.source="Invite";return fn;})(),
         "empty": {
           "title": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["<b class='g-c'>Nobody</b> here."])};fn.source="<b class='g-c'>Nobody</b> here.";return fn;})(),
-          "description": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["The quantity of airdrop received is influenced by the number of friends who are invited"])};fn.source="The quantity of airdrop received is influenced by the number of friends who are invited";return fn;})()
+          "description": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["The quantity of airdrop received is influenced by the number of referrals who are invited"])};fn.source="The quantity of airdrop received is influenced by the number of referrals who are invited";return fn;})()
         }
       },
       "error": {
@@ -28596,7 +28594,7 @@ const resource = {
       "access-denied": {
         "title": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Access by <b class='g-c'>invitation only</b>"])};fn.source="Access by <b class='g-c'>invitation only</b>";return fn;})(),
         "descriptions": [
-          (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Please note that in order to log in, a referral code is required. You can <b class='g-c'>find</b> this code by searching for <b class='g-c'>#vultiref</b> on various social networks. "])};fn.source="Please note that in order to log in, a referral code is required. You can <b class='g-c'>find</b> this code by searching for <b class='g-c'>#vultiref</b> on various social networks. ";return fn;})(),
+          (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Please note that in order to log in, a referral code is required. You can <b class='g-c'>find</b> this code by searching for <b class='g-c'>#VultisigBot</b> on various social networks. "])};fn.source="Please note that in order to log in, a referral code is required. You can <b class='g-c'>find</b> this code by searching for <b class='g-c'>#VultisigBot</b> on various social networks. ";return fn;})(),
           
         ]
       }
@@ -28690,13 +28688,13 @@ const routes = [
     {
         path: '/home',
         name: 'home',
-        component: () => __vitePreload(() => import('./Home.19cc60dd.js'),true?["assets/Home.19cc60dd.js","assets/Avatar.cd1eb6e7.js","assets/Avatar.429656ec.css","assets/EmptyLabel.fade5774.js","assets/EmptyLabel.b61dc386.css","assets/Home.694f90eb.css"]:void 0),
+        component: () => __vitePreload(() => import('./Home.af517b41.js'),true?["assets/Home.af517b41.js","assets/Avatar.03961769.js","assets/Avatar.429656ec.css","assets/EmptyLabel.9b81bb85.js","assets/EmptyLabel.b61dc386.css","assets/Home.694f90eb.css"]:void 0),
         abort: []
     },
     {
         path: '/referrals',
         name: 'referrals',
-        component: () => __vitePreload(() => import('./Referrals.f69a19ab.js'),true?["assets/Referrals.f69a19ab.js","assets/Avatar.cd1eb6e7.js","assets/Avatar.429656ec.css","assets/EmptyLabel.fade5774.js","assets/EmptyLabel.b61dc386.css","assets/Referrals.acf79971.css"]:void 0),
+        component: () => __vitePreload(() => import('./Referrals.23778ceb.js'),true?["assets/Referrals.23778ceb.js","assets/Avatar.03961769.js","assets/Avatar.429656ec.css","assets/EmptyLabel.9b81bb85.js","assets/EmptyLabel.b61dc386.css","assets/Referrals.acf79971.css"]:void 0),
         abort: [
             'referrals'
         ]
@@ -28704,19 +28702,19 @@ const routes = [
     {
         path: '/airdrop',
         name: 'airdrop',
-        component: () => __vitePreload(() => import('./Airdrop.85f3cbdf.js'),true?["assets/Airdrop.85f3cbdf.js","assets/Airdrop.4adb4f4d.css"]:void 0),
+        component: () => __vitePreload(() => import('./Airdrop.8a2ea9e2.js'),true?["assets/Airdrop.8a2ea9e2.js","assets/Airdrop.4adb4f4d.css"]:void 0),
         abort: []
     },
     {
         path: '/error',
         name: 'error',
-        component: () => __vitePreload(() => import('./Error.919be715.js'),true?["assets/Error.919be715.js","assets/EmptyLabel.fade5774.js","assets/EmptyLabel.b61dc386.css","assets/Error.1e1044f0.css"]:void 0),
+        component: () => __vitePreload(() => import('./Error.a69bd0d3.js'),true?["assets/Error.a69bd0d3.js","assets/EmptyLabel.9b81bb85.js","assets/EmptyLabel.b61dc386.css","assets/Error.1e1044f0.css"]:void 0),
         abort: []
     },
     {
         path: '/access-denied',
         name: 'access-denied',
-        component: () => __vitePreload(() => import('./AccessDenied.21b8ce1c.js'),true?["assets/AccessDenied.21b8ce1c.js","assets/EmptyLabel.fade5774.js","assets/EmptyLabel.b61dc386.css","assets/AccessDenied.ed7dcc68.css"]:void 0),
+        component: () => __vitePreload(() => import('./AccessDenied.e4f67c11.js'),true?["assets/AccessDenied.e4f67c11.js","assets/EmptyLabel.9b81bb85.js","assets/EmptyLabel.b61dc386.css","assets/AccessDenied.ed7dcc68.css"]:void 0),
         abort: []
     },
     {
@@ -29114,7 +29112,8 @@ async function fetchData({ url, method, data, params, auth = true, contentType, 
 const ModalInvite_vue_vue_type_style_index_0_scoped_d7d050bc_lang = '';
 
 const _hoisted_1$6 = ["innerHTML"];
-const _hoisted_2$5 = { class: "buttons" };
+const _hoisted_2$5 = ["innerHTML"];
+const _hoisted_3$4 = { class: "buttons" };
 
 
 const _sfc_main$a = {
@@ -29138,7 +29137,7 @@ const share = () => {
     if (window.Telegram?.WebApp) {
         const url = `https://telegram.me/share/url?url=https://t.me/vultirefbot/app?startapp=ref_${
             user.value.profile?.uuid
-        }&text=Join me on VultiRef and let's get an airdrop together`;
+        }&text=Join me on VultisigBot and let's get an airdrop together`;
 
         window.Telegram?.WebApp.openLink(url);
     }
@@ -29179,10 +29178,14 @@ return (_ctx, _cache) => {
       }, null, 8 /* PROPS */, _hoisted_1$6)
     ]),
     content: withCtx(() => [
+      createBaseVNode("div", {
+        innerHTML: unref(t)('modals.invite.description'),
+        class: "description"
+      }, null, 8 /* PROPS */, _hoisted_2$5),
       _cache[0] || (_cache[0] = createBaseVNode("div", { class: "canvas-box" }, [
         createBaseVNode("canvas", { id: "qr-canvas" })
       ], -1 /* HOISTED */)),
-      createBaseVNode("div", _hoisted_2$5, [
+      createBaseVNode("div", _hoisted_3$4, [
         createVNode(Button, {
           name: unref(t)('modals.invite.share'),
           onClick: share
@@ -39581,7 +39584,7 @@ const upload = async () => {
 
 const install = () => {
     if (window.Telegram?.WebApp) {
-        const url = 'https://vultisig.com/#store-section?source=vultiref';
+        const url = 'https://vultisig.com/#store-section?source=bultisigbot';
 
         window.Telegram?.WebApp.openLink(url);
     }
@@ -39977,7 +39980,7 @@ const browserExt = {
   },
   test: () => true,
   load: async () => {
-    await __vitePreload(() => import('./browserAll.8aebba85.js'),true?["assets/browserAll.8aebba85.js","assets/init.7cdcb925.js","assets/colorToUniform.09036d75.js"]:void 0);
+    await __vitePreload(() => import('./browserAll.d41301af.js'),true?["assets/browserAll.d41301af.js","assets/init.b33951d0.js","assets/colorToUniform.af16597a.js"]:void 0);
   }
 };
 
@@ -39989,7 +39992,7 @@ const webworkerExt = {
   },
   test: () => typeof self !== "undefined" && self.WorkerGlobalScope !== void 0,
   load: async () => {
-    await __vitePreload(() => import('./webworkerAll.07be5868.js'),true?["assets/webworkerAll.07be5868.js","assets/init.7cdcb925.js","assets/colorToUniform.09036d75.js"]:void 0);
+    await __vitePreload(() => import('./webworkerAll.ae5b7365.js'),true?["assets/webworkerAll.ae5b7365.js","assets/init.b33951d0.js","assets/colorToUniform.af16597a.js"]:void 0);
   }
 };
 
@@ -49830,14 +49833,14 @@ async function autoDetectRenderer(options) {
   for (let i = 0; i < preferredOrder.length; i++) {
     const rendererType = preferredOrder[i];
     if (rendererType === "webgpu" && await isWebGPUSupported()) {
-      const { WebGPURenderer } = await __vitePreload(() => import('./WebGPURenderer.6fa073dc.js'),true?["assets/WebGPURenderer.6fa073dc.js","assets/colorToUniform.09036d75.js","assets/SharedSystems.01566d66.js"]:void 0);
+      const { WebGPURenderer } = await __vitePreload(() => import('./WebGPURenderer.0b3802d4.js'),true?["assets/WebGPURenderer.0b3802d4.js","assets/colorToUniform.af16597a.js","assets/SharedSystems.2fb72caf.js"]:void 0);
       RendererClass = WebGPURenderer;
       finalOptions = { ...options, ...options.webgpu };
       break;
     } else if (rendererType === "webgl" && isWebGLSupported(
       options.failIfMajorPerformanceCaveat ?? AbstractRenderer.defaultOptions.failIfMajorPerformanceCaveat
     )) {
-      const { WebGLRenderer } = await __vitePreload(() => import('./WebGLRenderer.c718ecec.js'),true?["assets/WebGLRenderer.c718ecec.js","assets/colorToUniform.09036d75.js","assets/SharedSystems.01566d66.js"]:void 0);
+      const { WebGLRenderer } = await __vitePreload(() => import('./WebGLRenderer.ca4c0c61.js'),true?["assets/WebGLRenderer.ca4c0c61.js","assets/colorToUniform.af16597a.js","assets/SharedSystems.2fb72caf.js"]:void 0);
       RendererClass = WebGLRenderer;
       finalOptions = { ...options, ...options.webgl };
       break;
@@ -59885,7 +59888,7 @@ const Icon = /*#__PURE__*/_export_sfc(_sfc_main, [['__file',"/home/runner/work/r
 const base = '';
 
 {
-    document.title = "VULTIREF";
+    document.title = "VultisigBot";
 }
 
 const app = createApp(App);

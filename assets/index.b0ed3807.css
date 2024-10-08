@@ -521,7 +521,19 @@ ul.light li svg[data-v-d610e656] {
     background-position-y: 100%;
     background-size: 82%;
 }
-}.canvas-box[data-v-d7d050bc] {
+}.description[data-v-d7d050bc] {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  gap: 4px;
+}
+.canvas-box[data-v-d7d050bc] {
   width: 284px;
   height: 284px;
   margin: 0 auto;
