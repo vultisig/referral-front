@@ -1,6 +1,6 @@
-import { _ as _export_sfc, u as useI18n, m as mapState, a as mapMutations, i as mapActions, r as reactive, w as watch, j as onMounted, k as resolveComponent, o as openBlock, g as createBlock, b as unref, d as createElementBlock, f as createBaseVNode, e as createVNode, t as toDisplayString, F as Fragment, l as renderList, B as Button, h as createCommentVNode, n as delay, L as Loader } from './index.a7c9e1cd.js';
-import { A as Avatar } from './Avatar.03961769.js';
-import { E as EmptyLabel } from './EmptyLabel.9b81bb85.js';
+import { _ as _export_sfc, u as useI18n, m as mapState, a as mapMutations, h as mapActions, i as reactive, w as watch, j as onMounted, r as resolveComponent, o as openBlock, k as createBlock, b as unref, d as createElementBlock, f as createBaseVNode, e as createVNode, l as createTextVNode, t as toDisplayString, F as Fragment, n as renderList, B as Button, g as createCommentVNode, p as delay, L as Loader } from './index.f0806cb1.js';
+import { A as Avatar } from './Avatar.49bbc08a.js';
+import { E as EmptyLabel } from './EmptyLabel.0966b3e9.js';
 
 const Referrals_vue_vue_type_style_index_0_scoped_c8e84f31_lang = '';
 
@@ -10,7 +10,8 @@ const _hoisted_3 = {
   key: 1,
   class: "users-list"
 };
-const _hoisted_4 = { class: "invite-box" };
+const _hoisted_4 = ["innerHTML"];
+const _hoisted_5 = { class: "invite-box" };
 
     
 const _sfc_main = {
@@ -95,7 +96,12 @@ return (_ctx, _cache) => {
                   class: "emty"
                 }, null, 8 /* PROPS */, ["title", "description"]))
               : (openBlock(), createElementBlock("div", _hoisted_3, [
-                  createBaseVNode("span", null, toDisplayString(data.total) + " " + toDisplayString(unref(t)('common.referrals')), 1 /* TEXT */),
+                  createBaseVNode("span", null, [
+                    createTextVNode(toDisplayString(data.total) + " ", 1 /* TEXT */),
+                    createBaseVNode("span", {
+                      innerHTML: unref(t)('pages.referrals.total')
+                    }, null, 8 /* PROPS */, _hoisted_4)
+                  ]),
                   createBaseVNode("ul", null, [
                     (openBlock(true), createElementBlock(Fragment, null, renderList(data.referrals, (item) => {
                       return (openBlock(), createElementBlock("li", {
@@ -135,7 +141,7 @@ return (_ctx, _cache) => {
                     : createCommentVNode("v-if", true)
                 ]))
           ]),
-          createBaseVNode("div", _hoisted_4, [
+          createBaseVNode("div", _hoisted_5, [
             createVNode(Button, {
               name: unref(t)('pages.referrals.invite'),
               onClick: invite

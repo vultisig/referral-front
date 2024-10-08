@@ -28505,6 +28505,9 @@ function v4(options, buf, offset) {
 const resource = {
   "en_EN": {
     "common": {
+      "wallet": {
+        "defaultName": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["'s wallet"])};fn.source="'s wallet";return fn;})()
+      },
       "more": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["more"])};fn.source="more";return fn;})(),
       "referrals": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["squad"])};fn.source="squad";return fn;})(),
       "close": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Close"])};fn.source="Close";return fn;})(),
@@ -28515,7 +28518,8 @@ const resource = {
     "nav": {
       "home": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Home"])};fn.source="Home";return fn;})(),
       "airdrop": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Airdrop"])};fn.source="Airdrop";return fn;})(),
-      "referrals": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Squad"])};fn.source="Squad";return fn;})()
+      "referrals": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Squad"])};fn.source="Squad";return fn;})(),
+      "settings": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Settings"])};fn.source="Settings";return fn;})()
     },
     "utils": {
       "request": {
@@ -28540,11 +28544,20 @@ const resource = {
           "intro": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Upload QR"])};fn.source="Upload QR";return fn;})(),
           "unpacking": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Unpacking..."])};fn.source="Unpacking...";return fn;})(),
           "update": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Update"])};fn.source="Update";return fn;})(),
+          "put": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Registration on <b class='g-c'>web.vultisig.com</b>"])};fn.source="Registration on <b class='g-c'>web.vultisig.com</b>";return fn;})(),
+          "get": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Login on <b class='g-c'>web.vultisig.com</b>"])};fn.source="Login on <b class='g-c'>web.vultisig.com</b>";return fn;})(),
           "done": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Done!"])};fn.source="Done!";return fn;})()
         }
       }
     },
     "pages": {
+      "settings": {
+        "title": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["<b class='g-c'>Settings</b>"])};fn.source="<b class='g-c'>Settings</b>";return fn;})(),
+        "wallet": {
+          "add": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Add <b class='g-c'>Wallet</b>"])};fn.source="Add <b class='g-c'>Wallet</b>";return fn;})(),
+          "edit": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Change <b class='g-c'>Wallet</b>"])};fn.source="Change <b class='g-c'>Wallet</b>";return fn;})()
+        }
+      },
       "airdrop": {
         "title": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Join <b class='g-c'>Airdrop</b>"])};fn.source="Join <b class='g-c'>Airdrop</b>";return fn;})(),
         "social": {
@@ -28567,7 +28580,22 @@ const resource = {
         "join": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Join Airdrop"])};fn.source="Join Airdrop";return fn;})()
       },
       "home": {
+        "stats": {
+          "name": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["<b class='g-c'>Wallet</b> name"])};fn.source="<b class='g-c'>Wallet</b> name";return fn;})(),
+          "refferals": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["<b class='g-c'>Referrals</b> in your squad"])};fn.source="<b class='g-c'>Referrals</b> in your squad";return fn;})(),
+          "joined": {
+            "title": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["<b class='g-c'>Joined</b> the airdrop"])};fn.source="<b class='g-c'>Joined</b> the airdrop";return fn;})(),
+            "yes": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Yes"])};fn.source="Yes";return fn;})(),
+            "no": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["No"])};fn.source="No";return fn;})()
+          },
+          "rank": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Your <b class='g-c'>position</b>"])};fn.source="Your <b class='g-c'>position</b>";return fn;})(),
+          "farmed": {
+            "title": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["<b class='g-c'>Farmed</b>"])};fn.source="<b class='g-c'>Farmed</b>";return fn;})(),
+            "points": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["points"])};fn.source="points";return fn;})()
+          }
+        },
         "wallet": {
+          "view": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["View Wallet"])};fn.source="View Wallet";return fn;})(),
           "add": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Add Wallet"])};fn.source="Add Wallet";return fn;})(),
           "edit": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Change Wallet"])};fn.source="Change Wallet";return fn;})(),
           "empty": {
@@ -28577,6 +28605,7 @@ const resource = {
         }
       },
       "referrals": {
+        "total": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["refferals in <b class='g-c'>your squad</b>"])};fn.source="refferals in <b class='g-c'>your squad</b>";return fn;})(),
         "title": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["<b class='g-c'>Squad</b>"])};fn.source="<b class='g-c'>Squad</b>";return fn;})(),
         "invite": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Invite"])};fn.source="Invite";return fn;})(),
         "empty": {
@@ -28688,13 +28717,13 @@ const routes = [
     {
         path: '/home',
         name: 'home',
-        component: () => __vitePreload(() => import('./Home.af517b41.js'),true?["assets/Home.af517b41.js","assets/Avatar.03961769.js","assets/Avatar.429656ec.css","assets/EmptyLabel.9b81bb85.js","assets/EmptyLabel.b61dc386.css","assets/Home.694f90eb.css"]:void 0),
+        component: () => __vitePreload(() => import('./Home.1c9da118.js'),true?["assets/Home.1c9da118.js","assets/Avatar.49bbc08a.js","assets/Avatar.429656ec.css","assets/EmptyLabel.0966b3e9.js","assets/EmptyLabel.b61dc386.css","assets/Home.e20363e1.css"]:void 0),
         abort: []
     },
     {
         path: '/referrals',
         name: 'referrals',
-        component: () => __vitePreload(() => import('./Referrals.23778ceb.js'),true?["assets/Referrals.23778ceb.js","assets/Avatar.03961769.js","assets/Avatar.429656ec.css","assets/EmptyLabel.9b81bb85.js","assets/EmptyLabel.b61dc386.css","assets/Referrals.acf79971.css"]:void 0),
+        component: () => __vitePreload(() => import('./Referrals.3b262bbc.js'),true?["assets/Referrals.3b262bbc.js","assets/Avatar.49bbc08a.js","assets/Avatar.429656ec.css","assets/EmptyLabel.0966b3e9.js","assets/EmptyLabel.b61dc386.css","assets/Referrals.acf79971.css"]:void 0),
         abort: [
             'referrals'
         ]
@@ -28702,19 +28731,25 @@ const routes = [
     {
         path: '/airdrop',
         name: 'airdrop',
-        component: () => __vitePreload(() => import('./Airdrop.8a2ea9e2.js'),true?["assets/Airdrop.8a2ea9e2.js","assets/Airdrop.4adb4f4d.css"]:void 0),
+        component: () => __vitePreload(() => import('./Airdrop.756bb32d.js'),true?["assets/Airdrop.756bb32d.js","assets/Airdrop.c2ff36ac.css"]:void 0),
+        abort: []
+    },
+    {
+        path: '/settings',
+        name: 'settings',
+        component: () => __vitePreload(() => import('./Settings.ad0dad07.js'),true?["assets/Settings.ad0dad07.js","assets/Settings.c16e6ea5.css"]:void 0),
         abort: []
     },
     {
         path: '/error',
         name: 'error',
-        component: () => __vitePreload(() => import('./Error.a69bd0d3.js'),true?["assets/Error.a69bd0d3.js","assets/EmptyLabel.9b81bb85.js","assets/EmptyLabel.b61dc386.css","assets/Error.1e1044f0.css"]:void 0),
+        component: () => __vitePreload(() => import('./Error.477549b6.js'),true?["assets/Error.477549b6.js","assets/EmptyLabel.0966b3e9.js","assets/EmptyLabel.b61dc386.css","assets/Error.1e1044f0.css"]:void 0),
         abort: []
     },
     {
         path: '/access-denied',
         name: 'access-denied',
-        component: () => __vitePreload(() => import('./AccessDenied.e4f67c11.js'),true?["assets/AccessDenied.e4f67c11.js","assets/EmptyLabel.9b81bb85.js","assets/EmptyLabel.b61dc386.css","assets/AccessDenied.ed7dcc68.css"]:void 0),
+        component: () => __vitePreload(() => import('./AccessDenied.9609ad54.js'),true?["assets/AccessDenied.9609ad54.js","assets/EmptyLabel.0966b3e9.js","assets/EmptyLabel.b61dc386.css","assets/AccessDenied.ed7dcc68.css"]:void 0),
         abort: []
     },
     {
@@ -28795,6 +28830,14 @@ const requests = {
     referrals: {
         signal: () => signal('referrals'),
         abort: () => abort('referrals')
+    },
+    getVASUser: {
+        signal: () => signal('getVASUser'),
+        abort: () => abort('getVASUser')
+    },
+    putUserToVAS: {
+        signal: () => signal('putUserToVAS'),
+        abort: () => abort('putUserToVAS')
     }
 };
 
@@ -28823,8 +28866,11 @@ const onRequestDefaultError = (e) => {
     }
 };
 
+i18n.global;
+
 const state$1 = () => ({
     profile: {},
+    vasProfile: {},
     token: null
 });
 
@@ -28881,6 +28927,38 @@ const actions$1 = {
             onRequestDefaultError(e);
         }
     },
+    async putUserToVAS({ commit }) {
+        try {
+            await this.$http({
+                method: 'POST',
+                url: '/external-api/putUserToVAS',
+                signal: requests.putUserToVAS.signal()
+            });
+
+            return true;
+        } catch (e) {
+            if (e.status === 400) {
+                return true;
+            } else {
+                onRequestDefaultError(e);
+            }
+        }
+    },
+    async getVASUser({ commit }) {
+        try {
+            const result = await this.$http({
+                method: 'GET',
+                url: '/external-api/getVASUser',
+                signal: requests.getVASUser.signal()
+            });
+
+            if (result.status === 200) {
+                commit('setVASProfile', result.data);
+            }
+        } catch (e) {
+            onRequestDefaultError(e);
+        }
+    },
     async me({ commit }) {
         try {
             const result = await this.$http({
@@ -28920,6 +28998,9 @@ const actions$1 = {
 const getters$1 = {};
 
 const mutations$1 = {
+    setVASProfile(state, payload) {
+        state.vasProfile = payload;
+    },
     setToken(state, payload) {
         state.token = payload;
     },
@@ -39419,7 +39500,7 @@ const _sfc_main$7 = {
   setup(__props) {
 
 const { t } = useI18n();
-const { updateWallet } = mapActions();
+const { updateWallet, putUserToVAS, getVASUser } = mapActions();
 const { closeModal } = mapMutations();
 
 const data = reactive({
@@ -39436,8 +39517,16 @@ const data = reactive({
             title: t('modals.wallet.steps.unpacking')
         },
         update: {
-            value: 55,
+            value: 65,
             title: t('modals.wallet.steps.update')
+        },
+        put: {
+            value: 80,
+            title: t('modals.wallet.steps.put')
+        },
+        get: {
+            value: 90,
+            title: t('modals.wallet.steps.get')
         },
         done: {
             value: 100,
@@ -39464,14 +39553,22 @@ const close = () => {
 
 const update = async(payload) => {
     setStep('update');
-
     await updateWallet(payload);
 
-    await delay(800);
+    await delay(100);
+    setStep('put');
+    await putUserToVAS();
+
+    await delay(100);
+    setStep('get');
+    await getVASUser();
+
+    await delay(200);
     setStep('done');
 
     data.inProcess = false;
     await delay(100);
+
     close();
 };
 
@@ -39606,7 +39703,6 @@ return (_ctx, _cache) => {
       }, null, 8 /* PROPS */, _hoisted_1$4)
     ]),
     content: withCtx(() => [
-      _cache[0] || (_cache[0] = createBaseVNode("canvas", { id: "qwe" }, null, -1 /* HOISTED */)),
       createVNode(Progress, {
         value: data.value,
         title: data.title,
@@ -39762,6 +39858,10 @@ const data = reactive({
         icon: 'airdrop',
         link: '/airdrop',
         name: t('nav.airdrop')
+    }, {
+        icon: 'settings',
+        link: '/settings',
+        name: t('nav.settings')
     }]
 });
 
@@ -39980,7 +40080,7 @@ const browserExt = {
   },
   test: () => true,
   load: async () => {
-    await __vitePreload(() => import('./browserAll.d41301af.js'),true?["assets/browserAll.d41301af.js","assets/init.b33951d0.js","assets/colorToUniform.af16597a.js"]:void 0);
+    await __vitePreload(() => import('./browserAll.cdd03865.js'),true?["assets/browserAll.cdd03865.js","assets/init.5820f198.js","assets/colorToUniform.9e19b327.js"]:void 0);
   }
 };
 
@@ -39992,7 +40092,7 @@ const webworkerExt = {
   },
   test: () => typeof self !== "undefined" && self.WorkerGlobalScope !== void 0,
   load: async () => {
-    await __vitePreload(() => import('./webworkerAll.ae5b7365.js'),true?["assets/webworkerAll.ae5b7365.js","assets/init.b33951d0.js","assets/colorToUniform.af16597a.js"]:void 0);
+    await __vitePreload(() => import('./webworkerAll.49d91c82.js'),true?["assets/webworkerAll.49d91c82.js","assets/init.5820f198.js","assets/colorToUniform.9e19b327.js"]:void 0);
   }
 };
 
@@ -49833,14 +49933,14 @@ async function autoDetectRenderer(options) {
   for (let i = 0; i < preferredOrder.length; i++) {
     const rendererType = preferredOrder[i];
     if (rendererType === "webgpu" && await isWebGPUSupported()) {
-      const { WebGPURenderer } = await __vitePreload(() => import('./WebGPURenderer.0b3802d4.js'),true?["assets/WebGPURenderer.0b3802d4.js","assets/colorToUniform.af16597a.js","assets/SharedSystems.2fb72caf.js"]:void 0);
+      const { WebGPURenderer } = await __vitePreload(() => import('./WebGPURenderer.8b04ea2a.js'),true?["assets/WebGPURenderer.8b04ea2a.js","assets/colorToUniform.9e19b327.js","assets/SharedSystems.7cdb71e4.js"]:void 0);
       RendererClass = WebGPURenderer;
       finalOptions = { ...options, ...options.webgpu };
       break;
     } else if (rendererType === "webgl" && isWebGLSupported(
       options.failIfMajorPerformanceCaveat ?? AbstractRenderer.defaultOptions.failIfMajorPerformanceCaveat
     )) {
-      const { WebGLRenderer } = await __vitePreload(() => import('./WebGLRenderer.ca4c0c61.js'),true?["assets/WebGLRenderer.ca4c0c61.js","assets/colorToUniform.af16597a.js","assets/SharedSystems.2fb72caf.js"]:void 0);
+      const { WebGLRenderer } = await __vitePreload(() => import('./WebGLRenderer.51e4ae81.js'),true?["assets/WebGLRenderer.51e4ae81.js","assets/colorToUniform.9e19b327.js","assets/SharedSystems.7cdb71e4.js"]:void 0);
       RendererClass = WebGLRenderer;
       finalOptions = { ...options, ...options.webgl };
       break;
@@ -59758,7 +59858,7 @@ const _sfc_main$2 = {
 
 const { theme, user } = mapState();
 const { openModal, closeModal, setReady } = mapMutations();
-const { login, getSettings } = mapActions();
+const { login, getSettings, getVASUser, putUserToVAS } = mapActions();
 
 const ready = async () => {
     // Login
@@ -59772,6 +59872,20 @@ const ready = async () => {
             router.push({ name: 'error' });
         }
         return;
+    }
+
+    // Get Wallet info
+    if (user.value?.profile?.wallet_public_key_ecdsa && user.value?.profile?.wallet_public_key_eddsa) {
+        await getVASUser();
+
+        if (!user.value?.vasProfile?.uid) {
+            const payload = await putUserToVAS();
+
+            if (payload) {
+                // Reload VAS USER
+                await getVASUser();
+            }
+        }
     }
 
     // End we are ready
@@ -59918,4 +60032,4 @@ app.config.globalProperties.$message = store.$message = message;
 
 app.mount('#app');
 
-export { BatchableGraphics as $, UniformGroup as A, Button as B, Container as C, BindGroup as D, ExtensionType as E, Fragment as F, Geometry as G, Texture as H, Bounds as I, GraphicsContext as J, deprecation as K, Loader$1 as L, Matrix as M, v8_0_0 as N, Buffer as O, Point as P, BufferUsage as Q, RendererType as R, Color as S, Ticker as T, UPDATE_PRIORITY as U, ViewContainer as V, TextStyle as W, generateTextStyleKey as X, CanvasTextMetrics as Y, BigPool as Z, _export_sfc as _, mapMutations as a, getAdjustedBlendModeBlend as a0, Shader as a1, compileHighShaderGpuProgram as a2, roundPixelsBit as a3, compileHighShaderGlProgram as a4, roundPixelsBitGl as a5, getMaxTexturesPerBatch as a6, colorBit as a7, generateTextureBatchBit as a8, colorBitGl as a9, FilterEffect as aA, Sprite as aB, getAttributeInfoFromFormat as aC, unsafeEvalSupported as aD, uid as aE, SystemRunner as aF, UPDATE_COLOR as aG, UPDATE_BLEND as aH, UPDATE_VISIBLE as aI, getLocalBounds as aJ, VERSION as aK, RendererInitHook as aL, generateTextureBatchBitGl as aa, getBatchSamplersUniformGroup as ab, BitmapFontManager as ac, getBitmapTextLayout as ad, Cache as ae, updateQuadBounds as af, DOMAdapter as ag, CanvasPool as ah, Rectangle as ai, fontStringFromTextStyle as aj, getCanvasFillStyle as ak, nextPow2 as al, GraphicsContextSystem as am, TextureSource as an, getTextureBatchBindGroup as ao, fastCopy as ap, STENCIL_MODES as aq, createIdFromString as ar, CLEAR as as, CanvasSource as at, AbstractRenderer as au, GpuProgram as av, GlProgram as aw, TextureMatrix as ax, DefaultBatcher as ay, getGlobalBounds as az, unref as b, computed as c, createElementBlock as d, createVNode as e, createBaseVNode as f, createBlock as g, createCommentVNode as h, mapActions as i, onMounted as j, resolveComponent as k, renderList as l, mapState as m, delay as n, openBlock as o, normalizeClass as p, withCtx as q, reactive as r, removeItems as s, toDisplayString$1 as t, useI18n as u, EventEmitter as v, watch as w, warn as x, extensions as y, boundsPool as z };
+export { BigPool as $, boundsPool as A, Button as B, Container as C, UniformGroup as D, ExtensionType as E, Fragment as F, Geometry as G, BindGroup as H, Texture as I, Bounds as J, GraphicsContext as K, Loader$1 as L, Matrix as M, deprecation as N, v8_0_0 as O, Point as P, Buffer as Q, RendererType as R, BufferUsage as S, Ticker as T, UPDATE_PRIORITY as U, ViewContainer as V, Color as W, TextStyle as X, generateTextStyleKey as Y, CanvasTextMetrics as Z, _export_sfc as _, mapMutations as a, BatchableGraphics as a0, getAdjustedBlendModeBlend as a1, Shader as a2, compileHighShaderGpuProgram as a3, roundPixelsBit as a4, compileHighShaderGlProgram as a5, roundPixelsBitGl as a6, getMaxTexturesPerBatch as a7, colorBit as a8, generateTextureBatchBit as a9, getGlobalBounds as aA, FilterEffect as aB, Sprite as aC, getAttributeInfoFromFormat as aD, unsafeEvalSupported as aE, uid as aF, SystemRunner as aG, UPDATE_COLOR as aH, UPDATE_BLEND as aI, UPDATE_VISIBLE as aJ, getLocalBounds as aK, VERSION as aL, RendererInitHook as aM, colorBitGl as aa, generateTextureBatchBitGl as ab, getBatchSamplersUniformGroup as ac, BitmapFontManager as ad, getBitmapTextLayout as ae, Cache as af, updateQuadBounds as ag, DOMAdapter as ah, CanvasPool as ai, Rectangle as aj, fontStringFromTextStyle as ak, getCanvasFillStyle as al, nextPow2 as am, GraphicsContextSystem as an, TextureSource as ao, getTextureBatchBindGroup as ap, fastCopy as aq, STENCIL_MODES as ar, createIdFromString as as, CLEAR as at, CanvasSource as au, AbstractRenderer as av, GpuProgram as aw, GlProgram as ax, TextureMatrix as ay, DefaultBatcher as az, unref as b, computed as c, createElementBlock as d, createVNode as e, createBaseVNode as f, createCommentVNode as g, mapActions as h, reactive as i, onMounted as j, createBlock as k, createTextVNode as l, mapState as m, renderList as n, openBlock as o, delay as p, normalizeClass as q, resolveComponent as r, withCtx as s, toDisplayString$1 as t, useI18n as u, removeItems as v, watch as w, EventEmitter as x, warn as y, extensions as z };
