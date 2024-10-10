@@ -87,14 +87,14 @@
   width: 32px;
   height: 32px;
   margin-right: auto;
-  animation: stat-svg-933e9cdf infinite 6s;
+  animation: stat-svg-933e9cdf infinite 4s;
 }
 @keyframes stat-svg-933e9cdf {
 0% {
     transform: scale(1);
 }
 50% {
-    transform: scale(0.9);
+    transform: scale(0.85);
 }
 100% {
     transform: scale(1);

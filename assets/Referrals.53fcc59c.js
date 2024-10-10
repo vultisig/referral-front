@@ -1,6 +1,6 @@
-import { _ as _export_sfc, u as useI18n, m as mapState, a as mapMutations, h as mapActions, i as reactive, w as watch, j as onMounted, r as resolveComponent, o as openBlock, k as createBlock, b as unref, d as createElementBlock, f as createBaseVNode, e as createVNode, l as createTextVNode, t as toDisplayString, F as Fragment, n as renderList, B as Button, g as createCommentVNode, p as delay, L as Loader } from './index.6a045def.js';
-import { A as Avatar } from './Avatar.5fa379fe.js';
-import { E as EmptyLabel } from './EmptyLabel.bff9213b.js';
+import { _ as _export_sfc, u as useI18n, m as mapState, a as mapMutations, h as mapActions, i as reactive, w as watch, j as onMounted, r as resolveComponent, o as openBlock, k as createBlock, b as unref, d as createElementBlock, f as createBaseVNode, e as createVNode, l as createTextVNode, t as toDisplayString, F as Fragment, n as renderList, B as Button, g as createCommentVNode, p as delay, L as Loader } from './index.f65862cc.js';
+import { A as Avatar } from './Avatar.045ed939.js';
+import { E as EmptyLabel } from './EmptyLabel.946bbf14.js';
 
 const Referrals_vue_vue_type_style_index_0_scoped_c8e84f31_lang = '';
 
@@ -11,7 +11,14 @@ const _hoisted_3 = {
   class: "users-list"
 };
 const _hoisted_4 = ["innerHTML"];
-const _hoisted_5 = { class: "invite-box" };
+const _hoisted_5 = {
+  key: 1,
+  class: "state"
+};
+const _hoisted_6 = ["innerHTML"];
+const _hoisted_7 = ["innerHTML"];
+const _hoisted_8 = ["innerHTML"];
+const _hoisted_9 = { class: "invite-box" };
 
     
 const _sfc_main = {
@@ -21,7 +28,7 @@ const _sfc_main = {
     const { t } = useI18n();
     const { user, settings, ready } = mapState();
     const { openModal } = mapMutations();
-    const { getReferrals, me } = mapActions();
+    const { getReferrals, me, checkAirdropStatus } = mapActions();
 
     const data = reactive({
         referrals: [],
@@ -31,6 +38,21 @@ const _sfc_main = {
 
     const invite = () => {
         openModal('invite');
+    };
+
+    const getAirdropInfo = async (item) => {
+        if (!item.wallet_public_key_ecdsa) {
+            return;
+        }
+
+        item.loading = true;
+        item.join_airdrop = !!await checkAirdropStatus(item.uuid);
+        item.loading = false;
+
+        const idx = data.referrals.indexOf(item);
+        if (idx !== -1) {
+            data.referrals.splice(idx, 1, {...item});
+        }
     };
 
     const getReferralsList = async () => {
@@ -47,6 +69,10 @@ const _sfc_main = {
         }
 
         if (payload?.items) {
+            payload?.items.forEach(item => {
+                item.join_airdrop = false;
+                getAirdropInfo(item);
+            });
             data.referrals = [...data.referrals, ...payload.items];
         }
 
@@ -114,12 +140,32 @@ return (_ctx, _cache) => {
                           createBaseVNode("div", null, [
                             createBaseVNode("span", null, toDisplayString(item.username || item.first_name), 1 /* TEXT */)
                           ]),
-                          (item.wallet_public_key_ecdsa)
-                            ? (openBlock(), createBlock(_component_Icon, {
+                          (item.loading)
+                            ? (openBlock(), createBlock(Button, {
                                 key: 0,
-                                icon: "verified"
+                                class: "light loader",
+                                loading: true
                               }))
-                            : createCommentVNode("v-if", true)
+                            : (openBlock(), createElementBlock("span", _hoisted_5, [
+                                (!item.wallet_public_key_ecdsa)
+                                  ? (openBlock(), createElementBlock("span", {
+                                      key: 0,
+                                      innerHTML: unref(t)('pages.referrals.steps.registered')
+                                    }, null, 8 /* PROPS */, _hoisted_6))
+                                  : (!item.join_airdrop)
+                                    ? (openBlock(), createElementBlock(Fragment, { key: 1 }, [
+                                        createBaseVNode("span", {
+                                          innerHTML: unref(t)('pages.referrals.steps.added')
+                                        }, null, 8 /* PROPS */, _hoisted_7),
+                                        createVNode(_component_Icon, { icon: "wallet" })
+                                      ], 64 /* STABLE_FRAGMENT */))
+                                    : (openBlock(), createElementBlock(Fragment, { key: 2 }, [
+                                        createBaseVNode("span", {
+                                          innerHTML: unref(t)('pages.referrals.steps.joined')
+                                        }, null, 8 /* PROPS */, _hoisted_8),
+                                        createVNode(_component_Icon, { icon: "verified" })
+                                      ], 64 /* STABLE_FRAGMENT */))
+                              ]))
                         ])
                       ]))
                     }), 128 /* KEYED_FRAGMENT */))
@@ -141,7 +187,7 @@ return (_ctx, _cache) => {
                     : createCommentVNode("v-if", true)
                 ]))
           ]),
-          createBaseVNode("div", _hoisted_5, [
+          createBaseVNode("div", _hoisted_9, [
             createVNode(Button, {
               name: unref(t)('pages.referrals.invite'),
               onClick: invite

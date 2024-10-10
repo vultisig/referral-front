@@ -1,4 +1,4 @@
-import { _ as _export_sfc, u as useI18n, m as mapState, a as mapMutations, i as reactive, r as resolveComponent, b as unref, o as openBlock, d as createElementBlock, e as createVNode, f as createBaseVNode, F as Fragment, n as renderList, g as createCommentVNode, k as createBlock, s as withCtx, B as Button } from './index.6a045def.js';
+import { _ as _export_sfc, u as useI18n, m as mapState, a as mapMutations, i as reactive, r as resolveComponent, b as unref, o as openBlock, d as createElementBlock, e as createVNode, f as createBaseVNode, F as Fragment, n as renderList, g as createCommentVNode, k as createBlock, s as withCtx, B as Button } from './index.f65862cc.js';
 
 const Settings_vue_vue_type_style_index_0_scoped_2ff6c9bb_lang = '';
 
@@ -9,7 +9,8 @@ const _hoisted_1 = {
 const _hoisted_2 = ["innerHTML"];
 const _hoisted_3 = { class: "params" };
 const _hoisted_4 = ["innerHTML"];
-const _hoisted_5 = { class: "social-box" };
+const _hoisted_5 = ["innerHTML"];
+const _hoisted_6 = { class: "social-box" };
 
     
 const _sfc_main = {
@@ -37,6 +38,14 @@ const _sfc_main = {
             }
         ]
     });
+
+    const install = () => {
+        if (window.Telegram?.WebApp) {
+            const url = 'https://vultisig.com/#store-section?source=bultisigbot';
+
+            window.Telegram?.WebApp.openLink(url);
+        }
+    };
 
     const openWallet = () => {
         openModal('wallet');
@@ -70,9 +79,20 @@ return (_ctx, _cache) => {
               }, null, 8 /* PROPS */, _hoisted_4),
               createVNode(_component_Icon, { icon: "arrow" })
             ])
+          ]),
+          createBaseVNode("li", null, [
+            createBaseVNode("button", {
+              type: "button",
+              onClick: install
+            }, [
+              createBaseVNode("span", {
+                innerHTML: unref(t)('pages.settings.wallet.install')
+              }, null, 8 /* PROPS */, _hoisted_5),
+              createVNode(_component_Icon, { icon: "arrow" })
+            ])
           ])
         ]),
-        createBaseVNode("div", _hoisted_5, [
+        createBaseVNode("div", _hoisted_6, [
           (openBlock(true), createElementBlock(Fragment, null, renderList(data.socials, (item, id) => {
             return (openBlock(), createBlock(Button, {
               key: id,

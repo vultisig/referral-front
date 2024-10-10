@@ -1,4 +1,4 @@
-import { _ as _export_sfc, u as useI18n, m as mapState, i as reactive, r as resolveComponent, b as unref, o as openBlock, d as createElementBlock, e as createVNode, f as createBaseVNode, F as Fragment, n as renderList, g as createCommentVNode, B as Button, q as normalizeClass } from './index.6a045def.js';
+import { _ as _export_sfc, h as mapActions, u as useI18n, m as mapState, i as reactive, r as resolveComponent, b as unref, o as openBlock, d as createElementBlock, e as createVNode, f as createBaseVNode, F as Fragment, n as renderList, g as createCommentVNode, k as createBlock, B as Button, q as normalizeClass } from './index.f65862cc.js';
 
 const Airdrop_vue_vue_type_style_index_0_scoped_94566200_lang = '';
 
@@ -14,13 +14,17 @@ const _hoisted_3 = {
 const _hoisted_4 = ["onClick"];
 const _hoisted_5 = ["innerHTML"];
 const _hoisted_6 = ["innerHTML"];
-const _hoisted_7 = { class: "button-box" };
+const _hoisted_7 = {
+  key: 1,
+  class: "button-box"
+};
 
     
 const _sfc_main = {
   __name: 'Airdrop',
   setup(__props) {
 
+    const { getVASUser, joinAirdrop } = mapActions();
     const { t, tm, rt } = useI18n();
     const { user } = mapState();
 
@@ -30,10 +34,22 @@ const _sfc_main = {
     }));
 
     const data = reactive({
+        loading: false,
         qa: qa || []
     });
 
-    const joinAirdrop = () => {
+    const registerAirdrop = async () => {
+        data.loading = true;
+
+        const payload = await joinAirdrop();
+        if (payload) {
+            await getVASUser();
+        }
+
+        data.loading = false;
+    };
+
+    const viewAirdrop = () => {
         const params = [
             `public_key_ecdsa=${user.value.profile?.wallet_public_key_ecdsa}`,
             `public_key_eddsa=${user.value.profile?.wallet_public_key_eddsa}`,
@@ -79,13 +95,31 @@ return (_ctx, _cache) => {
               }), 128 /* KEYED_FRAGMENT */))
             ]))
           : createCommentVNode("v-if", true),
-        createBaseVNode("div", _hoisted_7, [
-          createVNode(Button, {
-            name: unref(t)('pages.airdrop.join'),
-            class: "secondary",
-            onClick: joinAirdrop
-          }, null, 8 /* PROPS */, ["name"])
-        ])
+        (unref(user).vasProfile?.uid)
+          ? (openBlock(), createElementBlock("div", _hoisted_7, [
+              (unref(user).vasProfile.join_airdrop)
+                ? (openBlock(), createBlock(Button, {
+                    key: 0,
+                    name: unref(t)('pages.airdrop.view'),
+                    class: "secondary",
+                    onClick: viewAirdrop
+                  }, null, 8 /* PROPS */, ["name"]))
+                : (openBlock(), createElementBlock(Fragment, { key: 1 }, [
+                    (!data.loading)
+                      ? (openBlock(), createBlock(Button, {
+                          key: 0,
+                          name: unref(t)('pages.airdrop.register'),
+                          class: "secondary",
+                          onClick: registerAirdrop
+                        }, null, 8 /* PROPS */, ["name"]))
+                      : (openBlock(), createBlock(Button, {
+                          key: 1,
+                          class: "secondary loader",
+                          loading: true
+                        }))
+                  ], 64 /* STABLE_FRAGMENT */))
+            ]))
+          : createCommentVNode("v-if", true)
       ]))
     : createCommentVNode("v-if", true)
 }
