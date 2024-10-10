@@ -38,7 +38,7 @@
                         </div>
                     </li>
                     <li>
-                        <Icon icon="flag"/>
+                        <Icon icon="verified"/>
                         <div>
                             <span v-html="t('pages.home.stats.joined.title')"></span>
                             <span>{{ user.vasProfile.join_airdrop ? t('pages.home.stats.joined.yes') : t('pages.home.stats.joined.no') }}</span>
@@ -196,7 +196,7 @@
                     width: 32px;
                     height: 32px;
                     margin-right: auto;
-                    animation: stat-svg infinite 6s;
+                    animation: stat-svg infinite 4s;
                 }
 
                 @keyframes stat-svg {
@@ -204,7 +204,7 @@
                         transform: scale(1);
                     }
                     50% {
-                        transform: scale(.9);
+                        transform: scale(.85);
                     }
                     100% {
                         transform: scale(1);

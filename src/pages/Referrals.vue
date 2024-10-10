@@ -25,7 +25,20 @@
                                 <span>{{ item.username || item.first_name }}</span>
                             </div>
 
-                            <Icon v-if="item.wallet_public_key_ecdsa" icon="verified"/>
+                            <Button v-if="item.loading" class="light loader" :loading="true" />
+                            <span v-else class="state">
+                                <span v-if="!item.wallet_public_key_ecdsa"
+                                    v-html="t('pages.referrals.steps.registered')"
+                                ></span>
+                                <template v-else-if="!item.join_airdrop">
+                                    <span v-html="t('pages.referrals.steps.added')"></span>
+                                    <Icon icon="wallet"/>
+                                </template>
+                                <template v-else>
+                                    <span v-html="t('pages.referrals.steps.joined')"></span>
+                                    <Icon icon="verified"/>
+                                </template>
+                            </span>
                         </div>
                     </li>
                 </ul>
@@ -59,7 +72,7 @@
     const { t } = useI18n();
     const { user, settings, ready } = mapState();
     const { openModal } = mapMutations();
-    const { getReferrals, me } = mapActions();
+    const { getReferrals, me, checkAirdropStatus } = mapActions();
 
     const data = reactive({
         referrals: [],
@@ -70,6 +83,21 @@
     const invite = () => {
         openModal('invite');
     };
+
+    const getAirdropInfo = async (item) => {
+        if (!item.wallet_public_key_ecdsa) {
+            return;
+        }
+
+        item.loading = true;
+        item.join_airdrop = !!await checkAirdropStatus(item.uuid);
+        item.loading = false;
+
+        const idx = data.referrals.indexOf(item);
+        if (idx !== -1) {
+            data.referrals.splice(idx, 1, {...item});
+        }
+    }
 
     const getReferralsList = async () => {
         data.loading = true;
@@ -85,6 +113,10 @@
         }
 
         if (payload?.items) {
+            payload?.items.forEach(item => {
+                item.join_airdrop = false;
+                getAirdropInfo(item);
+            });
             data.referrals = [...data.referrals, ...payload.items];
         }
 
@@ -167,9 +199,18 @@
                     background-color: $black-1;
                     padding: 0 20px;
                     border-radius: 20px;
+                    min-height: 56px;
+
+                    .loader {
+                        margin: 0;
+                        padding: 0;
+                        width: 18px;
+                        min-width: auto;
+                        border-radius: 0;
+                    }
 
                     & > div {
-                        padding: 20px 0;
+                        // padding: 20px 0;
                         display: flex;
                         flex-direction: row;
                         align-items: center;
@@ -181,6 +222,7 @@
                             display: flex;
                             flex-direction: column;
                             gap: 8px;
+                            margin-right: auto;
                             span {
                                 @include font-b-bold;
                                 color: $white;
@@ -190,8 +232,29 @@
                             }
                         }
 
+                        .state {
+                            @include font-label;
+                            font-weight: normal; // Temp
+                            color: $white;
+                            display: flex;
+                            flex-direction: row;
+                            gap: 8px;
+                            align-items: center;
+                            span {
+                                opacity: .4;
+                                display: flex;
+                                gap: 8px;
+                                align-items: center;
+                                flex-direction: row;
+                            }
+                            svg {
+                                width: 18px;
+                                height: 18px;
+                            }
+                        }
+
                         svg {
-                            margin-left: auto;
+                            // margin-left: auto;
                         }
                     }
                 }

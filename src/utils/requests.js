@@ -65,6 +65,14 @@ export const requests = {
     putUserToVAS: {
         signal: () => signal('putUserToVAS'),
         abort: () => abort('putUserToVAS')
+    },
+    joinAirdrop: {
+        signal: () => signal('joinAirdrop'),
+        abort: () => abort('joinAirdrop')
+    },
+    checkAirdropStatus: {
+        signal: (uuid) => signal('checkAirdropStatus', uuid),
+        abort: (uuid) => abort('checkAirdropStatus', uuid)
     }
 };
 
