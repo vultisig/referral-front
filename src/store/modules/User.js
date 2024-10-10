@@ -96,6 +96,43 @@ const actions = {
             onRequestDefaultError(e);
         }
     },
+    async checkAirdropStatus({ commit }, uuid) {
+        try {
+            const result = await this.$http({
+                method: 'POST',
+                url: '/external-api/checkStatus',
+                signal: requests.checkAirdropStatus.signal(uuid),
+                data: { uuid }
+            });
+
+            if (result.status === 200) {
+                return true;
+            }
+        } catch (e) {
+            if (e.status === 400) {
+                return true;
+            }
+        }
+    },
+    async joinAirdrop({ commit }) {
+        try {
+            const result = await this.$http({
+                method: 'POST',
+                url: '/external-api/join',
+                signal: requests.joinAirdrop.signal()
+            });
+
+            if (result.status === 200) {
+                return true;
+            }
+        } catch (e) {
+            if (e.status === 400) {
+                return true;
+            } else {
+                onRequestDefaultError(e);
+            }
+        }
+    },
     async me({ commit }) {
         try {
             const result = await this.$http({

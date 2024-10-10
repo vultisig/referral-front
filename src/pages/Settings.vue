@@ -12,6 +12,14 @@
                     <Icon icon="arrow"/>
                 </button>
             </li>
+            <li>
+                <button type="button"
+                    @click="install"
+                >
+                    <span v-html="t('pages.settings.wallet.install')"></span>
+                    <Icon icon="arrow"/>
+                </button>
+            </li>
         </ul>
 
         <div class="social-box">
@@ -51,6 +59,14 @@
             }
         ]
     });
+
+    const install = () => {
+        if (window.Telegram?.WebApp) {
+            const url = 'https://vultisig.com/#store-section?source=bultisigbot';
+
+            window.Telegram?.WebApp.openLink(url);
+        }
+    };
 
     const openWallet = () => {
         openModal('wallet');
@@ -92,7 +108,7 @@
             margin: 0;
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 4px;
             padding: 24px 0;
 
             li {

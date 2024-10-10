@@ -18,12 +18,23 @@
             </li>
         </ul>
 
-        <div class="button-box">
-            <Button
-                :name="t('pages.airdrop.join')"
-                class="secondary"
-                @click="joinAirdrop"
-            />
+        <div class="button-box" v-if="user.vasProfile?.uid">
+            <template v-if="user.vasProfile.join_airdrop">
+                <Button
+                    :name="t('pages.airdrop.view')"
+                    class="secondary"
+                    @click="viewAirdrop"
+                />
+            </template>
+            <template v-else>
+                <Button
+                    v-if="!data.loading"
+                    :name="t('pages.airdrop.register')"
+                    class="secondary"
+                    @click="registerAirdrop"
+                />
+                <Button v-else class="secondary loader" :loading="true" />
+            </template>
         </div>
     </div>
 </template>
@@ -32,8 +43,9 @@
     import { reactive } from 'vue';
     import { useI18n } from 'vue-i18n';
     import Button from '@/components/forms/Button.vue';
-    import { mapState } from '@/map-state';
+    import { mapActions, mapState } from '@/map-state';
 
+    const { getVASUser, joinAirdrop } = mapActions();
     const { t, tm, rt } = useI18n();
     const { user } = mapState();
 
@@ -43,10 +55,22 @@
     }));
 
     const data = reactive({
+        loading: false,
         qa: qa || []
     });
 
-    const joinAirdrop = () => {
+    const registerAirdrop = async () => {
+        data.loading = true;
+
+        const payload = await joinAirdrop();
+        if (payload) {
+            await getVASUser();
+        }
+
+        data.loading = false;
+    };
+
+    const viewAirdrop = () => {
         const params = [
             `public_key_ecdsa=${user.value.profile?.wallet_public_key_ecdsa}`,
             `public_key_eddsa=${user.value.profile?.wallet_public_key_eddsa}`,

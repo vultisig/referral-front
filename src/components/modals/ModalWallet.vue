@@ -14,7 +14,6 @@
             />
 
             <div class="buttons">
-                <Button :name="t('modals.wallet.install')" class="secondary" @click="install" :disabled="data.inProcess"/>
                 <Button :name="t('modals.wallet.upload')" @click="upload" :disabled="data.inProcess"/>
                 <Button :name="t('common.close')" class="secondary" @click="close" :disabled="data.inProcess"/>
             </div>
@@ -210,14 +209,6 @@ const upload = async () => {
     });
 
     input.click();
-};
-
-const install = () => {
-    if (window.Telegram?.WebApp) {
-        const url = 'https://vultisig.com/#store-section?source=bultisigbot';
-
-        window.Telegram?.WebApp.openLink(url);
-    }
 };
 
 onMounted(async () => {
