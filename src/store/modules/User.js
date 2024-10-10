@@ -106,7 +106,7 @@ const actions = {
             });
 
             if (result.status === 200) {
-                return true;
+                return !!result.data?.status;
             }
         } catch (e) {
             if (e.status === 400) {
