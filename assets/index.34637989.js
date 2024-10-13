@@ -28543,8 +28543,8 @@ const resource = {
           "intro": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Upload QR"])};fn.source="Upload QR";return fn;})(),
           "unpacking": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Unpacking..."])};fn.source="Unpacking...";return fn;})(),
           "update": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Update"])};fn.source="Update";return fn;})(),
-          "put": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Registration on <b class='g-c'>web.vultisig.com</b>"])};fn.source="Registration on <b class='g-c'>web.vultisig.com</b>";return fn;})(),
-          "get": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Login on <b class='g-c'>web.vultisig.com</b>"])};fn.source="Login on <b class='g-c'>web.vultisig.com</b>";return fn;})(),
+          "put": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Registration on <b class='g-c'>airdrop.vultisig.com</b>"])};fn.source="Registration on <b class='g-c'>airdrop.vultisig.com</b>";return fn;})(),
+          "get": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Login on <b class='g-c'>airdrop.vultisig.com</b>"])};fn.source="Login on <b class='g-c'>airdrop.vultisig.com</b>";return fn;})(),
           "done": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Done!"])};fn.source="Done!";return fn;})()
         }
       }
@@ -28723,13 +28723,13 @@ const routes = [
     {
         path: '/home',
         name: 'home',
-        component: () => __vitePreload(() => import('./Home.6e724ffd.js'),true?["assets/Home.6e724ffd.js","assets/Avatar.06f65915.js","assets/Avatar.429656ec.css","assets/EmptyLabel.ce6665fb.js","assets/EmptyLabel.b61dc386.css","assets/Home.bd916ff8.css"]:void 0),
+        component: () => __vitePreload(() => import('./Home.5efcac6e.js'),true?["assets/Home.5efcac6e.js","assets/Avatar.db155ebc.js","assets/Avatar.429656ec.css","assets/EmptyLabel.926c6524.js","assets/EmptyLabel.b61dc386.css","assets/Home.bd916ff8.css"]:void 0),
         abort: []
     },
     {
         path: '/referrals',
         name: 'referrals',
-        component: () => __vitePreload(() => import('./Referrals.e93283c9.js'),true?["assets/Referrals.e93283c9.js","assets/Avatar.06f65915.js","assets/Avatar.429656ec.css","assets/EmptyLabel.ce6665fb.js","assets/EmptyLabel.b61dc386.css","assets/Referrals.c3da3867.css"]:void 0),
+        component: () => __vitePreload(() => import('./Referrals.e04ec79b.js'),true?["assets/Referrals.e04ec79b.js","assets/Avatar.db155ebc.js","assets/Avatar.429656ec.css","assets/EmptyLabel.926c6524.js","assets/EmptyLabel.b61dc386.css","assets/Referrals.c3da3867.css"]:void 0),
         abort: [
             'referrals'
         ]
@@ -28737,25 +28737,25 @@ const routes = [
     {
         path: '/airdrop',
         name: 'airdrop',
-        component: () => __vitePreload(() => import('./Airdrop.3537687a.js'),true?["assets/Airdrop.3537687a.js","assets/Airdrop.2afd2fe3.css"]:void 0),
+        component: () => __vitePreload(() => import('./Airdrop.81772945.js'),true?["assets/Airdrop.81772945.js","assets/Airdrop.2afd2fe3.css"]:void 0),
         abort: []
     },
     {
         path: '/settings',
         name: 'settings',
-        component: () => __vitePreload(() => import('./Settings.e6f10d43.js'),true?["assets/Settings.e6f10d43.js","assets/Settings.829dafdd.css"]:void 0),
+        component: () => __vitePreload(() => import('./Settings.6f7301e0.js'),true?["assets/Settings.6f7301e0.js","assets/Settings.829dafdd.css"]:void 0),
         abort: []
     },
     {
         path: '/error',
         name: 'error',
-        component: () => __vitePreload(() => import('./Error.5cdcd791.js'),true?["assets/Error.5cdcd791.js","assets/EmptyLabel.ce6665fb.js","assets/EmptyLabel.b61dc386.css","assets/Error.1e1044f0.css"]:void 0),
+        component: () => __vitePreload(() => import('./Error.e709232f.js'),true?["assets/Error.e709232f.js","assets/EmptyLabel.926c6524.js","assets/EmptyLabel.b61dc386.css","assets/Error.1e1044f0.css"]:void 0),
         abort: []
     },
     {
         path: '/access-denied',
         name: 'access-denied',
-        component: () => __vitePreload(() => import('./AccessDenied.f80fec4a.js'),true?["assets/AccessDenied.f80fec4a.js","assets/EmptyLabel.ce6665fb.js","assets/EmptyLabel.b61dc386.css","assets/AccessDenied.ed7dcc68.css"]:void 0),
+        component: () => __vitePreload(() => import('./AccessDenied.577ac094.js'),true?["assets/AccessDenied.577ac094.js","assets/EmptyLabel.926c6524.js","assets/EmptyLabel.b61dc386.css","assets/AccessDenied.ed7dcc68.css"]:void 0),
         abort: []
     },
     {
@@ -40117,7 +40117,7 @@ const browserExt = {
   },
   test: () => true,
   load: async () => {
-    await __vitePreload(() => import('./browserAll.461b2493.js'),true?["assets/browserAll.461b2493.js","assets/init.928b8017.js","assets/colorToUniform.dc034ebf.js"]:void 0);
+    await __vitePreload(() => import('./browserAll.af47647c.js'),true?["assets/browserAll.af47647c.js","assets/init.4df85cfc.js","assets/colorToUniform.79b94ea9.js"]:void 0);
   }
 };
 
@@ -40129,7 +40129,7 @@ const webworkerExt = {
   },
   test: () => typeof self !== "undefined" && self.WorkerGlobalScope !== void 0,
   load: async () => {
-    await __vitePreload(() => import('./webworkerAll.334a5ee7.js'),true?["assets/webworkerAll.334a5ee7.js","assets/init.928b8017.js","assets/colorToUniform.dc034ebf.js"]:void 0);
+    await __vitePreload(() => import('./webworkerAll.79067ee1.js'),true?["assets/webworkerAll.79067ee1.js","assets/init.4df85cfc.js","assets/colorToUniform.79b94ea9.js"]:void 0);
   }
 };
 
@@ -49970,14 +49970,14 @@ async function autoDetectRenderer(options) {
   for (let i = 0; i < preferredOrder.length; i++) {
     const rendererType = preferredOrder[i];
     if (rendererType === "webgpu" && await isWebGPUSupported()) {
-      const { WebGPURenderer } = await __vitePreload(() => import('./WebGPURenderer.f46cc43d.js'),true?["assets/WebGPURenderer.f46cc43d.js","assets/colorToUniform.dc034ebf.js","assets/SharedSystems.c86b21b6.js"]:void 0);
+      const { WebGPURenderer } = await __vitePreload(() => import('./WebGPURenderer.6bcf212c.js'),true?["assets/WebGPURenderer.6bcf212c.js","assets/colorToUniform.79b94ea9.js","assets/SharedSystems.f36b2c9e.js"]:void 0);
       RendererClass = WebGPURenderer;
       finalOptions = { ...options, ...options.webgpu };
       break;
     } else if (rendererType === "webgl" && isWebGLSupported(
       options.failIfMajorPerformanceCaveat ?? AbstractRenderer.defaultOptions.failIfMajorPerformanceCaveat
     )) {
-      const { WebGLRenderer } = await __vitePreload(() => import('./WebGLRenderer.e4da37db.js'),true?["assets/WebGLRenderer.e4da37db.js","assets/colorToUniform.dc034ebf.js","assets/SharedSystems.c86b21b6.js"]:void 0);
+      const { WebGLRenderer } = await __vitePreload(() => import('./WebGLRenderer.2b84580a.js'),true?["assets/WebGLRenderer.2b84580a.js","assets/colorToUniform.79b94ea9.js","assets/SharedSystems.f36b2c9e.js"]:void 0);
       RendererClass = WebGLRenderer;
       finalOptions = { ...options, ...options.webgl };
       break;

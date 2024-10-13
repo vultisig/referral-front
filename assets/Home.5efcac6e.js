@@ -1,6 +1,6 @@
-import { _ as _export_sfc, u as useI18n, m as mapState, a as mapMutations, c as computed, r as resolveComponent, b as unref, o as openBlock, d as createElementBlock, e as createVNode, f as createBaseVNode, t as toDisplayString, F as Fragment, B as Button, g as createCommentVNode } from './index.ddd0e044.js';
-import { A as Avatar } from './Avatar.06f65915.js';
-import { E as EmptyLabel } from './EmptyLabel.ce6665fb.js';
+import { _ as _export_sfc, u as useI18n, m as mapState, a as mapMutations, c as computed, r as resolveComponent, b as unref, o as openBlock, d as createElementBlock, e as createVNode, f as createBaseVNode, t as toDisplayString, F as Fragment, B as Button, g as createCommentVNode } from './index.34637989.js';
+import { A as Avatar } from './Avatar.db155ebc.js';
+import { E as EmptyLabel } from './EmptyLabel.926c6524.js';
 
 const Home_vue_vue_type_style_index_0_scoped_933e9cdf_lang = '';
 
@@ -39,9 +39,9 @@ const _sfc_main = {
         ].join('&');
 
         if (window.Telegram?.WebApp) {
-            window.Telegram?.WebApp.openLink("https://web.vultisig.com?source=vultisigbot" + `&${params}`);
+            window.Telegram?.WebApp.openLink("https://airdrop.vultisig.com?source=vultisigbot" + `&${params}`);
         } else {
-            window.open("https://web.vultisig.com?source=vultisigbot" + `&${params}`, '_blank');
+            window.open("https://airdrop.vultisig.com?source=vultisigbot" + `&${params}`, '_blank');
         }
     };
 
