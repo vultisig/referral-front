@@ -1,6 +1,6 @@
-import { _ as _export_sfc, u as useI18n, m as mapState, a as mapMutations, h as mapActions, i as reactive, w as watch, j as onMounted, r as resolveComponent, o as openBlock, k as createBlock, b as unref, d as createElementBlock, f as createBaseVNode, e as createVNode, l as createTextVNode, t as toDisplayString, F as Fragment, n as renderList, B as Button, g as createCommentVNode, p as delay, L as Loader } from './index.34637989.js';
-import { A as Avatar } from './Avatar.db155ebc.js';
-import { E as EmptyLabel } from './EmptyLabel.926c6524.js';
+import { _ as _export_sfc, u as useI18n, m as mapState, a as mapMutations, h as mapActions, i as reactive, w as watch, j as onMounted, r as resolveComponent, o as openBlock, k as createBlock, b as unref, d as createElementBlock, f as createBaseVNode, e as createVNode, l as createTextVNode, t as toDisplayString, F as Fragment, n as renderList, B as Button, g as createCommentVNode, p as delay, L as Loader } from './index.30c48679.js';
+import { A as Avatar } from './Avatar.38f9f359.js';
+import { E as EmptyLabel } from './EmptyLabel.bb08cc72.js';
 
 const Referrals_vue_vue_type_style_index_0_scoped_c8e84f31_lang = '';
 
@@ -123,7 +123,7 @@ return (_ctx, _cache) => {
                 }, null, 8 /* PROPS */, ["title", "description"]))
               : (openBlock(), createElementBlock("div", _hoisted_3, [
                   createBaseVNode("span", null, [
-                    createTextVNode(toDisplayString(data.total) + " ", 1 /* TEXT */),
+                    createTextVNode(toDisplayString(unref(user).profile?.referrals_count) + " ", 1 /* TEXT */),
                     createBaseVNode("span", {
                       innerHTML: unref(t)('pages.referrals.total')
                     }, null, 8 /* PROPS */, _hoisted_4)
