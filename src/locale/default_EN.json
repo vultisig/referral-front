@@ -39,8 +39,8 @@
           "intro": "Upload QR",
           "unpacking": "Unpacking...",
           "update": "Update",
-          "put": "Registration on <b class='g-c'>web.vultisig.com</b>",
-          "get": "Login on <b class='g-c'>web.vultisig.com</b>",
+          "put": "Registration on <b class='g-c'>airdrop.vultisig.com</b>",
+          "get": "Login on <b class='g-c'>airdrop.vultisig.com</b>",
           "done": "Done!"
         }
       }
