@@ -21,6 +21,11 @@
         <div class="button-box" v-if="user.vasProfile?.uid">
             <template v-if="user.vasProfile.join_airdrop">
                 <Button
+                    :name="t('pages.airdrop.leaderboard')"
+                    class="secondary"
+                    @click="viewLeaderboard"
+                />
+                <Button
                     :name="t('pages.airdrop.view')"
                     class="secondary"
                     @click="viewAirdrop"
@@ -68,6 +73,20 @@
         }
 
         data.loading = false;
+    };
+
+    const viewLeaderboard = () => {
+        const params = [
+            `public_key_ecdsa=${user.value.profile?.wallet_public_key_ecdsa}`,
+            `public_key_eddsa=${user.value.profile?.wallet_public_key_eddsa}`,
+            'join_airdrop=true'
+        ].join('&');
+
+        if (window.Telegram?.WebApp) {
+            window.Telegram?.WebApp.openLink(import.meta.env.VITE_APP_LEADERBOARD_URL + `&${params}`);
+        } else {
+            window.open(import.meta.env.VITE_APP_LEADERBOARD_URL + `&${params}`, '_blank');
+        }
     };
 
     const viewAirdrop = () => {
@@ -199,6 +218,9 @@
             position: sticky;
             bottom: 0;
             margin-top: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
 
             button {
                 width: 100%;
