@@ -1,4 +1,4 @@
-import { _ as _export_sfc, h as mapActions, u as useI18n, m as mapState, i as reactive, r as resolveComponent, b as unref, o as openBlock, d as createElementBlock, e as createVNode, f as createBaseVNode, F as Fragment, n as renderList, g as createCommentVNode, k as createBlock, B as Button, q as normalizeClass } from './index.30c48679.js';
+import { _ as _export_sfc, h as mapActions, u as useI18n, m as mapState, i as reactive, r as resolveComponent, b as unref, o as openBlock, d as createElementBlock, e as createVNode, f as createBaseVNode, F as Fragment, n as renderList, g as createCommentVNode, B as Button, k as createBlock, q as normalizeClass } from './index.3ef87e1d.js';
 
 const Airdrop_vue_vue_type_style_index_0_scoped_94566200_lang = '';
 
@@ -47,6 +47,20 @@ const _sfc_main = {
         }
 
         data.loading = false;
+    };
+
+    const viewLeaderboard = () => {
+        const params = [
+            `public_key_ecdsa=${user.value.profile?.wallet_public_key_ecdsa}`,
+            `public_key_eddsa=${user.value.profile?.wallet_public_key_eddsa}`,
+            'join_airdrop=true'
+        ].join('&');
+
+        if (window.Telegram?.WebApp) {
+            window.Telegram?.WebApp.openLink("https://airdrop.vultisig.com/leaderboard?source=vultisigbot" + `&${params}`);
+        } else {
+            window.open("https://airdrop.vultisig.com/leaderboard?source=vultisigbot" + `&${params}`, '_blank');
+        }
     };
 
     const viewAirdrop = () => {
@@ -98,12 +112,18 @@ return (_ctx, _cache) => {
         (unref(user).vasProfile?.uid)
           ? (openBlock(), createElementBlock("div", _hoisted_7, [
               (unref(user).vasProfile.join_airdrop)
-                ? (openBlock(), createBlock(Button, {
-                    key: 0,
-                    name: unref(t)('pages.airdrop.view'),
-                    class: "secondary",
-                    onClick: viewAirdrop
-                  }, null, 8 /* PROPS */, ["name"]))
+                ? (openBlock(), createElementBlock(Fragment, { key: 0 }, [
+                    createVNode(Button, {
+                      name: unref(t)('pages.airdrop.leaderboard'),
+                      class: "secondary",
+                      onClick: viewLeaderboard
+                    }, null, 8 /* PROPS */, ["name"]),
+                    createVNode(Button, {
+                      name: unref(t)('pages.airdrop.view'),
+                      class: "secondary",
+                      onClick: viewAirdrop
+                    }, null, 8 /* PROPS */, ["name"])
+                  ], 64 /* STABLE_FRAGMENT */))
                 : (openBlock(), createElementBlock(Fragment, { key: 1 }, [
                     (!data.loading)
                       ? (openBlock(), createBlock(Button, {
