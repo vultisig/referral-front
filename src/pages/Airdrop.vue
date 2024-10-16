@@ -141,7 +141,7 @@
             margin: 0;
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 8px;
             padding: 24px 0;
 
             li {
