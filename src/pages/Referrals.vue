@@ -3,7 +3,7 @@
 
     <template v-else-if="user.profile?.id">
         <div class="page-container">
-            <Icon icon="frens" :alt="t('pages.referrals.title')"/>
+            <Icon icon="referrals" :alt="t('pages.referrals.title')"/>
             <h1 v-html="t('pages.referrals.title')" ></h1>
            
             <EmptyLabel v-if="!data.referrals.length"

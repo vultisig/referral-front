@@ -4,6 +4,14 @@
         <h1 v-html="t('pages.settings.title')"></h1>
 
         <ul class="params">
+            <li v-if="user.profile?.wallet_public_key_ecdsa">
+                <button type="button"
+                    @click="showPublicKeys"
+                >
+                    <span v-html="t('pages.settings.wallet.info')"></span>
+                    <Icon icon="arrow"/>
+                </button>
+            </li>
             <li>
                 <button type="button"
                     @click="openWallet"
@@ -68,6 +76,10 @@
         }
     };
 
+    const showPublicKeys = () => {
+        openModal('public-keys');
+    };
+
     const openWallet = () => {
         openModal('wallet');
     };
@@ -108,7 +120,7 @@
             margin: 0;
             display: flex;
             flex-direction: column;
-            gap: 4px;
+            gap: 8px;
             padding: 24px 0;
 
             li {
