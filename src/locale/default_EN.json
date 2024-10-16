@@ -24,6 +24,12 @@
       }
     },
     "modals": {
+      "loader": {
+        "description": {
+          "title": "UNLOCK YOUR <b class='g-c'>$VULT</b><br>AIRDROP TODAY",
+          "text": "Invite all your friends!"
+        }
+      },
       "invite": {
         "title": "<b class='g-c'>Invite</b>",
         "description": "at least <b class='g-c'>50$</b> is needed that referral is <b class='g-c'>counted</b>",
@@ -75,7 +81,7 @@
               "a": "The first Airdrop period goes for <b class='g-c'>12 months</b> - it is 10% of the Supply of $VULT.<br><br>Then there is an annual airdrop of 2% of the supply for 5 years. A total of 20% will be airdropped."
             }, {
               "q": "What information is <b class='g-c'>collected</b> by Vultisig?",
-              "a": "You are registering your Public Keys and vault addresses. <a class='g-c' href='https://github.com/vultisig/airdrop-registry' target='_blank'>Inspect the code here.</a><br><br>No other information is collected. <a class='g-c' href='https://github.com/vultisig/docs/blob/main/other/privacy.md' target='_blank'>Read the Privacy Policy here</a>"
+              "a": "You are registering your Public Keys and vault addresses.<br><br><a class='g-c' href='https://github.com/vultisig/airdrop-registry' target='_blank'>Inspect the code here.</a><br><br>No other information is collected.<br><br><a class='g-c' href='https://github.com/vultisig/docs/blob/main/other/privacy.md' target='_blank'>Read the Privacy Policy here</a>"
             }
         ],
         "register": "Register Airdrop",

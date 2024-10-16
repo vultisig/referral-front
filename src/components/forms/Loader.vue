@@ -98,6 +98,22 @@
                 }
             }
         }
+
+        &.opacity-mode {
+            background: none;
+            animation: none;
+            &:after {
+                display: none;
+            }
+
+            li {
+                top: 30%;
+                height: 70%;
+                svg {
+                    width: 80px;
+                }
+            }
+        }
     }
 
     @keyframes base-svg {

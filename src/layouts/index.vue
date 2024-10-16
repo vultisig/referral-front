@@ -61,7 +61,7 @@ const ready = async () => {
     setTimeout(() => {
         setReady(true);
         closeModal('loader');
-    }, 1000);
+    }, 2000);
 };
 
 onMounted(async () => {
