@@ -554,6 +554,36 @@ ul.light li svg[data-v-d610e656] {
   flex-direction: column;
   padding: 20px 0;
   gap: 20px;
+}.content-box[data-v-e67a8434] {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 0;
+}
+.description[data-v-e67a8434] {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--Color-primary-black-2);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex-shrink: 0;
+  padding: 0;
+  align-items: start;
+}
+.description span[data-v-e67a8434] {
+  white-space: normal;
+  max-width: 100%;
+  word-wrap: break-word;
+}
+.buttons[data-v-e67a8434] {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  gap: 20px;
 }div[data-v-1d612336] {
   display: flex;
   flex-direction: column;

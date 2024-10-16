@@ -1,4 +1,4 @@
-import { _ as _export_sfc, u as useI18n, m as mapState, a as mapMutations, i as reactive, r as resolveComponent, b as unref, o as openBlock, d as createElementBlock, e as createVNode, f as createBaseVNode, F as Fragment, n as renderList, g as createCommentVNode, k as createBlock, s as withCtx, B as Button } from './index.3ef87e1d.js';
+import { _ as _export_sfc, u as useI18n, m as mapState, a as mapMutations, i as reactive, r as resolveComponent, b as unref, o as openBlock, d as createElementBlock, e as createVNode, f as createBaseVNode, g as createCommentVNode, F as Fragment, n as renderList, k as createBlock, s as withCtx, B as Button } from './index.365c368c.js';
 
 const Settings_vue_vue_type_style_index_0_scoped_2ff6c9bb_lang = '';
 
@@ -8,9 +8,11 @@ const _hoisted_1 = {
 };
 const _hoisted_2 = ["innerHTML"];
 const _hoisted_3 = { class: "params" };
-const _hoisted_4 = ["innerHTML"];
+const _hoisted_4 = { key: 0 };
 const _hoisted_5 = ["innerHTML"];
-const _hoisted_6 = { class: "social-box" };
+const _hoisted_6 = ["innerHTML"];
+const _hoisted_7 = ["innerHTML"];
+const _hoisted_8 = { class: "social-box" };
 
     
 const _sfc_main = {
@@ -47,6 +49,10 @@ const _sfc_main = {
         }
     };
 
+    const showPublicKeys = () => {
+        openModal('public-keys');
+    };
+
     const openWallet = () => {
         openModal('wallet');
     };
@@ -69,6 +75,19 @@ return (_ctx, _cache) => {
           innerHTML: unref(t)('pages.settings.title')
         }, null, 8 /* PROPS */, _hoisted_2),
         createBaseVNode("ul", _hoisted_3, [
+          (unref(user).profile?.wallet_public_key_ecdsa)
+            ? (openBlock(), createElementBlock("li", _hoisted_4, [
+                createBaseVNode("button", {
+                  type: "button",
+                  onClick: showPublicKeys
+                }, [
+                  createBaseVNode("span", {
+                    innerHTML: unref(t)('pages.settings.wallet.info')
+                  }, null, 8 /* PROPS */, _hoisted_5),
+                  createVNode(_component_Icon, { icon: "arrow" })
+                ])
+              ]))
+            : createCommentVNode("v-if", true),
           createBaseVNode("li", null, [
             createBaseVNode("button", {
               type: "button",
@@ -76,7 +95,7 @@ return (_ctx, _cache) => {
             }, [
               createBaseVNode("span", {
                 innerHTML: unref(user).profile.wallet_public_key_ecdsa ? unref(t)('pages.settings.wallet.edit') : unref(t)('pages.settings.wallet.add')
-              }, null, 8 /* PROPS */, _hoisted_4),
+              }, null, 8 /* PROPS */, _hoisted_6),
               createVNode(_component_Icon, { icon: "arrow" })
             ])
           ]),
@@ -87,12 +106,12 @@ return (_ctx, _cache) => {
             }, [
               createBaseVNode("span", {
                 innerHTML: unref(t)('pages.settings.wallet.install')
-              }, null, 8 /* PROPS */, _hoisted_5),
+              }, null, 8 /* PROPS */, _hoisted_7),
               createVNode(_component_Icon, { icon: "arrow" })
             ])
           ])
         ]),
-        createBaseVNode("div", _hoisted_6, [
+        createBaseVNode("div", _hoisted_8, [
           (openBlock(true), createElementBlock(Fragment, null, renderList(data.socials, (item, id) => {
             return (openBlock(), createBlock(Button, {
               key: id,
