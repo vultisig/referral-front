@@ -19061,11 +19061,11 @@ const mapActions = () => {
 
 const Messages_vue_vue_type_style_index_0_scoped_a397f62e_lang = '';
 
-const _hoisted_1$a = {
+const _hoisted_1$b = {
   key: 0,
   class: "messages"
 };
-const _hoisted_2$9 = ["innerHTML"];
+const _hoisted_2$a = ["innerHTML"];
 
 
 const _sfc_main$f = {
@@ -19086,7 +19086,7 @@ return (_ctx, _cache) => {
   const _component_Icon = resolveComponent("Icon");
 
   return (unref(messages).length)
-    ? (openBlock(), createElementBlock("div", _hoisted_1$a, [
+    ? (openBlock(), createElementBlock("div", _hoisted_1$b, [
         createBaseVNode("div", null, [
           (openBlock(true), createElementBlock(Fragment, null, renderList(unref(messages), (message) => {
             return (openBlock(), createElementBlock("div", {
@@ -19100,7 +19100,7 @@ return (_ctx, _cache) => {
               _cache[0] || (_cache[0] = createBaseVNode("span", { class: "devider" }, null, -1 /* HOISTED */)),
               createBaseVNode("span", {
                 innerHTML: message.text
-              }, null, 8 /* PROPS */, _hoisted_2$9)
+              }, null, 8 /* PROPS */, _hoisted_2$a)
             ], 6 /* CLASS, STYLE */))
           }), 128 /* KEYED_FRAGMENT */))
         ])
@@ -25905,8 +25905,8 @@ registerLocaleFallbacker(fallbackWithLocaleChain);
 
 const Button_vue_vue_type_style_index_0_scoped_112c178d_lang = '';
 
-const _hoisted_1$9 = ["disabled"];
-const _hoisted_2$8 = { key: 0 };
+const _hoisted_1$a = ["disabled"];
+const _hoisted_2$9 = { key: 0 };
 
 
 const _sfc_main$e = {
@@ -25928,7 +25928,7 @@ return (_ctx, _cache) => {
     disabled: props.disabled
   }, [
     (props.name)
-      ? (openBlock(), createElementBlock("span", _hoisted_2$8, toDisplayString$1(props.name), 1 /* TEXT */))
+      ? (openBlock(), createElementBlock("span", _hoisted_2$9, toDisplayString$1(props.name), 1 /* TEXT */))
       : createCommentVNode("v-if", true),
     renderSlot(_ctx.$slots, "default", {}, undefined, true),
     (props.loading)
@@ -25937,7 +25937,7 @@ return (_ctx, _cache) => {
           icon: "loader-4"
         }))
       : createCommentVNode("v-if", true)
-  ], 8 /* PROPS */, _hoisted_1$9))
+  ], 8 /* PROPS */, _hoisted_1$a))
 }
 }
 
@@ -25948,7 +25948,7 @@ const Loader_vue_vue_type_style_index_0_scoped_d610e656_lang = '';
 
 const _sfc_main$d = {};
 
-function _sfc_render$1(_ctx, _cache) {
+function _sfc_render(_ctx, _cache) {
   const _component_Icon = resolveComponent("Icon");
 
   return (openBlock(), createElementBlock("ul", null, [
@@ -25966,19 +25966,19 @@ function _sfc_render$1(_ctx, _cache) {
     ])
   ]))
 }
-const Loader$1 = /*#__PURE__*/_export_sfc(_sfc_main$d, [['render',_sfc_render$1],['__scopeId',"data-v-d610e656"],['__file',"/home/runner/work/referral-front/referral-front/src/components/forms/Loader.vue"]]);
+const Loader$1 = /*#__PURE__*/_export_sfc(_sfc_main$d, [['render',_sfc_render],['__scopeId',"data-v-d610e656"],['__file',"/home/runner/work/referral-front/referral-front/src/components/forms/Loader.vue"]]);
 
 const BaseModal_vue_vue_type_style_index_0_scoped_6badf473_lang = '';
 
-const _hoisted_1$8 = {
+const _hoisted_1$9 = {
   key: 0,
   class: "header"
 };
-const _hoisted_2$7 = {
+const _hoisted_2$8 = {
   key: 1,
   class: "content"
 };
-const _hoisted_3$6 = {
+const _hoisted_3$7 = {
   key: 2,
   class: "loader"
 };
@@ -26037,7 +26037,7 @@ return (_ctx, _cache) => {
       onClick: _cache[0] || (_cache[0] = withModifiers(() => {}, ["stop"]))
     }, [
       (unref(slots).title)
-        ? (openBlock(), createElementBlock("div", _hoisted_1$8, [
+        ? (openBlock(), createElementBlock("div", _hoisted_1$9, [
             createBaseVNode("h3", null, [
               renderSlot(_ctx.$slots, "title", {}, undefined, true)
             ]),
@@ -26059,12 +26059,12 @@ return (_ctx, _cache) => {
           ]))
         : createCommentVNode("v-if", true),
       (!props.isLoading)
-        ? (openBlock(), createElementBlock("div", _hoisted_2$7, [
+        ? (openBlock(), createElementBlock("div", _hoisted_2$8, [
             renderSlot(_ctx.$slots, "content", {}, undefined, true)
           ]))
         : createCommentVNode("v-if", true),
       (props.isLoading)
-        ? (openBlock(), createElementBlock("div", _hoisted_3$6, [
+        ? (openBlock(), createElementBlock("div", _hoisted_3$7, [
             createVNode(Loader$1)
           ]))
         : createCommentVNode("v-if", true)
@@ -28528,6 +28528,12 @@ const resource = {
       }
     },
     "modals": {
+      "loader": {
+        "description": {
+          "title": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["UNLOCK YOUR <b class='g-c'>$VULT</b><br>AIRDROP TODAY"])};fn.source="UNLOCK YOUR <b class='g-c'>$VULT</b><br>AIRDROP TODAY";return fn;})(),
+          "text": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Invite all your friends!"])};fn.source="Invite all your friends!";return fn;})()
+        }
+      },
       "invite": {
         "title": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["<b class='g-c'>Invite</b>"])};fn.source="<b class='g-c'>Invite</b>";return fn;})(),
         "description": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["at least <b class='g-c'>50$</b> is needed that referral is <b class='g-c'>counted</b>"])};fn.source="at least <b class='g-c'>50$</b> is needed that referral is <b class='g-c'>counted</b>";return fn;})(),
@@ -28582,7 +28588,7 @@ const resource = {
           },
           {
             "q": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["What information is <b class='g-c'>collected</b> by Vultisig?"])};fn.source="What information is <b class='g-c'>collected</b> by Vultisig?";return fn;})(),
-            "a": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["You are registering your Public Keys and vault addresses. <a class='g-c' href='https://github.com/vultisig/airdrop-registry' target='_blank'>Inspect the code here.</a><br><br>No other information is collected. <a class='g-c' href='https://github.com/vultisig/docs/blob/main/other/privacy.md' target='_blank'>Read the Privacy Policy here</a>"])};fn.source="You are registering your Public Keys and vault addresses. <a class='g-c' href='https://github.com/vultisig/airdrop-registry' target='_blank'>Inspect the code here.</a><br><br>No other information is collected. <a class='g-c' href='https://github.com/vultisig/docs/blob/main/other/privacy.md' target='_blank'>Read the Privacy Policy here</a>";return fn;})()
+            "a": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["You are registering your Public Keys and vault addresses.<br><br><a class='g-c' href='https://github.com/vultisig/airdrop-registry' target='_blank'>Inspect the code here.</a><br><br>No other information is collected.<br><br><a class='g-c' href='https://github.com/vultisig/docs/blob/main/other/privacy.md' target='_blank'>Read the Privacy Policy here</a>"])};fn.source="You are registering your Public Keys and vault addresses.<br><br><a class='g-c' href='https://github.com/vultisig/airdrop-registry' target='_blank'>Inspect the code here.</a><br><br>No other information is collected.<br><br><a class='g-c' href='https://github.com/vultisig/docs/blob/main/other/privacy.md' target='_blank'>Read the Privacy Policy here</a>";return fn;})()
           }
         ],
         "register": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Register Airdrop"])};fn.source="Register Airdrop";return fn;})(),
@@ -28732,13 +28738,13 @@ const routes = [
     {
         path: '/home',
         name: 'home',
-        component: () => __vitePreload(() => import('./Home.dc1e1dfe.js'),true?["assets/Home.dc1e1dfe.js","assets/Avatar.d1eb2e89.js","assets/Avatar.429656ec.css","assets/EmptyLabel.dd03a8ab.js","assets/EmptyLabel.b61dc386.css","assets/Home.bd916ff8.css"]:void 0),
+        component: () => __vitePreload(() => import('./Home.8f99ef1d.js'),true?["assets/Home.8f99ef1d.js","assets/Avatar.896264e2.js","assets/Avatar.429656ec.css","assets/EmptyLabel.d13b7bfa.js","assets/EmptyLabel.b61dc386.css","assets/Home.bd916ff8.css"]:void 0),
         abort: []
     },
     {
         path: '/referrals',
         name: 'referrals',
-        component: () => __vitePreload(() => import('./Referrals.16b87ccc.js'),true?["assets/Referrals.16b87ccc.js","assets/Avatar.d1eb2e89.js","assets/Avatar.429656ec.css","assets/EmptyLabel.dd03a8ab.js","assets/EmptyLabel.b61dc386.css","assets/Referrals.c3da3867.css"]:void 0),
+        component: () => __vitePreload(() => import('./Referrals.48d108dc.js'),true?["assets/Referrals.48d108dc.js","assets/Avatar.896264e2.js","assets/Avatar.429656ec.css","assets/EmptyLabel.d13b7bfa.js","assets/EmptyLabel.b61dc386.css","assets/Referrals.c3da3867.css"]:void 0),
         abort: [
             'referrals'
         ]
@@ -28746,25 +28752,25 @@ const routes = [
     {
         path: '/airdrop',
         name: 'airdrop',
-        component: () => __vitePreload(() => import('./Airdrop.7ab24020.js'),true?["assets/Airdrop.7ab24020.js","assets/Airdrop.7a8abfd3.css"]:void 0),
+        component: () => __vitePreload(() => import('./Airdrop.c0d7bbf8.js'),true?["assets/Airdrop.c0d7bbf8.js","assets/Airdrop.7a8abfd3.css"]:void 0),
         abort: []
     },
     {
         path: '/settings',
         name: 'settings',
-        component: () => __vitePreload(() => import('./Settings.b30834fc.js'),true?["assets/Settings.b30834fc.js","assets/Settings.4d15868b.css"]:void 0),
+        component: () => __vitePreload(() => import('./Settings.88a096e7.js'),true?["assets/Settings.88a096e7.js","assets/Settings.4d15868b.css"]:void 0),
         abort: []
     },
     {
         path: '/error',
         name: 'error',
-        component: () => __vitePreload(() => import('./Error.3d0a247b.js'),true?["assets/Error.3d0a247b.js","assets/EmptyLabel.dd03a8ab.js","assets/EmptyLabel.b61dc386.css","assets/Error.1e1044f0.css"]:void 0),
+        component: () => __vitePreload(() => import('./Error.d035f680.js'),true?["assets/Error.d035f680.js","assets/EmptyLabel.d13b7bfa.js","assets/EmptyLabel.b61dc386.css","assets/Error.1e1044f0.css"]:void 0),
         abort: []
     },
     {
         path: '/access-denied',
         name: 'access-denied',
-        component: () => __vitePreload(() => import('./AccessDenied.010aba83.js'),true?["assets/AccessDenied.010aba83.js","assets/EmptyLabel.dd03a8ab.js","assets/EmptyLabel.b61dc386.css","assets/AccessDenied.ed7dcc68.css"]:void 0),
+        component: () => __vitePreload(() => import('./AccessDenied.e0a8cdc1.js'),true?["assets/AccessDenied.e0a8cdc1.js","assets/EmptyLabel.d13b7bfa.js","assets/EmptyLabel.b61dc386.css","assets/AccessDenied.ed7dcc68.css"]:void 0),
         abort: []
     },
     {
@@ -29252,9 +29258,9 @@ async function fetchData({ url, method, data, params, auth = true, contentType, 
 
 const ModalInvite_vue_vue_type_style_index_0_scoped_d7d050bc_lang = '';
 
-const _hoisted_1$7 = ["innerHTML"];
-const _hoisted_2$6 = ["innerHTML"];
-const _hoisted_3$5 = { class: "buttons" };
+const _hoisted_1$8 = ["innerHTML"];
+const _hoisted_2$7 = ["innerHTML"];
+const _hoisted_3$6 = { class: "buttons" };
 
 
 const _sfc_main$b = {
@@ -29316,17 +29322,17 @@ return (_ctx, _cache) => {
     title: withCtx(() => [
       createBaseVNode("span", {
         innerHTML: unref(t)('modals.invite.title')
-      }, null, 8 /* PROPS */, _hoisted_1$7)
+      }, null, 8 /* PROPS */, _hoisted_1$8)
     ]),
     content: withCtx(() => [
       createBaseVNode("div", {
         innerHTML: unref(t)('modals.invite.description'),
         class: "description"
-      }, null, 8 /* PROPS */, _hoisted_2$6),
+      }, null, 8 /* PROPS */, _hoisted_2$7),
       _cache[0] || (_cache[0] = createBaseVNode("div", { class: "canvas-box" }, [
         createBaseVNode("canvas", { id: "qr-canvas" })
       ], -1 /* HOISTED */)),
-      createBaseVNode("div", _hoisted_3$5, [
+      createBaseVNode("div", _hoisted_3$6, [
         createVNode(Button, {
           name: unref(t)('modals.invite.share'),
           onClick: share
@@ -29352,9 +29358,9 @@ const ModalInvite = /*#__PURE__*/_export_sfc(_sfc_main$b, [['__scopeId',"data-v-
 
 const ModalPublicKeys_vue_vue_type_style_index_0_scoped_e67a8434_lang = '';
 
-const _hoisted_1$6 = ["innerHTML"];
-const _hoisted_2$5 = { class: "content-box" };
-const _hoisted_3$4 = {
+const _hoisted_1$7 = ["innerHTML"];
+const _hoisted_2$6 = { class: "content-box" };
+const _hoisted_3$5 = {
   key: 0,
   class: "description"
 };
@@ -29381,12 +29387,12 @@ return (_ctx, _cache) => {
     title: withCtx(() => [
       createBaseVNode("span", {
         innerHTML: unref(t)('modals.public-keys.title')
-      }, null, 8 /* PROPS */, _hoisted_1$6)
+      }, null, 8 /* PROPS */, _hoisted_1$7)
     ]),
     content: withCtx(() => [
-      createBaseVNode("div", _hoisted_2$5, [
+      createBaseVNode("div", _hoisted_2$6, [
         (unref(user).profile.wallet_public_key_ecdsa)
-          ? (openBlock(), createElementBlock("div", _hoisted_3$4, [
+          ? (openBlock(), createElementBlock("div", _hoisted_3$5, [
               _cache[0] || (_cache[0] = createBaseVNode("b", { class: "g-c" }, "ECDSA Key:", -1 /* HOISTED */)),
               createBaseVNode("span", null, toDisplayString$1(unref(user).profile.wallet_public_key_ecdsa), 1 /* TEXT */),
               _cache[1] || (_cache[1] = createBaseVNode("br", null, null, -1 /* HOISTED */)),
@@ -29411,29 +29417,48 @@ return (_ctx, _cache) => {
 };
 const ModalPublicKeys = /*#__PURE__*/_export_sfc(_sfc_main$a, [['__scopeId',"data-v-e67a8434"],['__file',"/home/runner/work/referral-front/referral-front/src/components/modals/ModalPublicKeys.vue"]]);
 
+const ModalLoader_vue_vue_type_style_index_0_scoped_d2cc4814_lang = '';
+
+const _hoisted_1$6 = { class: "description" };
+const _hoisted_2$5 = ["innerHTML"];
+const _hoisted_3$4 = ["innerHTML"];
+
+
 const _sfc_main$9 = {
-    data() {
-        return {
-            form: {},
-            formDefault: {},
-            isLoading: true
-        };
-    },
-    components: {
-        BaseModal
-    }
-};
+  __name: 'ModalLoader',
+  setup(__props) {
 
-function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
-  const _component_BaseModal = resolveComponent("BaseModal");
+const { t } = useI18n();
 
-  return (openBlock(), createBlock(_component_BaseModal, {
-    isLoading: $data.isLoading,
+return (_ctx, _cache) => {
+  return (openBlock(), createBlock(BaseModal, {
     name: "loader",
     class: "full-size"
-  }, null, 8 /* PROPS */, ["isLoading"]))
+  }, {
+    content: withCtx(() => [
+      createBaseVNode("div", {
+        class: "loader-box",
+        style: normalizeStyle({ 'background-image': `url(/img/airdrop_bg_${ Math.random() > .5 ? 1 : 2 }.jpg)` })
+      }, [
+        createBaseVNode("div", _hoisted_1$6, [
+          createBaseVNode("label", {
+            innerHTML: unref(t)('modals.loader.description.title')
+          }, null, 8 /* PROPS */, _hoisted_2$5),
+          createBaseVNode("span", {
+            innerHTML: unref(t)('modals.loader.description.text')
+          }, null, 8 /* PROPS */, _hoisted_3$4)
+        ]),
+        _cache[0] || (_cache[0] = createBaseVNode("div", { class: "bg" }, null, -1 /* HOISTED */)),
+        createVNode(Loader$1, { class: "opacity-mode" })
+      ], 4 /* STYLE */)
+    ]),
+    _: 1 /* STABLE */
+  }))
 }
-const ModalLoader = /*#__PURE__*/_export_sfc(_sfc_main$9, [['render',_sfc_render],['__file',"/home/runner/work/referral-front/referral-front/src/components/modals/ModalLoader.vue"]]);
+}
+
+};
+const ModalLoader = /*#__PURE__*/_export_sfc(_sfc_main$9, [['__scopeId',"data-v-d2cc4814"],['__file',"/home/runner/work/referral-front/referral-front/src/components/modals/ModalLoader.vue"]]);
 
 var jsQR = {exports: {}};
 
@@ -40190,7 +40215,7 @@ const browserExt = {
   },
   test: () => true,
   load: async () => {
-    await __vitePreload(() => import('./browserAll.e8a0e00c.js'),true?["assets/browserAll.e8a0e00c.js","assets/init.cddea7fc.js","assets/colorToUniform.cc872df4.js"]:void 0);
+    await __vitePreload(() => import('./browserAll.de76bf80.js'),true?["assets/browserAll.de76bf80.js","assets/init.e1d20900.js","assets/colorToUniform.47267789.js"]:void 0);
   }
 };
 
@@ -40202,7 +40227,7 @@ const webworkerExt = {
   },
   test: () => typeof self !== "undefined" && self.WorkerGlobalScope !== void 0,
   load: async () => {
-    await __vitePreload(() => import('./webworkerAll.af296d7e.js'),true?["assets/webworkerAll.af296d7e.js","assets/init.cddea7fc.js","assets/colorToUniform.cc872df4.js"]:void 0);
+    await __vitePreload(() => import('./webworkerAll.ceeab84b.js'),true?["assets/webworkerAll.ceeab84b.js","assets/init.e1d20900.js","assets/colorToUniform.47267789.js"]:void 0);
   }
 };
 
@@ -50043,14 +50068,14 @@ async function autoDetectRenderer(options) {
   for (let i = 0; i < preferredOrder.length; i++) {
     const rendererType = preferredOrder[i];
     if (rendererType === "webgpu" && await isWebGPUSupported()) {
-      const { WebGPURenderer } = await __vitePreload(() => import('./WebGPURenderer.51678523.js'),true?["assets/WebGPURenderer.51678523.js","assets/colorToUniform.cc872df4.js","assets/SharedSystems.8fe70095.js"]:void 0);
+      const { WebGPURenderer } = await __vitePreload(() => import('./WebGPURenderer.a3d7a3ec.js'),true?["assets/WebGPURenderer.a3d7a3ec.js","assets/colorToUniform.47267789.js","assets/SharedSystems.b6513eca.js"]:void 0);
       RendererClass = WebGPURenderer;
       finalOptions = { ...options, ...options.webgpu };
       break;
     } else if (rendererType === "webgl" && isWebGLSupported(
       options.failIfMajorPerformanceCaveat ?? AbstractRenderer.defaultOptions.failIfMajorPerformanceCaveat
     )) {
-      const { WebGLRenderer } = await __vitePreload(() => import('./WebGLRenderer.0247d74e.js'),true?["assets/WebGLRenderer.0247d74e.js","assets/colorToUniform.cc872df4.js","assets/SharedSystems.8fe70095.js"]:void 0);
+      const { WebGLRenderer } = await __vitePreload(() => import('./WebGLRenderer.d05eb180.js'),true?["assets/WebGLRenderer.d05eb180.js","assets/colorToUniform.47267789.js","assets/SharedSystems.b6513eca.js"]:void 0);
       RendererClass = WebGLRenderer;
       finalOptions = { ...options, ...options.webgl };
       break;
@@ -60002,7 +60027,7 @@ const ready = async () => {
     setTimeout(() => {
         setReady(true);
         closeModal('loader');
-    }, 1000);
+    }, 2000);
 };
 
 onMounted(async () => {
