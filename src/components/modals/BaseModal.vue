@@ -74,7 +74,10 @@ const closeOutside = () => {
     left: 0;
     right: 0;
     top: 0;
-    bottom: 0;
+    // bottom: 0;
+    height: 100%;
+    max-height: var(--tg-viewport-height);
+    
     background: rgb(34 34 34 / 72%);
     display: flex;
     align-items: end;
