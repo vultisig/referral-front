@@ -32,7 +32,7 @@
       },
       "invite": {
         "title": "<b class='g-c'>Invite</b>",
-        "description": "at least <b class='g-c'>50$</b> is needed that referral is <b class='g-c'>counted</b>",
+        "description": "The referred wallet must be funded with <b class='g-c'>at least $50</b> to be viable.",
         "copy": "Copy link",
         "copied": "Refferal link is copied",
         "share": "Send"
@@ -72,13 +72,13 @@
         "qa": [
             {
               "q": "How do I <b class='g-c'>register</b> for the airdrop?",
-              "a": "<b class='g-c'>Become a Vultisig wallet user</b>.<br><br>Note: Airdrop is based on your <b class='g-c'>total</b> vault amounts, multiplied by the length of time your funds are kept in the vault. The largest holders for the longest amount of time earn the most"
+              "a": "<b class='g-c'>Become a Vultisig user and join the airdrop calculation.</b><br><br>Note: The airdrop is based on the total amount in your vault multiplied by the time in the wallet. The largest amounts for the longest time earn the most. <br> Read more about this <a class='g-c' href='https://github.com/vultisig/airdrop-registry' target='_blank'>here</a>"
             }, {
               "q": "What assets are <b class='g-c'>counted</b> for the Airdrop?",
-              "a": "<b class='g-c'>Any</b> supported Layer1 asset, and any token on the 1inch token list"
+              "a": "<b class='g-c'>Layer1</b> assets and most tokens <b class='g-c'>supported by Vultisig</b> are counted. Other assets such as LPs and Node Bonds from THORChain, MAYA Protocol and ChainFlip are also viable.<br><br>See the full list <a class='g-c' href='https://docs.vultisig.com/vultisig-token/airdrop#eligble-assets' target='_blank'>here</a>"
             }, {
-              "q": "What is the Airdrop Strategy?",
-              "a": "The first Airdrop period goes for <b class='g-c'>12 months</b> - it is 10% of the Supply of $VULT.<br><br>Then there is an annual airdrop of 2% of the supply for 5 years. A total of 20% will be airdropped."
+              "q": "What is the <b class='g-c'>Airdrop process</b>?",
+              "a": "Your assets will accumulate VULTIES over a period of <b class='g-c'>12 months</b>. At the end of this period, you will receive your share of the airdrop (<b class='g-c'>10% of $VULT</b>)."
             }, {
               "q": "What information is <b class='g-c'>collected</b> by Vultisig?",
               "a": "You are registering your Public Keys and vault addresses.<br><br><a class='g-c' href='https://github.com/vultisig/airdrop-registry' target='_blank'>Inspect the code here.</a><br><br>No other information is collected.<br><br><a class='g-c' href='https://github.com/vultisig/docs/blob/main/other/privacy.md' target='_blank'>Read the Privacy Policy here</a>"

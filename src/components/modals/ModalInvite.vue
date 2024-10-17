@@ -80,12 +80,8 @@ onMounted(() => {
 </script>
 
 <style lang="scss" scoped>
-
     .description {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
+        text-align: center;
         @include font-b;
         gap: 4px;
     }
@@ -110,7 +106,7 @@ onMounted(() => {
     .buttons {
         display: flex;
         flex-direction: column;
-        padding: 20px 0;
+        padding: 20px 0 32px 0;
         gap: 20px;
     }
 </style>
