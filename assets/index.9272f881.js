@@ -28536,7 +28536,7 @@ const resource = {
       },
       "invite": {
         "title": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["<b class='g-c'>Invite</b>"])};fn.source="<b class='g-c'>Invite</b>";return fn;})(),
-        "description": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["at least <b class='g-c'>50$</b> is needed that referral is <b class='g-c'>counted</b>"])};fn.source="at least <b class='g-c'>50$</b> is needed that referral is <b class='g-c'>counted</b>";return fn;})(),
+        "description": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["The referred wallet must be funded with <b class='g-c'>at least $50</b> to be viable."])};fn.source="The referred wallet must be funded with <b class='g-c'>at least $50</b> to be viable.";return fn;})(),
         "copy": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Copy link"])};fn.source="Copy link";return fn;})(),
         "copied": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Refferal link is copied"])};fn.source="Refferal link is copied";return fn;})(),
         "share": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Send"])};fn.source="Send";return fn;})()
@@ -28576,15 +28576,15 @@ const resource = {
         "qa": [
           {
             "q": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["How do I <b class='g-c'>register</b> for the airdrop?"])};fn.source="How do I <b class='g-c'>register</b> for the airdrop?";return fn;})(),
-            "a": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["<b class='g-c'>Become a Vultisig wallet user</b>.<br><br>Note: Airdrop is based on your <b class='g-c'>total</b> vault amounts, multiplied by the length of time your funds are kept in the vault. The largest holders for the longest amount of time earn the most"])};fn.source="<b class='g-c'>Become a Vultisig wallet user</b>.<br><br>Note: Airdrop is based on your <b class='g-c'>total</b> vault amounts, multiplied by the length of time your funds are kept in the vault. The largest holders for the longest amount of time earn the most";return fn;})()
+            "a": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["<b class='g-c'>Become a Vultisig user and join the airdrop calculation.</b><br><br>Note: The airdrop is based on the total amount in your vault multiplied by the time in the wallet. The largest amounts for the longest time earn the most. <br> Read more about this <a class='g-c' href='https://github.com/vultisig/airdrop-registry' target='_blank'>here</a>"])};fn.source="<b class='g-c'>Become a Vultisig user and join the airdrop calculation.</b><br><br>Note: The airdrop is based on the total amount in your vault multiplied by the time in the wallet. The largest amounts for the longest time earn the most. <br> Read more about this <a class='g-c' href='https://github.com/vultisig/airdrop-registry' target='_blank'>here</a>";return fn;})()
           },
           {
             "q": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["What assets are <b class='g-c'>counted</b> for the Airdrop?"])};fn.source="What assets are <b class='g-c'>counted</b> for the Airdrop?";return fn;})(),
-            "a": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["<b class='g-c'>Any</b> supported Layer1 asset, and any token on the 1inch token list"])};fn.source="<b class='g-c'>Any</b> supported Layer1 asset, and any token on the 1inch token list";return fn;})()
+            "a": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["<b class='g-c'>Layer1</b> assets and most tokens <b class='g-c'>supported by Vultisig</b> are counted. Other assets such as LPs and Node Bonds from THORChain, MAYA Protocol and ChainFlip are also viable.<br><br>See the full list <a class='g-c' href='https://docs.vultisig.com/vultisig-token/airdrop#eligble-assets' target='_blank'>here</a>"])};fn.source="<b class='g-c'>Layer1</b> assets and most tokens <b class='g-c'>supported by Vultisig</b> are counted. Other assets such as LPs and Node Bonds from THORChain, MAYA Protocol and ChainFlip are also viable.<br><br>See the full list <a class='g-c' href='https://docs.vultisig.com/vultisig-token/airdrop#eligble-assets' target='_blank'>here</a>";return fn;})()
           },
           {
-            "q": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["What is the Airdrop Strategy?"])};fn.source="What is the Airdrop Strategy?";return fn;})(),
-            "a": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["The first Airdrop period goes for <b class='g-c'>12 months</b> - it is 10% of the Supply of $VULT.<br><br>Then there is an annual airdrop of 2% of the supply for 5 years. A total of 20% will be airdropped."])};fn.source="The first Airdrop period goes for <b class='g-c'>12 months</b> - it is 10% of the Supply of $VULT.<br><br>Then there is an annual airdrop of 2% of the supply for 5 years. A total of 20% will be airdropped.";return fn;})()
+            "q": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["What is the <b class='g-c'>Airdrop process</b>?"])};fn.source="What is the <b class='g-c'>Airdrop process</b>?";return fn;})(),
+            "a": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Your assets will accumulate VULTIES over a period of <b class='g-c'>12 months</b>. At the end of this period, you will receive your share of the airdrop (<b class='g-c'>10% of $VULT</b>)."])};fn.source="Your assets will accumulate VULTIES over a period of <b class='g-c'>12 months</b>. At the end of this period, you will receive your share of the airdrop (<b class='g-c'>10% of $VULT</b>).";return fn;})()
           },
           {
             "q": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["What information is <b class='g-c'>collected</b> by Vultisig?"])};fn.source="What information is <b class='g-c'>collected</b> by Vultisig?";return fn;})(),
@@ -28738,13 +28738,13 @@ const routes = [
     {
         path: '/home',
         name: 'home',
-        component: () => __vitePreload(() => import('./Home.8f99ef1d.js'),true?["assets/Home.8f99ef1d.js","assets/Avatar.896264e2.js","assets/Avatar.429656ec.css","assets/EmptyLabel.d13b7bfa.js","assets/EmptyLabel.b61dc386.css","assets/Home.bd916ff8.css"]:void 0),
+        component: () => __vitePreload(() => import('./Home.d8cc811f.js'),true?["assets/Home.d8cc811f.js","assets/Avatar.26ca2413.js","assets/Avatar.429656ec.css","assets/EmptyLabel.f7f6ccbe.js","assets/EmptyLabel.b61dc386.css","assets/Home.bd916ff8.css"]:void 0),
         abort: []
     },
     {
         path: '/referrals',
         name: 'referrals',
-        component: () => __vitePreload(() => import('./Referrals.48d108dc.js'),true?["assets/Referrals.48d108dc.js","assets/Avatar.896264e2.js","assets/Avatar.429656ec.css","assets/EmptyLabel.d13b7bfa.js","assets/EmptyLabel.b61dc386.css","assets/Referrals.c3da3867.css"]:void 0),
+        component: () => __vitePreload(() => import('./Referrals.874fe8c2.js'),true?["assets/Referrals.874fe8c2.js","assets/Avatar.26ca2413.js","assets/Avatar.429656ec.css","assets/EmptyLabel.f7f6ccbe.js","assets/EmptyLabel.b61dc386.css","assets/Referrals.c3da3867.css"]:void 0),
         abort: [
             'referrals'
         ]
@@ -28752,25 +28752,25 @@ const routes = [
     {
         path: '/airdrop',
         name: 'airdrop',
-        component: () => __vitePreload(() => import('./Airdrop.c0d7bbf8.js'),true?["assets/Airdrop.c0d7bbf8.js","assets/Airdrop.7a8abfd3.css"]:void 0),
+        component: () => __vitePreload(() => import('./Airdrop.90a67cfd.js'),true?["assets/Airdrop.90a67cfd.js","assets/Airdrop.7a8abfd3.css"]:void 0),
         abort: []
     },
     {
         path: '/settings',
         name: 'settings',
-        component: () => __vitePreload(() => import('./Settings.88a096e7.js'),true?["assets/Settings.88a096e7.js","assets/Settings.4d15868b.css"]:void 0),
+        component: () => __vitePreload(() => import('./Settings.7050a43e.js'),true?["assets/Settings.7050a43e.js","assets/Settings.4d15868b.css"]:void 0),
         abort: []
     },
     {
         path: '/error',
         name: 'error',
-        component: () => __vitePreload(() => import('./Error.d035f680.js'),true?["assets/Error.d035f680.js","assets/EmptyLabel.d13b7bfa.js","assets/EmptyLabel.b61dc386.css","assets/Error.1e1044f0.css"]:void 0),
+        component: () => __vitePreload(() => import('./Error.edaa45a1.js'),true?["assets/Error.edaa45a1.js","assets/EmptyLabel.f7f6ccbe.js","assets/EmptyLabel.b61dc386.css","assets/Error.1e1044f0.css"]:void 0),
         abort: []
     },
     {
         path: '/access-denied',
         name: 'access-denied',
-        component: () => __vitePreload(() => import('./AccessDenied.e0a8cdc1.js'),true?["assets/AccessDenied.e0a8cdc1.js","assets/EmptyLabel.d13b7bfa.js","assets/EmptyLabel.b61dc386.css","assets/AccessDenied.ed7dcc68.css"]:void 0),
+        component: () => __vitePreload(() => import('./AccessDenied.3b961252.js'),true?["assets/AccessDenied.3b961252.js","assets/EmptyLabel.f7f6ccbe.js","assets/EmptyLabel.b61dc386.css","assets/AccessDenied.ed7dcc68.css"]:void 0),
         abort: []
     },
     {
@@ -40215,7 +40215,7 @@ const browserExt = {
   },
   test: () => true,
   load: async () => {
-    await __vitePreload(() => import('./browserAll.de76bf80.js'),true?["assets/browserAll.de76bf80.js","assets/init.e1d20900.js","assets/colorToUniform.47267789.js"]:void 0);
+    await __vitePreload(() => import('./browserAll.ad499fe7.js'),true?["assets/browserAll.ad499fe7.js","assets/init.548994e6.js","assets/colorToUniform.8e4bd612.js"]:void 0);
   }
 };
 
@@ -40227,7 +40227,7 @@ const webworkerExt = {
   },
   test: () => typeof self !== "undefined" && self.WorkerGlobalScope !== void 0,
   load: async () => {
-    await __vitePreload(() => import('./webworkerAll.ceeab84b.js'),true?["assets/webworkerAll.ceeab84b.js","assets/init.e1d20900.js","assets/colorToUniform.47267789.js"]:void 0);
+    await __vitePreload(() => import('./webworkerAll.1c5f0f69.js'),true?["assets/webworkerAll.1c5f0f69.js","assets/init.548994e6.js","assets/colorToUniform.8e4bd612.js"]:void 0);
   }
 };
 
@@ -50068,14 +50068,14 @@ async function autoDetectRenderer(options) {
   for (let i = 0; i < preferredOrder.length; i++) {
     const rendererType = preferredOrder[i];
     if (rendererType === "webgpu" && await isWebGPUSupported()) {
-      const { WebGPURenderer } = await __vitePreload(() => import('./WebGPURenderer.a3d7a3ec.js'),true?["assets/WebGPURenderer.a3d7a3ec.js","assets/colorToUniform.47267789.js","assets/SharedSystems.b6513eca.js"]:void 0);
+      const { WebGPURenderer } = await __vitePreload(() => import('./WebGPURenderer.3bd494ab.js'),true?["assets/WebGPURenderer.3bd494ab.js","assets/colorToUniform.8e4bd612.js","assets/SharedSystems.5963ef47.js"]:void 0);
       RendererClass = WebGPURenderer;
       finalOptions = { ...options, ...options.webgpu };
       break;
     } else if (rendererType === "webgl" && isWebGLSupported(
       options.failIfMajorPerformanceCaveat ?? AbstractRenderer.defaultOptions.failIfMajorPerformanceCaveat
     )) {
-      const { WebGLRenderer } = await __vitePreload(() => import('./WebGLRenderer.d05eb180.js'),true?["assets/WebGLRenderer.d05eb180.js","assets/colorToUniform.47267789.js","assets/SharedSystems.b6513eca.js"]:void 0);
+      const { WebGLRenderer } = await __vitePreload(() => import('./WebGLRenderer.f15bacd3.js'),true?["assets/WebGLRenderer.f15bacd3.js","assets/colorToUniform.8e4bd612.js","assets/SharedSystems.5963ef47.js"]:void 0);
       RendererClass = WebGLRenderer;
       finalOptions = { ...options, ...options.webgl };
       break;

@@ -388,7 +388,8 @@ ul.opacity-mode li svg[data-v-d610e656] {
   left: 0;
   right: 0;
   top: 0;
-  bottom: 0;
+  height: 100%;
+  max-height: var(--tg-viewport-height);
   background: rgba(34, 34, 34, 0.72);
   display: flex;
   align-items: end;
@@ -536,10 +537,7 @@ ul.opacity-mode li svg[data-v-d610e656] {
     background-size: 82%;
 }
 }.description[data-v-d7d050bc] {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -566,7 +564,7 @@ ul.opacity-mode li svg[data-v-d610e656] {
 .buttons[data-v-d7d050bc] {
   display: flex;
   flex-direction: column;
-  padding: 20px 0;
+  padding: 20px 0 32px 0;
   gap: 20px;
 }.content-box[data-v-e67a8434] {
   display: flex;
