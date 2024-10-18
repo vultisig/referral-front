@@ -67,13 +67,13 @@ const router = createRouter({
 });
 
 router.back = function (path) {
-    this.options.history.state.back ? this.go(-1) : this.push(path || '/');
+    this.options?.history?.state?.back ? this.go(-1) : this.push(path || '/');
 };
 
 router.beforeEach((to, from, next) => {
     if (from?.name) {
         routes.forEach((item) => {
-            if (item.name === from.name && item.abort) {
+            if (item?.name === from?.name && item.abort?.length) {
                 item.abort.forEach((code) => {
                     if (code.split(':id').length === 1) {
                         requests[code].abort();
