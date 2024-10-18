@@ -28738,13 +28738,13 @@ const routes = [
     {
         path: '/home',
         name: 'home',
-        component: () => __vitePreload(() => import('./Home.d8cc811f.js'),true?["assets/Home.d8cc811f.js","assets/Avatar.26ca2413.js","assets/Avatar.429656ec.css","assets/EmptyLabel.f7f6ccbe.js","assets/EmptyLabel.b61dc386.css","assets/Home.bd916ff8.css"]:void 0),
+        component: () => __vitePreload(() => import('./Home.c2929572.js'),true?["assets/Home.c2929572.js","assets/Avatar.c5f41387.js","assets/Avatar.429656ec.css","assets/EmptyLabel.f4088f05.js","assets/EmptyLabel.b61dc386.css","assets/Home.bd916ff8.css"]:void 0),
         abort: []
     },
     {
         path: '/referrals',
         name: 'referrals',
-        component: () => __vitePreload(() => import('./Referrals.874fe8c2.js'),true?["assets/Referrals.874fe8c2.js","assets/Avatar.26ca2413.js","assets/Avatar.429656ec.css","assets/EmptyLabel.f7f6ccbe.js","assets/EmptyLabel.b61dc386.css","assets/Referrals.c3da3867.css"]:void 0),
+        component: () => __vitePreload(() => import('./Referrals.a6e4f5f3.js'),true?["assets/Referrals.a6e4f5f3.js","assets/Avatar.c5f41387.js","assets/Avatar.429656ec.css","assets/EmptyLabel.f4088f05.js","assets/EmptyLabel.b61dc386.css","assets/Referrals.c3da3867.css"]:void 0),
         abort: [
             'referrals'
         ]
@@ -28752,25 +28752,25 @@ const routes = [
     {
         path: '/airdrop',
         name: 'airdrop',
-        component: () => __vitePreload(() => import('./Airdrop.90a67cfd.js'),true?["assets/Airdrop.90a67cfd.js","assets/Airdrop.7a8abfd3.css"]:void 0),
+        component: () => __vitePreload(() => import('./Airdrop.b967343c.js'),true?["assets/Airdrop.b967343c.js","assets/Airdrop.7a8abfd3.css"]:void 0),
         abort: []
     },
     {
         path: '/settings',
         name: 'settings',
-        component: () => __vitePreload(() => import('./Settings.7050a43e.js'),true?["assets/Settings.7050a43e.js","assets/Settings.4d15868b.css"]:void 0),
+        component: () => __vitePreload(() => import('./Settings.c5acc9b0.js'),true?["assets/Settings.c5acc9b0.js","assets/Settings.4d15868b.css"]:void 0),
         abort: []
     },
     {
         path: '/error',
         name: 'error',
-        component: () => __vitePreload(() => import('./Error.edaa45a1.js'),true?["assets/Error.edaa45a1.js","assets/EmptyLabel.f7f6ccbe.js","assets/EmptyLabel.b61dc386.css","assets/Error.1e1044f0.css"]:void 0),
+        component: () => __vitePreload(() => import('./Error.7cc36d52.js'),true?["assets/Error.7cc36d52.js","assets/EmptyLabel.f4088f05.js","assets/EmptyLabel.b61dc386.css","assets/Error.1e1044f0.css"]:void 0),
         abort: []
     },
     {
         path: '/access-denied',
         name: 'access-denied',
-        component: () => __vitePreload(() => import('./AccessDenied.3b961252.js'),true?["assets/AccessDenied.3b961252.js","assets/EmptyLabel.f7f6ccbe.js","assets/EmptyLabel.b61dc386.css","assets/AccessDenied.ed7dcc68.css"]:void 0),
+        component: () => __vitePreload(() => import('./AccessDenied.b46a3667.js'),true?["assets/AccessDenied.b46a3667.js","assets/EmptyLabel.f4088f05.js","assets/EmptyLabel.b61dc386.css","assets/AccessDenied.ed7dcc68.css"]:void 0),
         abort: []
     },
     {
@@ -28786,13 +28786,13 @@ const router = createRouter({
 });
 
 router.back = function (path) {
-    this.options.history.state.back ? this.go(-1) : this.push(path || '/');
+    this.options?.history?.state?.back ? this.go(-1) : this.push(path || '/');
 };
 
 router.beforeEach((to, from, next) => {
     if (from?.name) {
         routes.forEach((item) => {
-            if (item.name === from.name && item.abort) {
+            if (item?.name === from?.name && item.abort?.length) {
                 item.abort.forEach((code) => {
                     if (code.split(':id').length === 1) {
                         requests[code].abort();
@@ -40215,7 +40215,7 @@ const browserExt = {
   },
   test: () => true,
   load: async () => {
-    await __vitePreload(() => import('./browserAll.ad499fe7.js'),true?["assets/browserAll.ad499fe7.js","assets/init.548994e6.js","assets/colorToUniform.8e4bd612.js"]:void 0);
+    await __vitePreload(() => import('./browserAll.5dfde481.js'),true?["assets/browserAll.5dfde481.js","assets/init.fe543d34.js","assets/colorToUniform.c4db72a2.js"]:void 0);
   }
 };
 
@@ -40227,7 +40227,7 @@ const webworkerExt = {
   },
   test: () => typeof self !== "undefined" && self.WorkerGlobalScope !== void 0,
   load: async () => {
-    await __vitePreload(() => import('./webworkerAll.1c5f0f69.js'),true?["assets/webworkerAll.1c5f0f69.js","assets/init.548994e6.js","assets/colorToUniform.8e4bd612.js"]:void 0);
+    await __vitePreload(() => import('./webworkerAll.72042b3b.js'),true?["assets/webworkerAll.72042b3b.js","assets/init.fe543d34.js","assets/colorToUniform.c4db72a2.js"]:void 0);
   }
 };
 
@@ -50068,14 +50068,14 @@ async function autoDetectRenderer(options) {
   for (let i = 0; i < preferredOrder.length; i++) {
     const rendererType = preferredOrder[i];
     if (rendererType === "webgpu" && await isWebGPUSupported()) {
-      const { WebGPURenderer } = await __vitePreload(() => import('./WebGPURenderer.3bd494ab.js'),true?["assets/WebGPURenderer.3bd494ab.js","assets/colorToUniform.8e4bd612.js","assets/SharedSystems.5963ef47.js"]:void 0);
+      const { WebGPURenderer } = await __vitePreload(() => import('./WebGPURenderer.53489385.js'),true?["assets/WebGPURenderer.53489385.js","assets/colorToUniform.c4db72a2.js","assets/SharedSystems.3e758b41.js"]:void 0);
       RendererClass = WebGPURenderer;
       finalOptions = { ...options, ...options.webgpu };
       break;
     } else if (rendererType === "webgl" && isWebGLSupported(
       options.failIfMajorPerformanceCaveat ?? AbstractRenderer.defaultOptions.failIfMajorPerformanceCaveat
     )) {
-      const { WebGLRenderer } = await __vitePreload(() => import('./WebGLRenderer.f15bacd3.js'),true?["assets/WebGLRenderer.f15bacd3.js","assets/colorToUniform.8e4bd612.js","assets/SharedSystems.5963ef47.js"]:void 0);
+      const { WebGLRenderer } = await __vitePreload(() => import('./WebGLRenderer.adb93679.js'),true?["assets/WebGLRenderer.adb93679.js","assets/colorToUniform.c4db72a2.js","assets/SharedSystems.3e758b41.js"]:void 0);
       RendererClass = WebGLRenderer;
       finalOptions = { ...options, ...options.webgl };
       break;
@@ -60165,6 +60165,6 @@ app.directive('scroll', {
 app.config.globalProperties.$http = store.$http = fetchData;
 app.config.globalProperties.$message = store.$message = message;
 
-app.mount('#app');
+app.mount('#vulti-app');
 
 export { BigPool as $, boundsPool as A, Button as B, Container as C, UniformGroup as D, ExtensionType as E, Fragment as F, Geometry as G, BindGroup as H, Texture as I, Bounds as J, GraphicsContext as K, Loader$1 as L, Matrix as M, deprecation as N, v8_0_0 as O, Point as P, Buffer as Q, RendererType as R, BufferUsage as S, Ticker as T, UPDATE_PRIORITY as U, ViewContainer as V, Color as W, TextStyle as X, generateTextStyleKey as Y, CanvasTextMetrics as Z, _export_sfc as _, mapMutations as a, BatchableGraphics as a0, getAdjustedBlendModeBlend as a1, Shader as a2, compileHighShaderGpuProgram as a3, roundPixelsBit as a4, compileHighShaderGlProgram as a5, roundPixelsBitGl as a6, getMaxTexturesPerBatch as a7, colorBit as a8, generateTextureBatchBit as a9, getGlobalBounds as aA, FilterEffect as aB, Sprite as aC, getAttributeInfoFromFormat as aD, unsafeEvalSupported as aE, uid as aF, SystemRunner as aG, UPDATE_COLOR as aH, UPDATE_BLEND as aI, UPDATE_VISIBLE as aJ, getLocalBounds as aK, VERSION as aL, RendererInitHook as aM, colorBitGl as aa, generateTextureBatchBitGl as ab, getBatchSamplersUniformGroup as ac, BitmapFontManager as ad, getBitmapTextLayout as ae, Cache as af, updateQuadBounds as ag, DOMAdapter as ah, CanvasPool as ai, Rectangle as aj, fontStringFromTextStyle as ak, getCanvasFillStyle as al, nextPow2 as am, GraphicsContextSystem as an, TextureSource as ao, getTextureBatchBindGroup as ap, fastCopy as aq, STENCIL_MODES as ar, createIdFromString as as, CLEAR as at, CanvasSource as au, AbstractRenderer as av, GpuProgram as aw, GlProgram as ax, TextureMatrix as ay, DefaultBatcher as az, unref as b, computed as c, createElementBlock as d, createVNode as e, createBaseVNode as f, createCommentVNode as g, mapActions as h, reactive as i, onMounted as j, createBlock as k, createTextVNode as l, mapState as m, renderList as n, openBlock as o, delay as p, normalizeClass as q, resolveComponent as r, withCtx as s, toDisplayString$1 as t, useI18n as u, removeItems as v, watch as w, EventEmitter as x, warn as y, extensions as z };

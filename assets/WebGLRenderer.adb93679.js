@@ -1,6 +1,6 @@
-import { E as ExtensionType, S as BufferUsage, y as warn, ah as DOMAdapter, aD as getAttributeInfoFromFormat, G as Geometry, ax as GlProgram, a2 as Shader, I as Texture, ao as TextureSource, ar as STENCIL_MODES, aj as Rectangle, au as CanvasSource, at as CLEAR, D as UniformGroup, a7 as getMaxTexturesPerBatch, M as Matrix, a5 as compileHighShaderGlProgram, aa as colorBitGl, ab as generateTextureBatchBitGl, a6 as roundPixelsBitGl, ac as getBatchSamplersUniformGroup, z as extensions, av as AbstractRenderer, R as RendererType } from './index.9272f881.js';
-import { S as State, a as localUniformBitGl } from './colorToUniform.8e4bd612.js';
-import { e as ensureAttributes, G as GpuStencilModesToPixi, c as createUboSyncFunction, b as uboSyncFunctionsSTD40, U as UboSystem, R as RenderTargetSystem, B as BufferResource, d as uniformParsers, f as textureBitGl, S as SharedSystems, a as SharedRenderPipes } from './SharedSystems.5963ef47.js';
+import { E as ExtensionType, S as BufferUsage, y as warn, ah as DOMAdapter, aD as getAttributeInfoFromFormat, G as Geometry, ax as GlProgram, a2 as Shader, I as Texture, ao as TextureSource, ar as STENCIL_MODES, aj as Rectangle, au as CanvasSource, at as CLEAR, D as UniformGroup, a7 as getMaxTexturesPerBatch, M as Matrix, a5 as compileHighShaderGlProgram, aa as colorBitGl, ab as generateTextureBatchBitGl, a6 as roundPixelsBitGl, ac as getBatchSamplersUniformGroup, z as extensions, av as AbstractRenderer, R as RendererType } from './index.e77653d5.js';
+import { S as State, a as localUniformBitGl } from './colorToUniform.c4db72a2.js';
+import { e as ensureAttributes, G as GpuStencilModesToPixi, c as createUboSyncFunction, b as uboSyncFunctionsSTD40, U as UboSystem, R as RenderTargetSystem, B as BufferResource, d as uniformParsers, f as textureBitGl, S as SharedSystems, a as SharedRenderPipes } from './SharedSystems.3e758b41.js';
 
 class GlBatchAdaptor {
   constructor() {
