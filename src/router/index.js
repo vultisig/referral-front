@@ -1,14 +1,16 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import { ROUTER_ERRORS } from '@/constants';
+// import { ROUTER_ERRORS } from '@/constants';
+import { message } from '@/utils/utils';
 
 import { requests } from '@/utils/requests';
 
 const handleRouterError = (error) => {
-    const errorWords = error.message.toLowerCase().split(' ');
-    const action = ROUTER_ERRORS.find((item) => item.code.some((r) => errorWords.indexOf(r) !== -1));
-    if (action) {
-        return action.action();
-    }
+    message.error(error.message);
+    // const errorWords = error.message.toLowerCase().split(' ');
+    // const action = ROUTER_ERRORS.find((item) => item.code.some((r) => errorWords.indexOf(r) !== -1));
+    // if (action) {
+    //     return action.action();
+    // }
 };
 
 const goHome = (to, from, next) => {
