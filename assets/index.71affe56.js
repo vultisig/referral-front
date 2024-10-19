@@ -28713,21 +28713,13 @@ const scriptRel = 'modulepreload';const assetsURL = function(dep) { return "/"+d
     })).then(() => baseModule());
 };
 
-const { t: t$3 } = i18n.global;
-
-const ROUTER_ERRORS = [
-    {
-        code: ['fetch', 'load', 'dynamically', 'importing'],
-        action: () => message.error(t$3('common.errors.importError'))
-    }
-];
-
 const handleRouterError = (error) => {
-    const errorWords = error.message.toLowerCase().split(' ');
-    const action = ROUTER_ERRORS.find((item) => item.code.some((r) => errorWords.indexOf(r) !== -1));
-    if (action) {
-        return action.action();
-    }
+    message.error(error.message);
+    // const errorWords = error.message.toLowerCase().split(' ');
+    // const action = ROUTER_ERRORS.find((item) => item.code.some((r) => errorWords.indexOf(r) !== -1));
+    // if (action) {
+    //     return action.action();
+    // }
 };
 
 const goHome = (to, from, next) => {
@@ -28738,13 +28730,13 @@ const routes = [
     {
         path: '/home',
         name: 'home',
-        component: () => __vitePreload(() => import('./Home.c2929572.js'),true?["assets/Home.c2929572.js","assets/Avatar.c5f41387.js","assets/Avatar.429656ec.css","assets/EmptyLabel.f4088f05.js","assets/EmptyLabel.b61dc386.css","assets/Home.bd916ff8.css"]:void 0),
+        component: () => __vitePreload(() => import('./Home.4ba0c63c.js'),true?["assets/Home.4ba0c63c.js","assets/Avatar.5ffe432e.js","assets/Avatar.429656ec.css","assets/EmptyLabel.ed821962.js","assets/EmptyLabel.b61dc386.css","assets/Home.bd916ff8.css"]:void 0),
         abort: []
     },
     {
         path: '/referrals',
         name: 'referrals',
-        component: () => __vitePreload(() => import('./Referrals.a6e4f5f3.js'),true?["assets/Referrals.a6e4f5f3.js","assets/Avatar.c5f41387.js","assets/Avatar.429656ec.css","assets/EmptyLabel.f4088f05.js","assets/EmptyLabel.b61dc386.css","assets/Referrals.c3da3867.css"]:void 0),
+        component: () => __vitePreload(() => import('./Referrals.13739fd8.js'),true?["assets/Referrals.13739fd8.js","assets/Avatar.5ffe432e.js","assets/Avatar.429656ec.css","assets/EmptyLabel.ed821962.js","assets/EmptyLabel.b61dc386.css","assets/Referrals.c3da3867.css"]:void 0),
         abort: [
             'referrals'
         ]
@@ -28752,25 +28744,25 @@ const routes = [
     {
         path: '/airdrop',
         name: 'airdrop',
-        component: () => __vitePreload(() => import('./Airdrop.b967343c.js'),true?["assets/Airdrop.b967343c.js","assets/Airdrop.7a8abfd3.css"]:void 0),
+        component: () => __vitePreload(() => import('./Airdrop.95e16fc2.js'),true?["assets/Airdrop.95e16fc2.js","assets/Airdrop.7a8abfd3.css"]:void 0),
         abort: []
     },
     {
         path: '/settings',
         name: 'settings',
-        component: () => __vitePreload(() => import('./Settings.c5acc9b0.js'),true?["assets/Settings.c5acc9b0.js","assets/Settings.4d15868b.css"]:void 0),
+        component: () => __vitePreload(() => import('./Settings.a6a3e7b0.js'),true?["assets/Settings.a6a3e7b0.js","assets/Settings.4d15868b.css"]:void 0),
         abort: []
     },
     {
         path: '/error',
         name: 'error',
-        component: () => __vitePreload(() => import('./Error.7cc36d52.js'),true?["assets/Error.7cc36d52.js","assets/EmptyLabel.f4088f05.js","assets/EmptyLabel.b61dc386.css","assets/Error.1e1044f0.css"]:void 0),
+        component: () => __vitePreload(() => import('./Error.7fe61a2f.js'),true?["assets/Error.7fe61a2f.js","assets/EmptyLabel.ed821962.js","assets/EmptyLabel.b61dc386.css","assets/Error.1e1044f0.css"]:void 0),
         abort: []
     },
     {
         path: '/access-denied',
         name: 'access-denied',
-        component: () => __vitePreload(() => import('./AccessDenied.b46a3667.js'),true?["assets/AccessDenied.b46a3667.js","assets/EmptyLabel.f4088f05.js","assets/EmptyLabel.b61dc386.css","assets/AccessDenied.ed7dcc68.css"]:void 0),
+        component: () => __vitePreload(() => import('./AccessDenied.844d4c60.js'),true?["assets/AccessDenied.844d4c60.js","assets/EmptyLabel.ed821962.js","assets/EmptyLabel.b61dc386.css","assets/AccessDenied.ed7dcc68.css"]:void 0),
         abort: []
     },
     {
@@ -40215,7 +40207,7 @@ const browserExt = {
   },
   test: () => true,
   load: async () => {
-    await __vitePreload(() => import('./browserAll.5dfde481.js'),true?["assets/browserAll.5dfde481.js","assets/init.fe543d34.js","assets/colorToUniform.c4db72a2.js"]:void 0);
+    await __vitePreload(() => import('./browserAll.60f5ce04.js'),true?["assets/browserAll.60f5ce04.js","assets/init.6060f8d2.js","assets/colorToUniform.5dbfc0e0.js"]:void 0);
   }
 };
 
@@ -40227,7 +40219,7 @@ const webworkerExt = {
   },
   test: () => typeof self !== "undefined" && self.WorkerGlobalScope !== void 0,
   load: async () => {
-    await __vitePreload(() => import('./webworkerAll.72042b3b.js'),true?["assets/webworkerAll.72042b3b.js","assets/init.fe543d34.js","assets/colorToUniform.c4db72a2.js"]:void 0);
+    await __vitePreload(() => import('./webworkerAll.7879fb39.js'),true?["assets/webworkerAll.7879fb39.js","assets/init.6060f8d2.js","assets/colorToUniform.5dbfc0e0.js"]:void 0);
   }
 };
 
@@ -50068,14 +50060,14 @@ async function autoDetectRenderer(options) {
   for (let i = 0; i < preferredOrder.length; i++) {
     const rendererType = preferredOrder[i];
     if (rendererType === "webgpu" && await isWebGPUSupported()) {
-      const { WebGPURenderer } = await __vitePreload(() => import('./WebGPURenderer.53489385.js'),true?["assets/WebGPURenderer.53489385.js","assets/colorToUniform.c4db72a2.js","assets/SharedSystems.3e758b41.js"]:void 0);
+      const { WebGPURenderer } = await __vitePreload(() => import('./WebGPURenderer.7707a581.js'),true?["assets/WebGPURenderer.7707a581.js","assets/colorToUniform.5dbfc0e0.js","assets/SharedSystems.1e51a39f.js"]:void 0);
       RendererClass = WebGPURenderer;
       finalOptions = { ...options, ...options.webgpu };
       break;
     } else if (rendererType === "webgl" && isWebGLSupported(
       options.failIfMajorPerformanceCaveat ?? AbstractRenderer.defaultOptions.failIfMajorPerformanceCaveat
     )) {
-      const { WebGLRenderer } = await __vitePreload(() => import('./WebGLRenderer.adb93679.js'),true?["assets/WebGLRenderer.adb93679.js","assets/colorToUniform.c4db72a2.js","assets/SharedSystems.3e758b41.js"]:void 0);
+      const { WebGLRenderer } = await __vitePreload(() => import('./WebGLRenderer.b639903a.js'),true?["assets/WebGLRenderer.b639903a.js","assets/colorToUniform.5dbfc0e0.js","assets/SharedSystems.1e51a39f.js"]:void 0);
       RendererClass = WebGLRenderer;
       finalOptions = { ...options, ...options.webgl };
       break;
