@@ -1,11 +1,13 @@
 <template>
     <svg
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
         :width="props.size ? props.size[0] : null"
         :height="props.size ? props.size[1] : null"
         :fill="props.color ? props.color : null"
     >
         <title v-if="props.title">{{ props.title }}</title>
-        <use :href="url"></use>
+        <use :href="url" :xlink:href="url"></use>
     </svg>
 </template>
 
