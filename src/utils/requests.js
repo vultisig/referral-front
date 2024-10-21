@@ -95,6 +95,8 @@ export const onRequestDefaultError = (e) => {
             if (router?.currentRoute?.value?.name !== 'access-denied') {
                 router.push({ name: 'access-denied' });
             }
+        } else if (e?.response?.status === 423) {
+            message.error(e.response?.data?.message || t('utils.request.error'));
         } else {
             message.error(t('utils.request.error'));
         }
