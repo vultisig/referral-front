@@ -92,7 +92,7 @@
         "stats": {
           "balance": {
             "title": "Total <b class='g-c'>balance</b>",
-            "error": "The wallet must be funded with at least $50 to be valid"
+            "description": "The balance is updated once a day."
           },
           "name": "<b class='g-c'>Wallet</b> name",
           "refferals": "<b class='g-c'>Referrals</b> in your squad",
