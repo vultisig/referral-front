@@ -28748,13 +28748,13 @@ const routes = [
     {
         path: '/airdrop',
         name: 'airdrop',
-        component: () => __vitePreload(() => import('./Airdrop.5a03b90c.js'),true?["assets/Airdrop.5a03b90c.js","assets/Airdrop.7a8abfd3.css"]:void 0),
+        component: () => __vitePreload(() => import('./Airdrop.5a03b90c.js'),true?["assets/Airdrop.5a03b90c.js","assets/Airdrop.652df2f2.css"]:void 0),
         abort: []
     },
     {
         path: '/settings',
         name: 'settings',
-        component: () => __vitePreload(() => import('./Settings.42e972c5.js'),true?["assets/Settings.42e972c5.js","assets/Settings.4d15868b.css"]:void 0),
+        component: () => __vitePreload(() => import('./Settings.42e972c5.js'),true?["assets/Settings.42e972c5.js","assets/Settings.95b90fa1.css"]:void 0),
         abort: []
     },
     {
