@@ -1,6 +1,6 @@
-import { _ as _export_sfc, u as useI18n, m as mapState, a as mapMutations, c as computed, r as resolveComponent, b as unref, o as openBlock, d as createElementBlock, e as createVNode, f as createBaseVNode, t as toDisplayString, F as Fragment, B as Button, g as createCommentVNode, n as numberWithSpaces } from './index.8b9345aa.js';
-import { A as Avatar } from './Avatar.1abeee4c.js';
-import { E as EmptyLabel } from './EmptyLabel.802deee5.js';
+import { _ as _export_sfc, u as useI18n, m as mapState, a as mapMutations, c as computed, r as resolveComponent, b as unref, o as openBlock, d as createElementBlock, e as createVNode, f as createBaseVNode, t as toDisplayString, F as Fragment, B as Button, g as createCommentVNode, n as numberWithSpaces } from './index.a35d46c6.js';
+import { A as Avatar } from './Avatar.25691c5d.js';
+import { E as EmptyLabel } from './EmptyLabel.396f2752.js';
 
 const Home_vue_vue_type_style_index_0_scoped_933e9cdf_lang = '';
 
@@ -16,13 +16,8 @@ const _hoisted_6 = ["innerHTML"];
 const _hoisted_7 = ["innerHTML"];
 const _hoisted_8 = ["innerHTML"];
 const _hoisted_9 = ["innerHTML"];
-const _hoisted_10 = {
-  key: 0,
-  class: "warning"
-};
-const _hoisted_11 = ["innerHTML"];
-const _hoisted_12 = ["innerHTML"];
-const _hoisted_13 = { class: "button-box" };
+const _hoisted_10 = ["innerHTML"];
+const _hoisted_11 = { class: "button-box" };
 
     
 const _sfc_main = {
@@ -134,21 +129,14 @@ return (_ctx, _cache) => {
                                 }, null, 8 /* PROPS */, _hoisted_9),
                                 createBaseVNode("span", null, toDisplayString(unref(numberWithSpaces)(unref(user).vasProfile.balance)) + " $", 1 /* TEXT */)
                               ]),
-                              (unref(user).vasProfile.balance < 50)
-                                ? (openBlock(), createElementBlock("div", _hoisted_10, [
-                                    createBaseVNode("span", {
-                                      innerHTML: unref(t)('pages.home.stats.balance.error')
-                                    }, null, 8 /* PROPS */, _hoisted_11),
-                                    createVNode(_component_Icon, { icon: "triangle-warning" })
-                                  ]))
-                                : createCommentVNode("v-if", true)
+                              createCommentVNode(" <div v-if=\"user.vasProfile.balance < 50\" class=\"warning\">\n                                <span v-html=\"t('pages.home.stats.balance.error')\"></span>\n                                <Icon icon=\"triangle-warning\"/>\n                            </div> ")
                             ]),
                             createBaseVNode("li", null, [
                               createVNode(_component_Icon, { icon: "coin" }),
                               createBaseVNode("div", null, [
                                 createBaseVNode("span", {
                                   innerHTML: unref(t)('pages.home.stats.farmed.title')
-                                }, null, 8 /* PROPS */, _hoisted_12),
+                                }, null, 8 /* PROPS */, _hoisted_10),
                                 createBaseVNode("span", null, toDisplayString(unref(user).vasProfile.total_points) + " " + toDisplayString(unref(t)('pages.home.stats.farmed.points')), 1 /* TEXT */)
                               ])
                             ])
@@ -157,7 +145,7 @@ return (_ctx, _cache) => {
                     ], 64 /* STABLE_FRAGMENT */))
                   : createCommentVNode("v-if", true)
               ]),
-              createBaseVNode("div", _hoisted_13, [
+              createBaseVNode("div", _hoisted_11, [
                 createVNode(Button, {
                   name: unref(t)('pages.home.wallet.view'),
                   class: "secondary",
