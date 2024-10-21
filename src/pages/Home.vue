@@ -58,11 +58,10 @@
                                 <span v-html="t('pages.home.stats.balance.title')"></span>
                                 <span>{{ numberWithSpaces(user.vasProfile.balance) }} $</span>
                             </div>
-
-                            <div v-if="user.vasProfile.balance < 50" class="warning">
+                            <!-- <div v-if="user.vasProfile.balance < 50" class="warning">
                                 <span v-html="t('pages.home.stats.balance.error')"></span>
                                 <Icon icon="triangle-warning"/>
-                            </div>
+                            </div> -->
                         </li>
                         <li>
                             <Icon icon="coin"/>
