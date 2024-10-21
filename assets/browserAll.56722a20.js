@@ -1,6 +1,6 @@
-import { P as Point, x as removeItems, E as ExtensionType, T as Ticker, U as UPDATE_PRIORITY, y as EventEmitter, z as warn, A as extensions, C as Container } from './index.f5602f50.js';
-import './init.d25fd923.js';
-import './colorToUniform.f4f05e91.js';
+import { P as Point, x as removeItems, E as ExtensionType, T as Ticker, U as UPDATE_PRIORITY, y as EventEmitter, z as warn, A as extensions, C as Container } from './index.8b9345aa.js';
+import './init.b094b990.js';
+import './colorToUniform.9b1c738a.js';
 
 class FederatedEvent {
   /**

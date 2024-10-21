@@ -28734,13 +28734,13 @@ const routes = [
     {
         path: '/home',
         name: 'home',
-        component: () => __vitePreload(() => import('./Home.61a1e985.js'),true?["assets/Home.61a1e985.js","assets/Avatar.46d503f2.js","assets/Avatar.429656ec.css","assets/EmptyLabel.2637a762.js","assets/EmptyLabel.b61dc386.css","assets/Home.ebbd679a.css"]:void 0),
+        component: () => __vitePreload(() => import('./Home.ba64a351.js'),true?["assets/Home.ba64a351.js","assets/Avatar.1abeee4c.js","assets/Avatar.429656ec.css","assets/EmptyLabel.802deee5.js","assets/EmptyLabel.b61dc386.css","assets/Home.ebbd679a.css"]:void 0),
         abort: []
     },
     {
         path: '/referrals',
         name: 'referrals',
-        component: () => __vitePreload(() => import('./Referrals.fe46b941.js'),true?["assets/Referrals.fe46b941.js","assets/Avatar.46d503f2.js","assets/Avatar.429656ec.css","assets/EmptyLabel.2637a762.js","assets/EmptyLabel.b61dc386.css","assets/Referrals.c3da3867.css"]:void 0),
+        component: () => __vitePreload(() => import('./Referrals.08978b66.js'),true?["assets/Referrals.08978b66.js","assets/Avatar.1abeee4c.js","assets/Avatar.429656ec.css","assets/EmptyLabel.802deee5.js","assets/EmptyLabel.b61dc386.css","assets/Referrals.c3da3867.css"]:void 0),
         abort: [
             'referrals'
         ]
@@ -28748,25 +28748,25 @@ const routes = [
     {
         path: '/airdrop',
         name: 'airdrop',
-        component: () => __vitePreload(() => import('./Airdrop.c2241b77.js'),true?["assets/Airdrop.c2241b77.js","assets/Airdrop.7a8abfd3.css"]:void 0),
+        component: () => __vitePreload(() => import('./Airdrop.5a03b90c.js'),true?["assets/Airdrop.5a03b90c.js","assets/Airdrop.7a8abfd3.css"]:void 0),
         abort: []
     },
     {
         path: '/settings',
         name: 'settings',
-        component: () => __vitePreload(() => import('./Settings.227d12f7.js'),true?["assets/Settings.227d12f7.js","assets/Settings.4d15868b.css"]:void 0),
+        component: () => __vitePreload(() => import('./Settings.42e972c5.js'),true?["assets/Settings.42e972c5.js","assets/Settings.4d15868b.css"]:void 0),
         abort: []
     },
     {
         path: '/error',
         name: 'error',
-        component: () => __vitePreload(() => import('./Error.0b5fdfb6.js'),true?["assets/Error.0b5fdfb6.js","assets/EmptyLabel.2637a762.js","assets/EmptyLabel.b61dc386.css","assets/Error.1e1044f0.css"]:void 0),
+        component: () => __vitePreload(() => import('./Error.b00ae85e.js'),true?["assets/Error.b00ae85e.js","assets/EmptyLabel.802deee5.js","assets/EmptyLabel.b61dc386.css","assets/Error.1e1044f0.css"]:void 0),
         abort: []
     },
     {
         path: '/access-denied',
         name: 'access-denied',
-        component: () => __vitePreload(() => import('./AccessDenied.45aa7f99.js'),true?["assets/AccessDenied.45aa7f99.js","assets/EmptyLabel.2637a762.js","assets/EmptyLabel.b61dc386.css","assets/AccessDenied.ed7dcc68.css"]:void 0),
+        component: () => __vitePreload(() => import('./AccessDenied.f6a452d7.js'),true?["assets/AccessDenied.f6a452d7.js","assets/EmptyLabel.802deee5.js","assets/EmptyLabel.b61dc386.css","assets/AccessDenied.ed7dcc68.css"]:void 0),
         abort: []
     },
     {
@@ -28885,6 +28885,8 @@ const onRequestDefaultError = (e) => {
             if (router?.currentRoute?.value?.name !== 'access-denied') {
                 router.push({ name: 'access-denied' });
             }
+        } else if (e?.response?.status === 423) {
+            message.error(e.response?.data?.message || t$2('utils.request.error'));
         } else {
             message.error(t$2('utils.request.error'));
         }
@@ -40217,7 +40219,7 @@ const browserExt = {
   },
   test: () => true,
   load: async () => {
-    await __vitePreload(() => import('./browserAll.2d01b973.js'),true?["assets/browserAll.2d01b973.js","assets/init.d25fd923.js","assets/colorToUniform.f4f05e91.js"]:void 0);
+    await __vitePreload(() => import('./browserAll.56722a20.js'),true?["assets/browserAll.56722a20.js","assets/init.b094b990.js","assets/colorToUniform.9b1c738a.js"]:void 0);
   }
 };
 
@@ -40229,7 +40231,7 @@ const webworkerExt = {
   },
   test: () => typeof self !== "undefined" && self.WorkerGlobalScope !== void 0,
   load: async () => {
-    await __vitePreload(() => import('./webworkerAll.952616ae.js'),true?["assets/webworkerAll.952616ae.js","assets/init.d25fd923.js","assets/colorToUniform.f4f05e91.js"]:void 0);
+    await __vitePreload(() => import('./webworkerAll.76adbe87.js'),true?["assets/webworkerAll.76adbe87.js","assets/init.b094b990.js","assets/colorToUniform.9b1c738a.js"]:void 0);
   }
 };
 
@@ -50070,14 +50072,14 @@ async function autoDetectRenderer(options) {
   for (let i = 0; i < preferredOrder.length; i++) {
     const rendererType = preferredOrder[i];
     if (rendererType === "webgpu" && await isWebGPUSupported()) {
-      const { WebGPURenderer } = await __vitePreload(() => import('./WebGPURenderer.61bc6e9a.js'),true?["assets/WebGPURenderer.61bc6e9a.js","assets/colorToUniform.f4f05e91.js","assets/SharedSystems.5dad0ab1.js"]:void 0);
+      const { WebGPURenderer } = await __vitePreload(() => import('./WebGPURenderer.d2c55df2.js'),true?["assets/WebGPURenderer.d2c55df2.js","assets/colorToUniform.9b1c738a.js","assets/SharedSystems.b006af6b.js"]:void 0);
       RendererClass = WebGPURenderer;
       finalOptions = { ...options, ...options.webgpu };
       break;
     } else if (rendererType === "webgl" && isWebGLSupported(
       options.failIfMajorPerformanceCaveat ?? AbstractRenderer.defaultOptions.failIfMajorPerformanceCaveat
     )) {
-      const { WebGLRenderer } = await __vitePreload(() => import('./WebGLRenderer.4e951ffe.js'),true?["assets/WebGLRenderer.4e951ffe.js","assets/colorToUniform.f4f05e91.js","assets/SharedSystems.5dad0ab1.js"]:void 0);
+      const { WebGLRenderer } = await __vitePreload(() => import('./WebGLRenderer.35c6bfff.js'),true?["assets/WebGLRenderer.35c6bfff.js","assets/colorToUniform.9b1c738a.js","assets/SharedSystems.b006af6b.js"]:void 0);
       RendererClass = WebGLRenderer;
       finalOptions = { ...options, ...options.webgl };
       break;
