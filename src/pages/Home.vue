@@ -223,6 +223,7 @@
                         transform: scale(1);
                     }
                 }
+
                 .warning {
                     display: flex;
                     flex-direction: row;
@@ -266,8 +267,6 @@
 
         .button-box {
             padding: 12px 0;
-            // background-color: $black;
-            // box-shadow: 0px 4px 12px 4px $black;
             flex-shrink: 0;
             position: sticky;
             bottom: 0;
