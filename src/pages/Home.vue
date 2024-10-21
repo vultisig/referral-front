@@ -21,7 +21,6 @@
         </template>
         <template v-else>
             <ul class="stats">
-
                 <li>
                     <Icon icon="referrals-secondary"/>
                     <div>
@@ -54,6 +53,18 @@
                             </div>
                         </li>
                         <li>
+                            <Icon icon="dollar"/>
+                            <div>
+                                <span v-html="t('pages.home.stats.balance.title')"></span>
+                                <span>{{ numberWithSpaces(user.vasProfile.balance) }} $</span>
+                            </div>
+
+                            <div v-if="user.vasProfile.balance < 50" class="warning">
+                                <span v-html="t('pages.home.stats.balance.error')"></span>
+                                <Icon icon="triangle-warning"/>
+                            </div>
+                        </li>
+                        <li>
                             <Icon icon="coin"/>
                             <div>
                                 <span v-html="t('pages.home.stats.farmed.title')"></span>
@@ -82,6 +93,7 @@
     import Button from '@/components/forms/Button.vue';
     import EmptyLabel from '@/components/forms/EmptyLabel.vue';
     import { mapMutations, mapState } from '@/map-state';
+    import { numberWithSpaces } from '@/utils/utils';
 
     const { t } = useI18n();
     const { user } = mapState();
@@ -176,6 +188,7 @@
                 border-top-left-radius: 0;
                 border-bottom-right-radius: 0;
                 border-bottom-left-radius: 24px;
+                flex-wrap: wrap; 
 
                 &:nth-child(2n) {
                     flex-direction: row-reverse;
@@ -210,6 +223,24 @@
                         transform: scale(1);
                     }
                 }
+                .warning {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 4px;
+                    justify-content: end;
+                    width: 100%;
+                    flex: 1 1 100%;
+                    svg {
+                        width: 16px;
+                        height: 16px;
+                        margin: 0;
+                        animation: none;
+                    }
+                    span {
+                        @include font-small;
+                    }
+                }
 
                 div {
                     display: flex;
@@ -217,6 +248,11 @@
                     gap: 4px;
                     align-items: end;
                     span {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        gap: 4px;
+
                         &:nth-child(1) {
                         }
                         &:nth-child(2) {

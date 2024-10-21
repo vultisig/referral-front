@@ -25,11 +25,11 @@
                     class="secondary"
                     @click="viewLeaderboard"
                 />
-                <Button
+                <!-- <Button
                     :name="t('pages.airdrop.view')"
                     class="secondary"
                     @click="viewAirdrop"
-                />
+                /> -->
             </template>
             <template v-else>
                 <Button
