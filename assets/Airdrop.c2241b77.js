@@ -1,4 +1,4 @@
-import { _ as _export_sfc, h as mapActions, u as useI18n, m as mapState, i as reactive, r as resolveComponent, b as unref, o as openBlock, d as createElementBlock, e as createVNode, f as createBaseVNode, F as Fragment, n as renderList, g as createCommentVNode, B as Button, k as createBlock, q as normalizeClass } from './index.aa123522.js';
+import { _ as _export_sfc, h as mapActions, u as useI18n, m as mapState, i as reactive, r as resolveComponent, b as unref, o as openBlock, d as createElementBlock, e as createVNode, f as createBaseVNode, F as Fragment, p as renderList, g as createCommentVNode, B as Button, k as createBlock, s as normalizeClass } from './index.f5602f50.js';
 
 const Airdrop_vue_vue_type_style_index_0_scoped_94566200_lang = '';
 
@@ -63,20 +63,6 @@ const _sfc_main = {
         }
     };
 
-    const viewAirdrop = () => {
-        const params = [
-            `public_key_ecdsa=${user.value.profile?.wallet_public_key_ecdsa}`,
-            `public_key_eddsa=${user.value.profile?.wallet_public_key_eddsa}`,
-            'join_airdrop=true'
-        ].join('&');
-
-        if (window.Telegram?.WebApp) {
-            window.Telegram?.WebApp.openLink("https://airdrop.vultisig.com?source=vultisigbot" + `&${params}`);
-        } else {
-            window.open("https://airdrop.vultisig.com?source=vultisigbot" + `&${params}`, '_blank');
-        }
-    };
-
 return (_ctx, _cache) => {
   const _component_Icon = resolveComponent("Icon");
 
@@ -118,11 +104,7 @@ return (_ctx, _cache) => {
                       class: "secondary",
                       onClick: viewLeaderboard
                     }, null, 8 /* PROPS */, ["name"]),
-                    createVNode(Button, {
-                      name: unref(t)('pages.airdrop.view'),
-                      class: "secondary",
-                      onClick: viewAirdrop
-                    }, null, 8 /* PROPS */, ["name"])
+                    createCommentVNode(" <Button\n                    :name=\"t('pages.airdrop.view')\"\n                    class=\"secondary\"\n                    @click=\"viewAirdrop\"\n                /> ")
                   ], 64 /* STABLE_FRAGMENT */))
                 : (openBlock(), createElementBlock(Fragment, { key: 1 }, [
                     (!data.loading)
