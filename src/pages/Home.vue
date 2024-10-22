@@ -209,7 +209,11 @@
                         align-items: start;
                         &.warning {
                             align-items: center;
-                            flex-direction: row;
+                            flex-direction: row-reverse;
+                            justify-content: start;
+                            span {
+                                text-align: left;
+                            }
                         }
                     }
                 }
@@ -235,7 +239,7 @@
 
                 .warning {
                     display: flex;
-                    flex-direction: row-reverse;
+                    flex-direction: row;
                     align-items: center;
                     gap: 8px;
                     justify-content: end;
@@ -249,6 +253,7 @@
                     }
                     span {
                         @include font-small;
+                        text-align: right;
                     }
                 }
 
