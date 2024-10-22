@@ -1,5 +1,6 @@
 import { createStore } from 'vuex';
 import user from '@/store/modules/User';
+import achievement from '@/store/modules/Achievement';
 import { onRequestDefaultError, requests } from '@/utils/requests';
 import { delay } from '@/utils/utils';
 
@@ -7,6 +8,7 @@ const state = () => ({
     theme: 'theme.default',
     modals: [],
     messages: [],
+    pixiRedeem: null,
     enableBG: null,
     disableBG: null,
     ready: false,
@@ -49,6 +51,9 @@ const mutations = {
     },
     setEnableBG(state, payload) {
         state.enableBG = payload;
+    },
+    setPixiRedeem(state, payload) {
+        state.pixiRedeem = payload;
     },
     openModal(state, payload) {
         if (typeof payload == 'string') {
@@ -101,6 +106,7 @@ export const store = createStore({
     getters,
     mutations,
     modules: {
+        achievement,
         user
     }
 });

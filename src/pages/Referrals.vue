@@ -9,7 +9,7 @@
             <EmptyLabel v-if="!data.referrals.length"
                 :title="t('pages.referrals.empty.title')"
                 :description="t('pages.referrals.empty.description')"
-                class="emty"
+                class="empty"
             />
 
             <div v-else class="users-list">
@@ -167,7 +167,7 @@
             text-align: center;
         }
 
-        & > .emty {
+        & > .empty {
             margin: auto;
         }
 

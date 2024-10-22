@@ -35,6 +35,10 @@ const data = reactive({
         link: '/airdrop',
         name: t('nav.airdrop')
     }, {
+        icon: 'achievements',
+        link: '/achievements',
+        name: t('nav.achievements')
+    }, {
         icon: 'settings',
         link: '/settings',
         name: t('nav.settings')

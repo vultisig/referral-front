@@ -15,6 +15,7 @@
       "home": "Home",
       "airdrop": "Airdrop",
       "referrals": "Squad",
+      "achievements": "Rewards",
       "settings": "Settings"
     },
     "utils": {
@@ -24,6 +25,13 @@
       }
     },
     "modals": {
+      "achievement-redeem-code": {
+        "errors": {
+          "incorrect-code": "Incorrect code", 
+          "time-expired": "The validity period has expired", 
+          "already-redeem": "The achievement has already been received earlier"
+        }
+      },
       "loader": {
         "description": {
           "title": "UNLOCK YOUR <b class='g-c'>$VULT</b><br>AIRDROP TODAY",
@@ -116,6 +124,14 @@
             "title": "<b class='g-c'>Wallet</b> not connected",
             "description": "Do not connect a wallet if you do not wish for your <b class='g-c'>public keys</b> to be sent to the Airdrop Registry"
           }
+        }
+      },
+      "achievements": {
+        "title": "<b class='g-c'>Achievements</b>",
+        "redeem": "Redeem code",
+        "empty": {
+          "title": "<b class='g-c'>Achievements</b> not found",
+          "description": "The achievement offers exclusive opportunities, additional airdrops, and more. <br><br>To stay updated, be sure to follow us on X and Telegram. Attending conferences is also a great way to increase your chances of success and receive special achievements."
         }
       },
       "referrals": {
