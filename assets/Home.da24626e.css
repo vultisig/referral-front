@@ -84,6 +84,9 @@
 .page-container .stats li:nth-child(2n) div[data-v-933e9cdf] {
   align-items: start;
 }
+.page-container .stats li:nth-child(2n) div.warning[data-v-933e9cdf] {
+  align-items: center;
+}
 .page-container .stats li svg[data-v-933e9cdf] {
   width: 32px;
   height: 32px;
@@ -105,7 +108,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 4px;
+  gap: 8px;
   justify-content: end;
   width: 100%;
   flex: 1 1 100%;
