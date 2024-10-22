@@ -86,7 +86,11 @@
 }
 .page-container .stats li:nth-child(2n) div.warning[data-v-933e9cdf] {
   align-items: center;
-  flex-direction: row;
+  flex-direction: row-reverse;
+  justify-content: start;
+}
+.page-container .stats li:nth-child(2n) div.warning span[data-v-933e9cdf] {
+  text-align: left;
 }
 .page-container .stats li svg[data-v-933e9cdf] {
   width: 32px;
@@ -107,7 +111,7 @@
 }
 .page-container .stats li .warning[data-v-933e9cdf] {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   align-items: center;
   gap: 8px;
   justify-content: end;
@@ -126,6 +130,7 @@
   font-weight: 100;
   font-size: 10px;
   line-height: 10px;
+  text-align: right;
 }
 .page-container .stats li div[data-v-933e9cdf] {
   display: flex;
