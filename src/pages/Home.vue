@@ -209,6 +209,7 @@
                         align-items: start;
                         &.warning {
                             align-items: center;
+                            flex-direction: row;
                         }
                     }
                 }
@@ -234,7 +235,7 @@
 
                 .warning {
                     display: flex;
-                    flex-direction: row;
+                    flex-direction: row-reverse;
                     align-items: center;
                     gap: 8px;
                     justify-content: end;
