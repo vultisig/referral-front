@@ -104,7 +104,8 @@
           "rank": "Your <b class='g-c'>position</b>",
           "farmed": {
             "title": "<b class='g-c'>Farmed</b>",
-            "points": "points"
+            "points": "points",
+            "description": "Click «View Wallet» as some token may need to be manually enabled."
           }
         },
         "wallet": {
