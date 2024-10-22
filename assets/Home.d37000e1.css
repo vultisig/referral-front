@@ -86,6 +86,7 @@
 }
 .page-container .stats li:nth-child(2n) div.warning[data-v-933e9cdf] {
   align-items: center;
+  flex-direction: row;
 }
 .page-container .stats li svg[data-v-933e9cdf] {
   width: 32px;
@@ -106,7 +107,7 @@
 }
 .page-container .stats li .warning[data-v-933e9cdf] {
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   align-items: center;
   gap: 8px;
   justify-content: end;
