@@ -53,6 +53,18 @@
                             </div>
                         </li>
                         <li>
+                            <Icon icon="coin"/>
+                            <div>
+                                <span v-html="t('pages.home.stats.farmed.title')"></span>
+                                <span>{{ user.vasProfile.total_points }} {{ t('pages.home.stats.farmed.points') }}</span>
+                            </div>
+
+                            <div class="warning">
+                                <span v-html="t('pages.home.stats.farmed.description')"></span>
+                                <Icon icon="triangle-warning"/>
+                            </div>
+                        </li>
+                        <li>
                             <Icon icon="dollar"/>
                             <div>
                                 <span v-html="t('pages.home.stats.balance.title')"></span>
@@ -62,13 +74,6 @@
                             <div class="warning">
                                 <span v-html="t('pages.home.stats.balance.description')"></span>
                                 <Icon icon="triangle-warning"/>
-                            </div>
-                        </li>
-                        <li>
-                            <Icon icon="coin"/>
-                            <div>
-                                <span v-html="t('pages.home.stats.farmed.title')"></span>
-                                <span>{{ user.vasProfile.total_points }} {{ t('pages.home.stats.farmed.points') }}</span>
                             </div>
                         </li>
                     </template>
@@ -202,6 +207,9 @@
                     }
                     div {
                         align-items: start;
+                        &.warning {
+                            align-items: center;
+                        }
                     }
                 }
 
@@ -228,7 +236,7 @@
                     display: flex;
                     flex-direction: row;
                     align-items: center;
-                    gap: 4px;
+                    gap: 8px;
                     justify-content: end;
                     width: 100%;
                     flex: 1 1 100%;
