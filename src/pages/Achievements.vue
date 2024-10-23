@@ -28,9 +28,10 @@
             </div>
         </div>
 
-        <div class="buttons-box">
+        <div class="button-box">
             <Button
                 :name="t('pages.achievements.redeem')"
+                class="secondary"
                 @click="redeem"/>
         </div>
     </template>
@@ -179,16 +180,22 @@
         }
     }
 
-    .buttons-box {
-        padding: 24px 10px 12px;
-        background-color: $black-0;
-        box-shadow: 0px 4px 12px 4px $black-0;
+    .button-box {
+        padding: 12px 10px;
         flex-shrink: 0;
         position: sticky;
         bottom: 0;
         margin-top: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
         button {
             width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 8px;
         }
     }
 </style>
