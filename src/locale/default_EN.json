@@ -130,8 +130,8 @@
         "title": "<b class='g-c'>Achievements</b>",
         "redeem": "Redeem code",
         "empty": {
-          "title": "<b class='g-c'>Achievements</b> not found",
-          "description": "The achievement offers exclusive opportunities, additional airdrops, and more. <br><br>To stay updated, be sure to follow us on X and Telegram. Attending conferences is also a great way to increase your chances of success and receive special achievements."
+          "title": "There is <b class='g-c'>nothing</b>",
+          "description": "The achievement offers exclusive opportunities, additional airdrops, <b>and more</b>"
         }
       },
       "referrals": {

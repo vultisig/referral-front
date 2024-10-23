@@ -8,9 +8,16 @@ import { onBeforeMount, onMounted, reactive } from 'vue';
 import { mapMutations } from '@/map-state';
 
 const emit = defineEmits(['ready']);
-const { setPixiRedeem, setEnableBG, setDisableBG } = mapMutations();
+const {
+    setPixiRedeem,
+    setEnableBG,
+    setDisableBG,
+    setEnableRecursionLogo,
+    setDisableRecursionLogo
+} = mapMutations();
 
 const data = reactive({
+    recursionLogoApp: null,
     bgApp: null,
     redeemApp: null,
 
@@ -35,9 +42,18 @@ const data = reactive({
             height: 41
         }
     ],
+    recursionLogoTextures: [
+        {
+            code: 'logo',
+            url: `/img/logo-light.svg`,
+            width: 86,
+            height: 82
+        }
+    ],
 
     bgItems: [],
-    redeemItems: []
+    redeemItems: [],
+    recursionLogoItems: []
 });
 
 const addBgTexture = async (item) => {
@@ -100,6 +116,28 @@ const addRedeemTexture = async ({ item, x, y }) => {
     payload.rotate = Math.random() / 4;
 
     data.redeemItems.push(payload);
+};
+
+const addRecursionLogoTexture = async ({ item, scale }) => {
+    const payload = {
+        sprite: new Sprite(item.texture)
+    }
+
+    data.recursionLogoApp.stage.addChild(payload.sprite);
+    payload.sprite.anchor.set(0.5);
+
+    if (item.width) {
+        payload.sprite.width = parseInt(item.width * scale);
+    }
+
+    if (item.height) {
+        payload.sprite.height = parseInt(item.height * scale);
+    }
+
+    payload.sprite.x = parseInt(.5 * data.recursionLogoApp.screen.width);
+    payload.sprite.y = parseInt(.5 * data.recursionLogoApp.screen.height);
+
+    data.recursionLogoItems.push(payload);
 };
 
 const enableBG = async () => {
@@ -252,6 +290,45 @@ const createRedeem = async () => {
     });
 }
 
+const enableRecursionLogo = async () => {
+    if (!data.recursionLogoApp) {
+        await createRecursionLogo();
+    }
+
+    data.recursionLogoTextures.forEach(item => {
+        if (item.code === 'logo') {
+            for (let scale = 4; scale < 22; scale += 1) {
+                addRecursionLogoTexture({ item, scale });
+            }
+        }
+    });
+}
+
+const destroyRecursionLogo = async () => {
+    if (data.recursionLogoApp) {
+        data.recursionLogoApp.canvas.style.display = 'none';
+        data.recursionLogoApp.canvas.remove();
+
+        setTimeout(() => {
+            data.recursionLogoApp.destroy();
+            data.recursionLogoApp = null;
+            document.getElementById('pixi-recursion-logo').remove();
+        }, 10);
+    }
+}
+
+const createRecursionLogo = async () => {
+    const div = document.createElement('div');
+    div.id = 'pixi-recursion-logo';
+    document.getElementById('pixi-box').appendChild(div);
+
+    data.recursionLogoApp = new Application();
+
+    await data.recursionLogoApp.init({ backgroundAlpha: 0, resizeTo: window });
+
+    document.getElementById('pixi-recursion-logo').appendChild(data.recursionLogoApp.canvas);
+}
+
 onMounted(async () => {
     // Preload bg
     await Promise.all(data.bgTextures.map(async (item) => {
@@ -263,6 +340,11 @@ onMounted(async () => {
         item.texture = await Assets.load(item.url);
     }));
 
+    // Preload recursion
+    await Promise.all(data.recursionLogoTextures.map(async (item) => {
+        item.texture = await Assets.load(item.url);
+    }));
+
     // Create bg
     enableBG();
 
@@ -270,6 +352,9 @@ onMounted(async () => {
     setPixiRedeem(pixiRedeem);
     setEnableBG(enableBG);
     setDisableBG(disableBG);
+
+    setEnableRecursionLogo(enableRecursionLogo);
+    setDisableRecursionLogo(destroyRecursionLogo);
 
     emit('ready');
 });
@@ -281,6 +366,7 @@ onBeforeMount(async () => {
 </script>
 
 <style lang="scss">
+    #pixi-recursion-logo,
     #pixi-redeem,
     #pixi-bg {
         position: fixed;
@@ -291,6 +377,27 @@ onBeforeMount(async () => {
         pointer-events: none;
         opacity: .8;
         filter: blur(8px);
+    }
+
+    #pixi-recursion-logo {
+        opacity: .4;
+        filter: brightness(0.5);
+        animation: recoursion-scale linear infinite 40s;
+    }
+
+    @keyframes recoursion-scale {
+        0% {
+            transform: scale(1);
+            opacity: .4;
+        }
+        50% {
+            transform: scale(2);
+            opacity: 0;
+        }
+        100% {
+            transform: scale(1);
+            opacity: .4;
+        }
     }
 
     #pixi-redeem {

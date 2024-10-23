@@ -11,6 +11,9 @@ const state = () => ({
     pixiRedeem: null,
     enableBG: null,
     disableBG: null,
+    enableRecursionLogo: null,
+    disableRecursionLogo: null,
+
     ready: false,
     settings: {}
 });
@@ -54,6 +57,12 @@ const mutations = {
     },
     setPixiRedeem(state, payload) {
         state.pixiRedeem = payload;
+    },
+    setDisableRecursionLogo(state, payload) {
+        state.disableRecursionLogo = payload;
+    },
+    setEnableRecursionLogo(state, payload) {
+        state.enableRecursionLogo = payload;
     },
     openModal(state, payload) {
         if (typeof payload == 'string') {

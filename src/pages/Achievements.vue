@@ -37,7 +37,7 @@
 </template>
 
 <script setup>
-    import { onMounted, reactive, watch } from 'vue';
+    import { onBeforeUnmount, onMounted, reactive, watch } from 'vue';
     import { useI18n } from 'vue-i18n';
     import Button from '@/components/forms/Button.vue';
     import EmptyLabel from '@/components/forms/EmptyLabel.vue';
@@ -49,7 +49,7 @@
     const { user, settings, ready } = mapState();
     const { openModal } = mapMutations();
     const { getMyAchievements, me } = mapActions();
-    const { pixiRedeem } = mapState();
+    const { pixiRedeem, disableRecursionLogo, enableRecursionLogo } = mapState();
 
     const data = reactive({
         achievements: [],
@@ -89,6 +89,9 @@
         () => ready.value,
         async () => {
             if (ready.value) {
+                if (enableRecursionLogo?.value) {
+                    enableRecursionLogo.value();
+                }
                 // await me();
                 getAchievementsList();
             }
@@ -97,8 +100,18 @@
 
     onMounted(async () => {
         if (ready.value) {
+            if (enableRecursionLogo?.value) {
+                enableRecursionLogo.value();
+            }
             // await me();
             getAchievementsList();
+        }
+    });
+
+    onBeforeUnmount(async () => {
+        console.log(disableRecursionLogo)
+        if (disableRecursionLogo?.value) {
+            disableRecursionLogo.value();
         }
     });
 </script>
