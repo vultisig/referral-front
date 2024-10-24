@@ -11,6 +11,8 @@ const state = () => ({
 
 const actions = {
     async redeemAchievement({ commit }, code) {
+        await delay(500);
+        return true;
         try {
             const result = await this.$http({
                 method: 'POST',
@@ -20,7 +22,7 @@ const actions = {
             });
 
             if (result.status === 200) {
-                return true;
+                return result.data;
             }
         } catch (e) {
             if (e.status === 424) {

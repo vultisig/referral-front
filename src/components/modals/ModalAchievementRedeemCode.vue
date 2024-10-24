@@ -10,6 +10,7 @@
             <div class="content-box">
                 <div class="field-box">
                     <Field
+                        :disabled="data.loading"
                         :placeholder="$t('modals.achievement-redeem-code.placeholder')"
                         name="code"
                         @change="onInput"
@@ -17,7 +18,8 @@
                 </div>
 
                 <div class="buttons">
-                    <Button :name="t('common.apply')"
+                    <Button v-if="data.loading" class="loader" :loading="true" />
+                    <Button v-else :name="t('common.apply')"
                         :disabled="!data.value"
                         @click="apply" />
                     <Button :name="t('common.close')" class="secondary" @click="close"/>
@@ -33,29 +35,38 @@ import { useI18n } from 'vue-i18n';
 import Field from '@/components/forms/Field.vue';
 import Button from '@/components/forms/Button.vue';
 import BaseModal from '@/components/modals/BaseModal.vue';
-import { mapState, mapMutations } from '@/map-state';
+import { mapState, mapMutations, mapActions } from '@/map-state';
 
+const { redeemAchievement } = mapActions();
 const { t } = useI18n();
 const { closeModal } = mapMutations();
 const { user } = mapState();
 
 const data = reactive({
-    value: ''
+    value: '',
+    loading: false
 });
 
 const onInput = (e) => {
     data.value = (e.target?.value || '').trim();
 }
 
-const apply = () => {
+const apply = async () => {
+    data.loading = true;
+    const result = await redeemAchievement(data.value);
 
+    if (result) {
+        closeModal({
+            name: 'achievement-redeem-code',
+            data: result
+        });    
+    }
+
+    data.loading = false;
 }
 
 const close = () => {
-    closeModal({
-        name: 'achievement-redeem-code',
-        data: 'close'
-    });
+    closeModal('achievement-redeem-code');
 };
 </script>
 

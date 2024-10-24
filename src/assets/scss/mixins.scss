@@ -99,9 +99,16 @@
     }
 
     &:disabled {
-        filter: grayscale(1);
-        // background-color:  $black-0;
-        // border-color: transparent;
+        opacity: .4;
+        &:hover,
+        &:focus {
+            background: $black-1;
+            border-color: $black;
+        }
+    }
+
+    &:disabled ~ .actions-block {
+        display: none;
     }
 
     & ~ .actions-block {

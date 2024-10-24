@@ -61,8 +61,8 @@
     const redeem = (e) => {
         openModal({
             name: 'achievement-redeem-code',
-            callback: (action) => {
-                if (action === 'close') {
+            callback: (payload) => {
+                if (payload) {
                     if (pixiRedeem?.value) {
                         pixiRedeem.value({ y : e.pageY, x : e.pageX });
                     }
