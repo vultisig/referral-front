@@ -12,7 +12,13 @@ const state = () => ({
 const actions = {
     async redeemAchievement({ commit }, code) {
         await delay(500);
-        return true;
+        return {
+            name: 'Binance Blockchain Week Dubai 2024',
+            code: 'bbw-2024',
+            icon: 'bbw-2024.webp',
+            start_date: '2024-10-30T00:00:00Z',
+            end_date: '2024-10-31T23:59:00Z',
+        };
         try {
             const result = await this.$http({
                 method: 'POST',

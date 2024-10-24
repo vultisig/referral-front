@@ -17,6 +17,17 @@
                     <li v-for="(item, id) in data.achievements"
                         :key="id"
                     >
+                        <span>
+                            <img :src="getUrl(item.icon)" :alt="item.name" />
+                            <img :src="getUrl(item.icon)" :alt="item.name" />
+                        </span>
+                        <div>
+                            <label>{{ item.name }}</label>
+                           <!--  <mark v-if="item.start_date && item.end_date">
+                                {{ moment(item.start_date).format('DD.MM.YYYY') }} -
+                                {{ moment(item.end_date).format('DD.MM.YYYY') }}
+                            </mark> -->
+                        </div>
                     </li>
                 </ul>
 
@@ -45,6 +56,7 @@
     import Loader from '@/components/forms/Loader.vue';
     import { mapActions, mapMutations, mapState } from '@/map-state';
     import { delay } from '@/utils/utils';
+    import moment from 'moment';
 
     const { t } = useI18n();
     const { user, settings, ready } = mapState();
@@ -58,11 +70,18 @@
         loading: true
     });
 
+    const getUrl = (icon) => {
+        const path = `/img/achievements/${icon}`;
+        return new URL(path, import.meta.url).href;
+    }
+
     const redeem = (e) => {
         openModal({
             name: 'achievement-redeem-code',
             callback: (payload) => {
                 if (payload) {
+                    data.achievements.push(payload);
+
                     if (pixiRedeem?.value) {
                         pixiRedeem.value({ y : e.pageY, x : e.pageX });
                     }
@@ -173,9 +192,75 @@
                     justify-content: start;
                     gap: 12px;
                     background-color: $black-1;
-                    padding: 0 20px;
-                    border-radius: 20px;
-                    min-height: 56px;
+                    padding: 8px 16px;
+                    border-radius: 24px;
+                    min-height: 88px;
+
+                    & > span {
+                        width: 50px;
+                        flex-shrink: 0;
+                        height: 72px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        position: relative;
+                        img {
+                            width: 100%;
+
+                            &:nth-child(2) {
+                                position: absolute;
+                                top: 50%;
+                                left: 0;
+                                transform: translateY(-50%); 
+                                filter: brightness(9999);
+
+                                -webkit-mask-size: 100%;
+                                -webkit-mask-repeat: no-repeat;
+                                -webkit-mask-position: left top, left bottom;
+                                -webkit-mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+                            }
+                        }
+                    }
+                    div {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 8px;
+                        align-items: start;
+                        label {
+                            @include font-btn;
+                            color: $white;
+                            max-width: 210px;
+                        }
+                        mark {
+                            @include font-btn;
+                            background-color: $turquoise;
+                            color: $white; 
+                        }
+                    }
+
+                    &:nth-child(4n) {
+                        & > span img:nth-child(2) {
+                            @include sunshine(7s, 165deg, 0);
+                        }
+                    }
+
+                    &:nth-child(4n + 1) {
+                        & > span img:nth-child(2) {
+                            @include sunshine(4s, 135deg, 1);
+                        }
+                    }
+
+                    &:nth-child(4n + 2) {
+                        & > span img:nth-child(2) {
+                            @include sunshine(3s, 175deg, 2);
+                        }
+                    }
+
+                    &:nth-child(4n + 3) {
+                        & > span img:nth-child(2) {
+                            @include sunshine(5s, 105deg, 3);
+                        }
+                    }
                 }
             }
 
