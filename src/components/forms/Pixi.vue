@@ -110,7 +110,7 @@ const addRedeemTexture = async ({ item, x, y }) => {
 
     payload.dir = {
         x: +(((Math.random() > .4 ? 1 : -1) * (Math.random() * 8)).toFixed(1)),
-        y: +(((Math.random() > .4 ? 1 : -1) * (Math.random() * 8)).toFixed(1))
+        y: +(((Math.random() > .3 ? -1 : 1) * (Math.random() * 8)).toFixed(1))
     };
 
     payload.rotate = Math.random() / 4;

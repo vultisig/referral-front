@@ -5,6 +5,7 @@
         "defaultName": "'s wallet",
       },
       "more": "more",
+      "apply": "Apply",
       "referrals": "squad",
       "close": "Close",
       "errors": {
@@ -24,8 +25,17 @@
         "error": "Error executing request"
       }
     },
+    "forms": {
+      "field": {
+        "clear": "Clear",
+        "showPassword": "Show password",
+        "hidePassword": "Hide password"
+      }
+    },
     "modals": {
       "achievement-redeem-code": {
+        "placeholder": "Please enter code",
+        "title": "Time for achievements",
         "errors": {
           "incorrect-code": "Incorrect code", 
           "time-expired": "The validity period has expired", 

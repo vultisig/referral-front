@@ -59,15 +59,20 @@
     });
 
     const redeem = (e) => {
-        if (pixiRedeem?.value) {
-            pixiRedeem.value({ y : e.pageY, x : e.pageX });
-        }
+        openModal({
+            name: 'achievement-redeem-code',
+            callback: (action) => {
+                if (action === 'close') {
+                    if (pixiRedeem?.value) {
+                        pixiRedeem.value({ y : e.pageY, x : e.pageX });
+                    }
 
-        if (window.navigator?.vibrate) {
-            window.navigator.vibrate(200);
-        }
-
-        openModal('achievement-redeem-code');
+                    if (window.navigator?.vibrate) {
+                        window.navigator.vibrate(200);
+                    }
+                }
+            }
+        });
     };
 
     const getAchievementsList = async () => {

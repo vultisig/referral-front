@@ -79,3 +79,47 @@
         min-height: 40px;
     }
 }
+
+@mixin input {
+    width: 100%;
+    padding: 9px 16px;
+    height: 52px;
+    @include font-btn;
+    color: $white;
+    background: $black-1;
+    border: 1px solid $black;
+    border-radius: 8px;
+    outline: none;
+    color-scheme: dark;
+
+    &:hover,
+    &:focus {
+        background: $black-0;
+        border-color: $persian-blue;
+    }
+
+    &:disabled {
+        filter: grayscale(1);
+        // background-color:  $black-0;
+        // border-color: transparent;
+    }
+
+    & ~ .actions-block {
+        .clean  {
+            opacity: 0;
+        }
+    }
+
+    &:not(:placeholder-shown) ~ .actions-block {
+        .clean {
+            opacity: 1;
+        }
+    }
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active {
+        transition: background-color 5000s ease-in-out 0s;
+    }
+}
