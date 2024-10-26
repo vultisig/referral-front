@@ -70,6 +70,7 @@
   font-size: 13px;
   line-height: 18px;
   color: var(--Color-primary-white);
+  text-align: left;
 }
 .page-container .spoilers li button svg[data-v-94566200] {
   fill: var(--Color-primary-white);

@@ -14085,6 +14085,30 @@ const withModifiers = (fn, modifiers) => {
     return fn(event, ...args);
   });
 };
+const keyNames = {
+  esc: "escape",
+  space: " ",
+  up: "arrow-up",
+  left: "arrow-left",
+  right: "arrow-right",
+  down: "arrow-down",
+  delete: "backspace"
+};
+const withKeys = (fn, modifiers) => {
+  const cache = fn._withKeys || (fn._withKeys = {});
+  const cacheKey = modifiers.join(".");
+  return cache[cacheKey] || (cache[cacheKey] = (event) => {
+    if (!("key" in event)) {
+      return;
+    }
+    const eventKey = hyphenate(event.key);
+    if (modifiers.some(
+      (k) => k === eventKey || keyNames[k] === eventKey
+    )) {
+      return fn(event);
+    }
+  });
+};
 
 const rendererOptions = /* @__PURE__ */ extend({ patchProp }, nodeOps);
 let renderer;
@@ -17897,7 +17921,7 @@ const _export_sfc = (sfc, props) => {
   return target;
 };
 
-const _sfc_main$g = {
+const _sfc_main$j = {
   __name: 'Circle',
   props: {
     top: { type: [String, null], default: null },
@@ -17922,7 +17946,7 @@ return (_ctx, _cache) => {
 }
 
 };
-const Circle$1 = /*#__PURE__*/_export_sfc(_sfc_main$g, [['__scopeId',"data-v-cc11e5b1"],['__file',"/home/runner/work/referral-front/referral-front/src/components/forms/Circle.vue"]]);
+const Circle$1 = /*#__PURE__*/_export_sfc(_sfc_main$j, [['__scopeId',"data-v-cc11e5b1"],['__file',"/home/runner/work/referral-front/referral-front/src/components/forms/Circle.vue"]]);
 
 /*!
  * vuex v4.1.0
@@ -19061,14 +19085,14 @@ const mapActions = () => {
 
 const Messages_vue_vue_type_style_index_0_scoped_a397f62e_lang = '';
 
-const _hoisted_1$b = {
+const _hoisted_1$e = {
   key: 0,
   class: "messages"
 };
-const _hoisted_2$a = ["innerHTML"];
+const _hoisted_2$c = ["innerHTML"];
 
 
-const _sfc_main$f = {
+const _sfc_main$i = {
   __name: 'Messages',
   setup(__props) {
 
@@ -19086,7 +19110,7 @@ return (_ctx, _cache) => {
   const _component_Icon = resolveComponent("Icon");
 
   return (unref(messages).length)
-    ? (openBlock(), createElementBlock("div", _hoisted_1$b, [
+    ? (openBlock(), createElementBlock("div", _hoisted_1$e, [
         createBaseVNode("div", null, [
           (openBlock(true), createElementBlock(Fragment, null, renderList(unref(messages), (message) => {
             return (openBlock(), createElementBlock("div", {
@@ -19100,7 +19124,7 @@ return (_ctx, _cache) => {
               _cache[0] || (_cache[0] = createBaseVNode("span", { class: "devider" }, null, -1 /* HOISTED */)),
               createBaseVNode("span", {
                 innerHTML: message.text
-              }, null, 8 /* PROPS */, _hoisted_2$a)
+              }, null, 8 /* PROPS */, _hoisted_2$c)
             ], 6 /* CLASS, STYLE */))
           }), 128 /* KEYED_FRAGMENT */))
         ])
@@ -19110,7 +19134,7 @@ return (_ctx, _cache) => {
 }
 
 };
-const Messages = /*#__PURE__*/_export_sfc(_sfc_main$f, [['__scopeId',"data-v-a397f62e"],['__file',"/home/runner/work/referral-front/referral-front/src/components/forms/Messages.vue"]]);
+const Messages = /*#__PURE__*/_export_sfc(_sfc_main$i, [['__scopeId',"data-v-a397f62e"],['__file',"/home/runner/work/referral-front/referral-front/src/components/forms/Messages.vue"]]);
 
 var browser = {};
 
@@ -25905,11 +25929,11 @@ registerLocaleFallbacker(fallbackWithLocaleChain);
 
 const Button_vue_vue_type_style_index_0_scoped_112c178d_lang = '';
 
-const _hoisted_1$a = ["disabled"];
-const _hoisted_2$9 = { key: 0 };
+const _hoisted_1$d = ["disabled"];
+const _hoisted_2$b = { key: 0 };
 
 
-const _sfc_main$e = {
+const _sfc_main$h = {
   __name: 'Button',
   props: {
     name: { type: String, default: '' },
@@ -25928,7 +25952,7 @@ return (_ctx, _cache) => {
     disabled: props.disabled
   }, [
     (props.name)
-      ? (openBlock(), createElementBlock("span", _hoisted_2$9, toDisplayString$1(props.name), 1 /* TEXT */))
+      ? (openBlock(), createElementBlock("span", _hoisted_2$b, toDisplayString$1(props.name), 1 /* TEXT */))
       : createCommentVNode("v-if", true),
     renderSlot(_ctx.$slots, "default", {}, undefined, true),
     (props.loading)
@@ -25937,16 +25961,16 @@ return (_ctx, _cache) => {
           icon: "loader-4"
         }))
       : createCommentVNode("v-if", true)
-  ], 8 /* PROPS */, _hoisted_1$a))
+  ], 8 /* PROPS */, _hoisted_1$d))
 }
 }
 
 };
-const Button = /*#__PURE__*/_export_sfc(_sfc_main$e, [['__scopeId',"data-v-112c178d"],['__file',"/home/runner/work/referral-front/referral-front/src/components/forms/Button.vue"]]);
+const Button = /*#__PURE__*/_export_sfc(_sfc_main$h, [['__scopeId',"data-v-112c178d"],['__file',"/home/runner/work/referral-front/referral-front/src/components/forms/Button.vue"]]);
 
 const Loader_vue_vue_type_style_index_0_scoped_d610e656_lang = '';
 
-const _sfc_main$d = {};
+const _sfc_main$g = {};
 
 function _sfc_render(_ctx, _cache) {
   const _component_Icon = resolveComponent("Icon");
@@ -25966,25 +25990,25 @@ function _sfc_render(_ctx, _cache) {
     ])
   ]))
 }
-const Loader$1 = /*#__PURE__*/_export_sfc(_sfc_main$d, [['render',_sfc_render],['__scopeId',"data-v-d610e656"],['__file',"/home/runner/work/referral-front/referral-front/src/components/forms/Loader.vue"]]);
+const Loader$1 = /*#__PURE__*/_export_sfc(_sfc_main$g, [['render',_sfc_render],['__scopeId',"data-v-d610e656"],['__file',"/home/runner/work/referral-front/referral-front/src/components/forms/Loader.vue"]]);
 
 const BaseModal_vue_vue_type_style_index_0_scoped_6badf473_lang = '';
 
-const _hoisted_1$9 = {
+const _hoisted_1$c = {
   key: 0,
   class: "header"
 };
-const _hoisted_2$8 = {
+const _hoisted_2$a = {
   key: 1,
   class: "content"
 };
-const _hoisted_3$7 = {
+const _hoisted_3$8 = {
   key: 2,
   class: "loader"
 };
 
 
-const _sfc_main$c = {
+const _sfc_main$f = {
   __name: 'BaseModal',
   props: {
     canCancel: {
@@ -26037,7 +26061,7 @@ return (_ctx, _cache) => {
       onClick: _cache[0] || (_cache[0] = withModifiers(() => {}, ["stop"]))
     }, [
       (unref(slots).title)
-        ? (openBlock(), createElementBlock("div", _hoisted_1$9, [
+        ? (openBlock(), createElementBlock("div", _hoisted_1$c, [
             createBaseVNode("h3", null, [
               renderSlot(_ctx.$slots, "title", {}, undefined, true)
             ]),
@@ -26059,12 +26083,12 @@ return (_ctx, _cache) => {
           ]))
         : createCommentVNode("v-if", true),
       (!props.isLoading)
-        ? (openBlock(), createElementBlock("div", _hoisted_2$8, [
+        ? (openBlock(), createElementBlock("div", _hoisted_2$a, [
             renderSlot(_ctx.$slots, "content", {}, undefined, true)
           ]))
         : createCommentVNode("v-if", true),
       (props.isLoading)
-        ? (openBlock(), createElementBlock("div", _hoisted_3$7, [
+        ? (openBlock(), createElementBlock("div", _hoisted_3$8, [
             createVNode(Loader$1)
           ]))
         : createCommentVNode("v-if", true)
@@ -26074,7 +26098,7 @@ return (_ctx, _cache) => {
 }
 
 };
-const BaseModal = /*#__PURE__*/_export_sfc(_sfc_main$c, [['__scopeId',"data-v-6badf473"],['__file',"/home/runner/work/referral-front/referral-front/src/components/modals/BaseModal.vue"]]);
+const BaseModal = /*#__PURE__*/_export_sfc(_sfc_main$f, [['__scopeId',"data-v-6badf473"],['__file',"/home/runner/work/referral-front/referral-front/src/components/modals/BaseModal.vue"]]);
 
 /** @type {import('.')} */
 var esErrors = Error;
@@ -28509,8 +28533,10 @@ const resource = {
         "defaultName": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["'s wallet"])};fn.source="'s wallet";return fn;})()
       },
       "more": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["more"])};fn.source="more";return fn;})(),
+      "apply": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Apply"])};fn.source="Apply";return fn;})(),
       "referrals": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["squad"])};fn.source="squad";return fn;})(),
       "close": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Close"])};fn.source="Close";return fn;})(),
+      "unnamed": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Unnamed"])};fn.source="Unnamed";return fn;})(),
       "errors": {
         "importError": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["App version updated, reload page"])};fn.source="App version updated, reload page";return fn;})()
       }
@@ -28519,6 +28545,7 @@ const resource = {
       "home": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Home"])};fn.source="Home";return fn;})(),
       "airdrop": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Airdrop"])};fn.source="Airdrop";return fn;})(),
       "referrals": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Squad"])};fn.source="Squad";return fn;})(),
+      "achievements": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Achvs"])};fn.source="Achvs";return fn;})(),
       "settings": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Settings"])};fn.source="Settings";return fn;})()
     },
     "utils": {
@@ -28527,7 +28554,23 @@ const resource = {
         "error": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Error executing request"])};fn.source="Error executing request";return fn;})()
       }
     },
+    "forms": {
+      "field": {
+        "clear": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Clear"])};fn.source="Clear";return fn;})(),
+        "showPassword": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Show password"])};fn.source="Show password";return fn;})(),
+        "hidePassword": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Hide password"])};fn.source="Hide password";return fn;})()
+      }
+    },
     "modals": {
+      "achievement-redeem-code": {
+        "placeholder": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Please enter code"])};fn.source="Please enter code";return fn;})(),
+        "title": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Time for achievements"])};fn.source="Time for achievements";return fn;})(),
+        "errors": {
+          "incorrect-code": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Incorrect code"])};fn.source="Incorrect code";return fn;})(),
+          "time-expired": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["The validity period has expired"])};fn.source="The validity period has expired";return fn;})(),
+          "already-redeem": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["The achievement has already been received earlier"])};fn.source="The achievement has already been received earlier";return fn;})()
+        }
+      },
       "loader": {
         "description": {
           "title": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["UNLOCK YOUR <b class='g-c'>$VULT</b><br>AIRDROP TODAY"])};fn.source="UNLOCK YOUR <b class='g-c'>$VULT</b><br>AIRDROP TODAY";return fn;})(),
@@ -28584,7 +28627,7 @@ const resource = {
           },
           {
             "q": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["What is the <b class='g-c'>Airdrop process</b>?"])};fn.source="What is the <b class='g-c'>Airdrop process</b>?";return fn;})(),
-            "a": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Your assets will accumulate VULTIES over a period of <b class='g-c'>12 months</b>. At the end of this period, you will receive your share of the airdrop (<b class='g-c'>10% of $VULT</b>)."])};fn.source="Your assets will accumulate VULTIES over a period of <b class='g-c'>12 months</b>. At the end of this period, you will receive your share of the airdrop (<b class='g-c'>10% of $VULT</b>).";return fn;})()
+            "a": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Your assets will accumulate VULTIES over a period of <b class='g-c'>12 months</b>. At the end of this period, you will receive your share of the airdrop (<b class='g-c'>5% of $VULT</b>)."])};fn.source="Your assets will accumulate VULTIES over a period of <b class='g-c'>12 months</b>. At the end of this period, you will receive your share of the airdrop (<b class='g-c'>5% of $VULT</b>).";return fn;})()
           },
           {
             "q": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["What information is <b class='g-c'>collected</b> by Vultisig?"])};fn.source="What information is <b class='g-c'>collected</b> by Vultisig?";return fn;})(),
@@ -28623,6 +28666,14 @@ const resource = {
             "title": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["<b class='g-c'>Wallet</b> not connected"])};fn.source="<b class='g-c'>Wallet</b> not connected";return fn;})(),
             "description": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Do not connect a wallet if you do not wish for your <b class='g-c'>public keys</b> to be sent to the Airdrop Registry"])};fn.source="Do not connect a wallet if you do not wish for your <b class='g-c'>public keys</b> to be sent to the Airdrop Registry";return fn;})()
           }
+        }
+      },
+      "achievements": {
+        "title": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["<b class='g-c'>Achievements</b>"])};fn.source="<b class='g-c'>Achievements</b>";return fn;})(),
+        "redeem": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Redeem code"])};fn.source="Redeem code";return fn;})(),
+        "empty": {
+          "title": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["There is <b class='g-c'>nothing</b>"])};fn.source="There is <b class='g-c'>nothing</b>";return fn;})(),
+          "description": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["The achievement offers exclusive opportunities, additional airdrops <b>and etc</b>"])};fn.source="The achievement offers exclusive opportunities, additional airdrops <b>and etc</b>";return fn;})()
         }
       },
       "referrals": {
@@ -28735,39 +28786,47 @@ const routes = [
     {
         path: '/home',
         name: 'home',
-        component: () => __vitePreload(() => import('./Home.065a2120.js'),true?["assets/Home.065a2120.js","assets/Avatar.3f4cac1f.js","assets/Avatar.429656ec.css","assets/EmptyLabel.f95a7350.js","assets/EmptyLabel.b61dc386.css","assets/Home.88e56920.css"]:void 0),
+        component: () => __vitePreload(() => import('./Home.bb401fc7.js'),true?["assets/Home.bb401fc7.js","assets/Avatar.c0dce870.js","assets/Avatar.429656ec.css","assets/EmptyLabel.e77f9ba5.js","assets/EmptyLabel.b61dc386.css","assets/Home.88e56920.css"]:void 0),
         abort: []
     },
     {
         path: '/referrals',
         name: 'referrals',
-        component: () => __vitePreload(() => import('./Referrals.6525c4d1.js'),true?["assets/Referrals.6525c4d1.js","assets/Avatar.3f4cac1f.js","assets/Avatar.429656ec.css","assets/EmptyLabel.f95a7350.js","assets/EmptyLabel.b61dc386.css","assets/Referrals.c3da3867.css"]:void 0),
+        component: () => __vitePreload(() => import('./Referrals.1bd387e3.js'),true?["assets/Referrals.1bd387e3.js","assets/Avatar.c0dce870.js","assets/Avatar.429656ec.css","assets/EmptyLabel.e77f9ba5.js","assets/EmptyLabel.b61dc386.css","assets/Referrals.2b33ada9.css"]:void 0),
         abort: [
             'referrals'
         ]
     },
     {
+        path: '/achievements',
+        name: 'achievements',
+        component: () => __vitePreload(() => import('./Achievements.9e8ef340.js'),true?["assets/Achievements.9e8ef340.js","assets/EmptyLabel.e77f9ba5.js","assets/EmptyLabel.b61dc386.css","assets/Achievements.98728acb.css"]:void 0),
+        abort: [
+            'achievements'
+        ]
+    },
+    {
         path: '/airdrop',
         name: 'airdrop',
-        component: () => __vitePreload(() => import('./Airdrop.dcad6676.js'),true?["assets/Airdrop.dcad6676.js","assets/Airdrop.652df2f2.css"]:void 0),
+        component: () => __vitePreload(() => import('./Airdrop.ff06fe23.js'),true?["assets/Airdrop.ff06fe23.js","assets/Airdrop.3c798ef7.css"]:void 0),
         abort: []
     },
     {
         path: '/settings',
         name: 'settings',
-        component: () => __vitePreload(() => import('./Settings.74c3c711.js'),true?["assets/Settings.74c3c711.js","assets/Settings.95b90fa1.css"]:void 0),
+        component: () => __vitePreload(() => import('./Settings.cb7f0c22.js'),true?["assets/Settings.cb7f0c22.js","assets/Settings.95b90fa1.css"]:void 0),
         abort: []
     },
     {
         path: '/error',
         name: 'error',
-        component: () => __vitePreload(() => import('./Error.538c9cbc.js'),true?["assets/Error.538c9cbc.js","assets/EmptyLabel.f95a7350.js","assets/EmptyLabel.b61dc386.css","assets/Error.1e1044f0.css"]:void 0),
+        component: () => __vitePreload(() => import('./Error.9fc3b06d.js'),true?["assets/Error.9fc3b06d.js","assets/EmptyLabel.e77f9ba5.js","assets/EmptyLabel.b61dc386.css","assets/Error.1e1044f0.css"]:void 0),
         abort: []
     },
     {
         path: '/access-denied',
         name: 'access-denied',
-        component: () => __vitePreload(() => import('./AccessDenied.2950234c.js'),true?["assets/AccessDenied.2950234c.js","assets/EmptyLabel.f95a7350.js","assets/EmptyLabel.b61dc386.css","assets/AccessDenied.ed7dcc68.css"]:void 0),
+        component: () => __vitePreload(() => import('./AccessDenied.20dc7208.js'),true?["assets/AccessDenied.20dc7208.js","assets/EmptyLabel.e77f9ba5.js","assets/EmptyLabel.b61dc386.css","assets/AccessDenied.ed7dcc68.css"]:void 0),
         abort: []
     },
     {
@@ -28805,7 +28864,7 @@ router.beforeEach((to, from, next) => {
 
 router.onError(handleRouterError);
 
-const { t: t$2 } = i18n.global;
+const { t: t$3 } = i18n.global;
 const controllers = {};
 
 const signal = (name, id) => {
@@ -28849,6 +28908,10 @@ const requests = {
         signal: () => signal('referrals'),
         abort: () => abort('referrals')
     },
+    achievements: {
+        signal: () => signal('achievements'),
+        abort: () => abort('achievements')
+    },
     getVASUser: {
         signal: () => signal('getVASUser'),
         abort: () => abort('getVASUser')
@@ -28856,6 +28919,10 @@ const requests = {
     putUserToVAS: {
         signal: () => signal('putUserToVAS'),
         abort: () => abort('putUserToVAS')
+    },
+    redeemAchievement: {
+        signal: () => signal('redeemAchievement'),
+        abort: () => abort('redeemAchievement')
     },
     joinAirdrop: {
         signal: () => signal('joinAirdrop'),
@@ -28876,7 +28943,7 @@ const onRequestDefaultError = (e) => {
         } else if (e?.response?.status === 401) {
             clearTimeout(showAuthErrorTimeout);
             showAuthErrorTimeout = setTimeout(() => {
-                message.error(t$2('utils.request.authError'));
+                message.error(t$3('utils.request.authError'));
             }, 200);
 
             if (router?.currentRoute?.value?.name !== 'error') {
@@ -28887,22 +28954,22 @@ const onRequestDefaultError = (e) => {
                 router.push({ name: 'access-denied' });
             }
         } else if (e?.response?.status === 423) {
-            message.error(e.response?.data?.message || t$2('utils.request.error'));
+            message.error(e.response?.data?.message || t$3('utils.request.error'));
         } else {
-            message.error(t$2('utils.request.error'));
+            message.error(t$3('utils.request.error'));
         }
     }
 };
 
 i18n.global;
 
-const state$1 = () => ({
+const state$2 = () => ({
     profile: {},
     vasProfile: {},
     token: null
 });
 
-const actions$1 = {
+const actions$2 = {
     async login({ commit }) {
         if (!window.Telegram?.WebApp) {
             await delay(1500);
@@ -29057,12 +29124,30 @@ const actions$1 = {
         } catch (e) {
             onRequestDefaultError(e);
         }
+    },
+    async getMyAchievements({ commit }, payload) {
+        try {
+            const response = await this.$http({
+                method: 'POST',
+                url: '/user/achievements/',
+                data: payload,
+                signal: requests.achievements.signal()
+            });
+
+            if (response.status === 200) {
+                return response.data;
+            }
+
+            return response.data;
+        } catch (e) {
+            onRequestDefaultError(e);
+        }
     }
 };
 
-const getters$1 = {};
+const getters$2 = {};
 
-const mutations$1 = {
+const mutations$2 = {
     setVASProfile(state, payload) {
         state.vasProfile = payload;
     },
@@ -29075,6 +29160,49 @@ const mutations$1 = {
 };
 
 const user = {
+    state: state$2,
+    actions: actions$2,
+    getters: getters$2,
+    mutations: mutations$2
+};
+
+const { t: t$2 } = i18n.global;
+
+const state$1 = () => ({
+});
+
+const actions$1 = {
+    async redeemAchievement({ commit }, code) {
+        try {
+            const result = await this.$http({
+                method: 'POST',
+                url: '/achievements/apply',
+                data: { code },
+                signal: requests.redeemAchievement.signal()
+            });
+
+            if (result.status === 200) {
+                return result.data;
+            }
+        } catch (e) {
+            if (e.status === 424) {
+                message.error(t$2('modals.achievement-redeem-code.errors.incorrect-code'));
+            } else if (e.status === 423) {
+                message.error(t$2('modals.achievement-redeem-code.errors.time-expired'));
+            } else if (e.status === 420) {
+                message.error(t$2('modals.achievement-redeem-code.errors.already-redeem'));
+            } else {
+                onRequestDefaultError(e);
+            }
+        }
+    }
+};
+
+const getters$1 = {};
+
+const mutations$1 = {};
+
+const achievement = {
     state: state$1,
     actions: actions$1,
     getters: getters$1,
@@ -29085,8 +29213,12 @@ const state = () => ({
     theme: 'theme.default',
     modals: [],
     messages: [],
+    pixiRedeem: null,
     enableBG: null,
     disableBG: null,
+    enableRecursionLogo: null,
+    disableRecursionLogo: null,
+
     ready: false,
     settings: {}
 });
@@ -29127,6 +29259,15 @@ const mutations = {
     },
     setEnableBG(state, payload) {
         state.enableBG = payload;
+    },
+    setPixiRedeem(state, payload) {
+        state.pixiRedeem = payload;
+    },
+    setDisableRecursionLogo(state, payload) {
+        state.disableRecursionLogo = payload;
+    },
+    setEnableRecursionLogo(state, payload) {
+        state.enableRecursionLogo = payload;
     },
     openModal(state, payload) {
         if (typeof payload == 'string') {
@@ -29179,6 +29320,7 @@ const store = createStore({
     getters,
     mutations,
     modules: {
+        achievement,
         user
     }
 });
@@ -29263,12 +29405,12 @@ function numberWithSpaces(x) {
 
 const ModalInvite_vue_vue_type_style_index_0_scoped_d7d050bc_lang = '';
 
-const _hoisted_1$8 = ["innerHTML"];
-const _hoisted_2$7 = ["innerHTML"];
-const _hoisted_3$6 = { class: "buttons" };
+const _hoisted_1$b = ["innerHTML"];
+const _hoisted_2$9 = ["innerHTML"];
+const _hoisted_3$7 = { class: "buttons" };
 
 
-const _sfc_main$b = {
+const _sfc_main$e = {
   __name: 'ModalInvite',
   setup(__props) {
 
@@ -29327,17 +29469,17 @@ return (_ctx, _cache) => {
     title: withCtx(() => [
       createBaseVNode("span", {
         innerHTML: unref(t)('modals.invite.title')
-      }, null, 8 /* PROPS */, _hoisted_1$8)
+      }, null, 8 /* PROPS */, _hoisted_1$b)
     ]),
     content: withCtx(() => [
       createBaseVNode("div", {
         innerHTML: unref(t)('modals.invite.description'),
         class: "description"
-      }, null, 8 /* PROPS */, _hoisted_2$7),
+      }, null, 8 /* PROPS */, _hoisted_2$9),
       _cache[0] || (_cache[0] = createBaseVNode("div", { class: "canvas-box" }, [
         createBaseVNode("canvas", { id: "qr-canvas" })
       ], -1 /* HOISTED */)),
-      createBaseVNode("div", _hoisted_3$6, [
+      createBaseVNode("div", _hoisted_3$7, [
         createVNode(Button, {
           name: unref(t)('modals.invite.share'),
           onClick: share
@@ -29359,20 +29501,20 @@ return (_ctx, _cache) => {
 }
 
 };
-const ModalInvite = /*#__PURE__*/_export_sfc(_sfc_main$b, [['__scopeId',"data-v-d7d050bc"],['__file',"/home/runner/work/referral-front/referral-front/src/components/modals/ModalInvite.vue"]]);
+const ModalInvite = /*#__PURE__*/_export_sfc(_sfc_main$e, [['__scopeId',"data-v-d7d050bc"],['__file',"/home/runner/work/referral-front/referral-front/src/components/modals/ModalInvite.vue"]]);
 
 const ModalPublicKeys_vue_vue_type_style_index_0_scoped_e67a8434_lang = '';
 
-const _hoisted_1$7 = ["innerHTML"];
-const _hoisted_2$6 = { class: "content-box" };
-const _hoisted_3$5 = {
+const _hoisted_1$a = ["innerHTML"];
+const _hoisted_2$8 = { class: "content-box" };
+const _hoisted_3$6 = {
   key: 0,
   class: "description"
 };
-const _hoisted_4 = { class: "buttons" };
+const _hoisted_4$1 = { class: "buttons" };
 
 
-const _sfc_main$a = {
+const _sfc_main$d = {
   __name: 'ModalPublicKeys',
   setup(__props) {
 
@@ -29392,12 +29534,12 @@ return (_ctx, _cache) => {
     title: withCtx(() => [
       createBaseVNode("span", {
         innerHTML: unref(t)('modals.public-keys.title')
-      }, null, 8 /* PROPS */, _hoisted_1$7)
+      }, null, 8 /* PROPS */, _hoisted_1$a)
     ]),
     content: withCtx(() => [
-      createBaseVNode("div", _hoisted_2$6, [
+      createBaseVNode("div", _hoisted_2$8, [
         (unref(user).profile.wallet_public_key_ecdsa)
-          ? (openBlock(), createElementBlock("div", _hoisted_3$5, [
+          ? (openBlock(), createElementBlock("div", _hoisted_3$6, [
               _cache[0] || (_cache[0] = createBaseVNode("b", { class: "g-c" }, "ECDSA Key:", -1 /* HOISTED */)),
               createBaseVNode("span", null, toDisplayString$1(unref(user).profile.wallet_public_key_ecdsa), 1 /* TEXT */),
               _cache[1] || (_cache[1] = createBaseVNode("br", null, null, -1 /* HOISTED */)),
@@ -29405,7 +29547,7 @@ return (_ctx, _cache) => {
               createBaseVNode("span", null, toDisplayString$1(unref(user).profile.wallet_public_key_eddsa), 1 /* TEXT */)
             ]))
           : createCommentVNode("v-if", true),
-        createBaseVNode("div", _hoisted_4, [
+        createBaseVNode("div", _hoisted_4$1, [
           createVNode(Button, {
             name: unref(t)('common.close'),
             class: "secondary",
@@ -29420,16 +29562,16 @@ return (_ctx, _cache) => {
 }
 
 };
-const ModalPublicKeys = /*#__PURE__*/_export_sfc(_sfc_main$a, [['__scopeId',"data-v-e67a8434"],['__file',"/home/runner/work/referral-front/referral-front/src/components/modals/ModalPublicKeys.vue"]]);
+const ModalPublicKeys = /*#__PURE__*/_export_sfc(_sfc_main$d, [['__scopeId',"data-v-e67a8434"],['__file',"/home/runner/work/referral-front/referral-front/src/components/modals/ModalPublicKeys.vue"]]);
 
 const ModalLoader_vue_vue_type_style_index_0_scoped_d2cc4814_lang = '';
 
-const _hoisted_1$6 = { class: "description" };
-const _hoisted_2$5 = ["innerHTML"];
-const _hoisted_3$4 = ["innerHTML"];
+const _hoisted_1$9 = { class: "description" };
+const _hoisted_2$7 = ["innerHTML"];
+const _hoisted_3$5 = ["innerHTML"];
 
 
-const _sfc_main$9 = {
+const _sfc_main$c = {
   __name: 'ModalLoader',
   setup(__props) {
 
@@ -29445,13 +29587,13 @@ return (_ctx, _cache) => {
         class: "loader-box",
         style: normalizeStyle({ 'background-image': `url(/img/airdrop_bg_${ Math.random() > .5 ? 1 : 2 }.jpg)` })
       }, [
-        createBaseVNode("div", _hoisted_1$6, [
+        createBaseVNode("div", _hoisted_1$9, [
           createBaseVNode("label", {
             innerHTML: unref(t)('modals.loader.description.title')
-          }, null, 8 /* PROPS */, _hoisted_2$5),
+          }, null, 8 /* PROPS */, _hoisted_2$7),
           createBaseVNode("span", {
             innerHTML: unref(t)('modals.loader.description.text')
-          }, null, 8 /* PROPS */, _hoisted_3$4)
+          }, null, 8 /* PROPS */, _hoisted_3$5)
         ]),
         _cache[0] || (_cache[0] = createBaseVNode("div", { class: "bg" }, null, -1 /* HOISTED */)),
         createVNode(Loader$1, { class: "opacity-mode" })
@@ -29463,7 +29605,7 @@ return (_ctx, _cache) => {
 }
 
 };
-const ModalLoader = /*#__PURE__*/_export_sfc(_sfc_main$9, [['__scopeId',"data-v-d2cc4814"],['__file',"/home/runner/work/referral-front/referral-front/src/components/modals/ModalLoader.vue"]]);
+const ModalLoader = /*#__PURE__*/_export_sfc(_sfc_main$c, [['__scopeId',"data-v-d2cc4814"],['__file',"/home/runner/work/referral-front/referral-front/src/components/modals/ModalLoader.vue"]]);
 
 var jsQR = {exports: {}};
 
@@ -39545,15 +39687,15 @@ const t$1=t=>new Promise((r,n)=>{const o=new Image;o.src=URL.createObjectURL(t),
 
 const Progress_vue_vue_type_style_index_0_scoped_1d612336_lang = '';
 
-const _hoisted_1$5 = {
+const _hoisted_1$8 = {
   viewBox: "0 0 200 200",
   class: "progress-bar"
 };
-const _hoisted_2$4 = ["stroke-dasharray"];
-const _hoisted_3$3 = ["innerHTML"];
+const _hoisted_2$6 = ["stroke-dasharray"];
+const _hoisted_3$4 = ["innerHTML"];
 
     
-const _sfc_main$8 = {
+const _sfc_main$b = {
   __name: 'Progress',
   props: {
         title: { type: String, default: '' },
@@ -39592,7 +39734,7 @@ const _sfc_main$8 = {
 
 return (_ctx, _cache) => {
   return (openBlock(), createElementBlock("div", null, [
-    (openBlock(), createElementBlock("svg", _hoisted_1$5, [
+    (openBlock(), createElementBlock("svg", _hoisted_1$8, [
       _cache[0] || (_cache[0] = createBaseVNode("circle", {
         r: "80",
         cx: "100",
@@ -39613,7 +39755,7 @@ return (_ctx, _cache) => {
         "stroke-dashoffset": "0",
         class: "gradient",
         style: {"transform":"rotate(-90deg)","transform-origin":"center"}
-      }, null, 8 /* PROPS */, _hoisted_2$4),
+      }, null, 8 /* PROPS */, _hoisted_2$6),
       _cache[1] || (_cache[1] = createBaseVNode("defs", null, [
         createBaseVNode("linearGradient", { id: "progress-bar-gradient" }, [
           createBaseVNode("stop", {
@@ -39631,22 +39773,22 @@ return (_ctx, _cache) => {
       ? (openBlock(), createElementBlock("span", {
           key: 0,
           innerHTML: props.title
-        }, null, 8 /* PROPS */, _hoisted_3$3))
+        }, null, 8 /* PROPS */, _hoisted_3$4))
       : createCommentVNode("v-if", true)
   ]))
 }
 }
 
 };
-const Progress = /*#__PURE__*/_export_sfc(_sfc_main$8, [['__scopeId',"data-v-1d612336"],['__file',"/home/runner/work/referral-front/referral-front/src/components/forms/Progress.vue"]]);
+const Progress = /*#__PURE__*/_export_sfc(_sfc_main$b, [['__scopeId',"data-v-1d612336"],['__file',"/home/runner/work/referral-front/referral-front/src/components/forms/Progress.vue"]]);
 
 const ModalWallet_vue_vue_type_style_index_0_scoped_374dd900_lang = '';
 
-const _hoisted_1$4 = ["innerHTML"];
-const _hoisted_2$3 = { class: "buttons" };
+const _hoisted_1$7 = ["innerHTML"];
+const _hoisted_2$5 = { class: "buttons" };
 
 
-const _sfc_main$7 = {
+const _sfc_main$a = {
   __name: 'ModalWallet',
   setup(__props) {
 
@@ -39843,7 +39985,7 @@ return (_ctx, _cache) => {
     title: withCtx(() => [
       createBaseVNode("span", {
         innerHTML: unref(t)('modals.wallet.title')
-      }, null, 8 /* PROPS */, _hoisted_1$4)
+      }, null, 8 /* PROPS */, _hoisted_1$7)
     ]),
     content: withCtx(() => [
       createVNode(Progress, {
@@ -39851,7 +39993,7 @@ return (_ctx, _cache) => {
         title: data.title,
         class: "progress"
       }, null, 8 /* PROPS */, ["value", "title"]),
-      createBaseVNode("div", _hoisted_2$3, [
+      createBaseVNode("div", _hoisted_2$5, [
         createVNode(Button, {
           name: unref(t)('modals.wallet.upload'),
           onClick: upload,
@@ -39871,7 +40013,315 @@ return (_ctx, _cache) => {
 }
 
 };
-const ModalWallet = /*#__PURE__*/_export_sfc(_sfc_main$7, [['__scopeId',"data-v-374dd900"],['__file',"/home/runner/work/referral-front/referral-front/src/components/modals/ModalWallet.vue"]]);
+const ModalWallet = /*#__PURE__*/_export_sfc(_sfc_main$a, [['__scopeId',"data-v-374dd900"],['__file',"/home/runner/work/referral-front/referral-front/src/components/modals/ModalWallet.vue"]]);
+
+const IconButton_vue_vue_type_style_index_0_scoped_749754e6_lang = '';
+
+const _hoisted_1$6 = ["title"];
+
+
+const _sfc_main$9 = {
+  __name: 'IconButton',
+  props: {
+    icon: { type: String, default: '' },
+    name: { type: String, default: '' }
+},
+  setup(__props) {
+
+const props = __props;
+
+return (_ctx, _cache) => {
+  const _component_Icon = resolveComponent("Icon");
+
+  return (openBlock(), createElementBlock("button", {
+    type: "button",
+    title: props.name
+  }, [
+    createVNode(_component_Icon, {
+      icon: props.icon
+    }, null, 8 /* PROPS */, ["icon"])
+  ], 8 /* PROPS */, _hoisted_1$6))
+}
+}
+
+};
+const IconButton = /*#__PURE__*/_export_sfc(_sfc_main$9, [['__scopeId',"data-v-749754e6"],['__file',"/home/runner/work/referral-front/referral-front/src/components/forms/IconButton.vue"]]);
+
+const Field_vue_vue_type_style_index_0_scoped_ae786fdc_lang = '';
+
+const _hoisted_1$5 = ["type", "name", "min", "max", "maxlength", "disabled", "placeholder", "autocomplete", "readonly"];
+const _hoisted_2$4 = { class: "actions-block" };
+
+
+const _sfc_main$8 = {
+  __name: 'Field',
+  props: {
+    icon: { type: String, default: '' },
+    value: { type: [String, Number], default: '' },
+    name: { type: [String, Number], default: '' },
+    id: { type: String, default: '' },
+    placeholder: { type: String, default: '' },
+    type: { type: String, default: 'text' },
+    maxlength: { type: [Number, null], default: null },
+    max: { type: Number, default: null },
+    min: { type: Number, default: null },
+    disabled: { type: Boolean, default: false },
+    autocomplete: { type: String, default: 'off' },
+    readonly: { type: Boolean, default: false },
+    clearable: { type: Boolean, default: true },
+    info: { type: [String, Boolean], default: false }
+},
+  emits: ['change', 'pressEnter'],
+  setup(__props, { expose: __expose, emit: __emit }) {
+
+const props = __props;
+
+const { t } = useI18n();
+
+const field = ref$1(null);
+
+const data = reactive({
+    type: props.type
+});
+
+const emit = __emit;
+
+__expose({ field });
+
+const showPassword = () => {
+    data.type = 'text';
+};
+
+const hidePassword = () => {
+    data.type = 'password';
+};
+
+const clean = () => {
+    field.value.value = '';
+    setTimeout(() => {
+        onInput({ target: field.value });
+        field.value.focus();
+    });
+};
+
+onMounted(() => {
+    if (props.value !== null) {
+        field.value.value = props.value;
+    }
+});
+
+const onPressEnter = (evn) => {
+    onInput(evn);
+    emit('pressEnter');
+};
+
+const onInput = (evn) => {
+    if (!evn?.target) {
+        return;
+    }
+
+    if (['.', ',', '-'].includes(evn.data)) {
+        if (!evn.target.value) {
+            emit('change', evn);
+        }
+        return;
+    }
+
+    let value = evn.target.value.trimStart();
+
+    if (value) {
+        if (typeof props.min === 'number') {
+            if (parseFloat(value, 10) < props.min || Number.isNaN(parseInt(value, 10))) {
+                value = props.min;
+            }
+        }
+        if (typeof props.max === 'number') {
+            if (parseFloat(value, 10) > props.max) {
+                value = props.max;
+            }
+        }
+    } else {
+        value = '';
+    }
+
+    evn.target.value = value;
+
+    setTimeout(() => {
+        if (evn.target && evn.target.value !== value) {
+            evn.target.value = value;
+        }
+    });
+
+    emit('change', evn);
+};
+
+return (_ctx, _cache) => {
+  const _component_Icon = resolveComponent("Icon");
+
+  return (openBlock(), createElementBlock("div", {
+    class: normalizeClass([props.icon ? 'with-icon' : ''])
+  }, [
+    createBaseVNode("p", null, [
+      createBaseVNode("input", {
+        ref_key: "field",
+        ref: field,
+        type: data.type,
+        name: props.name,
+        min: props.min,
+        max: props.max,
+        maxlength: props.maxlength,
+        disabled: props.disabled,
+        placeholder: props.placeholder,
+        autocomplete: __props.autocomplete,
+        readonly: props.readonly,
+        onInput: onInput,
+        onKeyup: withKeys(onPressEnter, ["enter"])
+      }, null, 40 /* PROPS, NEED_HYDRATION */, _hoisted_1$5),
+      (props.icon)
+        ? (openBlock(), createBlock(_component_Icon, {
+            key: 0,
+            icon: props.icon
+          }, null, 8 /* PROPS */, ["icon"]))
+        : createCommentVNode("v-if", true),
+      createBaseVNode("div", _hoisted_2$4, [
+        (props.type === 'password' && data.type === 'password')
+          ? (openBlock(), createBlock(IconButton, {
+              key: 0,
+              tabindex: "-1",
+              icon: "eye-closed",
+              class: "secondary small",
+              name: unref(t)('forms.field.showPassword'),
+              onClick: showPassword
+            }, null, 8 /* PROPS */, ["name"]))
+          : (props.type === 'password' && data.type === 'text')
+            ? (openBlock(), createBlock(IconButton, {
+                key: 1,
+                tabindex: "-1",
+                icon: "eye-opened",
+                class: "secondary small",
+                name: unref(t)('forms.field.hidePassword'),
+                onClick: hidePassword
+              }, null, 8 /* PROPS */, ["name"]))
+            : (props.clearable && !props.readonly)
+              ? (openBlock(), createBlock(IconButton, {
+                  key: 2,
+                  tabindex: "-1",
+                  icon: "clean",
+                  class: "secondary small clean",
+                  name: unref(t)('forms.field.clear'),
+                  onClick: clean
+                }, null, 8 /* PROPS */, ["name"]))
+              : createCommentVNode("v-if", true),
+        (props.info)
+          ? (openBlock(), createBlock(_component_Icon, {
+              key: 3,
+              icon: "info",
+              class: "icon-info",
+              title: props.info
+            }, null, 8 /* PROPS */, ["title"]))
+          : createCommentVNode("v-if", true)
+      ])
+    ])
+  ], 2 /* CLASS */))
+}
+}
+
+};
+const Field = /*#__PURE__*/_export_sfc(_sfc_main$8, [['__scopeId',"data-v-ae786fdc"],['__file',"/home/runner/work/referral-front/referral-front/src/components/forms/Field.vue"]]);
+
+const ModalAchievementRedeemCode_vue_vue_type_style_index_0_scoped_5bc606af_lang = '';
+
+const _hoisted_1$4 = ["innerHTML"];
+const _hoisted_2$3 = { class: "content-box" };
+const _hoisted_3$3 = { class: "field-box" };
+const _hoisted_4 = { class: "buttons" };
+
+
+const _sfc_main$7 = {
+  __name: 'ModalAchievementRedeemCode',
+  setup(__props) {
+
+const { redeemAchievement } = mapActions();
+const { t } = useI18n();
+const { closeModal } = mapMutations();
+mapState();
+
+const data = reactive({
+    value: '',
+    loading: false
+});
+
+const onInput = (e) => {
+    data.value = (e.target?.value || '').trim();
+};
+
+const apply = async () => {
+    data.loading = true;
+    await delay(400);
+    const result = await redeemAchievement(data.value);
+
+    if (result) {
+        closeModal({
+            name: 'achievement-redeem-code',
+            data: result
+        });    
+    }
+
+    data.loading = false;
+};
+
+const close = () => {
+    closeModal('achievement-redeem-code');
+};
+
+return (_ctx, _cache) => {
+  return (openBlock(), createBlock(BaseModal, {
+    name: "achievement-redeem-code",
+    onClose: close
+  }, {
+    title: withCtx(() => [
+      createBaseVNode("span", {
+        innerHTML: unref(t)('modals.achievement-redeem-code.title')
+      }, null, 8 /* PROPS */, _hoisted_1$4)
+    ]),
+    content: withCtx(() => [
+      createBaseVNode("div", _hoisted_2$3, [
+        createBaseVNode("div", _hoisted_3$3, [
+          createVNode(Field, {
+            disabled: data.loading,
+            placeholder: _ctx.$t('modals.achievement-redeem-code.placeholder'),
+            name: "code",
+            onChange: onInput
+          }, null, 8 /* PROPS */, ["disabled", "placeholder"])
+        ]),
+        createBaseVNode("div", _hoisted_4, [
+          (data.loading)
+            ? (openBlock(), createBlock(Button, {
+                key: 0,
+                class: "loader",
+                loading: true
+              }))
+            : (openBlock(), createBlock(Button, {
+                key: 1,
+                name: unref(t)('common.apply'),
+                disabled: !data.value,
+                onClick: apply
+              }, null, 8 /* PROPS */, ["name", "disabled"])),
+          createVNode(Button, {
+            name: unref(t)('common.close'),
+            class: "secondary",
+            onClick: close
+          }, null, 8 /* PROPS */, ["name"])
+        ])
+      ])
+    ]),
+    _: 1 /* STABLE */
+  }))
+}
+}
+
+};
+const ModalAchievementRedeemCode = /*#__PURE__*/_export_sfc(_sfc_main$7, [['__scopeId',"data-v-5bc606af"],['__file',"/home/runner/work/referral-front/referral-front/src/components/modals/ModalAchievementRedeemCode.vue"]]);
 
 const _sfc_main$6 = {
   __name: 'Modals',
@@ -39892,8 +40342,11 @@ return (_ctx, _cache) => {
     (modalIsOpened('public-keys'))
       ? (openBlock(), createBlock(ModalPublicKeys, { key: 2 }))
       : createCommentVNode("v-if", true),
+    (modalIsOpened('achievement-redeem-code'))
+      ? (openBlock(), createBlock(ModalAchievementRedeemCode, { key: 3 }))
+      : createCommentVNode("v-if", true),
     (modalIsOpened('loader'))
-      ? (openBlock(), createBlock(ModalLoader, { key: 3 }))
+      ? (openBlock(), createBlock(ModalLoader, { key: 4 }))
       : createCommentVNode("v-if", true)
   ], 64 /* STABLE_FRAGMENT */))
 }
@@ -39998,6 +40451,10 @@ const data = reactive({
         icon: 'airdrop',
         link: '/airdrop',
         name: t('nav.airdrop')
+    }, {
+        icon: 'achievements',
+        link: '/achievements',
+        name: t('nav.achievements')
     }, {
         icon: 'settings',
         link: '/settings',
@@ -40220,7 +40677,7 @@ const browserExt = {
   },
   test: () => true,
   load: async () => {
-    await __vitePreload(() => import('./browserAll.525d2304.js'),true?["assets/browserAll.525d2304.js","assets/init.e3cc1c9f.js","assets/colorToUniform.df735816.js"]:void 0);
+    await __vitePreload(() => import('./browserAll.25dd7e69.js'),true?["assets/browserAll.25dd7e69.js","assets/init.5b2ba1d1.js","assets/colorToUniform.ddb77849.js"]:void 0);
   }
 };
 
@@ -40232,7 +40689,7 @@ const webworkerExt = {
   },
   test: () => typeof self !== "undefined" && self.WorkerGlobalScope !== void 0,
   load: async () => {
-    await __vitePreload(() => import('./webworkerAll.f475446c.js'),true?["assets/webworkerAll.f475446c.js","assets/init.e3cc1c9f.js","assets/colorToUniform.df735816.js"]:void 0);
+    await __vitePreload(() => import('./webworkerAll.319a6103.js'),true?["assets/webworkerAll.319a6103.js","assets/init.5b2ba1d1.js","assets/colorToUniform.ddb77849.js"]:void 0);
   }
 };
 
@@ -50073,14 +50530,14 @@ async function autoDetectRenderer(options) {
   for (let i = 0; i < preferredOrder.length; i++) {
     const rendererType = preferredOrder[i];
     if (rendererType === "webgpu" && await isWebGPUSupported()) {
-      const { WebGPURenderer } = await __vitePreload(() => import('./WebGPURenderer.139b5671.js'),true?["assets/WebGPURenderer.139b5671.js","assets/colorToUniform.df735816.js","assets/SharedSystems.8b6a492d.js"]:void 0);
+      const { WebGPURenderer } = await __vitePreload(() => import('./WebGPURenderer.c1a8a4e0.js'),true?["assets/WebGPURenderer.c1a8a4e0.js","assets/colorToUniform.ddb77849.js","assets/SharedSystems.2715dc50.js"]:void 0);
       RendererClass = WebGPURenderer;
       finalOptions = { ...options, ...options.webgpu };
       break;
     } else if (rendererType === "webgl" && isWebGLSupported(
       options.failIfMajorPerformanceCaveat ?? AbstractRenderer.defaultOptions.failIfMajorPerformanceCaveat
     )) {
-      const { WebGLRenderer } = await __vitePreload(() => import('./WebGLRenderer.ec525f61.js'),true?["assets/WebGLRenderer.ec525f61.js","assets/colorToUniform.df735816.js","assets/SharedSystems.8b6a492d.js"]:void 0);
+      const { WebGLRenderer } = await __vitePreload(() => import('./WebGLRenderer.106ce771.js'),true?["assets/WebGLRenderer.106ce771.js","assets/colorToUniform.ddb77849.js","assets/SharedSystems.2715dc50.js"]:void 0);
       RendererClass = WebGLRenderer;
       finalOptions = { ...options, ...options.webgl };
       break;
@@ -59831,10 +60288,19 @@ const _sfc_main$3 = {
   setup(__props, { emit: __emit }) {
 
 const emit = __emit;
-const { setEnableBG, setDisableBG } = mapMutations();
+const {
+    setPixiRedeem,
+    setEnableBG,
+    setDisableBG,
+    setEnableRecursionLogo,
+    setDisableRecursionLogo
+} = mapMutations();
 
 const data = reactive({
+    recursionLogoApp: null,
     bgApp: null,
+    redeemApp: null,
+
     bgTextures: [
         {
             code: 'logo',
@@ -59848,7 +60314,26 @@ const data = reactive({
             height: 56
         }
     ],
-    bgItems: []
+    redeemTextures: [
+        {
+            code: 'logo',
+            url: `/img/bg/logo.svg`,
+            width: 43,
+            height: 41
+        }
+    ],
+    recursionLogoTextures: [
+        {
+            code: 'logo',
+            url: `/img/logo-light.svg`,
+            width: 86,
+            height: 82
+        }
+    ],
+
+    bgItems: [],
+    redeemItems: [],
+    recursionLogoItems: []
 });
 
 const addBgTexture = async (item) => {
@@ -59880,6 +60365,59 @@ const addBgTexture = async (item) => {
     payload.rotate = Math.random() / 20;
 
     data.bgItems.push(payload);
+};
+
+const addRedeemTexture = async ({ item, x, y }) => {
+    const payload = {
+        sprite: new Sprite(item.texture)
+    };
+
+    data.redeemApp.stage.addChild(payload.sprite);
+    payload.sprite.anchor.set(0.5);
+
+    const scale = (.1 + Math.random() * .6);
+
+    if (item.width) {
+        payload.sprite.width = parseInt(item.width * scale);
+    }
+
+    if (item.height) {
+        payload.sprite.height = parseInt(item.height * scale);
+    }
+
+    payload.sprite.x = x || parseInt(.5 * data.redeemApp.screen.width);
+    payload.sprite.y = y || parseInt(.5 * data.redeemApp.screen.height);
+
+    payload.dir = {
+        x: +(((Math.random() > .4 ? 1 : -1) * (Math.random() * 8)).toFixed(1)),
+        y: +(((Math.random() > .3 ? -1 : 1) * (Math.random() * 8)).toFixed(1))
+    };
+
+    payload.rotate = Math.random() / 4;
+
+    data.redeemItems.push(payload);
+};
+
+const addRecursionLogoTexture = async ({ item, scale }) => {
+    const payload = {
+        sprite: new Sprite(item.texture)
+    };
+
+    data.recursionLogoApp.stage.addChild(payload.sprite);
+    payload.sprite.anchor.set(0.5);
+
+    if (item.width) {
+        payload.sprite.width = parseInt(item.width * scale);
+    }
+
+    if (item.height) {
+        payload.sprite.height = parseInt(item.height * scale);
+    }
+
+    payload.sprite.x = parseInt(.5 * data.recursionLogoApp.screen.width);
+    payload.sprite.y = parseInt(.5 * data.recursionLogoApp.screen.height);
+
+    data.recursionLogoItems.push(payload);
 };
 
 const enableBG = async () => {
@@ -59957,9 +60495,133 @@ const createBG = async () => {
     });
 };
 
+const pixiRedeem = async ({ x, y }) => {
+    if (!data.redeemApp) {
+        await createRedeem();
+    }
+
+    data.redeemTextures.forEach(item => {
+        if (item.code === 'logo') {
+            for (let i = 0; i < 140; i++) {
+                addRedeemTexture({ item, x, y });
+            }
+        }
+    });
+};
+
+const destroyRedeem = async () => {
+    if (data.redeemApp) {
+        data.redeemApp.canvas.style.display = 'none';
+        data.redeemApp.canvas.remove();
+
+        setTimeout(() => {
+            data.redeemApp.destroy();
+            data.redeemApp = null;
+            document.getElementById('pixi-redeem').remove();
+        }, 10);
+    }
+};
+
+const createRedeem = async () => {
+    const div = document.createElement('div');
+    div.id = 'pixi-redeem';
+    document.getElementById('pixi-box').appendChild(div);
+
+    data.redeemApp = new Application();
+
+    await data.redeemApp.init({ backgroundAlpha: 0, resizeTo: window });
+
+    document.getElementById('pixi-redeem').appendChild(data.redeemApp.canvas);
+
+    data.redeemApp.ticker.add((time) => {
+        data.redeemItems.forEach((item, id) => {
+            item.sprite.x += item.dir.x;
+            item.sprite.y += item.dir.y;
+
+            let exit = false;
+
+            if (item.sprite.x > data.redeemApp.screen.width + 30) {
+                exit = true;
+            }
+
+            if (item.sprite.x <= -30) {
+                exit = true;
+            }
+
+            if (item.sprite.y >= data.redeemApp.screen.height + 30) {
+                exit = true;
+            }
+
+            if (item.sprite.y <= -30) {
+                exit = true;
+            }
+
+            item.sprite.rotation += item.rotate * time.deltaTime;
+
+            if (exit) {
+                data.redeemApp.stage.removeChild(item.sprite);
+                data.redeemItems.splice(id, 1);
+            }
+
+            if (!data.redeemItems.length) {
+                destroyRedeem();
+            }
+        });
+    });
+};
+
+const enableRecursionLogo = async () => {
+    if (!data.recursionLogoApp) {
+        await createRecursionLogo();
+    }
+
+    data.recursionLogoTextures.forEach(item => {
+        if (item.code === 'logo') {
+            for (let scale = 4; scale < 22; scale += 1) {
+                addRecursionLogoTexture({ item, scale });
+            }
+        }
+    });
+};
+
+const destroyRecursionLogo = async () => {
+    if (data.recursionLogoApp) {
+        data.recursionLogoApp.canvas.style.display = 'none';
+        data.recursionLogoApp.canvas.remove();
+
+        setTimeout(() => {
+            data.recursionLogoApp.destroy();
+            data.recursionLogoApp = null;
+            document.getElementById('pixi-recursion-logo').remove();
+        }, 10);
+    }
+};
+
+const createRecursionLogo = async () => {
+    const div = document.createElement('div');
+    div.id = 'pixi-recursion-logo';
+    document.getElementById('pixi-box').appendChild(div);
+
+    data.recursionLogoApp = new Application();
+
+    await data.recursionLogoApp.init({ backgroundAlpha: 0, resizeTo: window });
+
+    document.getElementById('pixi-recursion-logo').appendChild(data.recursionLogoApp.canvas);
+};
+
 onMounted(async () => {
     // Preload bg
     await Promise.all(data.bgTextures.map(async (item) => {
+        item.texture = await Assets.load(item.url);
+    }));
+
+    // Preload redeems
+    await Promise.all(data.redeemTextures.map(async (item) => {
+        item.texture = await Assets.load(item.url);
+    }));
+
+    // Preload recursion
+    await Promise.all(data.recursionLogoTextures.map(async (item) => {
         item.texture = await Assets.load(item.url);
     }));
 
@@ -59967,13 +60629,18 @@ onMounted(async () => {
     enableBG();
 
     // Create fn in store
+    setPixiRedeem(pixiRedeem);
     setEnableBG(enableBG);
     setDisableBG(disableBG);
+
+    setEnableRecursionLogo(enableRecursionLogo);
+    setDisableRecursionLogo(destroyRecursionLogo);
 
     emit('ready');
 });
 
 onBeforeMount(async () => {
+    await destroyRedeem();
     await disableBG();
 });
 
@@ -60177,4 +60844,4 @@ app.config.globalProperties.$message = store.$message = message;
 
 app.mount('#vulti-app');
 
-export { CanvasTextMetrics as $, extensions as A, Button as B, Container as C, boundsPool as D, ExtensionType as E, Fragment as F, Geometry as G, UniformGroup as H, BindGroup as I, Texture as J, Bounds as K, Loader$1 as L, Matrix as M, GraphicsContext as N, deprecation as O, Point as P, v8_0_0 as Q, RendererType as R, Buffer as S, Ticker as T, UPDATE_PRIORITY as U, ViewContainer as V, BufferUsage as W, Color as X, TextStyle as Y, generateTextStyleKey as Z, _export_sfc as _, mapMutations as a, BigPool as a0, BatchableGraphics as a1, getAdjustedBlendModeBlend as a2, Shader as a3, compileHighShaderGpuProgram as a4, roundPixelsBit as a5, compileHighShaderGlProgram as a6, roundPixelsBitGl as a7, getMaxTexturesPerBatch as a8, colorBit as a9, DefaultBatcher as aA, getGlobalBounds as aB, FilterEffect as aC, Sprite as aD, getAttributeInfoFromFormat as aE, unsafeEvalSupported as aF, uid as aG, SystemRunner as aH, UPDATE_COLOR as aI, UPDATE_BLEND as aJ, UPDATE_VISIBLE as aK, getLocalBounds as aL, VERSION as aM, RendererInitHook as aN, generateTextureBatchBit as aa, colorBitGl as ab, generateTextureBatchBitGl as ac, getBatchSamplersUniformGroup as ad, BitmapFontManager as ae, getBitmapTextLayout as af, Cache as ag, updateQuadBounds as ah, DOMAdapter as ai, CanvasPool as aj, Rectangle as ak, fontStringFromTextStyle as al, getCanvasFillStyle as am, nextPow2 as an, GraphicsContextSystem as ao, TextureSource as ap, getTextureBatchBindGroup as aq, fastCopy as ar, STENCIL_MODES as as, createIdFromString as at, CLEAR as au, CanvasSource as av, AbstractRenderer as aw, GpuProgram as ax, GlProgram as ay, TextureMatrix as az, unref as b, computed as c, createElementBlock as d, createVNode as e, createBaseVNode as f, createCommentVNode as g, mapActions as h, reactive as i, onMounted as j, createBlock as k, createTextVNode as l, mapState as m, numberWithSpaces as n, openBlock as o, renderList as p, delay as q, resolveComponent as r, normalizeClass as s, toDisplayString$1 as t, useI18n as u, withCtx as v, watch as w, removeItems as x, EventEmitter as y, warn as z };
+export { generateTextStyleKey as $, warn as A, Button as B, extensions as C, Container as D, ExtensionType as E, Fragment as F, boundsPool as G, Geometry as H, UniformGroup as I, BindGroup as J, Texture as K, Loader$1 as L, Matrix as M, Bounds as N, GraphicsContext as O, Point as P, deprecation as Q, RendererType as R, v8_0_0 as S, Ticker as T, UPDATE_PRIORITY as U, ViewContainer as V, Buffer as W, BufferUsage as X, Color as Y, TextStyle as Z, _export_sfc as _, mapMutations as a, CanvasTextMetrics as a0, BigPool as a1, BatchableGraphics as a2, getAdjustedBlendModeBlend as a3, Shader as a4, compileHighShaderGpuProgram as a5, roundPixelsBit as a6, compileHighShaderGlProgram as a7, roundPixelsBitGl as a8, getMaxTexturesPerBatch as a9, TextureMatrix as aA, DefaultBatcher as aB, getGlobalBounds as aC, FilterEffect as aD, Sprite as aE, getAttributeInfoFromFormat as aF, unsafeEvalSupported as aG, uid as aH, SystemRunner as aI, UPDATE_COLOR as aJ, UPDATE_BLEND as aK, UPDATE_VISIBLE as aL, getLocalBounds as aM, VERSION as aN, RendererInitHook as aO, colorBit as aa, generateTextureBatchBit as ab, colorBitGl as ac, generateTextureBatchBitGl as ad, getBatchSamplersUniformGroup as ae, BitmapFontManager as af, getBitmapTextLayout as ag, Cache as ah, updateQuadBounds as ai, DOMAdapter as aj, CanvasPool as ak, Rectangle as al, fontStringFromTextStyle as am, getCanvasFillStyle as an, nextPow2 as ao, GraphicsContextSystem as ap, TextureSource as aq, getTextureBatchBindGroup as ar, fastCopy as as, STENCIL_MODES as at, createIdFromString as au, CLEAR as av, CanvasSource as aw, AbstractRenderer as ax, GpuProgram as ay, GlProgram as az, unref as b, computed as c, createElementBlock as d, createVNode as e, createBaseVNode as f, createCommentVNode as g, mapActions as h, reactive as i, onMounted as j, createBlock as k, createTextVNode as l, mapState as m, numberWithSpaces as n, openBlock as o, renderList as p, delay as q, resolveComponent as r, onBeforeUnmount as s, toDisplayString$1 as t, useI18n as u, normalizeClass as v, watch as w, withCtx as x, removeItems as y, EventEmitter as z };
