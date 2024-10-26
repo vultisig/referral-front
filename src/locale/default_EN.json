@@ -5,8 +5,10 @@
         "defaultName": "'s wallet",
       },
       "more": "more",
+      "apply": "Apply",
       "referrals": "squad",
       "close": "Close",
+      "unnamed": "Unnamed",
       "errors": {
         "importError": "App version updated, reload page"
       }
@@ -15,6 +17,7 @@
       "home": "Home",
       "airdrop": "Airdrop",
       "referrals": "Squad",
+      "achievements": "Achvs",
       "settings": "Settings"
     },
     "utils": {
@@ -23,7 +26,23 @@
         "error": "Error executing request"
       }
     },
+    "forms": {
+      "field": {
+        "clear": "Clear",
+        "showPassword": "Show password",
+        "hidePassword": "Hide password"
+      }
+    },
     "modals": {
+      "achievement-redeem-code": {
+        "placeholder": "Please enter code",
+        "title": "Time for achievements",
+        "errors": {
+          "incorrect-code": "Incorrect code", 
+          "time-expired": "The validity period has expired", 
+          "already-redeem": "The achievement has already been received earlier"
+        }
+      },
       "loader": {
         "description": {
           "title": "UNLOCK YOUR <b class='g-c'>$VULT</b><br>AIRDROP TODAY",
@@ -78,7 +97,7 @@
               "a": "<b class='g-c'>Layer1</b> assets and most tokens <b class='g-c'>supported by Vultisig</b> are counted. Other assets such as LPs and Node Bonds from THORChain, MAYA Protocol and ChainFlip are also valid.<br><br>See the full list <a class='g-c' href='https://docs.vultisig.com/vultisig-token/airdrop#eligble-assets' target='_blank'>here</a>"
             }, {
               "q": "What is the <b class='g-c'>Airdrop process</b>?",
-              "a": "Your assets will accumulate VULTIES over a period of <b class='g-c'>12 months</b>. At the end of this period, you will receive your share of the airdrop (<b class='g-c'>10% of $VULT</b>)."
+              "a": "Your assets will accumulate VULTIES over a period of <b class='g-c'>12 months</b>. At the end of this period, you will receive your share of the airdrop (<b class='g-c'>5% of $VULT</b>)."
             }, {
               "q": "What information is <b class='g-c'>collected</b> by Vultisig?",
               "a": "You are registering your Public Keys and vault addresses.<br><br><a class='g-c' href='https://github.com/vultisig/airdrop-registry' target='_blank'>Inspect the code here.</a><br><br>No other information is collected.<br><br><a class='g-c' href='https://github.com/vultisig/docs/blob/main/other/privacy.md' target='_blank'>Read the Privacy Policy here</a>"
@@ -116,6 +135,14 @@
             "title": "<b class='g-c'>Wallet</b> not connected",
             "description": "Do not connect a wallet if you do not wish for your <b class='g-c'>public keys</b> to be sent to the Airdrop Registry"
           }
+        }
+      },
+      "achievements": {
+        "title": "<b class='g-c'>Achievements</b>",
+        "redeem": "Redeem code",
+        "empty": {
+          "title": "There is <b class='g-c'>nothing</b>",
+          "description": "The achievement offers exclusive opportunities, additional airdrops <b>and etc</b>"
         }
       },
       "referrals": {

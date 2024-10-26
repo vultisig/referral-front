@@ -58,6 +58,10 @@ export const requests = {
         signal: () => signal('referrals'),
         abort: () => abort('referrals')
     },
+    achievements: {
+        signal: () => signal('achievements'),
+        abort: () => abort('achievements')
+    },
     getVASUser: {
         signal: () => signal('getVASUser'),
         abort: () => abort('getVASUser')
@@ -65,6 +69,10 @@ export const requests = {
     putUserToVAS: {
         signal: () => signal('putUserToVAS'),
         abort: () => abort('putUserToVAS')
+    },
+    redeemAchievement: {
+        signal: () => signal('redeemAchievement'),
+        abort: () => abort('redeemAchievement')
     },
     joinAirdrop: {
         signal: () => signal('joinAirdrop'),

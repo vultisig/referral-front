@@ -81,6 +81,17 @@ onMounted(async () => {
     flex-direction: column;
     max-height: var(--tg-viewport-height);
     overflow: hidden;
+    &:after {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 30px;
+        pointer-events: none;
+        background: linear-gradient(180deg, $black 0%, transparent 100%);
+        z-index: 999;
+    }
 
     #page {
         flex: 1 1 1%;

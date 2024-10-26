@@ -166,6 +166,24 @@ const actions = {
         } catch (e) {
             onRequestDefaultError(e);
         }
+    },
+    async getMyAchievements({ commit }, payload) {
+        try {
+            const response = await this.$http({
+                method: 'POST',
+                url: '/user/achievements/',
+                data: payload,
+                signal: requests.achievements.signal()
+            });
+
+            if (response.status === 200) {
+                return response.data;
+            }
+
+            return response.data;
+        } catch (e) {
+            onRequestDefaultError(e);
+        }
     }
 };
 

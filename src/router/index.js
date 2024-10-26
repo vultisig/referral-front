@@ -33,6 +33,14 @@ const routes = [
         ]
     },
     {
+        path: '/achievements',
+        name: 'achievements',
+        component: () => import('../pages/Achievements.vue'),
+        abort: [
+            'achievements'
+        ]
+    },
+    {
         path: '/airdrop',
         name: 'airdrop',
         component: () => import('../pages/Airdrop.vue'),

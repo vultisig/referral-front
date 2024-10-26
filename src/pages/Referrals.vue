@@ -9,7 +9,7 @@
             <EmptyLabel v-if="!data.referrals.length"
                 :title="t('pages.referrals.empty.title')"
                 :description="t('pages.referrals.empty.description')"
-                class="emty"
+                class="empty"
             />
 
             <div v-else class="users-list">
@@ -19,10 +19,10 @@
                     <li v-for="item in data.referrals"
                         :key="item.username"
                     >
-                        <Avatar :name="item.username || item.first_name" />
+                        <Avatar :name="item.username || item.first_name || t('common.unnamed')" />
                         <div>
                             <div>
-                                <span>{{ item.username || item.first_name }}</span>
+                                <span>{{ item.username || item.first_name || t('common.unnamed') }}</span>
                             </div>
 
                             <Button v-if="item.loading" class="light loader" :loading="true" />
@@ -167,7 +167,7 @@
             text-align: center;
         }
 
-        & > .emty {
+        & > .empty {
             margin: auto;
         }
 
