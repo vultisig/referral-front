@@ -1,5 +1,4 @@
 import { onRequestDefaultError, requests } from '@/utils/requests';
-import { delay } from '@/utils/utils';
 import i18n from '@/i18n';
 import axios from 'axios';
 import { message } from '@/utils/utils';
@@ -11,12 +10,10 @@ const state = () => ({
 
 const actions = {
     async redeemAchievement({ commit }, code) {
-        await delay(500);
-        
         try {
             const result = await this.$http({
                 method: 'POST',
-                url: '/achievement/apply',
+                url: '/achievements/apply',
                 data: { code },
                 signal: requests.redeemAchievement.signal()
             });

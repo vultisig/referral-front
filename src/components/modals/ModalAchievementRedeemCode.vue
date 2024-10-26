@@ -36,6 +36,7 @@ import Field from '@/components/forms/Field.vue';
 import Button from '@/components/forms/Button.vue';
 import BaseModal from '@/components/modals/BaseModal.vue';
 import { mapState, mapMutations, mapActions } from '@/map-state';
+import { delay } from '@/utils/utils';
 
 const { redeemAchievement } = mapActions();
 const { t } = useI18n();
@@ -53,6 +54,7 @@ const onInput = (e) => {
 
 const apply = async () => {
     data.loading = true;
+    await delay(400);
     const result = await redeemAchievement(data.value);
 
     if (result) {

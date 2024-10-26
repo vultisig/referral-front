@@ -17,8 +17,8 @@
                     <li v-for="(item, id) in data.achievements"
                         :key="id"
                     >
-                        <span>
-                            <img :src="getUrl(item.icon)" :alt="item.name" />
+                        <span :class="{ loaded: item.loaded }">
+                            <img :src="getUrl(item.icon)" :alt="item.name" @load="item.loaded = true" />
                             <img :src="getUrl(item.icon)" :alt="item.name" />
                         </span>
                         <div>
@@ -194,13 +194,14 @@
                     min-height: 88px;
 
                     & > span {
-                        width: 50px;
+                        width: 52px;
                         flex-shrink: 0;
-                        height: 72px;
+                        height: 80px;
                         display: flex;
                         align-items: center;
                         justify-content: center;
                         position: relative;
+                        transform: scale(0);
                         img {
                             width: 100%;
 
@@ -215,6 +216,31 @@
                                 -webkit-mask-repeat: no-repeat;
                                 -webkit-mask-position: left top, left bottom;
                                 -webkit-mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+                            }
+                        }
+
+                        &.loaded {
+                            transform: scale(1);
+                            animation: achievements-loaded .4s linear;
+                        }
+                        @keyframes achievements-loaded {
+                            0% {
+                                transform: scale(0);
+                            }
+                            30% {
+                                transform: scale(1.2);
+                            }
+                            50% {
+                                transform: scale(.8);
+                            }
+                            70% {
+                                transform: scale(1.1);
+                            }
+                            90% {
+                                transform: scale(.9);
+                            }
+                            100% {
+                                transform: scale(1);
                             }
                         }
                     }
