@@ -142,7 +142,7 @@
         "redeem": "Redeem code",
         "empty": {
           "title": "There is <b class='g-c'>nothing</b>",
-          "description": "The achievement offers exclusive opportunities, additional airdrops, <b>and etc</b>"
+          "description": "The achievement offers exclusive opportunities, additional airdrops <b>and etc</b>"
         }
       },
       "referrals": {
