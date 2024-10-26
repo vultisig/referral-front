@@ -168,6 +168,7 @@
                         margin-right: auto;
                         @include font-secondray-btn;
                         color: $white;
+                        text-align: left;
                     }
 
                     svg {
