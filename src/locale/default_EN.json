@@ -8,6 +8,7 @@
       "apply": "Apply",
       "referrals": "squad",
       "close": "Close",
+      "unnamed": "Unnamed",
       "errors": {
         "importError": "App version updated, reload page"
       }

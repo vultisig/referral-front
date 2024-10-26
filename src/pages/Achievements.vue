@@ -61,7 +61,7 @@
     const { t } = useI18n();
     const { user, settings, ready } = mapState();
     const { openModal } = mapMutations();
-    const { getMyAchievements, me } = mapActions();
+    const { getMyAchievements } = mapActions();
     const { pixiRedeem, disableRecursionLogo, enableRecursionLogo } = mapState();
 
     const data = reactive({
@@ -98,14 +98,14 @@
         data.loading = true;
         await delay(400);
 
-        // const payload = await getMyAchievements({
-        //     skip: data.achievements.length,
-        //     take: +settings.value.ACHIEVEMENTS_DEFAULT_TAKE || 30
-        // });
+        const payload = await getMyAchievements({
+            skip: data.achievements.length,
+            take: +settings.value.ACHIEVEMENTS_DEFAULT_TAKE || 30
+        });
 
-        // if (payload?.total) {
-        //     data.total = payload.total;
-        // }
+        if (payload?.total) {
+            data.total = payload.total;
+        }
 
         data.loading = false;
     };
@@ -117,7 +117,6 @@
                 if (enableRecursionLogo?.value) {
                     enableRecursionLogo.value();
                 }
-                // await me();
                 getAchievementsList();
             }
         }
@@ -128,13 +127,11 @@
             if (enableRecursionLogo?.value) {
                 enableRecursionLogo.value();
             }
-            // await me();
             getAchievementsList();
         }
     });
 
     onBeforeUnmount(async () => {
-        console.log(disableRecursionLogo)
         if (disableRecursionLogo?.value) {
             disableRecursionLogo.value();
         }
@@ -246,13 +243,13 @@
 
                     &:nth-child(4n + 1) {
                         & > span img:nth-child(2) {
-                            @include sunshine(4s, 135deg, 1);
+                            @include sunshine(3s, 135deg, 1);
                         }
                     }
 
                     &:nth-child(4n + 2) {
                         & > span img:nth-child(2) {
-                            @include sunshine(3s, 175deg, 2);
+                            @include sunshine(4s, 175deg, 2);
                         }
                     }
 
