@@ -107,6 +107,8 @@
             data.total = payload.total;
         }
 
+        data.achievements = payload.data;
+
         data.loading = false;
     };
 
