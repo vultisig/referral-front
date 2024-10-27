@@ -8,7 +8,6 @@
             <div v-if="data.achievement"
                 class="achievement-box"
                 :style="{ 'background-color': data.achievement?.color }"
-                @click="close"
             >
                 <Stars :count="10" />
 
@@ -23,6 +22,10 @@
                 <label>{{ data.achievement.name }}</label>
 
                 <p v-if="data.achievement.description" v-html="data.achievement.description"></p>
+
+                <div class="buttons">
+                    <Button :name="t('common.close')" class="invert" @click="close"/>
+                </div>
             </div>
         </template>
     </BaseModal>
@@ -36,6 +39,7 @@
     import { mapMutations, mapGetters } from '@/map-state';
     import { useI18n } from 'vue-i18n';
     import { delay } from '@/utils/utils';
+    import { Howl } from 'howler';
 
     const { t } = useI18n();
     const { closeModal } = mapMutations();
@@ -55,8 +59,14 @@
     }
 
     const onLoad = async () => {
+        const sound = new Howl({
+            src: [new URL('/achievement.mp3', import.meta.url).href]
+        });
+
         await delay(200);
         data.loaded = true
+
+        sound.play();
     }
 
     const close = () => {
@@ -74,7 +84,7 @@
         display: flex;
         flex-direction: column;
         gap: 42px;
-        padding: 24px 24px 32px;
+        padding: 84px 24px 32px;
         height: 100%;
         position: relative;
 
@@ -87,7 +97,7 @@
             justify-content: center;
             position: relative;
             transform: scale(0);
-            margin: auto;
+            margin: 0 auto;
 
             $deg: calc(var(--achievement-random-deg) + 1deg);
 
@@ -144,9 +154,17 @@
 
         & > p {
             padding: 0;
-            @include font-btn;
+            @include font-secondray-btn;
             color: $white;
             text-align: center;
         }
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        gap: 20px;
+        margin-top: auto;
     }
 </style>
