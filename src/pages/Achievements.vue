@@ -201,13 +201,14 @@
                     border-radius: 24px;
                     min-height: 88px;
                     cursor: pointer;
-                    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+                    -webkit-tap-highlight-color: transparent;
 
                     &:active,
                     &:hover,
                     &:focus {
                         outline: none;
                         -webkit-appearance: none;
+                        -webkit-tap-highlight-color: transparent;
                     }
 
                     & > span {
