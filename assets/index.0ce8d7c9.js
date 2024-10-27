@@ -28807,7 +28807,7 @@ const routes = [
     {
         path: '/achievements',
         name: 'achievements',
-        component: () => __vitePreload(() => import('./Achievements.044a05b7.js'),true?["assets/Achievements.044a05b7.js","assets/EmptyLabel.24479e14.js","assets/EmptyLabel.b61dc386.css","assets/Achievements.66e48d11.css"]:void 0),
+        component: () => __vitePreload(() => import('./Achievements.044a05b7.js'),true?["assets/Achievements.044a05b7.js","assets/EmptyLabel.24479e14.js","assets/EmptyLabel.b61dc386.css","assets/Achievements.6110f0e6.css"]:void 0),
         abort: [
             'achievements'
         ]
