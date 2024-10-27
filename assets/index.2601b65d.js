@@ -17921,7 +17921,7 @@ const _export_sfc = (sfc, props) => {
   return target;
 };
 
-const _sfc_main$j = {
+const _sfc_main$l = {
   __name: 'Circle',
   props: {
     top: { type: [String, null], default: null },
@@ -17946,7 +17946,7 @@ return (_ctx, _cache) => {
 }
 
 };
-const Circle$1 = /*#__PURE__*/_export_sfc(_sfc_main$j, [['__scopeId',"data-v-cc11e5b1"],['__file',"/home/runner/work/referral-front/referral-front/src/components/forms/Circle.vue"]]);
+const Circle$1 = /*#__PURE__*/_export_sfc(_sfc_main$l, [['__scopeId',"data-v-cc11e5b1"],['__file',"/home/runner/work/referral-front/referral-front/src/components/forms/Circle.vue"]]);
 
 /*!
  * vuex v4.1.0
@@ -19069,6 +19069,13 @@ const mapState = () => {
     return Object.fromEntries(Object.keys(store.state).map((key) => [key, computed(() => store.state[key])]));
 };
 
+const mapGetters = () => {
+    const store = useStore();
+    return Object.fromEntries(
+        Object.keys(store.getters).map((getter) => [getter, computed(() => store.getters[getter])])
+    );
+};
+
 const mapMutations = () => {
     const store = useStore();
     return Object.fromEntries(
@@ -19085,14 +19092,14 @@ const mapActions = () => {
 
 const Messages_vue_vue_type_style_index_0_scoped_a397f62e_lang = '';
 
-const _hoisted_1$e = {
+const _hoisted_1$g = {
   key: 0,
   class: "messages"
 };
-const _hoisted_2$c = ["innerHTML"];
+const _hoisted_2$d = ["innerHTML"];
 
 
-const _sfc_main$i = {
+const _sfc_main$k = {
   __name: 'Messages',
   setup(__props) {
 
@@ -19110,7 +19117,7 @@ return (_ctx, _cache) => {
   const _component_Icon = resolveComponent("Icon");
 
   return (unref(messages).length)
-    ? (openBlock(), createElementBlock("div", _hoisted_1$e, [
+    ? (openBlock(), createElementBlock("div", _hoisted_1$g, [
         createBaseVNode("div", null, [
           (openBlock(true), createElementBlock(Fragment, null, renderList(unref(messages), (message) => {
             return (openBlock(), createElementBlock("div", {
@@ -19124,7 +19131,7 @@ return (_ctx, _cache) => {
               _cache[0] || (_cache[0] = createBaseVNode("span", { class: "devider" }, null, -1 /* HOISTED */)),
               createBaseVNode("span", {
                 innerHTML: message.text
-              }, null, 8 /* PROPS */, _hoisted_2$c)
+              }, null, 8 /* PROPS */, _hoisted_2$d)
             ], 6 /* CLASS, STYLE */))
           }), 128 /* KEYED_FRAGMENT */))
         ])
@@ -19134,7 +19141,7 @@ return (_ctx, _cache) => {
 }
 
 };
-const Messages = /*#__PURE__*/_export_sfc(_sfc_main$i, [['__scopeId',"data-v-a397f62e"],['__file',"/home/runner/work/referral-front/referral-front/src/components/forms/Messages.vue"]]);
+const Messages = /*#__PURE__*/_export_sfc(_sfc_main$k, [['__scopeId',"data-v-a397f62e"],['__file',"/home/runner/work/referral-front/referral-front/src/components/forms/Messages.vue"]]);
 
 var browser = {};
 
@@ -25929,11 +25936,11 @@ registerLocaleFallbacker(fallbackWithLocaleChain);
 
 const Button_vue_vue_type_style_index_0_scoped_112c178d_lang = '';
 
-const _hoisted_1$d = ["disabled"];
-const _hoisted_2$b = { key: 0 };
+const _hoisted_1$f = ["disabled"];
+const _hoisted_2$c = { key: 0 };
 
 
-const _sfc_main$h = {
+const _sfc_main$j = {
   __name: 'Button',
   props: {
     name: { type: String, default: '' },
@@ -25952,7 +25959,7 @@ return (_ctx, _cache) => {
     disabled: props.disabled
   }, [
     (props.name)
-      ? (openBlock(), createElementBlock("span", _hoisted_2$b, toDisplayString$1(props.name), 1 /* TEXT */))
+      ? (openBlock(), createElementBlock("span", _hoisted_2$c, toDisplayString$1(props.name), 1 /* TEXT */))
       : createCommentVNode("v-if", true),
     renderSlot(_ctx.$slots, "default", {}, undefined, true),
     (props.loading)
@@ -25961,16 +25968,16 @@ return (_ctx, _cache) => {
           icon: "loader-4"
         }))
       : createCommentVNode("v-if", true)
-  ], 8 /* PROPS */, _hoisted_1$d))
+  ], 8 /* PROPS */, _hoisted_1$f))
 }
 }
 
 };
-const Button = /*#__PURE__*/_export_sfc(_sfc_main$h, [['__scopeId',"data-v-112c178d"],['__file',"/home/runner/work/referral-front/referral-front/src/components/forms/Button.vue"]]);
+const Button = /*#__PURE__*/_export_sfc(_sfc_main$j, [['__scopeId',"data-v-112c178d"],['__file',"/home/runner/work/referral-front/referral-front/src/components/forms/Button.vue"]]);
 
 const Loader_vue_vue_type_style_index_0_scoped_d610e656_lang = '';
 
-const _sfc_main$g = {};
+const _sfc_main$i = {};
 
 function _sfc_render(_ctx, _cache) {
   const _component_Icon = resolveComponent("Icon");
@@ -25990,25 +25997,25 @@ function _sfc_render(_ctx, _cache) {
     ])
   ]))
 }
-const Loader$1 = /*#__PURE__*/_export_sfc(_sfc_main$g, [['render',_sfc_render],['__scopeId',"data-v-d610e656"],['__file',"/home/runner/work/referral-front/referral-front/src/components/forms/Loader.vue"]]);
+const Loader$1 = /*#__PURE__*/_export_sfc(_sfc_main$i, [['render',_sfc_render],['__scopeId',"data-v-d610e656"],['__file',"/home/runner/work/referral-front/referral-front/src/components/forms/Loader.vue"]]);
 
 const BaseModal_vue_vue_type_style_index_0_scoped_6badf473_lang = '';
 
-const _hoisted_1$c = {
+const _hoisted_1$e = {
   key: 0,
   class: "header"
 };
-const _hoisted_2$a = {
+const _hoisted_2$b = {
   key: 1,
   class: "content"
 };
-const _hoisted_3$8 = {
+const _hoisted_3$9 = {
   key: 2,
   class: "loader"
 };
 
 
-const _sfc_main$f = {
+const _sfc_main$h = {
   __name: 'BaseModal',
   props: {
     canCancel: {
@@ -26061,7 +26068,7 @@ return (_ctx, _cache) => {
       onClick: _cache[0] || (_cache[0] = withModifiers(() => {}, ["stop"]))
     }, [
       (unref(slots).title)
-        ? (openBlock(), createElementBlock("div", _hoisted_1$c, [
+        ? (openBlock(), createElementBlock("div", _hoisted_1$e, [
             createBaseVNode("h3", null, [
               renderSlot(_ctx.$slots, "title", {}, undefined, true)
             ]),
@@ -26083,12 +26090,12 @@ return (_ctx, _cache) => {
           ]))
         : createCommentVNode("v-if", true),
       (!props.isLoading)
-        ? (openBlock(), createElementBlock("div", _hoisted_2$a, [
+        ? (openBlock(), createElementBlock("div", _hoisted_2$b, [
             renderSlot(_ctx.$slots, "content", {}, undefined, true)
           ]))
         : createCommentVNode("v-if", true),
       (props.isLoading)
-        ? (openBlock(), createElementBlock("div", _hoisted_3$8, [
+        ? (openBlock(), createElementBlock("div", _hoisted_3$9, [
             createVNode(Loader$1)
           ]))
         : createCommentVNode("v-if", true)
@@ -26098,7 +26105,7 @@ return (_ctx, _cache) => {
 }
 
 };
-const BaseModal = /*#__PURE__*/_export_sfc(_sfc_main$f, [['__scopeId',"data-v-6badf473"],['__file',"/home/runner/work/referral-front/referral-front/src/components/modals/BaseModal.vue"]]);
+const BaseModal = /*#__PURE__*/_export_sfc(_sfc_main$h, [['__scopeId',"data-v-6badf473"],['__file',"/home/runner/work/referral-front/referral-front/src/components/modals/BaseModal.vue"]]);
 
 /** @type {import('.')} */
 var esErrors = Error;
@@ -28623,7 +28630,7 @@ const resource = {
           },
           {
             "q": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["What assets are <b class='g-c'>counted</b> for the Airdrop?"])};fn.source="What assets are <b class='g-c'>counted</b> for the Airdrop?";return fn;})(),
-            "a": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["<b class='g-c'>Layer1</b> assets and most tokens <b class='g-c'>supported by Vultisig</b> are counted. Other assets such as LPs and Node Bonds from THORChain, MAYA Protocol and ChainFlip are also valid.<br><br>See the full list <a class='g-c' href='https://docs.vultisig.com/vultisig-token/airdrop#eligble-assets' target='_blank'>here</a>"])};fn.source="<b class='g-c'>Layer1</b> assets and most tokens <b class='g-c'>supported by Vultisig</b> are counted. Other assets such as LPs and Node Bonds from THORChain, MAYA Protocol and ChainFlip are also valid.<br><br>See the full list <a class='g-c' href='https://docs.vultisig.com/vultisig-token/airdrop#eligble-assets' target='_blank'>here</a>";return fn;})()
+            "a": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["<b class='g-c'>Layer1</b> assets and most tokens <b class='g-c'>supported by Vultisig</b> are counted. Other assets such as LPs and Node Bonds from THORChain, MAYA Protocol are also valid.<br><br>See the full list <a class='g-c' href='https://docs.vultisig.com/vultisig-token/airdrop#eligble-assets' target='_blank'>here</a>"])};fn.source="<b class='g-c'>Layer1</b> assets and most tokens <b class='g-c'>supported by Vultisig</b> are counted. Other assets such as LPs and Node Bonds from THORChain, MAYA Protocol are also valid.<br><br>See the full list <a class='g-c' href='https://docs.vultisig.com/vultisig-token/airdrop#eligble-assets' target='_blank'>here</a>";return fn;})()
           },
           {
             "q": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["What is the <b class='g-c'>Airdrop process</b>?"])};fn.source="What is the <b class='g-c'>Airdrop process</b>?";return fn;})(),
@@ -28786,13 +28793,13 @@ const routes = [
     {
         path: '/home',
         name: 'home',
-        component: () => __vitePreload(() => import('./Home.bb401fc7.js'),true?["assets/Home.bb401fc7.js","assets/Avatar.c0dce870.js","assets/Avatar.429656ec.css","assets/EmptyLabel.e77f9ba5.js","assets/EmptyLabel.b61dc386.css","assets/Home.88e56920.css"]:void 0),
+        component: () => __vitePreload(() => import('./Home.eb0c0aa2.js'),true?["assets/Home.eb0c0aa2.js","assets/Avatar.a6398143.js","assets/Avatar.429656ec.css","assets/EmptyLabel.3d49f756.js","assets/EmptyLabel.b61dc386.css","assets/Home.88e56920.css"]:void 0),
         abort: []
     },
     {
         path: '/referrals',
         name: 'referrals',
-        component: () => __vitePreload(() => import('./Referrals.1bd387e3.js'),true?["assets/Referrals.1bd387e3.js","assets/Avatar.c0dce870.js","assets/Avatar.429656ec.css","assets/EmptyLabel.e77f9ba5.js","assets/EmptyLabel.b61dc386.css","assets/Referrals.2b33ada9.css"]:void 0),
+        component: () => __vitePreload(() => import('./Referrals.06ef978a.js'),true?["assets/Referrals.06ef978a.js","assets/Avatar.a6398143.js","assets/Avatar.429656ec.css","assets/EmptyLabel.3d49f756.js","assets/EmptyLabel.b61dc386.css","assets/Referrals.2b33ada9.css"]:void 0),
         abort: [
             'referrals'
         ]
@@ -28800,7 +28807,7 @@ const routes = [
     {
         path: '/achievements',
         name: 'achievements',
-        component: () => __vitePreload(() => import('./Achievements.9e8ef340.js'),true?["assets/Achievements.9e8ef340.js","assets/EmptyLabel.e77f9ba5.js","assets/EmptyLabel.b61dc386.css","assets/Achievements.98728acb.css"]:void 0),
+        component: () => __vitePreload(() => import('./Achievements.e860c9fe.js'),true?["assets/Achievements.e860c9fe.js","assets/EmptyLabel.3d49f756.js","assets/EmptyLabel.b61dc386.css","assets/Achievements.07ff9f10.css"]:void 0),
         abort: [
             'achievements'
         ]
@@ -28808,25 +28815,25 @@ const routes = [
     {
         path: '/airdrop',
         name: 'airdrop',
-        component: () => __vitePreload(() => import('./Airdrop.ff06fe23.js'),true?["assets/Airdrop.ff06fe23.js","assets/Airdrop.3c798ef7.css"]:void 0),
+        component: () => __vitePreload(() => import('./Airdrop.7215c66b.js'),true?["assets/Airdrop.7215c66b.js","assets/Airdrop.3c798ef7.css"]:void 0),
         abort: []
     },
     {
         path: '/settings',
         name: 'settings',
-        component: () => __vitePreload(() => import('./Settings.cb7f0c22.js'),true?["assets/Settings.cb7f0c22.js","assets/Settings.95b90fa1.css"]:void 0),
+        component: () => __vitePreload(() => import('./Settings.f37725f6.js'),true?["assets/Settings.f37725f6.js","assets/Settings.95b90fa1.css"]:void 0),
         abort: []
     },
     {
         path: '/error',
         name: 'error',
-        component: () => __vitePreload(() => import('./Error.9fc3b06d.js'),true?["assets/Error.9fc3b06d.js","assets/EmptyLabel.e77f9ba5.js","assets/EmptyLabel.b61dc386.css","assets/Error.1e1044f0.css"]:void 0),
+        component: () => __vitePreload(() => import('./Error.d9295d53.js'),true?["assets/Error.d9295d53.js","assets/EmptyLabel.3d49f756.js","assets/EmptyLabel.b61dc386.css","assets/Error.1e1044f0.css"]:void 0),
         abort: []
     },
     {
         path: '/access-denied',
         name: 'access-denied',
-        component: () => __vitePreload(() => import('./AccessDenied.20dc7208.js'),true?["assets/AccessDenied.20dc7208.js","assets/EmptyLabel.e77f9ba5.js","assets/EmptyLabel.b61dc386.css","assets/AccessDenied.ed7dcc68.css"]:void 0),
+        component: () => __vitePreload(() => import('./AccessDenied.a918cb4f.js'),true?["assets/AccessDenied.a918cb4f.js","assets/EmptyLabel.3d49f756.js","assets/EmptyLabel.b61dc386.css","assets/AccessDenied.ed7dcc68.css"]:void 0),
         abort: []
     },
     {
@@ -29405,12 +29412,12 @@ function numberWithSpaces(x) {
 
 const ModalInvite_vue_vue_type_style_index_0_scoped_d7d050bc_lang = '';
 
-const _hoisted_1$b = ["innerHTML"];
-const _hoisted_2$9 = ["innerHTML"];
-const _hoisted_3$7 = { class: "buttons" };
+const _hoisted_1$d = ["innerHTML"];
+const _hoisted_2$a = ["innerHTML"];
+const _hoisted_3$8 = { class: "buttons" };
 
 
-const _sfc_main$e = {
+const _sfc_main$g = {
   __name: 'ModalInvite',
   setup(__props) {
 
@@ -29469,17 +29476,17 @@ return (_ctx, _cache) => {
     title: withCtx(() => [
       createBaseVNode("span", {
         innerHTML: unref(t)('modals.invite.title')
-      }, null, 8 /* PROPS */, _hoisted_1$b)
+      }, null, 8 /* PROPS */, _hoisted_1$d)
     ]),
     content: withCtx(() => [
       createBaseVNode("div", {
         innerHTML: unref(t)('modals.invite.description'),
         class: "description"
-      }, null, 8 /* PROPS */, _hoisted_2$9),
+      }, null, 8 /* PROPS */, _hoisted_2$a),
       _cache[0] || (_cache[0] = createBaseVNode("div", { class: "canvas-box" }, [
         createBaseVNode("canvas", { id: "qr-canvas" })
       ], -1 /* HOISTED */)),
-      createBaseVNode("div", _hoisted_3$7, [
+      createBaseVNode("div", _hoisted_3$8, [
         createVNode(Button, {
           name: unref(t)('modals.invite.share'),
           onClick: share
@@ -29501,20 +29508,20 @@ return (_ctx, _cache) => {
 }
 
 };
-const ModalInvite = /*#__PURE__*/_export_sfc(_sfc_main$e, [['__scopeId',"data-v-d7d050bc"],['__file',"/home/runner/work/referral-front/referral-front/src/components/modals/ModalInvite.vue"]]);
+const ModalInvite = /*#__PURE__*/_export_sfc(_sfc_main$g, [['__scopeId',"data-v-d7d050bc"],['__file',"/home/runner/work/referral-front/referral-front/src/components/modals/ModalInvite.vue"]]);
 
 const ModalPublicKeys_vue_vue_type_style_index_0_scoped_e67a8434_lang = '';
 
-const _hoisted_1$a = ["innerHTML"];
-const _hoisted_2$8 = { class: "content-box" };
-const _hoisted_3$6 = {
+const _hoisted_1$c = ["innerHTML"];
+const _hoisted_2$9 = { class: "content-box" };
+const _hoisted_3$7 = {
   key: 0,
   class: "description"
 };
 const _hoisted_4$1 = { class: "buttons" };
 
 
-const _sfc_main$d = {
+const _sfc_main$f = {
   __name: 'ModalPublicKeys',
   setup(__props) {
 
@@ -29534,12 +29541,12 @@ return (_ctx, _cache) => {
     title: withCtx(() => [
       createBaseVNode("span", {
         innerHTML: unref(t)('modals.public-keys.title')
-      }, null, 8 /* PROPS */, _hoisted_1$a)
+      }, null, 8 /* PROPS */, _hoisted_1$c)
     ]),
     content: withCtx(() => [
-      createBaseVNode("div", _hoisted_2$8, [
+      createBaseVNode("div", _hoisted_2$9, [
         (unref(user).profile.wallet_public_key_ecdsa)
-          ? (openBlock(), createElementBlock("div", _hoisted_3$6, [
+          ? (openBlock(), createElementBlock("div", _hoisted_3$7, [
               _cache[0] || (_cache[0] = createBaseVNode("b", { class: "g-c" }, "ECDSA Key:", -1 /* HOISTED */)),
               createBaseVNode("span", null, toDisplayString$1(unref(user).profile.wallet_public_key_ecdsa), 1 /* TEXT */),
               _cache[1] || (_cache[1] = createBaseVNode("br", null, null, -1 /* HOISTED */)),
@@ -29562,16 +29569,16 @@ return (_ctx, _cache) => {
 }
 
 };
-const ModalPublicKeys = /*#__PURE__*/_export_sfc(_sfc_main$d, [['__scopeId',"data-v-e67a8434"],['__file',"/home/runner/work/referral-front/referral-front/src/components/modals/ModalPublicKeys.vue"]]);
+const ModalPublicKeys = /*#__PURE__*/_export_sfc(_sfc_main$f, [['__scopeId',"data-v-e67a8434"],['__file',"/home/runner/work/referral-front/referral-front/src/components/modals/ModalPublicKeys.vue"]]);
 
 const ModalLoader_vue_vue_type_style_index_0_scoped_d2cc4814_lang = '';
 
-const _hoisted_1$9 = { class: "description" };
-const _hoisted_2$7 = ["innerHTML"];
-const _hoisted_3$5 = ["innerHTML"];
+const _hoisted_1$b = { class: "description" };
+const _hoisted_2$8 = ["innerHTML"];
+const _hoisted_3$6 = ["innerHTML"];
 
 
-const _sfc_main$c = {
+const _sfc_main$e = {
   __name: 'ModalLoader',
   setup(__props) {
 
@@ -29587,13 +29594,13 @@ return (_ctx, _cache) => {
         class: "loader-box",
         style: normalizeStyle({ 'background-image': `url(/img/airdrop_bg_${ Math.random() > .5 ? 1 : 2 }.jpg)` })
       }, [
-        createBaseVNode("div", _hoisted_1$9, [
+        createBaseVNode("div", _hoisted_1$b, [
           createBaseVNode("label", {
             innerHTML: unref(t)('modals.loader.description.title')
-          }, null, 8 /* PROPS */, _hoisted_2$7),
+          }, null, 8 /* PROPS */, _hoisted_2$8),
           createBaseVNode("span", {
             innerHTML: unref(t)('modals.loader.description.text')
-          }, null, 8 /* PROPS */, _hoisted_3$5)
+          }, null, 8 /* PROPS */, _hoisted_3$6)
         ]),
         _cache[0] || (_cache[0] = createBaseVNode("div", { class: "bg" }, null, -1 /* HOISTED */)),
         createVNode(Loader$1, { class: "opacity-mode" })
@@ -29605,7 +29612,7 @@ return (_ctx, _cache) => {
 }
 
 };
-const ModalLoader = /*#__PURE__*/_export_sfc(_sfc_main$c, [['__scopeId',"data-v-d2cc4814"],['__file',"/home/runner/work/referral-front/referral-front/src/components/modals/ModalLoader.vue"]]);
+const ModalLoader = /*#__PURE__*/_export_sfc(_sfc_main$e, [['__scopeId',"data-v-d2cc4814"],['__file',"/home/runner/work/referral-front/referral-front/src/components/modals/ModalLoader.vue"]]);
 
 var jsQR = {exports: {}};
 
@@ -39687,15 +39694,15 @@ const t$1=t=>new Promise((r,n)=>{const o=new Image;o.src=URL.createObjectURL(t),
 
 const Progress_vue_vue_type_style_index_0_scoped_1d612336_lang = '';
 
-const _hoisted_1$8 = {
+const _hoisted_1$a = {
   viewBox: "0 0 200 200",
   class: "progress-bar"
 };
-const _hoisted_2$6 = ["stroke-dasharray"];
-const _hoisted_3$4 = ["innerHTML"];
+const _hoisted_2$7 = ["stroke-dasharray"];
+const _hoisted_3$5 = ["innerHTML"];
 
     
-const _sfc_main$b = {
+const _sfc_main$d = {
   __name: 'Progress',
   props: {
         title: { type: String, default: '' },
@@ -39734,7 +39741,7 @@ const _sfc_main$b = {
 
 return (_ctx, _cache) => {
   return (openBlock(), createElementBlock("div", null, [
-    (openBlock(), createElementBlock("svg", _hoisted_1$8, [
+    (openBlock(), createElementBlock("svg", _hoisted_1$a, [
       _cache[0] || (_cache[0] = createBaseVNode("circle", {
         r: "80",
         cx: "100",
@@ -39755,7 +39762,7 @@ return (_ctx, _cache) => {
         "stroke-dashoffset": "0",
         class: "gradient",
         style: {"transform":"rotate(-90deg)","transform-origin":"center"}
-      }, null, 8 /* PROPS */, _hoisted_2$6),
+      }, null, 8 /* PROPS */, _hoisted_2$7),
       _cache[1] || (_cache[1] = createBaseVNode("defs", null, [
         createBaseVNode("linearGradient", { id: "progress-bar-gradient" }, [
           createBaseVNode("stop", {
@@ -39773,22 +39780,22 @@ return (_ctx, _cache) => {
       ? (openBlock(), createElementBlock("span", {
           key: 0,
           innerHTML: props.title
-        }, null, 8 /* PROPS */, _hoisted_3$4))
+        }, null, 8 /* PROPS */, _hoisted_3$5))
       : createCommentVNode("v-if", true)
   ]))
 }
 }
 
 };
-const Progress = /*#__PURE__*/_export_sfc(_sfc_main$b, [['__scopeId',"data-v-1d612336"],['__file',"/home/runner/work/referral-front/referral-front/src/components/forms/Progress.vue"]]);
+const Progress = /*#__PURE__*/_export_sfc(_sfc_main$d, [['__scopeId',"data-v-1d612336"],['__file',"/home/runner/work/referral-front/referral-front/src/components/forms/Progress.vue"]]);
 
 const ModalWallet_vue_vue_type_style_index_0_scoped_374dd900_lang = '';
 
-const _hoisted_1$7 = ["innerHTML"];
-const _hoisted_2$5 = { class: "buttons" };
+const _hoisted_1$9 = ["innerHTML"];
+const _hoisted_2$6 = { class: "buttons" };
 
 
-const _sfc_main$a = {
+const _sfc_main$c = {
   __name: 'ModalWallet',
   setup(__props) {
 
@@ -39985,7 +39992,7 @@ return (_ctx, _cache) => {
     title: withCtx(() => [
       createBaseVNode("span", {
         innerHTML: unref(t)('modals.wallet.title')
-      }, null, 8 /* PROPS */, _hoisted_1$7)
+      }, null, 8 /* PROPS */, _hoisted_1$9)
     ]),
     content: withCtx(() => [
       createVNode(Progress, {
@@ -39993,7 +40000,7 @@ return (_ctx, _cache) => {
         title: data.title,
         class: "progress"
       }, null, 8 /* PROPS */, ["value", "title"]),
-      createBaseVNode("div", _hoisted_2$5, [
+      createBaseVNode("div", _hoisted_2$6, [
         createVNode(Button, {
           name: unref(t)('modals.wallet.upload'),
           onClick: upload,
@@ -40013,7 +40020,125 @@ return (_ctx, _cache) => {
 }
 
 };
-const ModalWallet = /*#__PURE__*/_export_sfc(_sfc_main$a, [['__scopeId',"data-v-374dd900"],['__file',"/home/runner/work/referral-front/referral-front/src/components/modals/ModalWallet.vue"]]);
+const ModalWallet = /*#__PURE__*/_export_sfc(_sfc_main$c, [['__scopeId',"data-v-374dd900"],['__file',"/home/runner/work/referral-front/referral-front/src/components/modals/ModalWallet.vue"]]);
+
+const Stars_vue_vue_type_style_index_0_scoped_26b545ec_lang = '';
+
+const _hoisted_1$8 = { class: "stars" };
+
+
+const _sfc_main$b = {
+  __name: 'Stars',
+  props: {
+    count: { type: Number, default: 25 }
+},
+  setup(__props) {
+
+const props = __props;
+
+return (_ctx, _cache) => {
+  return (openBlock(), createElementBlock("div", _hoisted_1$8, [
+    (openBlock(true), createElementBlock(Fragment, null, renderList(new Array (props.count), (item, id) => {
+      return (openBlock(), createElementBlock("div", {
+        key: id,
+        class: "star"
+      }))
+    }), 128 /* KEYED_FRAGMENT */))
+  ]))
+}
+}
+
+};
+const Stars = /*#__PURE__*/_export_sfc(_sfc_main$b, [['__scopeId',"data-v-26b545ec"],['__file',"/home/runner/work/referral-front/referral-front/src/components/forms/Stars.vue"]]);
+
+const ModalAchievement_vue_vue_type_style_index_0_scoped_c779f412_lang = '';
+
+const _hoisted_1$7 = ["src", "alt"];
+const _hoisted_2$5 = ["src", "alt"];
+const _hoisted_3$4 = ["innerHTML"];
+
+    
+const _sfc_main$a = {
+  __name: 'ModalAchievement',
+  setup(__props) {
+
+    useI18n();
+    const { closeModal } = mapMutations();
+    const { getModalData } = mapGetters();
+
+    const data = reactive({
+        loaded: false,
+        achievement: null,
+        style: {
+            '--achievement-random-deg': `${ Math.ceil(Math.random() * 360) }deg`
+        }
+    });
+
+    const getUrl = (icon) => {
+        const path = `/img/achievements/${icon}`;
+        return new URL(path, import.meta.url).href;
+    };
+
+    const onLoad = async () => {
+        await delay(200);
+        data.loaded = true;
+    };
+
+    const close = () => {
+        closeModal('achievement');
+    };
+
+    onMounted(() => {
+        const payload = getModalData.value('achievement');
+        data.achievement = payload;
+    });
+
+return (_ctx, _cache) => {
+  return (openBlock(), createBlock(BaseModal, {
+    name: "achievement",
+    onClose: close,
+    class: "full-size light"
+  }, {
+    content: withCtx(() => [
+      (data.achievement)
+        ? (openBlock(), createElementBlock("div", {
+            key: 0,
+            class: "achievement-box",
+            style: normalizeStyle({ 'background-color': data.achievement?.color }),
+            onClick: close
+          }, [
+            createVNode(Stars, { count: 25 }),
+            createBaseVNode("span", {
+              class: normalizeClass({ loaded: data.loaded })
+            }, [
+              createBaseVNode("img", {
+                src: getUrl(data.achievement.icon),
+                alt: data.achievement.name,
+                onLoad: onLoad
+              }, null, 40 /* PROPS, NEED_HYDRATION */, _hoisted_1$7),
+              createBaseVNode("img", {
+                src: getUrl(data.achievement.icon),
+                alt: data.achievement.name,
+                style: normalizeStyle(data.style)
+              }, null, 12 /* STYLE, PROPS */, _hoisted_2$5)
+            ], 2 /* CLASS */),
+            createBaseVNode("label", null, toDisplayString$1(data.achievement.name), 1 /* TEXT */),
+            (data.achievement.description)
+              ? (openBlock(), createElementBlock("p", {
+                  key: 0,
+                  innerHTML: data.achievement.description
+                }, null, 8 /* PROPS */, _hoisted_3$4))
+              : createCommentVNode("v-if", true)
+          ], 4 /* STYLE */))
+        : createCommentVNode("v-if", true)
+    ]),
+    _: 1 /* STABLE */
+  }))
+}
+}
+
+};
+const ModalAchievement = /*#__PURE__*/_export_sfc(_sfc_main$a, [['__scopeId',"data-v-c779f412"],['__file',"/home/runner/work/referral-front/referral-front/src/components/modals/ModalAchievement.vue"]]);
 
 const IconButton_vue_vue_type_style_index_0_scoped_749754e6_lang = '';
 
@@ -40345,8 +40470,11 @@ return (_ctx, _cache) => {
     (modalIsOpened('achievement-redeem-code'))
       ? (openBlock(), createBlock(ModalAchievementRedeemCode, { key: 3 }))
       : createCommentVNode("v-if", true),
+    (modalIsOpened('achievement'))
+      ? (openBlock(), createBlock(ModalAchievement, { key: 4 }))
+      : createCommentVNode("v-if", true),
     (modalIsOpened('loader'))
-      ? (openBlock(), createBlock(ModalLoader, { key: 4 }))
+      ? (openBlock(), createBlock(ModalLoader, { key: 5 }))
       : createCommentVNode("v-if", true)
   ], 64 /* STABLE_FRAGMENT */))
 }
@@ -40677,7 +40805,7 @@ const browserExt = {
   },
   test: () => true,
   load: async () => {
-    await __vitePreload(() => import('./browserAll.25dd7e69.js'),true?["assets/browserAll.25dd7e69.js","assets/init.5b2ba1d1.js","assets/colorToUniform.ddb77849.js"]:void 0);
+    await __vitePreload(() => import('./browserAll.93389568.js'),true?["assets/browserAll.93389568.js","assets/init.774b0f8a.js","assets/colorToUniform.0dcc78d5.js"]:void 0);
   }
 };
 
@@ -40689,7 +40817,7 @@ const webworkerExt = {
   },
   test: () => typeof self !== "undefined" && self.WorkerGlobalScope !== void 0,
   load: async () => {
-    await __vitePreload(() => import('./webworkerAll.319a6103.js'),true?["assets/webworkerAll.319a6103.js","assets/init.5b2ba1d1.js","assets/colorToUniform.ddb77849.js"]:void 0);
+    await __vitePreload(() => import('./webworkerAll.2f502821.js'),true?["assets/webworkerAll.2f502821.js","assets/init.774b0f8a.js","assets/colorToUniform.0dcc78d5.js"]:void 0);
   }
 };
 
@@ -50530,14 +50658,14 @@ async function autoDetectRenderer(options) {
   for (let i = 0; i < preferredOrder.length; i++) {
     const rendererType = preferredOrder[i];
     if (rendererType === "webgpu" && await isWebGPUSupported()) {
-      const { WebGPURenderer } = await __vitePreload(() => import('./WebGPURenderer.c1a8a4e0.js'),true?["assets/WebGPURenderer.c1a8a4e0.js","assets/colorToUniform.ddb77849.js","assets/SharedSystems.2715dc50.js"]:void 0);
+      const { WebGPURenderer } = await __vitePreload(() => import('./WebGPURenderer.b29696ab.js'),true?["assets/WebGPURenderer.b29696ab.js","assets/colorToUniform.0dcc78d5.js","assets/SharedSystems.bd9f2705.js"]:void 0);
       RendererClass = WebGPURenderer;
       finalOptions = { ...options, ...options.webgpu };
       break;
     } else if (rendererType === "webgl" && isWebGLSupported(
       options.failIfMajorPerformanceCaveat ?? AbstractRenderer.defaultOptions.failIfMajorPerformanceCaveat
     )) {
-      const { WebGLRenderer } = await __vitePreload(() => import('./WebGLRenderer.106ce771.js'),true?["assets/WebGLRenderer.106ce771.js","assets/colorToUniform.ddb77849.js","assets/SharedSystems.2715dc50.js"]:void 0);
+      const { WebGLRenderer } = await __vitePreload(() => import('./WebGLRenderer.4a558d52.js'),true?["assets/WebGLRenderer.4a558d52.js","assets/colorToUniform.0dcc78d5.js","assets/SharedSystems.bd9f2705.js"]:void 0);
       RendererClass = WebGLRenderer;
       finalOptions = { ...options, ...options.webgl };
       break;

@@ -1,5 +1,5 @@
-import { _ as _export_sfc, u as useI18n, m as mapState, a as mapMutations, h as mapActions, i as reactive, w as watch, j as onMounted, s as onBeforeUnmount, r as resolveComponent, o as openBlock, k as createBlock, b as unref, d as createElementBlock, f as createBaseVNode, e as createVNode, F as Fragment, p as renderList, B as Button, g as createCommentVNode, q as delay, v as normalizeClass, t as toDisplayString, L as Loader } from './index.e2446950.js';
-import { E as EmptyLabel } from './EmptyLabel.e77f9ba5.js';
+import { _ as _export_sfc, u as useI18n, m as mapState, a as mapMutations, h as mapActions, i as reactive, w as watch, j as onMounted, s as onBeforeUnmount, r as resolveComponent, o as openBlock, k as createBlock, b as unref, d as createElementBlock, f as createBaseVNode, e as createVNode, F as Fragment, p as renderList, B as Button, g as createCommentVNode, q as delay, v as normalizeClass, t as toDisplayString, L as Loader } from './index.2601b65d.js';
+import { E as EmptyLabel } from './EmptyLabel.3d49f756.js';
 
 //! moment.js
 //! version : 2.30.1
@@ -5688,9 +5688,10 @@ const _hoisted_3 = {
   key: 1,
   class: "achievements-list"
 };
-const _hoisted_4 = ["src", "alt", "onLoad"];
-const _hoisted_5 = ["src", "alt"];
-const _hoisted_6 = { class: "button-box" };
+const _hoisted_4 = ["onClick"];
+const _hoisted_5 = ["src", "alt", "onLoad"];
+const _hoisted_6 = ["src", "alt"];
+const _hoisted_7 = { class: "button-box" };
 
     
 const _sfc_main = {
@@ -5714,12 +5715,21 @@ const _sfc_main = {
         return new URL(path, import.meta.url).href;
     };
 
+    const openAchievement = (item) => {
+        openModal({
+            name: 'achievement',
+            data: item
+        });
+    };
+
     const redeem = (e) => {
         openModal({
             name: 'achievement-redeem-code',
             callback: (payload) => {
                 if (payload) {
                     data.achievements.push(payload);
+
+                    openAchievement(payload);
 
                     if (pixiRedeem?.value) {
                         pixiRedeem.value({ y : e.pageY, x : e.pageX });
@@ -5806,7 +5816,10 @@ return (_ctx, _cache) => {
               : (openBlock(), createElementBlock("div", _hoisted_3, [
                   createBaseVNode("ul", null, [
                     (openBlock(true), createElementBlock(Fragment, null, renderList(data.achievements, (item, id) => {
-                      return (openBlock(), createElementBlock("li", { key: id }, [
+                      return (openBlock(), createElementBlock("li", {
+                        key: id,
+                        onClick: $event => (openAchievement(item))
+                      }, [
                         createBaseVNode("span", {
                           class: normalizeClass({ loaded: item.loaded })
                         }, [
@@ -5814,17 +5827,16 @@ return (_ctx, _cache) => {
                             src: getUrl(item.icon),
                             alt: item.name,
                             onLoad: $event => (item.loaded = true)
-                          }, null, 40 /* PROPS, NEED_HYDRATION */, _hoisted_4),
+                          }, null, 40 /* PROPS, NEED_HYDRATION */, _hoisted_5),
                           createBaseVNode("img", {
                             src: getUrl(item.icon),
                             alt: item.name
-                          }, null, 8 /* PROPS */, _hoisted_5)
+                          }, null, 8 /* PROPS */, _hoisted_6)
                         ], 2 /* CLASS */),
                         createBaseVNode("div", null, [
-                          createBaseVNode("label", null, toDisplayString(item.name), 1 /* TEXT */),
-                          createCommentVNode("  <mark v-if=\"item.start_date && item.end_date\">\n                                {{ moment(item.start_date).format('DD.MM.YYYY') }} -\n                                {{ moment(item.end_date).format('DD.MM.YYYY') }}\n                            </mark> ")
+                          createBaseVNode("label", null, toDisplayString(item.name), 1 /* TEXT */)
                         ])
-                      ]))
+                      ], 8 /* PROPS */, _hoisted_4))
                     }), 128 /* KEYED_FRAGMENT */))
                   ]),
                   (data.total > data.achievements.length && !data.loading)
@@ -5844,7 +5856,7 @@ return (_ctx, _cache) => {
                     : createCommentVNode("v-if", true)
                 ]))
           ]),
-          createBaseVNode("div", _hoisted_6, [
+          createBaseVNode("div", _hoisted_7, [
             createVNode(Button, {
               name: unref(t)('pages.achievements.redeem'),
               class: "secondary",
