@@ -89,9 +89,9 @@
         position: relative;
 
         & > span {
-            width: 208px;
+            width: 150px;
             flex-shrink: 0;
-            height: 320px;
+            height: 230px;
             display: flex;
             align-items: center;
             justify-content: center;
