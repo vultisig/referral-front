@@ -30,6 +30,7 @@ const props = defineProps({
         width: 100%;
         height: 120%;
         transform: rotate(-45deg);
+        pointer-events: none;
     }
 
     .star {
