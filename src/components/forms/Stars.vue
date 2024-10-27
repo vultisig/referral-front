@@ -33,7 +33,7 @@ const props = defineProps({
     }
 
     .star {
-        $star-count: 50;
+        $star-count: 20;
         --star-color: var(--primary-color);
         --star-tail-length: 6em;
         --star-tail-height: 2px;

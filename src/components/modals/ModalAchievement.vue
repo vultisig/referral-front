@@ -10,7 +10,7 @@
                 :style="{ 'background-color': data.achievement?.color }"
                 @click="close"
             >
-                <Stars :count="25" />
+                <Stars :count="10" />
 
                 <span :class="{ loaded: data.loaded }">
                     <img :src="getUrl(data.achievement.icon)" :alt="data.achievement.name" @load="onLoad" />
