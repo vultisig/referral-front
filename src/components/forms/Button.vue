@@ -62,6 +62,11 @@ button {
         flex-shrink: 0;
     }
 
+    &.invert {
+        background: $black;
+        color: $turquoise;
+    }
+
     &.secondary {
         background-color: transparent;
         color: $white;
