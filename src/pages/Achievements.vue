@@ -16,6 +16,7 @@
                 <ul>
                     <li v-for="(item, id) in data.achievements"
                         :key="id"
+                        @click="openAchievement(item)"
                     >
                         <span :class="{ loaded: item.loaded }">
                             <img :src="getUrl(item.icon)" :alt="item.name" @load="item.loaded = true" />
@@ -23,10 +24,6 @@
                         </span>
                         <div>
                             <label>{{ item.name }}</label>
-                           <!--  <mark v-if="item.start_date && item.end_date">
-                                {{ moment(item.start_date).format('DD.MM.YYYY') }} -
-                                {{ moment(item.end_date).format('DD.MM.YYYY') }}
-                            </mark> -->
                         </div>
                     </li>
                 </ul>
@@ -75,12 +72,21 @@
         return new URL(path, import.meta.url).href;
     }
 
+    const openAchievement = (item) => {
+        openModal({
+            name: 'achievement',
+            data: item
+        });
+    }
+
     const redeem = (e) => {
         openModal({
             name: 'achievement-redeem-code',
             callback: (payload) => {
                 if (payload) {
                     data.achievements.push(payload);
+
+                    openAchievement(payload);
 
                     if (pixiRedeem?.value) {
                         pixiRedeem.value({ y : e.pageY, x : e.pageX });
@@ -194,6 +200,7 @@
                     padding: 8px 16px;
                     border-radius: 24px;
                     min-height: 88px;
+                    cursor: pointer;
 
                     & > span {
                         width: 52px;
@@ -255,6 +262,7 @@
                             @include font-btn;
                             color: $white;
                             max-width: 210px;
+                            cursor: pointer;
                         }
                         mark {
                             @include font-btn;
