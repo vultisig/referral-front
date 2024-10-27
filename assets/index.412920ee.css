@@ -833,124 +833,124 @@ div > span[data-v-1d612336] {
 }
 }
 .star[data-v-26b545ec]:nth-child(1) {
-  --star-tail-length: 7.28em;
-  --top-offset: 98.28vh;
-  --fall-duration: 10.594s;
-  --fall-delay: 0.036s;
+  --star-tail-length: 5.67em;
+  --top-offset: 18.2vh;
+  --fall-duration: 7.694s;
+  --fall-delay: 0.402s;
 }
 .star[data-v-26b545ec]:nth-child(2) {
-  --star-tail-length: 6.96em;
-  --top-offset: 74.84vh;
-  --fall-duration: 6.455s;
-  --fall-delay: 0.456s;
+  --star-tail-length: 5.21em;
+  --top-offset: 13.2vh;
+  --fall-duration: 7.134s;
+  --fall-delay: 0.728s;
 }
 .star[data-v-26b545ec]:nth-child(3) {
-  --star-tail-length: 7.35em;
-  --top-offset: 53.57vh;
-  --fall-duration: 6.684s;
-  --fall-delay: 0.75s;
-}
-.star[data-v-26b545ec]:nth-child(4) {
-  --star-tail-length: 6.41em;
-  --top-offset: 39.52vh;
-  --fall-duration: 6.036s;
-  --fall-delay: 0.099s;
-}
-.star[data-v-26b545ec]:nth-child(5) {
-  --star-tail-length: 5.61em;
-  --top-offset: 7.48vh;
-  --fall-duration: 9.01s;
-  --fall-delay: 0.334s;
-}
-.star[data-v-26b545ec]:nth-child(6) {
-  --star-tail-length: 5.79em;
-  --top-offset: 9.04vh;
-  --fall-duration: 6.573s;
-  --fall-delay: 0.716s;
-}
-.star[data-v-26b545ec]:nth-child(7) {
-  --star-tail-length: 6.36em;
-  --top-offset: 40.19vh;
-  --fall-duration: 11.775s;
-  --fall-delay: 0.87s;
-}
-.star[data-v-26b545ec]:nth-child(8) {
-  --star-tail-length: 6.4em;
-  --top-offset: 1.78vh;
-  --fall-duration: 6.355s;
-  --fall-delay: 0.354s;
-}
-.star[data-v-26b545ec]:nth-child(9) {
-  --star-tail-length: 5.07em;
-  --top-offset: 84.43vh;
-  --fall-duration: 10.165s;
-  --fall-delay: 0.163s;
-}
-.star[data-v-26b545ec]:nth-child(10) {
-  --star-tail-length: 6.74em;
-  --top-offset: 99.26vh;
-  --fall-duration: 8.926s;
-  --fall-delay: 0.795s;
-}
-.star[data-v-26b545ec]:nth-child(11) {
-  --star-tail-length: 6.37em;
-  --top-offset: 12.5vh;
-  --fall-duration: 9.778s;
-  --fall-delay: 0.001s;
-}
-.star[data-v-26b545ec]:nth-child(12) {
-  --star-tail-length: 5.47em;
-  --top-offset: 85.69vh;
-  --fall-duration: 6.153s;
-  --fall-delay: 0.12s;
-}
-.star[data-v-26b545ec]:nth-child(13) {
-  --star-tail-length: 6.93em;
-  --top-offset: 85.26vh;
-  --fall-duration: 8.015s;
-  --fall-delay: 0.668s;
-}
-.star[data-v-26b545ec]:nth-child(14) {
-  --star-tail-length: 6.08em;
-  --top-offset: 12.45vh;
-  --fall-duration: 6.859s;
-  --fall-delay: 0.476s;
-}
-.star[data-v-26b545ec]:nth-child(15) {
-  --star-tail-length: 5.57em;
-  --top-offset: 30.5vh;
-  --fall-duration: 7.893s;
-  --fall-delay: 0.861s;
-}
-.star[data-v-26b545ec]:nth-child(16) {
-  --star-tail-length: 5.96em;
-  --top-offset: 64.8vh;
-  --fall-duration: 10.267s;
-  --fall-delay: 0.188s;
-}
-.star[data-v-26b545ec]:nth-child(17) {
-  --star-tail-length: 6.64em;
-  --top-offset: 12.58vh;
-  --fall-duration: 7.064s;
-  --fall-delay: 0.12s;
-}
-.star[data-v-26b545ec]:nth-child(18) {
-  --star-tail-length: 6.18em;
-  --top-offset: 92.99vh;
-  --fall-duration: 10.615s;
+  --star-tail-length: 5.92em;
+  --top-offset: 60.65vh;
+  --fall-duration: 11.389s;
   --fall-delay: 0.015s;
 }
+.star[data-v-26b545ec]:nth-child(4) {
+  --star-tail-length: 6.29em;
+  --top-offset: 76.73vh;
+  --fall-duration: 11.505s;
+  --fall-delay: 0.438s;
+}
+.star[data-v-26b545ec]:nth-child(5) {
+  --star-tail-length: 6.94em;
+  --top-offset: 91.62vh;
+  --fall-duration: 7.196s;
+  --fall-delay: 0.873s;
+}
+.star[data-v-26b545ec]:nth-child(6) {
+  --star-tail-length: 6.21em;
+  --top-offset: 0.33vh;
+  --fall-duration: 10.742s;
+  --fall-delay: 0.536s;
+}
+.star[data-v-26b545ec]:nth-child(7) {
+  --star-tail-length: 6.85em;
+  --top-offset: 75.56vh;
+  --fall-duration: 11.874s;
+  --fall-delay: 0.653s;
+}
+.star[data-v-26b545ec]:nth-child(8) {
+  --star-tail-length: 5.37em;
+  --top-offset: 38.8vh;
+  --fall-duration: 10.782s;
+  --fall-delay: 0.434s;
+}
+.star[data-v-26b545ec]:nth-child(9) {
+  --star-tail-length: 7.19em;
+  --top-offset: 34.05vh;
+  --fall-duration: 9.536s;
+  --fall-delay: 0.371s;
+}
+.star[data-v-26b545ec]:nth-child(10) {
+  --star-tail-length: 5.41em;
+  --top-offset: 49.66vh;
+  --fall-duration: 10.018s;
+  --fall-delay: 0.22s;
+}
+.star[data-v-26b545ec]:nth-child(11) {
+  --star-tail-length: 6.93em;
+  --top-offset: 64.43vh;
+  --fall-duration: 10.648s;
+  --fall-delay: 0.357s;
+}
+.star[data-v-26b545ec]:nth-child(12) {
+  --star-tail-length: 6.87em;
+  --top-offset: 11.21vh;
+  --fall-duration: 6.349s;
+  --fall-delay: 0.473s;
+}
+.star[data-v-26b545ec]:nth-child(13) {
+  --star-tail-length: 6.07em;
+  --top-offset: 12.03vh;
+  --fall-duration: 9.403s;
+  --fall-delay: 0.703s;
+}
+.star[data-v-26b545ec]:nth-child(14) {
+  --star-tail-length: 5.26em;
+  --top-offset: 18.8vh;
+  --fall-duration: 6.857s;
+  --fall-delay: 0.897s;
+}
+.star[data-v-26b545ec]:nth-child(15) {
+  --star-tail-length: 5.84em;
+  --top-offset: 44.9vh;
+  --fall-duration: 8.871s;
+  --fall-delay: 0.556s;
+}
+.star[data-v-26b545ec]:nth-child(16) {
+  --star-tail-length: 6.31em;
+  --top-offset: 14.74vh;
+  --fall-duration: 6.554s;
+  --fall-delay: 0.064s;
+}
+.star[data-v-26b545ec]:nth-child(17) {
+  --star-tail-length: 5.14em;
+  --top-offset: 95.09vh;
+  --fall-duration: 6.603s;
+  --fall-delay: 0.074s;
+}
+.star[data-v-26b545ec]:nth-child(18) {
+  --star-tail-length: 5.05em;
+  --top-offset: 11.1vh;
+  --fall-duration: 6.86s;
+  --fall-delay: 0.103s;
+}
 .star[data-v-26b545ec]:nth-child(19) {
-  --star-tail-length: 5.31em;
-  --top-offset: 52.17vh;
-  --fall-duration: 10.513s;
-  --fall-delay: 0.874s;
+  --star-tail-length: 7.41em;
+  --top-offset: 71.85vh;
+  --fall-duration: 11.647s;
+  --fall-delay: 0.672s;
 }
 .star[data-v-26b545ec]:nth-child(20) {
-  --star-tail-length: 7em;
-  --top-offset: 39.91vh;
-  --fall-duration: 6.96s;
-  --fall-delay: 0.792s;
+  --star-tail-length: 6.14em;
+  --top-offset: 25.58vh;
+  --fall-duration: 9.832s;
+  --fall-delay: 0.254s;
 }
 .star[data-v-26b545ec]::before, .star[data-v-26b545ec]::after {
   position: absolute;
@@ -1001,9 +1001,9 @@ to {
   position: relative;
 }
 .achievement-box > span[data-v-c779f412] {
-  width: 208px;
+  width: 150px;
   flex-shrink: 0;
-  height: 320px;
+  height: 230px;
   display: flex;
   align-items: center;
   justify-content: center;
