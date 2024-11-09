@@ -5,6 +5,8 @@
         <div class="page-container">
             <Icon icon="referrals" :alt="t('pages.referrals.title')"/>
             <h1 v-html="t('pages.referrals.title')" ></h1>
+            <!-- <span v-html="t('pages.referrals.description')" class="description"></span> -->
+
            
             <EmptyLabel v-if="!data.referrals.length"
                 :title="t('pages.referrals.empty.title')"
@@ -13,7 +15,10 @@
             />
 
             <div v-else class="users-list">
-                <span>{{ user.profile?.referrals_count }} <span v-html="t('pages.referrals.total')"></span></span>
+                <span>
+                    {{ user.profile?.referrals_count }} <span v-html="t('pages.referrals.total')"></span><br>
+                    <span v-html="t('pages.referrals.description')"></span>
+                </span>
 
                 <ul>
                     <li v-for="item in data.referrals"
@@ -165,6 +170,16 @@
             @include font-h1;
             color: $white;
             text-align: center;
+        }
+
+        & > .description {
+            @include font-b;
+            color: $black-2;
+            // display: flex;
+            // flex-direction: column;
+            // gap: 4px;
+            // flex-shrink: 0;
+            // padding: 0 12px;
         }
 
         & > .empty {

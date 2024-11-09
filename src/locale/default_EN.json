@@ -2,7 +2,7 @@
   "en_EN": {
     "common": {
       "wallet": {
-        "defaultName": "'s wallet",
+        "defaultName": "'s vault",
       },
       "more": "more",
       "apply": "Apply",
@@ -51,7 +51,7 @@
       },
       "invite": {
         "title": "<b class='g-c'>Invite</b>",
-        "description": "The referred wallet must be funded with <b class='g-c'>at least $50</b> to be valid.",
+        "description": "The referred vault must be funded with <b class='g-c'>at least $50</b> to be valid.",
         "copy": "Copy link",
         "copied": "Refferal link is copied",
         "share": "Send"
@@ -60,7 +60,7 @@
         "title": "<b class='g-c'>Public keys</b>",
       },
       "wallet": {
-        "title": "Connect <b class='g-c'>Wallet</b>",
+        "title": "Connect <b class='g-c'>Vault</b>",
         "upload": "Upload Vault QR",
         "errorqr": "QR code not found",
         "steps": {
@@ -79,8 +79,8 @@
         "wallet": {
           "info": "Show <b class='g-c'>Public keys</b>",
           "install": "Install <b class='g-c'>Vultisig</b>",
-          "add": "Add <b class='g-c'>Wallet</b>",
-          "edit": "Change <b class='g-c'>Wallet</b>"
+          "add": "Add <b class='g-c'>Vault</b>",
+          "edit": "Change <b class='g-c'>Vault</b>"
         }
       },
       "airdrop": {
@@ -91,7 +91,7 @@
         "qa": [
             {
               "q": "How do I <b class='g-c'>register</b> for the airdrop?",
-              "a": "<b class='g-c'>Become a Vultisig user and join the airdrop calculation.</b><br><br>Note: The airdrop is based on the total amount in your vault multiplied by the time in the wallet. The largest amounts for the longest time earn the most. <br> Read more about this <a class='g-c' href='https://docs.vultisig.com/vultisig-token/airdrop' target='_blank'>here</a>"
+              "a": "<b class='g-c'>Become a Vultisig user and join the airdrop calculation.</b><br><br>Note: The airdrop is based on the total amount in your vault multiplied by the time in the vault. The largest amounts for the longest time earn the most. <br> Read more about this <a class='g-c' href='https://docs.vultisig.com/vultisig-token/airdrop' target='_blank'>here</a>"
             }, {
               "q": "What assets are <b class='g-c'>counted</b> for the Airdrop?",
               "a": "<b class='g-c'>Layer1</b> assets and most tokens <b class='g-c'>supported by Vultisig</b> are counted. Other assets such as LPs and Node Bonds from THORChain, MAYA Protocol are also valid.<br><br>See the full list <a class='g-c' href='https://docs.vultisig.com/vultisig-token/airdrop#eligble-assets' target='_blank'>here</a>"
@@ -113,7 +113,7 @@
             "title": "Total <b class='g-c'>balance</b>",
             "description": "The balance is updated once a day."
           },
-          "name": "<b class='g-c'>Wallet</b> name",
+          "name": "<b class='g-c'>Vault</b> name",
           "refferals": "<b class='g-c'>Referrals</b> in your squad",
           "joined": {
             "title": "<b class='g-c'>Joined</b> the airdrop",
@@ -124,16 +124,16 @@
           "farmed": {
             "title": "<b class='g-c'>Farmed</b>",
             "points": "points",
-            "description": "Click «View Wallet» as some token may need to be manually enabled."
+            "description": "Click «View Vault» as some token may need to be manually enabled."
           }
         },
         "wallet": {
-          "view": "View Wallet",
-          "add": "Add Wallet",
-          "edit": "Change Wallet",
+          "view": "View Vault",
+          "add": "Add Vault",
+          "edit": "Change Vault",
           "empty": {
-            "title": "<b class='g-c'>Wallet</b> not connected",
-            "description": "Do not connect a wallet if you do not wish for your <b class='g-c'>public keys</b> to be sent to the Airdrop Registry"
+            "title": "<b class='g-c'>Vault</b> not connected",
+            "description": "Do not connect a vault if you do not wish for your <b class='g-c'>public keys</b> to be sent to the Airdrop Registry"
           }
         }
       },
@@ -148,14 +148,15 @@
       "referrals": {
         "total": "refferals in <b class='g-c'>your squad</b>",
         "title": "<b class='g-c'>Squad</b>",
+        "description": "Invite your friends to <b class='g-c'>increase your airdrop</b>",
         "invite": "Invite",
         "empty": {
           "title": "<b class='g-c'>Nobody</b> here.",
-          "description": "The quantity of airdrop received is influenced by the number of referrals who are invited"
+          "description": "Invite your friends to increase your airdrop"
         },
         "steps": {
           "registered": "<b class='g-c'>1/3</b> Registered",
-          "added": "<b class='g-c'>2/3</b> Added wallet",
+          "added": "<b class='g-c'>2/3</b> Added vault",
           "joined": "<b class='g-c'>3/3</b> Joined airdrop"
         }
       },

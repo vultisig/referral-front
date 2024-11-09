@@ -21,6 +21,39 @@
         </template>
         <template v-else>
             <ul class="stats">
+                <template v-if="user.vasProfile?.join_airdrop">
+                    <li>
+                        <Icon icon="rank"/>
+                        <div>
+                            <span v-html="t('pages.home.stats.rank')"></span>
+                            <span>#{{ user.vasProfile.rank }}</span>
+                        </div>
+                    </li>
+                    <li>
+                        <Icon icon="coin"/>
+                        <div>
+                            <span v-html="t('pages.home.stats.farmed.title')"></span>
+                            <span>{{ user.vasProfile.total_points }} {{ t('pages.home.stats.farmed.points') }}</span>
+                        </div>
+
+                        <div class="warning">
+                            <span v-html="t('pages.home.stats.farmed.description')"></span>
+                            <Icon icon="triangle-warning"/>
+                        </div>
+                    </li>
+                    <li>
+                        <Icon icon="dollar"/>
+                        <div>
+                            <span v-html="t('pages.home.stats.balance.title')"></span>
+                            <span>{{ numberWithSpaces(user.vasProfile.balance) }} $</span>
+                        </div>
+
+                        <div class="warning">
+                            <span v-html="t('pages.home.stats.balance.description')"></span>
+                            <Icon icon="triangle-warning"/>
+                        </div>
+                    </li>
+                </template>
                 <li>
                     <Icon icon="referrals-secondary"/>
                     <div>
@@ -30,53 +63,19 @@
                 </li>
                 <template v-if="user.vasProfile?.uid">
                     <li>
-                        <Icon icon="wallet"/>
-                        <div>
-                            <span v-html="t('pages.home.stats.name')"></span>
-                            <span>{{ user.vasProfile.name }}</span>
-                        </div>
-                    </li>
-                    <li>
                         <Icon icon="verified"/>
                         <div>
                             <span v-html="t('pages.home.stats.joined.title')"></span>
                             <span>{{ user.vasProfile.join_airdrop ? t('pages.home.stats.joined.yes') : t('pages.home.stats.joined.no') }}</span>
                         </div>
                     </li>
-
-                    <template v-if="user.vasProfile?.join_airdrop">
-                        <li>
-                            <Icon icon="rank"/>
-                            <div>
-                                <span v-html="t('pages.home.stats.rank')"></span>
-                                <span>#{{ user.vasProfile.rank }}</span>
-                            </div>
-                        </li>
-                        <li>
-                            <Icon icon="coin"/>
-                            <div>
-                                <span v-html="t('pages.home.stats.farmed.title')"></span>
-                                <span>{{ user.vasProfile.total_points }} {{ t('pages.home.stats.farmed.points') }}</span>
-                            </div>
-
-                            <div class="warning">
-                                <span v-html="t('pages.home.stats.farmed.description')"></span>
-                                <Icon icon="triangle-warning"/>
-                            </div>
-                        </li>
-                        <li>
-                            <Icon icon="dollar"/>
-                            <div>
-                                <span v-html="t('pages.home.stats.balance.title')"></span>
-                                <span>{{ numberWithSpaces(user.vasProfile.balance) }} $</span>
-                            </div>
-
-                            <div class="warning">
-                                <span v-html="t('pages.home.stats.balance.description')"></span>
-                                <Icon icon="triangle-warning"/>
-                            </div>
-                        </li>
-                    </template>
+                    <li>
+                        <Icon icon="wallet"/>
+                        <div>
+                            <span v-html="t('pages.home.stats.name')"></span>
+                            <span>{{ user.vasProfile.name }}</span>
+                        </div>
+                    </li>
                 </template>
             </ul>
 
