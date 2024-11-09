@@ -1,6 +1,6 @@
-import { _ as _export_sfc, u as useI18n, m as mapState, a as mapMutations, c as computed, r as resolveComponent, b as unref, o as openBlock, d as createElementBlock, e as createVNode, f as createBaseVNode, t as toDisplayString, F as Fragment, B as Button, g as createCommentVNode, n as numberWithSpaces } from './index.3693856e.js';
-import { A as Avatar } from './Avatar.95b7fe58.js';
-import { E as EmptyLabel } from './EmptyLabel.1fef0721.js';
+import { _ as _export_sfc, u as useI18n, m as mapState, a as mapMutations, c as computed, r as resolveComponent, b as unref, o as openBlock, d as createElementBlock, e as createVNode, f as createBaseVNode, t as toDisplayString, F as Fragment, B as Button, g as createCommentVNode, n as numberWithSpaces } from './index.6803bdbb.js';
+import { A as Avatar } from './Avatar.bd190700.js';
+import { E as EmptyLabel } from './EmptyLabel.2bf7b4fe.js';
 
 const Home_vue_vue_type_style_index_0_scoped_933e9cdf_lang = '';
 
@@ -13,13 +13,13 @@ const _hoisted_3 = { class: "button-box" };
 const _hoisted_4 = { class: "stats" };
 const _hoisted_5 = ["innerHTML"];
 const _hoisted_6 = ["innerHTML"];
-const _hoisted_7 = ["innerHTML"];
+const _hoisted_7 = { class: "warning" };
 const _hoisted_8 = ["innerHTML"];
 const _hoisted_9 = ["innerHTML"];
 const _hoisted_10 = { class: "warning" };
 const _hoisted_11 = ["innerHTML"];
 const _hoisted_12 = ["innerHTML"];
-const _hoisted_13 = { class: "warning" };
+const _hoisted_13 = ["innerHTML"];
 const _hoisted_14 = ["innerHTML"];
 const _hoisted_15 = { class: "button-box" };
 
@@ -85,78 +85,78 @@ return (_ctx, _cache) => {
             ], 64 /* STABLE_FRAGMENT */))
           : (openBlock(), createElementBlock(Fragment, { key: 1 }, [
               createBaseVNode("ul", _hoisted_4, [
+                (unref(user).vasProfile?.join_airdrop)
+                  ? (openBlock(), createElementBlock(Fragment, { key: 0 }, [
+                      createBaseVNode("li", null, [
+                        createVNode(_component_Icon, { icon: "rank" }),
+                        createBaseVNode("div", null, [
+                          createBaseVNode("span", {
+                            innerHTML: unref(t)('pages.home.stats.rank')
+                          }, null, 8 /* PROPS */, _hoisted_5),
+                          createBaseVNode("span", null, "#" + toDisplayString(unref(user).vasProfile.rank), 1 /* TEXT */)
+                        ])
+                      ]),
+                      createBaseVNode("li", null, [
+                        createVNode(_component_Icon, { icon: "coin" }),
+                        createBaseVNode("div", null, [
+                          createBaseVNode("span", {
+                            innerHTML: unref(t)('pages.home.stats.farmed.title')
+                          }, null, 8 /* PROPS */, _hoisted_6),
+                          createBaseVNode("span", null, toDisplayString(unref(user).vasProfile.total_points) + " " + toDisplayString(unref(t)('pages.home.stats.farmed.points')), 1 /* TEXT */)
+                        ]),
+                        createBaseVNode("div", _hoisted_7, [
+                          createBaseVNode("span", {
+                            innerHTML: unref(t)('pages.home.stats.farmed.description')
+                          }, null, 8 /* PROPS */, _hoisted_8),
+                          createVNode(_component_Icon, { icon: "triangle-warning" })
+                        ])
+                      ]),
+                      createBaseVNode("li", null, [
+                        createVNode(_component_Icon, { icon: "dollar" }),
+                        createBaseVNode("div", null, [
+                          createBaseVNode("span", {
+                            innerHTML: unref(t)('pages.home.stats.balance.title')
+                          }, null, 8 /* PROPS */, _hoisted_9),
+                          createBaseVNode("span", null, toDisplayString(unref(numberWithSpaces)(unref(user).vasProfile.balance)) + " $", 1 /* TEXT */)
+                        ]),
+                        createBaseVNode("div", _hoisted_10, [
+                          createBaseVNode("span", {
+                            innerHTML: unref(t)('pages.home.stats.balance.description')
+                          }, null, 8 /* PROPS */, _hoisted_11),
+                          createVNode(_component_Icon, { icon: "triangle-warning" })
+                        ])
+                      ])
+                    ], 64 /* STABLE_FRAGMENT */))
+                  : createCommentVNode("v-if", true),
                 createBaseVNode("li", null, [
                   createVNode(_component_Icon, { icon: "referrals-secondary" }),
                   createBaseVNode("div", null, [
                     createBaseVNode("span", {
                       innerHTML: unref(t)('pages.home.stats.refferals')
-                    }, null, 8 /* PROPS */, _hoisted_5),
+                    }, null, 8 /* PROPS */, _hoisted_12),
                     createBaseVNode("span", null, toDisplayString(unref(user).profile.referrals_count), 1 /* TEXT */)
                   ])
                 ]),
                 (unref(user).vasProfile?.uid)
-                  ? (openBlock(), createElementBlock(Fragment, { key: 0 }, [
-                      createBaseVNode("li", null, [
-                        createVNode(_component_Icon, { icon: "wallet" }),
-                        createBaseVNode("div", null, [
-                          createBaseVNode("span", {
-                            innerHTML: unref(t)('pages.home.stats.name')
-                          }, null, 8 /* PROPS */, _hoisted_6),
-                          createBaseVNode("span", null, toDisplayString(unref(user).vasProfile.name), 1 /* TEXT */)
-                        ])
-                      ]),
+                  ? (openBlock(), createElementBlock(Fragment, { key: 1 }, [
                       createBaseVNode("li", null, [
                         createVNode(_component_Icon, { icon: "verified" }),
                         createBaseVNode("div", null, [
                           createBaseVNode("span", {
                             innerHTML: unref(t)('pages.home.stats.joined.title')
-                          }, null, 8 /* PROPS */, _hoisted_7),
+                          }, null, 8 /* PROPS */, _hoisted_13),
                           createBaseVNode("span", null, toDisplayString(unref(user).vasProfile.join_airdrop ? unref(t)('pages.home.stats.joined.yes') : unref(t)('pages.home.stats.joined.no')), 1 /* TEXT */)
                         ])
                       ]),
-                      (unref(user).vasProfile?.join_airdrop)
-                        ? (openBlock(), createElementBlock(Fragment, { key: 0 }, [
-                            createBaseVNode("li", null, [
-                              createVNode(_component_Icon, { icon: "rank" }),
-                              createBaseVNode("div", null, [
-                                createBaseVNode("span", {
-                                  innerHTML: unref(t)('pages.home.stats.rank')
-                                }, null, 8 /* PROPS */, _hoisted_8),
-                                createBaseVNode("span", null, "#" + toDisplayString(unref(user).vasProfile.rank), 1 /* TEXT */)
-                              ])
-                            ]),
-                            createBaseVNode("li", null, [
-                              createVNode(_component_Icon, { icon: "coin" }),
-                              createBaseVNode("div", null, [
-                                createBaseVNode("span", {
-                                  innerHTML: unref(t)('pages.home.stats.farmed.title')
-                                }, null, 8 /* PROPS */, _hoisted_9),
-                                createBaseVNode("span", null, toDisplayString(unref(user).vasProfile.total_points) + " " + toDisplayString(unref(t)('pages.home.stats.farmed.points')), 1 /* TEXT */)
-                              ]),
-                              createBaseVNode("div", _hoisted_10, [
-                                createBaseVNode("span", {
-                                  innerHTML: unref(t)('pages.home.stats.farmed.description')
-                                }, null, 8 /* PROPS */, _hoisted_11),
-                                createVNode(_component_Icon, { icon: "triangle-warning" })
-                              ])
-                            ]),
-                            createBaseVNode("li", null, [
-                              createVNode(_component_Icon, { icon: "dollar" }),
-                              createBaseVNode("div", null, [
-                                createBaseVNode("span", {
-                                  innerHTML: unref(t)('pages.home.stats.balance.title')
-                                }, null, 8 /* PROPS */, _hoisted_12),
-                                createBaseVNode("span", null, toDisplayString(unref(numberWithSpaces)(unref(user).vasProfile.balance)) + " $", 1 /* TEXT */)
-                              ]),
-                              createBaseVNode("div", _hoisted_13, [
-                                createBaseVNode("span", {
-                                  innerHTML: unref(t)('pages.home.stats.balance.description')
-                                }, null, 8 /* PROPS */, _hoisted_14),
-                                createVNode(_component_Icon, { icon: "triangle-warning" })
-                              ])
-                            ])
-                          ], 64 /* STABLE_FRAGMENT */))
-                        : createCommentVNode("v-if", true)
+                      createBaseVNode("li", null, [
+                        createVNode(_component_Icon, { icon: "wallet" }),
+                        createBaseVNode("div", null, [
+                          createBaseVNode("span", {
+                            innerHTML: unref(t)('pages.home.stats.name')
+                          }, null, 8 /* PROPS */, _hoisted_14),
+                          createBaseVNode("span", null, toDisplayString(unref(user).vasProfile.name), 1 /* TEXT */)
+                        ])
+                      ])
                     ], 64 /* STABLE_FRAGMENT */))
                   : createCommentVNode("v-if", true)
               ]),

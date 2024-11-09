@@ -28537,7 +28537,7 @@ const resource = {
   "en_EN": {
     "common": {
       "wallet": {
-        "defaultName": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["'s wallet"])};fn.source="'s wallet";return fn;})()
+        "defaultName": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["'s vault"])};fn.source="'s vault";return fn;})()
       },
       "more": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["more"])};fn.source="more";return fn;})(),
       "apply": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Apply"])};fn.source="Apply";return fn;})(),
@@ -28586,7 +28586,7 @@ const resource = {
       },
       "invite": {
         "title": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["<b class='g-c'>Invite</b>"])};fn.source="<b class='g-c'>Invite</b>";return fn;})(),
-        "description": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["The referred wallet must be funded with <b class='g-c'>at least $50</b> to be valid."])};fn.source="The referred wallet must be funded with <b class='g-c'>at least $50</b> to be valid.";return fn;})(),
+        "description": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["The referred vault must be funded with <b class='g-c'>at least $50</b> to be valid."])};fn.source="The referred vault must be funded with <b class='g-c'>at least $50</b> to be valid.";return fn;})(),
         "copy": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Copy link"])};fn.source="Copy link";return fn;})(),
         "copied": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Refferal link is copied"])};fn.source="Refferal link is copied";return fn;})(),
         "share": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Send"])};fn.source="Send";return fn;})()
@@ -28595,7 +28595,7 @@ const resource = {
         "title": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["<b class='g-c'>Public keys</b>"])};fn.source="<b class='g-c'>Public keys</b>";return fn;})()
       },
       "wallet": {
-        "title": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Connect <b class='g-c'>Wallet</b>"])};fn.source="Connect <b class='g-c'>Wallet</b>";return fn;})(),
+        "title": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Connect <b class='g-c'>Vault</b>"])};fn.source="Connect <b class='g-c'>Vault</b>";return fn;})(),
         "upload": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Upload Vault QR"])};fn.source="Upload Vault QR";return fn;})(),
         "errorqr": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["QR code not found"])};fn.source="QR code not found";return fn;})(),
         "steps": {
@@ -28614,8 +28614,8 @@ const resource = {
         "wallet": {
           "info": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Show <b class='g-c'>Public keys</b>"])};fn.source="Show <b class='g-c'>Public keys</b>";return fn;})(),
           "install": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Install <b class='g-c'>Vultisig</b>"])};fn.source="Install <b class='g-c'>Vultisig</b>";return fn;})(),
-          "add": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Add <b class='g-c'>Wallet</b>"])};fn.source="Add <b class='g-c'>Wallet</b>";return fn;})(),
-          "edit": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Change <b class='g-c'>Wallet</b>"])};fn.source="Change <b class='g-c'>Wallet</b>";return fn;})()
+          "add": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Add <b class='g-c'>Vault</b>"])};fn.source="Add <b class='g-c'>Vault</b>";return fn;})(),
+          "edit": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Change <b class='g-c'>Vault</b>"])};fn.source="Change <b class='g-c'>Vault</b>";return fn;})()
         }
       },
       "airdrop": {
@@ -28626,7 +28626,7 @@ const resource = {
         "qa": [
           {
             "q": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["How do I <b class='g-c'>register</b> for the airdrop?"])};fn.source="How do I <b class='g-c'>register</b> for the airdrop?";return fn;})(),
-            "a": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["<b class='g-c'>Become a Vultisig user and join the airdrop calculation.</b><br><br>Note: The airdrop is based on the total amount in your vault multiplied by the time in the wallet. The largest amounts for the longest time earn the most. <br> Read more about this <a class='g-c' href='https://docs.vultisig.com/vultisig-token/airdrop' target='_blank'>here</a>"])};fn.source="<b class='g-c'>Become a Vultisig user and join the airdrop calculation.</b><br><br>Note: The airdrop is based on the total amount in your vault multiplied by the time in the wallet. The largest amounts for the longest time earn the most. <br> Read more about this <a class='g-c' href='https://docs.vultisig.com/vultisig-token/airdrop' target='_blank'>here</a>";return fn;})()
+            "a": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["<b class='g-c'>Become a Vultisig user and join the airdrop calculation.</b><br><br>Note: The airdrop is based on the total amount in your vault multiplied by the time in the vault. The largest amounts for the longest time earn the most. <br> Read more about this <a class='g-c' href='https://docs.vultisig.com/vultisig-token/airdrop' target='_blank'>here</a>"])};fn.source="<b class='g-c'>Become a Vultisig user and join the airdrop calculation.</b><br><br>Note: The airdrop is based on the total amount in your vault multiplied by the time in the vault. The largest amounts for the longest time earn the most. <br> Read more about this <a class='g-c' href='https://docs.vultisig.com/vultisig-token/airdrop' target='_blank'>here</a>";return fn;})()
           },
           {
             "q": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["What assets are <b class='g-c'>counted</b> for the Airdrop?"])};fn.source="What assets are <b class='g-c'>counted</b> for the Airdrop?";return fn;})(),
@@ -28651,7 +28651,7 @@ const resource = {
             "title": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Total <b class='g-c'>balance</b>"])};fn.source="Total <b class='g-c'>balance</b>";return fn;})(),
             "description": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["The balance is updated once a day."])};fn.source="The balance is updated once a day.";return fn;})()
           },
-          "name": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["<b class='g-c'>Wallet</b> name"])};fn.source="<b class='g-c'>Wallet</b> name";return fn;})(),
+          "name": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["<b class='g-c'>Vault</b> name"])};fn.source="<b class='g-c'>Vault</b> name";return fn;})(),
           "refferals": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["<b class='g-c'>Referrals</b> in your squad"])};fn.source="<b class='g-c'>Referrals</b> in your squad";return fn;})(),
           "joined": {
             "title": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["<b class='g-c'>Joined</b> the airdrop"])};fn.source="<b class='g-c'>Joined</b> the airdrop";return fn;})(),
@@ -28662,16 +28662,16 @@ const resource = {
           "farmed": {
             "title": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["<b class='g-c'>Farmed</b>"])};fn.source="<b class='g-c'>Farmed</b>";return fn;})(),
             "points": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["points"])};fn.source="points";return fn;})(),
-            "description": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Click «View Wallet» as some token may need to be manually enabled."])};fn.source="Click «View Wallet» as some token may need to be manually enabled.";return fn;})()
+            "description": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Click «View Vault» as some token may need to be manually enabled."])};fn.source="Click «View Vault» as some token may need to be manually enabled.";return fn;})()
           }
         },
         "wallet": {
-          "view": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["View Wallet"])};fn.source="View Wallet";return fn;})(),
-          "add": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Add Wallet"])};fn.source="Add Wallet";return fn;})(),
-          "edit": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Change Wallet"])};fn.source="Change Wallet";return fn;})(),
+          "view": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["View Vault"])};fn.source="View Vault";return fn;})(),
+          "add": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Add Vault"])};fn.source="Add Vault";return fn;})(),
+          "edit": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Change Vault"])};fn.source="Change Vault";return fn;})(),
           "empty": {
-            "title": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["<b class='g-c'>Wallet</b> not connected"])};fn.source="<b class='g-c'>Wallet</b> not connected";return fn;})(),
-            "description": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Do not connect a wallet if you do not wish for your <b class='g-c'>public keys</b> to be sent to the Airdrop Registry"])};fn.source="Do not connect a wallet if you do not wish for your <b class='g-c'>public keys</b> to be sent to the Airdrop Registry";return fn;})()
+            "title": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["<b class='g-c'>Vault</b> not connected"])};fn.source="<b class='g-c'>Vault</b> not connected";return fn;})(),
+            "description": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Do not connect a vault if you do not wish for your <b class='g-c'>public keys</b> to be sent to the Airdrop Registry"])};fn.source="Do not connect a vault if you do not wish for your <b class='g-c'>public keys</b> to be sent to the Airdrop Registry";return fn;})()
           }
         }
       },
@@ -28686,14 +28686,15 @@ const resource = {
       "referrals": {
         "total": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["refferals in <b class='g-c'>your squad</b>"])};fn.source="refferals in <b class='g-c'>your squad</b>";return fn;})(),
         "title": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["<b class='g-c'>Squad</b>"])};fn.source="<b class='g-c'>Squad</b>";return fn;})(),
+        "description": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Invite your friends to <b class='g-c'>increase your airdrop</b>"])};fn.source="Invite your friends to <b class='g-c'>increase your airdrop</b>";return fn;})(),
         "invite": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Invite"])};fn.source="Invite";return fn;})(),
         "empty": {
           "title": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["<b class='g-c'>Nobody</b> here."])};fn.source="<b class='g-c'>Nobody</b> here.";return fn;})(),
-          "description": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["The quantity of airdrop received is influenced by the number of referrals who are invited"])};fn.source="The quantity of airdrop received is influenced by the number of referrals who are invited";return fn;})()
+          "description": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Invite your friends to increase your airdrop"])};fn.source="Invite your friends to increase your airdrop";return fn;})()
         },
         "steps": {
           "registered": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["<b class='g-c'>1/3</b> Registered"])};fn.source="<b class='g-c'>1/3</b> Registered";return fn;})(),
-          "added": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["<b class='g-c'>2/3</b> Added wallet"])};fn.source="<b class='g-c'>2/3</b> Added wallet";return fn;})(),
+          "added": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["<b class='g-c'>2/3</b> Added vault"])};fn.source="<b class='g-c'>2/3</b> Added vault";return fn;})(),
           "joined": (()=>{const fn=(ctx) => {const { normalize: _normalize } = ctx;return _normalize(["<b class='g-c'>3/3</b> Joined airdrop"])};fn.source="<b class='g-c'>3/3</b> Joined airdrop";return fn;})()
         }
       },
@@ -28793,13 +28794,13 @@ const routes = [
     {
         path: '/home',
         name: 'home',
-        component: () => __vitePreload(() => import('./Home.9c6d872e.js'),true?["assets/Home.9c6d872e.js","assets/Avatar.95b7fe58.js","assets/Avatar.429656ec.css","assets/EmptyLabel.1fef0721.js","assets/EmptyLabel.b61dc386.css","assets/Home.88e56920.css"]:void 0),
+        component: () => __vitePreload(() => import('./Home.93e34052.js'),true?["assets/Home.93e34052.js","assets/Avatar.bd190700.js","assets/Avatar.429656ec.css","assets/EmptyLabel.2bf7b4fe.js","assets/EmptyLabel.b61dc386.css","assets/Home.88e56920.css"]:void 0),
         abort: []
     },
     {
         path: '/referrals',
         name: 'referrals',
-        component: () => __vitePreload(() => import('./Referrals.bd4f6978.js'),true?["assets/Referrals.bd4f6978.js","assets/Avatar.95b7fe58.js","assets/Avatar.429656ec.css","assets/EmptyLabel.1fef0721.js","assets/EmptyLabel.b61dc386.css","assets/Referrals.2b33ada9.css"]:void 0),
+        component: () => __vitePreload(() => import('./Referrals.87f2c49a.js'),true?["assets/Referrals.87f2c49a.js","assets/Avatar.bd190700.js","assets/Avatar.429656ec.css","assets/EmptyLabel.2bf7b4fe.js","assets/EmptyLabel.b61dc386.css","assets/Referrals.234344ce.css"]:void 0),
         abort: [
             'referrals'
         ]
@@ -28807,7 +28808,7 @@ const routes = [
     {
         path: '/achievements',
         name: 'achievements',
-        component: () => __vitePreload(() => import('./Achievements.fc358f70.js'),true?["assets/Achievements.fc358f70.js","assets/EmptyLabel.1fef0721.js","assets/EmptyLabel.b61dc386.css","assets/Achievements.6110f0e6.css"]:void 0),
+        component: () => __vitePreload(() => import('./Achievements.3ac70896.js'),true?["assets/Achievements.3ac70896.js","assets/EmptyLabel.2bf7b4fe.js","assets/EmptyLabel.b61dc386.css","assets/Achievements.6110f0e6.css"]:void 0),
         abort: [
             'achievements'
         ]
@@ -28815,25 +28816,25 @@ const routes = [
     {
         path: '/airdrop',
         name: 'airdrop',
-        component: () => __vitePreload(() => import('./Airdrop.54b87d5d.js'),true?["assets/Airdrop.54b87d5d.js","assets/Airdrop.3c798ef7.css"]:void 0),
+        component: () => __vitePreload(() => import('./Airdrop.2b86e961.js'),true?["assets/Airdrop.2b86e961.js","assets/Airdrop.3c798ef7.css"]:void 0),
         abort: []
     },
     {
         path: '/settings',
         name: 'settings',
-        component: () => __vitePreload(() => import('./Settings.7b698464.js'),true?["assets/Settings.7b698464.js","assets/Settings.95b90fa1.css"]:void 0),
+        component: () => __vitePreload(() => import('./Settings.efbdb026.js'),true?["assets/Settings.efbdb026.js","assets/Settings.95b90fa1.css"]:void 0),
         abort: []
     },
     {
         path: '/error',
         name: 'error',
-        component: () => __vitePreload(() => import('./Error.3bf82f7c.js'),true?["assets/Error.3bf82f7c.js","assets/EmptyLabel.1fef0721.js","assets/EmptyLabel.b61dc386.css","assets/Error.1e1044f0.css"]:void 0),
+        component: () => __vitePreload(() => import('./Error.c876b729.js'),true?["assets/Error.c876b729.js","assets/EmptyLabel.2bf7b4fe.js","assets/EmptyLabel.b61dc386.css","assets/Error.1e1044f0.css"]:void 0),
         abort: []
     },
     {
         path: '/access-denied',
         name: 'access-denied',
-        component: () => __vitePreload(() => import('./AccessDenied.87a4ee55.js'),true?["assets/AccessDenied.87a4ee55.js","assets/EmptyLabel.1fef0721.js","assets/EmptyLabel.b61dc386.css","assets/AccessDenied.ed7dcc68.css"]:void 0),
+        component: () => __vitePreload(() => import('./AccessDenied.b75a7165.js'),true?["assets/AccessDenied.b75a7165.js","assets/EmptyLabel.2bf7b4fe.js","assets/EmptyLabel.b61dc386.css","assets/AccessDenied.ed7dcc68.css"]:void 0),
         abort: []
     },
     {
@@ -44057,7 +44058,7 @@ const browserExt = {
   },
   test: () => true,
   load: async () => {
-    await __vitePreload(() => import('./browserAll.adbf052e.js'),true?["assets/browserAll.adbf052e.js","assets/init.8cc1f961.js","assets/colorToUniform.156d6c0a.js"]:void 0);
+    await __vitePreload(() => import('./browserAll.d02a8c43.js'),true?["assets/browserAll.d02a8c43.js","assets/init.0f67c5da.js","assets/colorToUniform.8cb19207.js"]:void 0);
   }
 };
 
@@ -44069,7 +44070,7 @@ const webworkerExt = {
   },
   test: () => typeof self !== "undefined" && self.WorkerGlobalScope !== void 0,
   load: async () => {
-    await __vitePreload(() => import('./webworkerAll.c7c87ba1.js'),true?["assets/webworkerAll.c7c87ba1.js","assets/init.8cc1f961.js","assets/colorToUniform.156d6c0a.js"]:void 0);
+    await __vitePreload(() => import('./webworkerAll.d6c12f5d.js'),true?["assets/webworkerAll.d6c12f5d.js","assets/init.0f67c5da.js","assets/colorToUniform.8cb19207.js"]:void 0);
   }
 };
 
@@ -53910,14 +53911,14 @@ async function autoDetectRenderer(options) {
   for (let i = 0; i < preferredOrder.length; i++) {
     const rendererType = preferredOrder[i];
     if (rendererType === "webgpu" && await isWebGPUSupported()) {
-      const { WebGPURenderer } = await __vitePreload(() => import('./WebGPURenderer.c64986d4.js'),true?["assets/WebGPURenderer.c64986d4.js","assets/colorToUniform.156d6c0a.js","assets/SharedSystems.952a7310.js"]:void 0);
+      const { WebGPURenderer } = await __vitePreload(() => import('./WebGPURenderer.9aa8a51b.js'),true?["assets/WebGPURenderer.9aa8a51b.js","assets/colorToUniform.8cb19207.js","assets/SharedSystems.068b2973.js"]:void 0);
       RendererClass = WebGPURenderer;
       finalOptions = { ...options, ...options.webgpu };
       break;
     } else if (rendererType === "webgl" && isWebGLSupported(
       options.failIfMajorPerformanceCaveat ?? AbstractRenderer.defaultOptions.failIfMajorPerformanceCaveat
     )) {
-      const { WebGLRenderer } = await __vitePreload(() => import('./WebGLRenderer.af32db45.js'),true?["assets/WebGLRenderer.af32db45.js","assets/colorToUniform.156d6c0a.js","assets/SharedSystems.952a7310.js"]:void 0);
+      const { WebGLRenderer } = await __vitePreload(() => import('./WebGLRenderer.3eb35090.js'),true?["assets/WebGLRenderer.3eb35090.js","assets/colorToUniform.8cb19207.js","assets/SharedSystems.068b2973.js"]:void 0);
       RendererClass = WebGLRenderer;
       finalOptions = { ...options, ...options.webgl };
       break;

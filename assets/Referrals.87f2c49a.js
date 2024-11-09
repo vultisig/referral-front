@@ -1,6 +1,6 @@
-import { _ as _export_sfc, u as useI18n, m as mapState, a as mapMutations, h as mapActions, i as reactive, w as watch, j as onMounted, r as resolveComponent, o as openBlock, k as createBlock, b as unref, d as createElementBlock, f as createBaseVNode, e as createVNode, l as createTextVNode, t as toDisplayString, F as Fragment, p as renderList, B as Button, g as createCommentVNode, q as delay, L as Loader } from './index.3693856e.js';
-import { A as Avatar } from './Avatar.95b7fe58.js';
-import { E as EmptyLabel } from './EmptyLabel.1fef0721.js';
+import { _ as _export_sfc, u as useI18n, m as mapState, a as mapMutations, h as mapActions, i as reactive, w as watch, j as onMounted, r as resolveComponent, o as openBlock, k as createBlock, b as unref, d as createElementBlock, f as createBaseVNode, e as createVNode, g as createCommentVNode, l as createTextVNode, t as toDisplayString, F as Fragment, p as renderList, B as Button, q as delay, L as Loader } from './index.6803bdbb.js';
+import { A as Avatar } from './Avatar.bd190700.js';
+import { E as EmptyLabel } from './EmptyLabel.2bf7b4fe.js';
 
 const Referrals_vue_vue_type_style_index_0_scoped_c8e84f31_lang = '';
 
@@ -11,14 +11,15 @@ const _hoisted_3 = {
   class: "users-list"
 };
 const _hoisted_4 = ["innerHTML"];
-const _hoisted_5 = {
+const _hoisted_5 = ["innerHTML"];
+const _hoisted_6 = {
   key: 1,
   class: "state"
 };
-const _hoisted_6 = ["innerHTML"];
 const _hoisted_7 = ["innerHTML"];
 const _hoisted_8 = ["innerHTML"];
-const _hoisted_9 = { class: "invite-box" };
+const _hoisted_9 = ["innerHTML"];
+const _hoisted_10 = { class: "invite-box" };
 
     
 const _sfc_main = {
@@ -114,6 +115,7 @@ return (_ctx, _cache) => {
             createBaseVNode("h1", {
               innerHTML: unref(t)('pages.referrals.title')
             }, null, 8 /* PROPS */, _hoisted_2),
+            createCommentVNode(" <span v-html=\"t('pages.referrals.description')\" class=\"description\"></span> "),
             (!data.referrals.length)
               ? (openBlock(), createBlock(EmptyLabel, {
                   key: 0,
@@ -126,7 +128,11 @@ return (_ctx, _cache) => {
                     createTextVNode(toDisplayString(unref(user).profile?.referrals_count) + " ", 1 /* TEXT */),
                     createBaseVNode("span", {
                       innerHTML: unref(t)('pages.referrals.total')
-                    }, null, 8 /* PROPS */, _hoisted_4)
+                    }, null, 8 /* PROPS */, _hoisted_4),
+                    _cache[0] || (_cache[0] = createBaseVNode("br", null, null, -1 /* HOISTED */)),
+                    createBaseVNode("span", {
+                      innerHTML: unref(t)('pages.referrals.description')
+                    }, null, 8 /* PROPS */, _hoisted_5)
                   ]),
                   createBaseVNode("ul", null, [
                     (openBlock(true), createElementBlock(Fragment, null, renderList(data.referrals, (item) => {
@@ -146,23 +152,23 @@ return (_ctx, _cache) => {
                                 class: "light loader",
                                 loading: true
                               }))
-                            : (openBlock(), createElementBlock("span", _hoisted_5, [
+                            : (openBlock(), createElementBlock("span", _hoisted_6, [
                                 (!item.wallet_public_key_ecdsa)
                                   ? (openBlock(), createElementBlock("span", {
                                       key: 0,
                                       innerHTML: unref(t)('pages.referrals.steps.registered')
-                                    }, null, 8 /* PROPS */, _hoisted_6))
+                                    }, null, 8 /* PROPS */, _hoisted_7))
                                   : (!item.join_airdrop)
                                     ? (openBlock(), createElementBlock(Fragment, { key: 1 }, [
                                         createBaseVNode("span", {
                                           innerHTML: unref(t)('pages.referrals.steps.added')
-                                        }, null, 8 /* PROPS */, _hoisted_7),
+                                        }, null, 8 /* PROPS */, _hoisted_8),
                                         createVNode(_component_Icon, { icon: "wallet" })
                                       ], 64 /* STABLE_FRAGMENT */))
                                     : (openBlock(), createElementBlock(Fragment, { key: 2 }, [
                                         createBaseVNode("span", {
                                           innerHTML: unref(t)('pages.referrals.steps.joined')
-                                        }, null, 8 /* PROPS */, _hoisted_8),
+                                        }, null, 8 /* PROPS */, _hoisted_9),
                                         createVNode(_component_Icon, { icon: "verified" })
                                       ], 64 /* STABLE_FRAGMENT */))
                               ]))
@@ -187,7 +193,7 @@ return (_ctx, _cache) => {
                     : createCommentVNode("v-if", true)
                 ]))
           ]),
-          createBaseVNode("div", _hoisted_9, [
+          createBaseVNode("div", _hoisted_10, [
             createVNode(Button, {
               name: unref(t)('pages.referrals.invite'),
               onClick: invite
