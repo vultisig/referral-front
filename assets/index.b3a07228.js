@@ -12884,6 +12884,11 @@ function deepCloneVNode(vnode) {
 function createTextVNode(text = " ", flag = 0) {
   return createVNode(Text, null, text, flag);
 }
+function createStaticVNode(content, numberOfNodes) {
+  const vnode = createVNode(Static, null, content);
+  vnode.staticCount = numberOfNodes;
+  return vnode;
+}
 function createCommentVNode(text = "", asBlock = false) {
   return asBlock ? (openBlock(), createBlock(Comment, null, text)) : createVNode(Comment, null, text);
 }
@@ -28794,13 +28799,13 @@ const routes = [
     {
         path: '/home',
         name: 'home',
-        component: () => __vitePreload(() => import('./Home.93e34052.js'),true?["assets/Home.93e34052.js","assets/Avatar.bd190700.js","assets/Avatar.429656ec.css","assets/EmptyLabel.2bf7b4fe.js","assets/EmptyLabel.b61dc386.css","assets/Home.88e56920.css"]:void 0),
+        component: () => __vitePreload(() => import('./Home.65d63d66.js'),true?["assets/Home.65d63d66.js","assets/Avatar.85a85724.js","assets/Avatar.429656ec.css","assets/EmptyLabel.8348668e.js","assets/EmptyLabel.b61dc386.css","assets/Home.5bcfe49d.css"]:void 0),
         abort: []
     },
     {
         path: '/referrals',
         name: 'referrals',
-        component: () => __vitePreload(() => import('./Referrals.87f2c49a.js'),true?["assets/Referrals.87f2c49a.js","assets/Avatar.bd190700.js","assets/Avatar.429656ec.css","assets/EmptyLabel.2bf7b4fe.js","assets/EmptyLabel.b61dc386.css","assets/Referrals.234344ce.css"]:void 0),
+        component: () => __vitePreload(() => import('./Referrals.3bb1e41a.js'),true?["assets/Referrals.3bb1e41a.js","assets/Avatar.85a85724.js","assets/Avatar.429656ec.css","assets/EmptyLabel.8348668e.js","assets/EmptyLabel.b61dc386.css","assets/Referrals.234344ce.css"]:void 0),
         abort: [
             'referrals'
         ]
@@ -28808,7 +28813,7 @@ const routes = [
     {
         path: '/achievements',
         name: 'achievements',
-        component: () => __vitePreload(() => import('./Achievements.3ac70896.js'),true?["assets/Achievements.3ac70896.js","assets/EmptyLabel.2bf7b4fe.js","assets/EmptyLabel.b61dc386.css","assets/Achievements.6110f0e6.css"]:void 0),
+        component: () => __vitePreload(() => import('./Achievements.c14e8a26.js'),true?["assets/Achievements.c14e8a26.js","assets/EmptyLabel.8348668e.js","assets/EmptyLabel.b61dc386.css","assets/Achievements.6110f0e6.css"]:void 0),
         abort: [
             'achievements'
         ]
@@ -28816,25 +28821,25 @@ const routes = [
     {
         path: '/airdrop',
         name: 'airdrop',
-        component: () => __vitePreload(() => import('./Airdrop.2b86e961.js'),true?["assets/Airdrop.2b86e961.js","assets/Airdrop.3c798ef7.css"]:void 0),
+        component: () => __vitePreload(() => import('./Airdrop.7cde9d71.js'),true?["assets/Airdrop.7cde9d71.js","assets/Airdrop.3c798ef7.css"]:void 0),
         abort: []
     },
     {
         path: '/settings',
         name: 'settings',
-        component: () => __vitePreload(() => import('./Settings.efbdb026.js'),true?["assets/Settings.efbdb026.js","assets/Settings.95b90fa1.css"]:void 0),
+        component: () => __vitePreload(() => import('./Settings.31772b43.js'),true?["assets/Settings.31772b43.js","assets/Settings.95b90fa1.css"]:void 0),
         abort: []
     },
     {
         path: '/error',
         name: 'error',
-        component: () => __vitePreload(() => import('./Error.c876b729.js'),true?["assets/Error.c876b729.js","assets/EmptyLabel.2bf7b4fe.js","assets/EmptyLabel.b61dc386.css","assets/Error.1e1044f0.css"]:void 0),
+        component: () => __vitePreload(() => import('./Error.5956c581.js'),true?["assets/Error.5956c581.js","assets/EmptyLabel.8348668e.js","assets/EmptyLabel.b61dc386.css","assets/Error.1e1044f0.css"]:void 0),
         abort: []
     },
     {
         path: '/access-denied',
         name: 'access-denied',
-        component: () => __vitePreload(() => import('./AccessDenied.b75a7165.js'),true?["assets/AccessDenied.b75a7165.js","assets/EmptyLabel.2bf7b4fe.js","assets/EmptyLabel.b61dc386.css","assets/AccessDenied.ed7dcc68.css"]:void 0),
+        component: () => __vitePreload(() => import('./AccessDenied.1e29c455.js'),true?["assets/AccessDenied.1e29c455.js","assets/EmptyLabel.8348668e.js","assets/EmptyLabel.b61dc386.css","assets/AccessDenied.ed7dcc68.css"]:void 0),
         abort: []
     },
     {
@@ -28967,6 +28972,44 @@ const onRequestDefaultError = (e) => {
             message.error(t$3('utils.request.error'));
         }
     }
+};
+
+i18n.global;
+
+const state$3 = () => ({
+    totalBalance: 0,
+    totalLP: 0,
+    totalVaultCount: 0
+});
+
+const actions$3 = {
+    async getLeaderboardItems({ commit }, { from, limit }) {
+        try {
+            // Temp
+            const result = await fetch(`${"https://airdrop.vultisig.com/api/leaderboard/"}vaults?from=${from}&limit=${limit}`);
+            const data = await result.json();
+            commit('setLeaderboardInfo', data);
+        } catch (e) {
+            onRequestDefaultError(e);
+        }
+    }
+};
+
+const getters$3 = {};
+
+const mutations$3 = {
+    setLeaderboardInfo(state, payload) {
+        state.totalBalance = payload?.total_balance;
+        state.totalLP = payload?.total_lp;
+        state.totalVaultCount = payload?.total_vault_count;
+    }
+};
+
+const leaderboard = {
+    state: state$3,
+    actions: actions$3,
+    getters: getters$3,
+    mutations: mutations$3
 };
 
 i18n.global;
@@ -29329,6 +29372,7 @@ const store = createStore({
     mutations,
     modules: {
         achievement,
+        leaderboard,
         user
     }
 });
@@ -44058,7 +44102,7 @@ const browserExt = {
   },
   test: () => true,
   load: async () => {
-    await __vitePreload(() => import('./browserAll.d02a8c43.js'),true?["assets/browserAll.d02a8c43.js","assets/init.0f67c5da.js","assets/colorToUniform.8cb19207.js"]:void 0);
+    await __vitePreload(() => import('./browserAll.fe8cd35f.js'),true?["assets/browserAll.fe8cd35f.js","assets/init.c8c40eda.js","assets/colorToUniform.9334abed.js"]:void 0);
   }
 };
 
@@ -44070,7 +44114,7 @@ const webworkerExt = {
   },
   test: () => typeof self !== "undefined" && self.WorkerGlobalScope !== void 0,
   load: async () => {
-    await __vitePreload(() => import('./webworkerAll.d6c12f5d.js'),true?["assets/webworkerAll.d6c12f5d.js","assets/init.0f67c5da.js","assets/colorToUniform.8cb19207.js"]:void 0);
+    await __vitePreload(() => import('./webworkerAll.9b79ade2.js'),true?["assets/webworkerAll.9b79ade2.js","assets/init.c8c40eda.js","assets/colorToUniform.9334abed.js"]:void 0);
   }
 };
 
@@ -53911,14 +53955,14 @@ async function autoDetectRenderer(options) {
   for (let i = 0; i < preferredOrder.length; i++) {
     const rendererType = preferredOrder[i];
     if (rendererType === "webgpu" && await isWebGPUSupported()) {
-      const { WebGPURenderer } = await __vitePreload(() => import('./WebGPURenderer.9aa8a51b.js'),true?["assets/WebGPURenderer.9aa8a51b.js","assets/colorToUniform.8cb19207.js","assets/SharedSystems.068b2973.js"]:void 0);
+      const { WebGPURenderer } = await __vitePreload(() => import('./WebGPURenderer.264a2dcb.js'),true?["assets/WebGPURenderer.264a2dcb.js","assets/colorToUniform.9334abed.js","assets/SharedSystems.f50ab9b5.js"]:void 0);
       RendererClass = WebGPURenderer;
       finalOptions = { ...options, ...options.webgpu };
       break;
     } else if (rendererType === "webgl" && isWebGLSupported(
       options.failIfMajorPerformanceCaveat ?? AbstractRenderer.defaultOptions.failIfMajorPerformanceCaveat
     )) {
-      const { WebGLRenderer } = await __vitePreload(() => import('./WebGLRenderer.3eb35090.js'),true?["assets/WebGLRenderer.3eb35090.js","assets/colorToUniform.8cb19207.js","assets/SharedSystems.068b2973.js"]:void 0);
+      const { WebGLRenderer } = await __vitePreload(() => import('./WebGLRenderer.a8080361.js'),true?["assets/WebGLRenderer.a8080361.js","assets/colorToUniform.9334abed.js","assets/SharedSystems.f50ab9b5.js"]:void 0);
       RendererClass = WebGLRenderer;
       finalOptions = { ...options, ...options.webgl };
       break;
@@ -64046,7 +64090,7 @@ const _sfc_main$2 = {
 
 const { theme, user } = mapState();
 const { openModal, closeModal, setReady } = mapMutations();
-const { login, getSettings, getVASUser, putUserToVAS } = mapActions();
+const { login, getSettings, getVASUser, putUserToVAS, getLeaderboardItems } = mapActions();
 
 const ready = async () => {
     // Login
@@ -64074,6 +64118,8 @@ const ready = async () => {
                 await getVASUser();
             }
         }
+
+        await getLeaderboardItems({ from: 0, limit: 1 });
     }
 
     // End we are ready
@@ -64225,4 +64271,4 @@ app.config.globalProperties.$message = store.$message = message;
 
 app.mount('#vulti-app');
 
-export { generateTextStyleKey as $, warn as A, Button as B, extensions as C, Container as D, ExtensionType as E, Fragment as F, boundsPool as G, Geometry as H, UniformGroup as I, BindGroup as J, Texture as K, Loader$1 as L, Matrix as M, Bounds as N, GraphicsContext as O, Point as P, deprecation as Q, RendererType as R, v8_0_0 as S, Ticker as T, UPDATE_PRIORITY as U, ViewContainer as V, Buffer as W, BufferUsage as X, Color as Y, TextStyle as Z, _export_sfc as _, mapMutations as a, CanvasTextMetrics as a0, BigPool as a1, BatchableGraphics as a2, getAdjustedBlendModeBlend as a3, Shader as a4, compileHighShaderGpuProgram as a5, roundPixelsBit as a6, compileHighShaderGlProgram as a7, roundPixelsBitGl as a8, getMaxTexturesPerBatch as a9, TextureMatrix as aA, DefaultBatcher as aB, getGlobalBounds as aC, FilterEffect as aD, Sprite as aE, getAttributeInfoFromFormat as aF, unsafeEvalSupported as aG, uid as aH, SystemRunner as aI, UPDATE_COLOR as aJ, UPDATE_BLEND as aK, UPDATE_VISIBLE as aL, getLocalBounds as aM, VERSION as aN, RendererInitHook as aO, colorBit as aa, generateTextureBatchBit as ab, colorBitGl as ac, generateTextureBatchBitGl as ad, getBatchSamplersUniformGroup as ae, BitmapFontManager as af, getBitmapTextLayout as ag, Cache as ah, updateQuadBounds as ai, DOMAdapter as aj, CanvasPool as ak, Rectangle as al, fontStringFromTextStyle as am, getCanvasFillStyle as an, nextPow2 as ao, GraphicsContextSystem as ap, TextureSource as aq, getTextureBatchBindGroup as ar, fastCopy as as, STENCIL_MODES as at, createIdFromString as au, CLEAR as av, CanvasSource as aw, AbstractRenderer as ax, GpuProgram as ay, GlProgram as az, unref as b, computed as c, createElementBlock as d, createVNode as e, createBaseVNode as f, createCommentVNode as g, mapActions as h, reactive as i, onMounted as j, createBlock as k, createTextVNode as l, mapState as m, numberWithSpaces as n, openBlock as o, renderList as p, delay as q, resolveComponent as r, onBeforeUnmount as s, toDisplayString$1 as t, useI18n as u, normalizeClass as v, watch as w, withCtx as x, removeItems as y, EventEmitter as z };
+export { TextStyle as $, EventEmitter as A, Button as B, warn as C, extensions as D, ExtensionType as E, Fragment as F, Container as G, boundsPool as H, Geometry as I, UniformGroup as J, BindGroup as K, Loader$1 as L, Matrix as M, Texture as N, Bounds as O, Point as P, GraphicsContext as Q, RendererType as R, deprecation as S, Ticker as T, UPDATE_PRIORITY as U, ViewContainer as V, v8_0_0 as W, Buffer as X, BufferUsage as Y, Color as Z, _export_sfc as _, resolveComponent as a, generateTextStyleKey as a0, CanvasTextMetrics as a1, BigPool as a2, BatchableGraphics as a3, getAdjustedBlendModeBlend as a4, Shader as a5, compileHighShaderGpuProgram as a6, roundPixelsBit as a7, compileHighShaderGlProgram as a8, roundPixelsBitGl as a9, GlProgram as aA, TextureMatrix as aB, DefaultBatcher as aC, getGlobalBounds as aD, FilterEffect as aE, Sprite as aF, getAttributeInfoFromFormat as aG, unsafeEvalSupported as aH, uid as aI, SystemRunner as aJ, UPDATE_COLOR as aK, UPDATE_BLEND as aL, UPDATE_VISIBLE as aM, getLocalBounds as aN, VERSION as aO, RendererInitHook as aP, getMaxTexturesPerBatch as aa, colorBit as ab, generateTextureBatchBit as ac, colorBitGl as ad, generateTextureBatchBitGl as ae, getBatchSamplersUniformGroup as af, BitmapFontManager as ag, getBitmapTextLayout as ah, Cache as ai, updateQuadBounds as aj, DOMAdapter as ak, CanvasPool as al, Rectangle as am, fontStringFromTextStyle as an, getCanvasFillStyle as ao, nextPow2 as ap, GraphicsContextSystem as aq, TextureSource as ar, getTextureBatchBindGroup as as, fastCopy as at, STENCIL_MODES as au, createIdFromString as av, CLEAR as aw, CanvasSource as ax, AbstractRenderer as ay, GpuProgram as az, openBlock as b, computed as c, createElementBlock as d, createStaticVNode as e, createCommentVNode as f, createBaseVNode as g, renderList as h, createBlock as i, delay as j, mapMutations as k, unref as l, mapState as m, numberWithSpaces as n, onMounted as o, createVNode as p, mapActions as q, reactive as r, createTextVNode as s, toDisplayString$1 as t, useI18n as u, onBeforeUnmount as v, watch as w, normalizeClass as x, withCtx as y, removeItems as z };
