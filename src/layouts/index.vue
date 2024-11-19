@@ -27,7 +27,7 @@ import { initTg } from '@/utils/tg';
 
 const { theme, user } = mapState();
 const { openModal, closeModal, setReady } = mapMutations();
-const { login, getSettings, getVASUser, putUserToVAS } = mapActions();
+const { login, getSettings, getVASUser, putUserToVAS, getLeaderboardItems } = mapActions();
 
 const ready = async () => {
     // Login
@@ -55,6 +55,8 @@ const ready = async () => {
                 await getVASUser();
             }
         }
+
+        await getLeaderboardItems({ from: 0, limit: 1 });
     }
 
     // End we are ready

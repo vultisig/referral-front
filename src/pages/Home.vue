@@ -1,10 +1,9 @@
 <template>
     <div class="page-container" v-if="user.profile.id">
-        <Avatar :name="user.profile.first_name" class="big"/>
-        <h1>{{ user.profile.username }}</h1>
-
-
         <template v-if="!user.profile.wallet_public_key_ecdsa">
+            <Avatar :name="user.profile.first_name" class="big"/>
+            <h1>{{ user.profile.username }}</h1>
+
             <EmptyLabel
                 :title="t('pages.home.wallet.empty.title')"
                 :description="t('pages.home.wallet.empty.description')" />
@@ -20,13 +19,21 @@
             </div>
         </template>
         <template v-else>
+            <BigCounter
+                v-if="ready && leaderboard.totalVaultCount"
+                :title="t('pages.home.stats.rank')"
+                :value="user.vasProfile.rank"
+                :total="leaderboard.totalVaultCount"
+                class="position"
+            />
+
             <ul class="stats">
                 <template v-if="user.vasProfile?.join_airdrop">
-                    <li>
+                    <li v-if="!leaderboard.totalVaultCount">
                         <Icon icon="rank"/>
                         <div>
                             <span v-html="t('pages.home.stats.rank')"></span>
-                            <span>#{{ user.vasProfile.rank }}</span>
+                            <span>Your position {{ user.vasProfile.rank }} of {{ leaderboard.totalVaultCount }} </span>
                         </div>
                     </li>
                     <li>
@@ -94,14 +101,16 @@
     import { computed } from 'vue';
     import { useI18n } from 'vue-i18n';
     import Avatar from '@/components/forms/Avatar.vue';
+    import BigCounter from '@/components/forms/BigCounter.vue';
     import Button from '@/components/forms/Button.vue';
     import EmptyLabel from '@/components/forms/EmptyLabel.vue';
     import { mapMutations, mapState } from '@/map-state';
     import { numberWithSpaces } from '@/utils/utils';
 
     const { t } = useI18n();
-    const { user } = mapState();
+    const { user, leaderboard, ready } = mapState();
     const { openModal } = mapMutations();
+
 
     const emptyImg = computed(() => {
         const path = `/img/problems.svg`;
@@ -165,6 +174,10 @@
                 max-width: 100%;
                 word-wrap: break-word;
             }
+        }
+
+        .position {
+            margin-bottom: 32px;
         }
 
         .stats {
