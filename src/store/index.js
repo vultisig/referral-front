@@ -1,4 +1,5 @@
 import { createStore } from 'vuex';
+import leaderboard from '@/store/modules/Leaderboard';
 import user from '@/store/modules/User';
 import achievement from '@/store/modules/Achievement';
 import { onRequestDefaultError, requests } from '@/utils/requests';
@@ -116,6 +117,7 @@ export const store = createStore({
     mutations,
     modules: {
         achievement,
+        leaderboard,
         user
     }
 });
