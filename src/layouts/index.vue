@@ -109,6 +109,7 @@ onMounted(async () => {
             flex-direction: column;
             flex: 1 1;
             overflow: auto;
+            overflow-x: hidden;
             @include scrollbar();
         }
     }
